@@ -1,2 +1,2 @@
-PREP(playMusic);
+PREP(playMusicServer);
 PREP(timeFormat);
