@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="AFSK">
+    <Package name="Main">
+        <Key ID="STR_AFSK_Main_Attributes">
+            <English>SerialKillers Attributes</English>
+            <Polish>Atrybuty SerialKillers</Polish>
+        </Key>
+        <Key ID="STR_AFSK_Main_Category">
+            <English>SerialKillers</English>
+        </Key>
+        <Key ID="STR_AFSK_Main_Toolbar">
+            <English>SerialKillers</English>
+        </Key>
+    </Package>
+</Project>
