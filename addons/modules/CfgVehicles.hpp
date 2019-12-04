@@ -10,11 +10,12 @@ class CfgVehicles {
             class AnyBrain;
         };
     };
+
     class GVAR(modulePoliceStation): Module_F {
         scope = 2;
         displayName = CSTRING(Police_Station);
         category = QUOTE(PREFIX);
-        function = QEFUNC(init, initPoliceStation);
+        function = QFUNC(modulePoliceStation);
         functionPriority = 1;
         isGlobal = 0;
         isTriggerActivated = 0;
