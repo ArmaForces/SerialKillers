@@ -1,3 +1,3 @@
-PREP(nearestTown);
+PREP(nearestLocation);
 PREP(playMusicServer);
 PREP(timeFormat);
