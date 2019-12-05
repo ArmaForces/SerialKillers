@@ -18,8 +18,11 @@
 params ["_musicClassname"];
 
 // Add to queue
-if GVAR(musicPlaying) exitWith {
+if GVAR(musicPlaying) then {
     GVAR(musicQueue) pushBack _musicClassname;
+} else {
+    GVAR(musicPlaying) = true;
+    [QGVAR(playMusic), [_musicClassname]] call CBA_fnc_globalEvent;
 };
 
 if (GVAR(musicEH) == -1) then {
