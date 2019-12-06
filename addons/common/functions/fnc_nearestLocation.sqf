@@ -24,4 +24,4 @@ if (_pos isEqualType objNull) then {
 // Get nearest locations to object.
 private _towns = nearestLocations [_pos, ["NameVillage", "NameCity", "NameCityCapital"], 2000];
 // Select nearest location from array.
-_towns param [0, locationNull];
+_towns param [0, locationNull]
