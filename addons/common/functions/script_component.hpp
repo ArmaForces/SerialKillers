@@ -1,0 +1,1 @@
+#include "\z\afsk\addons\common\script_component.hpp"
