@@ -13,7 +13,7 @@ class CfgVehicles {
 
     class GVAR(modulePoliceStation): Module_F {
         scope = 2;
-        displayName = CSTRING(Police_Station);
+        displayName = CSTRING(PoliceStation_Name);
         category = QUOTE(PREFIX);
         function = QFUNC(modulePoliceStation);
         functionPriority = 1;
@@ -34,13 +34,13 @@ class CfgVehicles {
         class Attributes: AttributesBase {
             // Allows police station identification
             class LocationName: Edit {
-                displayName = CSTRING(Location_Name);
-                tooltip = CSTRING(Location_Name_Description);
+                displayName = CSTRING(PoliceStation_LocationName);
+                tooltip = CSTRING(PoliceStation_LocationName_Description);
                 property = "LocationName";
             };
             // Determine if helicopters can be spawned here
             class HasHelipad: Checkbox {
-                displayName = CSTRING(Has_Helipad);
+                displayName = CSTRING(PoliceStation_HasHelipad);
                 property = "HasHelipad";
             };
             class ModuleDescription: ModuleDescription {};
