@@ -10,7 +10,7 @@
  * None
  *
  * Example:
- * [_module] call afsk_modules_fnc_modulePoliceStation
+ * None
  *
  * Public: No
  */
