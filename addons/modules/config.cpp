@@ -7,11 +7,13 @@ class CfgPatches {
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {
-            "cba_main"
+            "afsk_main"
         };
         author = "ArmaForces";
         VERSION_CONFIG;
     };
 };
 
-#include "CfgModuleCategories.hpp"
+
+#include "CfgEventHandlers.hpp"
+#include "CfgVehicles.hpp"

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="AFSK">
+    <Package name="Modules">
+        <Key ID="STR_AFSK_Modules_PoliceStation_Name">
+            <English>Police Station</English>
+            <Polish>Posterunek Policji</Polish>
+        </Key>
+        <Key ID="STR_AFSK_Modules_PoliceStation_LocationName">
+            <English>Location Name</English>
+            <Polish>Nazwa lokacji</Polish>
+        </Key>
+        <Key ID="STR_AFSK_Modules_PoliceStation_LocationName_Description">
+            <English>Location Name. If empty will use nearest map location name.</English>
+            <Polish>Nazwa lokacji. Jeżeli puste to użyta zostanie nazwa najbliższej lokacji na mapie.</Polish>
+        </Key>
+        <Key ID="STR_AFSK_Modules_PoliceStation_HasHelipad">
+            <English>Has helipad</English>
+            <Polish>Posiada lądowisko dla helikoptera</Polish>
+        </Key>
+    </Package>
+</Project>
