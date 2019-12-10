@@ -1,5 +1,9 @@
 #include "script_component.hpp"
 
+[QGVAR(copKilled), {
+    _this call FUNC(copKilled);
+}] call CBA_fnc_addEventHandler;
+
 [QGVAR(createTeleport), {
     _this call FUNC(createTeleport);
 }] call CBA_fnc_addEventHandler;
