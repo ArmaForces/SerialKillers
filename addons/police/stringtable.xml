@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="AFSK">
+    <Package name="Police">
+        <Key ID="STR_AFSK_Police_Alarm">
+            <English>Someone is in %1 police station!</English>
+            <Polish>Ktoś majstruje coś w bazie policji w %1!</Polish>
+        </Key>
+        <Key ID="STR_AFSK_Police_Bad_Idea">
+            <English>It was a bad idea...</English>
+            <Polish>To był zły pomysł...</Polish>
+        </Key>
+        <Key ID="STR_AFSK_Police_Cop_Killed_In_City">
+            <English>Cop was killed at %1 in %2!</English>
+            <Polish>Policjant został zabity o godzinie %1 w %2!</Polish>
+        </Key>
+        <Key ID="STR_AFSK_Police_Cop_Killed_Near_City">
+            <English>Cop was killed at %1 near %2!</English>
+            <Polish>Policjant został zabity o godzinie %1 w pobliżu %2!</Polish>
+        </Key>
+    </Package>
+</Project>
