@@ -18,7 +18,7 @@
 
 params ["_unit", "_time"];
 
-private _markerName = format ["killed_cop_%1", random (999)];
+private _markerName = format ["killed_cop_%1_%2", _unit, serverTime];
 private _markerText = format ["%1", _time];
 private _marker = createMarker [_markerName, getpos _unit];
 _marker setMarkerType "mil_objective";
