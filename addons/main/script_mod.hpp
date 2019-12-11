@@ -14,3 +14,9 @@
 #else
     #define COMPONENT_NAME QUOTE(AFSK - COMPONENT)
 #endif
+
+#ifdef DISABLE_COMPILE_CACHE
+    #define LINKFUNC(x) {_this call FUNC(x)}
+#else
+    #define LINKFUNC(x) FUNC(x)
+#endif
