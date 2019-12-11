@@ -28,4 +28,4 @@ _marker setMarkerText _markerText;
 
 [_marker] call EFUNC(common, markerDecay);
 
-_marker;
+_marker
