@@ -16,11 +16,7 @@
  * Public: No
  */
 
-params ["_marker", ["_decayHalfTime", -1]];
-
-if (_decayHalfTime isEqualTo -1) then {
-    _decayHalfTime = 10;
-};
+params ["_marker", ["_decayHalfTime", 10]];
 
 // How much decay will be applied every 15 seconds
 private _decayRate = 1/(_decayHalfTime * 4 * 2);
