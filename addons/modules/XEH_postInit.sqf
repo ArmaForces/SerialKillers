@@ -1,3 +1,5 @@
 #include "script_component.hpp"
 
-publicVariable QGVAR(policeStations);
+if (isServer) then {
+    publicVariable QGVAR(policeStations);
+};
