@@ -27,7 +27,7 @@ private _time = [daytime] call BIS_fnc_timeToString;
 private _msg = [_unit, _time] call FUNC(copKilledMsg);
 [QGVAR(showMsg), [_msg]] call CBA_fnc_globalEvent;
 // Check why unit died and call funcion to change score.
-if (side _killer == EAST OR _unit == _killer) then {
+if (side _killer == EAST || {_unit == _killer}) then {
     [2] call EFUNC(score, addPoliceScore);
     [2] call EFUNC(score, addKillersScore);
 } else {
