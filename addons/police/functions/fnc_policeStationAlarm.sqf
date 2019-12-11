@@ -19,7 +19,7 @@ params ["_object"];
 
 titleText [LSTRING(Bad_Idea), "PLAIN", 5];
 
-private _nearestTown = [_object] call MDL_SK_fnc_nearest_town;
+private _nearestTown = [_object] call EFUNC(common, nearestLocation);
 private _msg = format [LSTRING(Alarm), text _nearestTown];
 
 // Show sideChat message to all cops.
