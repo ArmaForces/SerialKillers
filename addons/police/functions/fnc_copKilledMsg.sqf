@@ -31,9 +31,9 @@ private _msg = "";
 private _distance = _deadCop distance _nearestTown;
 // Check if distance is greater than 250 m. If so then change output a bit to represent that.
 if (_distance <= 250) then {
-    _msg = format ["Policjant został zabity o godzinie %1 w %2!", _timeOfDeath, text _nearestTown];
+    _msg = format [LSTRING(Cop_Killed_In_City), _timeOfDeath, text _nearestTown];
 } else {
-    _msg = format ["Policjant został zabity o godzinie %1 w pobliżu %2!", _timeOfDeath, text _nearestTown];
+    _msg = format [LSTRING(Cop_Killed_Near_City), _timeOfDeath, text _nearestTown];
 };
 
 _msg

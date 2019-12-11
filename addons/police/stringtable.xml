@@ -9,5 +9,13 @@
             <English>It was a bad idea...</English>
             <Polish>To był zły pomysł...</Polish>
         </Key>
+        <Key ID="STR_AFSK_Police_Cop_Killed_In_City">
+            <English>Cop was killed at %1 in %2!</English>
+            <Polish>Policjant został zabity o godzinie %1 w %2!</Polish>
+        </Key>
+        <Key ID="STR_AFSK_Police_Cop_Killed_Near_City">
+            <English>Cop was killed at %1 near %2!</English>
+            <Polish>Policjant został zabity o godzinie %1 w pobliżu %2!</Polish>
+        </Key>
     </Package>
 </Project>
