@@ -1,0 +1,1 @@
+#include "\z\afsk\addons\civilian\script_component.hpp"
