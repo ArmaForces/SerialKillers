@@ -27,9 +27,11 @@ private _cityCiviliansCount = switch (_citySize) do {
 
 private _cityCivilians = [];
 
-_cityCiviliansCount = GVAR(CiviliansCount) min _cityCiviliansCount;
+_cityCiviliansCount = GVAR(civiliansCount) min _cityCiviliansCount;
 for "_y" from 1 to _cityCiviliansCount step 1 do {
-    _cityCivilians pushBack ([_cityLogic] call FUNC(createCivilian));
+    private _civilian = [_cityLogic] call FUNC(createCivilian);
+    _cityCivilians pushBack _civilian;
+    GVAR(civilians) pushBack _civilian;
 };
 
 _cityCivilians

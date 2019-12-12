@@ -3,7 +3,8 @@ ADDON = false;
 #include "XEH_PREP.hpp"
 
 GVAR(cities) = [];
-GVAR(CiviliansCount) = 100 + floor (random (101));
+GVAR(civilians) = [];
+GVAR(civiliansCount) = 100 + floor (random (101));
 
 {
     GVAR(cities) pushBack ([_x] call FUNC(initCity));

@@ -27,6 +27,6 @@ private _cityCivilians = [_cityLogic, _citySize] call FUNC(initCityCivilians);
 private _cityCiviliansCount = count _cityCivilians;
 _cityLogic setVariable ["CiviliansList", _cityCivilians];
 _cityLogic setVariable ["CiviliansCount", _cityCiviliansCount];
-GVAR(CiviliansCount) = GVAR(CiviliansCount) - _cityCiviliansCount;
+GVAR(civiliansCount) = GVAR(civiliansCount) - _cityCiviliansCount;
 
 _cityLogic
