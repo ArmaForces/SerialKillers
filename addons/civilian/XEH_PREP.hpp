@@ -1,0 +1,2 @@
+PREP(initCity);
+PREP(initCityCivilians);
