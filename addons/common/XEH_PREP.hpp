@@ -1,4 +1,4 @@
 PREP(getAllMapCities);
-PREP(getCitySize);
+PREP(getLocationType);
 PREP(nearestLocation);
 PREP(playMusicServer);
