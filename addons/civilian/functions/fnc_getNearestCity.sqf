@@ -23,10 +23,10 @@ if (_position isEqualType objNull) then {
 };
 
 // Find nearest city location and city logic which should be on the same position.
-_nearestTown = [_position] call EFUNC(common, nearestLocation);
+_nearestTown = [_position] call EFUNC(common,nearestLocation);
 if (_nearestTown isEqualTo locationNull) then {\
     // Try to increase radius first
-    _nearestTown = [_position, 7500] call EFUNC(common, nearestLocation);
+    _nearestTown = [_position, 7500] call EFUNC(common,nearestLocation);
 };
 if (_nearestTown isEqualTo locationNull) exitWith {objNull};
 private _logic = nearestObject [_nearestTown, "LOGIC"];

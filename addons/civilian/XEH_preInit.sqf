@@ -8,6 +8,6 @@ GVAR(civiliansCount) = 100 + floor (random (101));
 
 {
     GVAR(cities) pushBack ([_x] call FUNC(initCity));
-} forEach EGVAR(common, cities);
+} forEach EGVAR(common,cities);
 
 ADDON = true;

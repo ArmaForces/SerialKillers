@@ -20,7 +20,7 @@ params ["_city"];
 private _cityLogic = (createGroup sideLogic) createUnit ["LOGIC", [0,0,0], [], 0, "NONE"];
 _cityLogic setVariable ["Location", _city, true];
 
-private _citySize = [_city] call EFUNC(common, getLocationType);
+private _citySize = [_city] call EFUNC(common,getLocationType);
 
 // Init civilians
 [_cityLogic, _citySize] call FUNC(initCityCivilians);
