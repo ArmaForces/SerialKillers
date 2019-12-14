@@ -18,6 +18,6 @@
 params ["_cityLogic"];
 
 private _newGroup = createGroup CIVILIAN;
-private _position = [0, 0, 0];
+private _position = [[position _cityLogic, 100]] call BIS_fnc_randomPos;
 
 _newGroup createUnit ["C_man_polo_1_F", _position, [], 0, "NONE"];
