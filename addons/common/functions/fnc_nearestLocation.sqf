@@ -15,13 +15,13 @@
  * Public: No
  */
 
-params ["_pos"];
+params ["_pos", ["_searchRadius", 2000]];
 
 if (_pos isEqualType objNull) then {
     _pos = getPosATL _pos;
 };
 
 // Get nearest locations to object.
-private _towns = nearestLocations [_pos, ["NameVillage", "NameCity", "NameCityCapital"], 2000];
+private _towns = nearestLocations [_pos, ["NameVillage", "NameCity", "NameCityCapital"], _searchRadius];
 // Select nearest location from array.
 _towns param [0, locationNull]
