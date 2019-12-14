@@ -22,7 +22,7 @@ private _filter = "getText (_x >> 'type') isEqualTo '%1'";
 {
     private _locations = format [_filter, _x] configClasses (configFile >> "CfgWorlds" >> worldName >> "Names");
     {
-        _cities pushBack _x;
+        _cities pushBackUnique _x;
     } forEach _locations;
 } forEach ["NameCityCapital", "NameCity", "NameVillage"];
 
