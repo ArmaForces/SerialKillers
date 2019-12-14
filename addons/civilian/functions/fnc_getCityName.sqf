@@ -31,7 +31,7 @@ private _location = _city getVariable ["Location", [_city] call EFUNC(common,nea
 if (_location isEqualTo locationNull) exitWith {""};
 
 // Get location name from config and save as logic variable for future calls
-_name = getText (configFile >> "CfgWorlds" >> worldName >> "Names" >> className _city >> "name");
+_name = getText (configFile >> "CfgWorlds" >> worldName >> "Names" >> className _location >> "name");
 _city setVariable ["Name", _name];
 
 _name
