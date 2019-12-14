@@ -17,7 +17,7 @@
 
 private _cities = [];
 
-private _filter = "getText _x >> 'type' isEqualTo '%1'";
+private _filter = "getText (_x >> 'type') isEqualTo '%1'";
 
 {
     private _locations = format [_filter, _x] configClasses (configFile >> "CfgWorlds" >> worldName >> "Names");
