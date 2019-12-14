@@ -21,6 +21,7 @@ if (_city isEqualType configNull) then {
     _city = [getArray (_x >> 'position'), 10] call EFUNC(common,nearestLocation);
 };
 
+// Create city logic
 private _cityLogic = (createGroup sideLogic) createUnit ["LOGIC", position _city, [], 0, "CAN_COLLIDE"];
 _cityLogic setVariable ["Location", _city, true];
 _cityLogic setVariable ["Name", [_cityLogic] call FUNC(getCityName), true];
@@ -31,7 +32,4 @@ private _citySize = [_city] call EFUNC(common,getLocationType);
 [_cityLogic, _citySize] call FUNC(initCityCivilians);
 
 // Init vehicles
-private _cityVehicles = [_cityLogic, _citySize] call FUNC(initCityVehicles);
-private _cityVehiclesCount = count _cityVehicles;
-
 _cityLogic
