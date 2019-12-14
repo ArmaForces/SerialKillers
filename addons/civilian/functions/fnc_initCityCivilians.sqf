@@ -16,9 +16,9 @@
  * Public: No
  */
 
-params ["_cityLogic", "_citySize"];
+params ["_cityLogic", "_cityType"];
 
-private _cityCiviliansCount = switch (_citySize) do {
+private _cityCiviliansCount = switch (_cityType) do {
     case "NameCityCapital": {ceil (random (10))};
     case "NameCity": {ceil (random (8))};
     case "NameVillage": {ceil (random (6))};
