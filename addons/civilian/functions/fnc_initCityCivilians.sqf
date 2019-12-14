@@ -30,8 +30,8 @@ private _cityCivilians = [];
 _cityCiviliansCount = GVAR(civiliansCount) min _cityCiviliansCount;
 for "_y" from 1 to _cityCiviliansCount step 1 do {
     private _civilian = [_cityLogic] call FUNC(createCivilian);
+    [_civilian, _cityLogic] call FUNC(initCivilian);
     _cityCivilians pushBack _civilian;
-    GVAR(civilians) pushBack _civilian;
 };
 
 _cityCivilians

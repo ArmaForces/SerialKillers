@@ -23,10 +23,10 @@ _cityLogic setVariable ["Location", _city, true];
 private _citySize = [_city] call EFUNC(common, getLocationType);
 
 // Init civilians
-private _cityCivilians = [_cityLogic, _citySize] call FUNC(initCityCivilians);
-private _cityCiviliansCount = count _cityCivilians;
-_cityLogic setVariable ["CiviliansList", _cityCivilians];
-_cityLogic setVariable ["CiviliansCount", _cityCiviliansCount];
-GVAR(civiliansCount) = GVAR(civiliansCount) - _cityCiviliansCount;
+[_cityLogic, _citySize] call FUNC(initCityCivilians);
+
+// Init vehicles
+private _cityVehicles = [_cityLogic, _citySize] call FUNC(initCityVehicles);
+private _cityVehiclesCount = count _cityVehicles;
 
 _cityLogic
