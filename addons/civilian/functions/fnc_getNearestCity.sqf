@@ -22,18 +22,13 @@ if (_position isEqualType objNull) then {
     _position = getPos _position;
 };
 
-// Find nearest city location and city logic which should be on the same position.
+// Find nearest city location and corresponding city namespace
 _nearestTown = [_position] call EFUNC(common,nearestLocation);
 if (_nearestTown isEqualTo locationNull) then {
     // Try to increase radius first
     _nearestTown = [_position, 7500] call EFUNC(common,nearestLocation);
 };
 if (_nearestTown isEqualTo locationNull) exitWith {objNull};
-private _logic = nearestObject [position _nearestTown, "LOGIC"];
 
-// Check if logic has assigned found location to prevent returning non city logic
-if (_logic getVariable ["Location", locationNull] isEqualTo _nearestTown) then {
-    _logic
-} else {
-    objNull
-};
+// Return city namespace or objNull if not found
+[_nearestTown] call FUNC(getCityByLocation);

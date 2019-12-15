@@ -3,6 +3,7 @@ ADDON = false;
 #include "XEH_PREP.hpp"
 
 GVAR(cities) = [];
+GVAR(citiesLocations) = true call CBA_fnc_createNamespace;
 GVAR(civilians) = [];
 GVAR(civiliansCount) = 100 + floor (random (101));
 

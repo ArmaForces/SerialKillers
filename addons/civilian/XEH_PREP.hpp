@@ -1,5 +1,6 @@
 PREP(assignCityCivilian);
 PREP(createCivilian);
+PERP(getCityByLocation);
 PREP(getCityName);
 PREP(getNearestCity);
 PREP(initCity);

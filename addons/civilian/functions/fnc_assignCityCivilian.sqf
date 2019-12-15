@@ -5,7 +5,7 @@
  *
  * Arguments:
  * 0: Civilian <OBJECT>
- * 1: City <LOGIC>
+ * 1: City namespace <CBA_NAMESPACE>
  *
  * Return Value:
  * None
@@ -16,11 +16,11 @@
  * Public: No
  */
 
-params ["_civilian", "_cityLogic"];
+params ["_civilian", "_cityNamespace"];
 
-_cityCivilians = _cityLogic getVariable ["CiviliansList", []];
+_cityCivilians = _cityNamespace getVariable [QGVAR(CiviliansList), []];
 _cityCivilians pushBack _civilian;
 _cityCiviliansCount = count _cityCivilians;
-_cityLogic setVariable ["CiviliansList", _cityCivilians];
-_cityLogic setVariable ["CiviliansCount", _cityCiviliansCount];
-_civilian setVariable ["City", _cityLogic];
+_cityNamespace setVariable [QGVAR(CiviliansList), _cityCivilians];
+_cityNamespace setVariable [QGVAR(CiviliansCount), _cityCiviliansCount];
+_civilian setVariable [QGVAR(City), _cityNamespace];
