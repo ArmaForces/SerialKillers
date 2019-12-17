@@ -1,0 +1,1 @@
+#include "\z\afsk\addons\markers\script_component.hpp"
