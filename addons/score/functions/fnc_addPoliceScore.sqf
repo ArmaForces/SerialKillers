@@ -5,6 +5,7 @@
  *
  * Arguments:
  * 0: Score change <NUMBER>
+ * 1: Reason <STRING>
  *
  * Return Value:
  * 0: New score <NUMBER>
@@ -15,7 +16,7 @@
  * Public: No
  */
 
-params ["_scoreChange"];
+params ["_scoreChange", ["_reason", ""]];
 
 private _time = [daytime] call BIS_fnc_timeToString;
 
@@ -30,4 +31,4 @@ GVAR(policeScoreChange) = GVAR(policeScoreChange) + _scoreChange;
     };
 }, [GVAR(policeScoreChange)], 5] call CBA_fnc_waitAndExecute;
 
-call FUNC(showScore);
+[_reason] call FUNC(showScore);

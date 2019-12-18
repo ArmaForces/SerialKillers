@@ -1,10 +1,11 @@
 #include "script_component.hpp"
 /*
  * Author: 3Mydlo3
- * Function description
+ * Function shows current scores and recent changes.
+ * Can show additional text, eg. reason of change.
  *
  * Arguments:
- * None
+ * 0: Additional text <STRING>
  *
  * Return Value:
  * None
@@ -14,6 +15,8 @@
  *
  * Public: No
  */
+
+params [["_extraText", ""]];
 
 private _fnc_determineSign = {
     params ["_value"];
@@ -52,8 +55,10 @@ private _msg = composeText [
     lineBreak,
     _msgPolice,
     lineBreak,
-    _msgPoliceScore
+    _msgPoliceScore,
+    lineBreak,
+    _extraText
 ];
 _msg setAttributes ["valign", "center"];
 
-[QEGVAR(common,showMessage), [_msg, [4]]] call CBA_fnc_globalEvent;
+[QEGVAR(common,showMessage), [_msg, [5]]] call CBA_fnc_globalEvent;
