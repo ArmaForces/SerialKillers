@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="AFSK">
+    <Package name="Score">
+        <Key ID="STR_AFSK_Score_Display_Name">
+            <English>SerialKillers - Score</English>
+            <Polish>SerialKillers - Wynik</Polish>
+        </Key>
+        <Key ID="STR_AFSK_Score_IdleTimeoutsMax">
+            <English>Maximum number of timeouts</English>
+            <Polish>Maksymalna liczba przekroczeń limitu czasu</Polish>
+        </Key>
+        <Key ID="STR_AFSK_Score_IdleTimeoutsMax_Description">
+            <English>Killers lose if then exceed maximum idle time this many times. (-1 to disable)</English>
+            <Polish>Zabójcy przegrywają jeśli tyle razy przekroczą limit czasu pomiędzy zabójstwami. (-1 by wyłączyć)</Polish>
+        </Key>
+        <Key ID="STR_AFSK_Score_IdleTimeMax">
+            <English>Maximum time between kills</English>
+            <Polish>Maksymalny odstęp czasu pomiędzy zabójstwami</Polish>
+        </Key>
+        <Key ID="STR_AFSK_Score_IdleTimeMax_Description">
+            <English>When this time elapses police and killers can have their points adjusted. (-1 to disable)</English>
+            <Polish>Po upłynięciu tego czasu policja i zabójcy mogą mieć dodane/odjęte punkty. (-1 by wyłączyć)</Polish>
+        </Key>
+    </Package>
+</Project>
