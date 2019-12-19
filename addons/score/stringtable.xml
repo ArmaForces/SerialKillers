@@ -33,5 +33,21 @@
             <English>When this time elapses police and killers can have their points adjusted. (-1 to disable)</English>
             <Polish>Po upłynięciu tego czasu policja i zabójcy mogą mieć dodane/odjęte punkty. (-1 by wyłączyć)</Polish>
         </Key>
+        <Key ID="STR_AFSK_Score_IdleTimePoliceScoreChange">
+            <English>Police score change</English>
+            <Polish>Zmiana wyniku policji po przekroczeniu limitu czasu</Polish>
+        </Key>
+        <Key ID="STR_AFSK_Score_IdleTimePoliceScoreChange_Description">
+            <English>Police gets this many points on timeout.</English>
+            <Polish>Po upłynięciu maksymalnego czasu pomiędzy zabójstwami policja dostanie tyle punktów.</Polish>
+        </Key>
+        <Key ID="STR_AFSK_Score_IdleTimeKillersScoreChange">
+            <English>Killers score change</English>
+            <Polish>Zmiana wyniku zabójców po przekroczeniu limitu czasu</Polish>
+        </Key>
+        <Key ID="STR_AFSK_Score_IdleTimeKillersScoreChange_Description">
+            <English>Killers get this many points on timeout.</English>
+            <Polish>Po upłynięciu maksymalnego czasu pomiędzy zabójstwami policja dostanie tyle punktów.</Polish>
+        </Key>
     </Package>
 </Project>

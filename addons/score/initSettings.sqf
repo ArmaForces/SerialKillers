@@ -31,3 +31,25 @@
     true
 ] call CBA_fnc_addSetting;
 
+[
+    QGVAR(idleTimePoliceScoreChange),
+    "SLIDER",
+    [LSTRING(idleTimePoliceScoreChange), LSTRING(idleTimePoliceScoreChange_Description)],
+    [LSTRING(DisplayName), LSTRING(IdleTime)],
+    [-10, 10, 5, 0],
+    true,
+    {},
+    true
+] call CBA_fnc_addSetting;
+
+[
+    QGVAR(idleTimeKillersScoreChange),
+    "SLIDER",
+    [LSTRING(idleTimeKillersScoreChange), LSTRING(idleTimeKillersScoreChange_Description)],
+    [LSTRING(DisplayName), LSTRING(IdleTime)],
+    [-10, 10, 0, 0],
+    true,
+    {},
+    true
+] call CBA_fnc_addSetting;
+
