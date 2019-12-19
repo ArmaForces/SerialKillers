@@ -5,6 +5,14 @@
             <English>SerialKillers - Score</English>
             <Polish>SerialKillers - Wynik</Polish>
         </Key>
+        <Key ID="STR_AFSK_Score_KillersScoreMax">
+            <English>Killers score target</English>
+            <Polish>Maksymalny wynik zabójców</Polish>
+        </Key>
+        <Key ID="STR_AFSK_Score_KillersScoreMax_Description">
+            <English>When killers reach given score, they win.</English>
+            <Polish>Zabójcy wygrywają, gdy osiągną wskazany wynik.</Polish>
+        </Key>
         <Key ID="STR_AFSK_Score_IdleTimeoutsMax">
             <English>Maximum number of timeouts</English>
             <Polish>Maksymalna liczba przekroczeń limitu czasu</Polish>

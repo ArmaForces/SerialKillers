@@ -1,6 +1,15 @@
 #include "script_component.hpp"
 
 [
+    QGVAR(killersScoreMax),
+    "SLIDER",
+    [LSTRING(KillersScoreMax), LSTRING(KillersScoreMax_Description)],
+    LSTRING(DisplayName),
+    [10, 200, 50, 0],
+    true
+] call CBA_fnc_addSetting;
+
+[
     QGVAR(idleTimeMax),
     "SLIDER",
     [LSTRING(IdleTimeMax), LSTRING(IdleTimeMax_Description)],
