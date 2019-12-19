@@ -18,9 +18,8 @@
 
 params ["_civilian", "_cityNamespace"];
 
+// Get city civilians array and pushback new civilian. No need for setVariable as getVariable returns array pointer.
 _cityCivilians = _cityNamespace getVariable [QGVAR(CiviliansList), []];
 _cityCivilians pushBack _civilian;
-_cityCiviliansCount = count _cityCivilians;
-_cityNamespace setVariable [QGVAR(CiviliansList), _cityCivilians];
-_cityNamespace setVariable [QGVAR(CiviliansCount), _cityCiviliansCount];
+_cityNamespace setVariable [QGVAR(CiviliansCount), count _cityCivilians];
 _civilian setVariable [QGVAR(City), _cityNamespace];
