@@ -24,7 +24,7 @@ if (_cityLocation isEqualType configNull) then {
 
 // Create city namespace
 private _cityNamespace = true call CBA_fnc_createNamespace;
-GVAR(citiesLocations) setVariable [className _cityLocation, _cityNamespace];
+GVAR(citiesLocations) setVariable [className _cityLocation, _cityNamespace, true];
 _cityNamespace setVariable [QGVAR(Location), _cityLocation, true];
 _cityNamespace setVariable [QGVAR(Name), [_cityLocation] call FUNC(getCityName), true];
 _cityNamespace setVariable [QGVAR(Position), (position _cityLocation) set [3, 0], true];
