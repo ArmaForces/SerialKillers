@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 /*
- * Author: 3Mydlo3, veteran29
+ * Author: 3Mydlo3
  * BFT loop
  *
  * Arguments:
@@ -10,7 +10,7 @@
  * None
  *
  * Example:
- * [] call afm_friendly_tracker_fnc_loop
+ * call afsk_markers_fnc_loop
  *
  * Public: No
  */
@@ -20,8 +20,7 @@
     private _civilian = _x;
     private _marker = _civilian getVariable [QGVAR(marker), ""];
     if (_marker isEqualTo "") then {
-        _marker = [_civilian] call FUNC(createMarker);
-        _civilian setVariable [QGVAR(marker), _marker];
+        _marker = [_civilian] call FUNC(createCivilianMarker);
     };
     _marker setMarkerPosLocal (position _civilian);
 } foreach EGVAR(civilian,civilians);
