@@ -39,5 +39,18 @@ if (playerSide isEqualTo WEST) then {
     } forEach allPlayers select {side _x isEqualTo WEST};
 };
 
+// Move marker for every killer
+if (playerSide isEqualTo EAST) then {
+    {
+        private _killer = _x;
+        private _marker = _killer getVariable [QGVAR(marker), ""];
+        if (_marker isEqualTo "") then {
+            _marker = [_killer] call FUNC(createKillerMarker);
+        } else {
+            _marker setMarkerPosLocal (position _killer);
+        };
+    } forEach allPlayers select {side _x isEqualTo EAST};
+};
+
 // Schedule next loop
 [FUNC(loop), [], GVAR(refreshRate)] call CBA_fnc_waitAndExecute;
