@@ -17,7 +17,7 @@ if (isServer) then {
         GVAR(cities) pushBack ([_x] call FUNC(initCity));
     } forEach EGVAR(common,cities);
 
-    publicVariable QUOTE(GVAR(cities));
+    publicVariable QGVAR(cities);
 };
 
 ADDON = true;
