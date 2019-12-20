@@ -22,7 +22,4 @@ GVAR(idleTimeouts) = 0;
 // Mission end flag
 GVAR(missionEnd) = -1;
 
-[WEST, 0] call BIS_fnc_respawnTickets;
-[EAST, 0] call BIS_fnc_respawnTickets;
-
 ADDON = true;
