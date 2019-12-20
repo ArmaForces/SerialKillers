@@ -17,6 +17,10 @@
             <English>Timeout between kills</English>
             <Polish>Odstęp czasu pomiędzy zabójstwami</Polish>
         </Key>
+        <Key ID="STR_AFSK_Score_idleTime_Inital_Message">
+            <English>From now on killers must keep killing within %1 minutes since last kill or they will face penalty.</English>
+            <Polish>Od tego momentu zabójcy muszą zabić w ciągu %1 minut od ostatniego zabójstwa albo otrzymają karę.</Polish>
+        </Key>
         <Key ID="STR_AFSK_Score_IdleTimeoutsMax">
             <English>Maximum number of timeouts</English>
             <Polish>Maksymalna liczba przekroczeń limitu czasu</Polish>
