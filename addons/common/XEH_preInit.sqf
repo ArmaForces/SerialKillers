@@ -8,6 +8,6 @@ if (isServer) then {
     GVAR(musicQueue) = [];
 
     GVAR(cities) = call FUNC(getAllMapCities);
-}
+};
 
 ADDON = true;
