@@ -26,9 +26,9 @@ if (isServer) then {
             lineBreak,
             text format ["%1: %2", ELSTRING(killers,Killers), GVAR(idleTimeKillersScoreChange)],
             lineBreak,
-            text format ["%1: %2", ELSTRING(police,Police), GVAR(idleTimePoliceScoreChange)],
+            text format ["%1: %2", ELSTRING(police,Police), GVAR(idleTimePoliceScoreChange)]
         ];
-        _msg setAttributes ["valign", "center"];
+        _msg = _msg setAttributes ["valign", "center"];
         [QEGVAR(common,showMessage), [_msg, [3]]] call CBA_fnc_globalEvent;
         call FUNC(monitorTimeouts);
     }, [], GVAR(idleTimeMax)] call CBA_fnc_waitAndExecute;

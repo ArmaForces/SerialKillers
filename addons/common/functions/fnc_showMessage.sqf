@@ -19,7 +19,7 @@
 params ["_msg", ["_additionalParams", []]];
 
 if (GVAR(ACE_Loaded)) then {
-    _additionalParams params [["_size", 1.5], ["_target", ACE_player], ["_width", 10]]
+    _additionalParams params [["_size", 1.5], ["_target", ACE_player], ["_width", 10]];
     [_msg, _size, _target, _width] call ACE_common_fnc_displayTextStructured;
 } else {
     hint _msg;
