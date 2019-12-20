@@ -2,6 +2,10 @@
 
 if (isServer) then {
     /* Serverside events */
+    [QGVAR(endMission), {
+        _this call FUNC(endMission);
+    }] call CBA_fnc_addEventHandler;
+
     [QGVAR(scoreChanged), {
         params ["_side", "_change", ["_reason", ""]];
         if (_side isEqualTo WEST) then {

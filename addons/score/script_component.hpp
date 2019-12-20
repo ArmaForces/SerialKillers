@@ -12,3 +12,7 @@
 #endif
 
 #include "\z\afsk\addons\main\script_macros.hpp"
+
+#define KILLERS_SCORE_REACHED 0
+#define KILLERS_DEAD 1
+#define MAXIMUM_TIMEOUT_REACHED 2

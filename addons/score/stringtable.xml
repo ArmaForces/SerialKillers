@@ -53,5 +53,25 @@
             <English>Killers get this many points on timeout.</English>
             <Polish>Po upłynięciu maksymalnego czasu pomiędzy zabójstwami policja dostanie tyle punktów.</Polish>
         </Key>
+        <Key ID="STR_AFSK_Score_Killers_Win">
+            <English>Killers win!</English>
+            <Polish>Zabójcy wygrywają!</Polish>
+        </Key>
+        <Key ID="STR_AFSK_Score_Police_Win">
+            <English>Police wins!</English>
+            <Polish>Policja wygrywa!</Polish>
+        </Key>
+        <Key ID="STR_AFSK_Score_Killers_Score_Reached">
+            <English>Score limit reached</English>
+            <Polish>Osiągnięty limit wyniku</Polish>
+        </Key>
+        <Key ID="STR_AFSK_Score_Killers_Dead">
+            <English>All killers are either dead or in custody.</English>
+            <Polish>Wszyscy zabójcy są martwi albo w więzieniu.</Polish>
+        </Key>
+        <Key ID="STR_AFSK_Score_Timeout_Limit">
+            <English>Timeouts limit reached</English>
+            <Polish>Osiągnięty limit przekroczeń limitu czasu</Polish>
+        </Key>
     </Package>
 </Project>
