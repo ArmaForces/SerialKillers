@@ -21,9 +21,23 @@
     private _marker = _civilian getVariable [QGVAR(marker), ""];
     if (_marker isEqualTo "") then {
         _marker = [_civilian] call FUNC(createCivilianMarker);
+    } else {
+        _marker setMarkerPosLocal (position _civilian);
     };
-    _marker setMarkerPosLocal (position _civilian);
 } foreach EGVAR(civilian,civilians);
+
+// Move marker for every cop
+if (playerSide isEqualTo WEST) then {
+    {
+        private _cop = _x;
+        private _marker = _cop getVariable [QGVAR(marker), ""];
+        if (_marker isEqualTo "") then {
+            _marker = [_cop] call FUNC(createCopMarker);
+        } else {
+            _marker setMarkerPosLocal (position _cop);
+        };
+    } forEach allPlayers select {side _x isEqualTo WEST};
+};
 
 // Schedule next loop
 [FUNC(loop), [], GVAR(refreshRate)] call CBA_fnc_waitAndExecute;
