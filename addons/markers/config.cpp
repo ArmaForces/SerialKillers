@@ -7,9 +7,9 @@ class CfgPatches {
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {
-            "afm_civilian",
-            "afm_killers",
-            "afm_police"
+            "afsk_civilian",
+            "afsk_killers",
+            "afsk_police"
         };
         author = "ArmaForces";
         VERSION_CONFIG;
