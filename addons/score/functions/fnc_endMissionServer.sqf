@@ -1,7 +1,7 @@
 #include "script_component.hpp"
 /*
  * Author: 3Mydlo3
- * Function end scenario.
+ * Function ends scenario on server.
  *
  * Arguments:
  * 0: End type <NUMBER>
@@ -10,29 +10,33 @@
  * None
  *
  * Example:
- * [0] call afsk_score_fnc_endMission
+ * [0] call afsk_score_fnc_endMissionServer
  *
  * Public: No
  */
 
 params ["_endType"];
 
+// Check if mission has already ended to prevent triggering multiple times
+if !(GVAR(missionEnd) isEqualTo -1) exitWith {};
+GVAR(missionEnd) = _endType;
+
 switch (_endType) do {
     // 0
     case KILLERS_SCORE_REACHED: {
-        QGVAR(killersScoreReached) call BIS_fnc_endMissionServer;
+
     };
     // 1
     case KILLERS_DEAD: {
-        QGVAR(killersDead) call BIS_fnc_endMissionServer;
+
     };
     // 2
     case MAXIMUM_TIMEOUT_REACHED: {
-        QGVAR(timeoutLimit) call BIS_fnc_endMissionServer;
+
     };
     default {
-        "SideScore" call BIS_fnc_endMissionServer;
+
     };
 };
 
-
+[QGVAR(emptyEnd), true] call BIS_fnc_endMission;

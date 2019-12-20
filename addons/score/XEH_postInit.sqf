@@ -3,7 +3,7 @@
 if (isServer) then {
     /* Serverside events */
     [QGVAR(endMission), {
-        _this call FUNC(endMission);
+        _this call FUNC(endMissionServer);
     }] call CBA_fnc_addEventHandler;
 
     [QGVAR(scoreChanged), {
@@ -37,6 +37,10 @@ if (isServer) then {
 
 if (hasInterface) then {
     /* Clientside events */
+    [QGVAR(endMission), {
+        _this call FUNC(endMissionClient);
+    }] call CBA_fnc_addEventHandler;
+
     [QGVAR(showScore), {
         _this call FUNC(showScore);
     }] call CBA_fnc_addEventHandler;

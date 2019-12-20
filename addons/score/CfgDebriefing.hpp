@@ -1,13 +1,17 @@
 class CfgDebriefing {
-    class GVAR(killersScoreReached) {
-        title = CSTRING(Killers_Win);
-        subtitle = CSTRING(Killers_Score_Reached);
+    class GVAR(emptyEnd) {
+        title = "";
+        subtitle = "";
         description = "";
         pictureBackground = "";
         picture = "";
         pictureColor[] = {0.0, 0.0, 0.0, 0.0};
     };
-    class GVAR(killersDead): GVAR(killersScoreReached) {
+    class GVAR(killersScoreReached): GVAR(emptyEnd) {
+        title = CSTRING(Killers_Win);
+        subtitle = CSTRING(Killers_Score_Reached);
+    };
+    class GVAR(killersDead): GVAR(emptyEnd) {
         title = CSTRING(Police_Win);
         subtitle = CSTRING(Killers_Dead);
     };

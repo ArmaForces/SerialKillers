@@ -1,5 +1,6 @@
 PREP(addKillersScore);
 PREP(addPoliceScore);
-PREP(endMission);
+PREP(endMissionClient);
+PREP(endMissionServer);
 PREP(monitorTimeouts);
 PREP(showScore);
