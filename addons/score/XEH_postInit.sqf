@@ -28,7 +28,7 @@ if (isServer) then {
             lineBreak,
             text format ["%1: %2", ELSTRING(police,Police), GVAR(idleTimePoliceScoreChange)]
         ];
-        _msg = _msg setAttributes ["valign", "center"];
+        _msg setAttributes ["valign", "middle"];
         [QEGVAR(common,showMessage), [_msg, [3]]] call CBA_fnc_globalEvent;
         call FUNC(monitorTimeouts);
     }, [], GVAR(idleTimeMax)] call CBA_fnc_waitAndExecute;
