@@ -17,6 +17,10 @@
 
 params ["_endType"];
 
+// Check if mission has already ended to prevent triggering multiple times
+if !(GVAR(missionEnd) isEqualTo -1) exitWith {};
+GVAR(missionEnd) = _endType;
+
 switch (_endType) do {
     // 0
     case KILLERS_SCORE_REACHED: {
