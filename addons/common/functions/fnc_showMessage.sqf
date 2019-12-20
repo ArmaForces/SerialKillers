@@ -1,17 +1,17 @@
 #include "script_component.hpp"
 /*
- * Author: <author>
- * Function description
+ * Author: 3Mydlo3
+ * Function shows message to local player. Uses ACE function if available.
  *
  * Arguments:
- * 0: Objects <ARRAY>
- * 1: All <BOOL>
+ * 0: Message <STRING>
+ * 1: Additional params for ACE function <ARRAY>
  *
  * Return Value:
  * None
  *
  * Example:
- * [[bob, ted], false] call afsk_main_fnc_example
+ * ["Message"] call afsk_common_fnc_showMessage
  *
  * Public: No
  */
