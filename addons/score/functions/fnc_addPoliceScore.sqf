@@ -22,12 +22,15 @@ private _time = [daytime] call BIS_fnc_timeToString;
 
 // Change police score
 GVAR(policeScore) = GVAR(policeScore) + _scoreChange;
+publicVariable QGVAR(policeScore);
 [WEST, _scoreChange] call BIS_fnc_respawnTickets;
 
 GVAR(policeScoreChange) = GVAR(policeScoreChange) + _scoreChange;
+publicVariable QGVAR(policeScoreChange);
 [{
     if (GVAR(policeScoreChange) isEqualTo (_this select 0)) then {
         GVAR(policeScoreChange) = 0;
+        publicVariable QGVAR(policeScoreChange);
     };
 }, [GVAR(policeScoreChange)], 5] call CBA_fnc_waitAndExecute;
 

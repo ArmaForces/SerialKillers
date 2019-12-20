@@ -22,12 +22,15 @@ private _time = [daytime] call BIS_fnc_timeToString;
 
 // Change killers score
 GVAR(killersScore) = GVAR(killersScore) + _scoreChange;
+publicVariable QGVAR(killersScore);
 [EAST, _scoreChange] call BIS_fnc_respawnTickets;
 
 GVAR(killersScoreChange) = GVAR(killersScoreChange) + _scoreChange;
+publicVariable QGVAR(killersScoreChange);
 [{
     if (GVAR(killersScoreChange) isEqualTo (_this select 0)) then {
         GVAR(killersScoreChange) = 0;
+        publicVariable QGVAR(killersScoreChange);
     };
 }, [GVAR(killersScoreChange)], 5] call CBA_fnc_waitAndExecute;
 
