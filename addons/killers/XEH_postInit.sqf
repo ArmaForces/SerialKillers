@@ -6,6 +6,10 @@ if (hasInterface) then {
         _this call FUNC(createTeleport);
     }] call CBA_fnc_addEventHandler;
 
+    [QGVAR(showMsg), {
+        params ["_msg"];
+        [EAST, "HQ"] sideChat _msg;
+    }] call CBA_fnc_addEventHandler;
 };
 
 [QGVAR(teleport), {
