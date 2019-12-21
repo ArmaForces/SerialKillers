@@ -14,7 +14,7 @@
     "SLIDER",
     [LSTRING(TimeLimit), LSTRING(TimeLimit_Description)],
     [LSTRING(DisplayName), LSTRING(TimeLimit)],
-    [-1, 120, 60, 0],
+    [-1, 120, 45, 0],
     true,
     {},
     true
@@ -31,10 +31,10 @@
 
 [
     QGVAR(timeLimitExtraTime),
-    "CHECKBOX",
+    "SLIDER",
     [LSTRING(TimeLimit_ExtraTime), LSTRING(TimeLimit_ExtraTime_Description)],
     [LSTRING(DisplayName), LSTRING(TimeLimit)],
-    false,
+    [-1, 120, 15, 0],
     true
 ] call CBA_fnc_addSetting;
 
