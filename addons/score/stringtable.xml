@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="AFSK">
     <Package name="Score">
-        <Key ID="STR_AFSK_Score_Display_Name">
+        <Key ID="STR_AFSK_Score_DisplayName">
             <English>SerialKillers - Score</English>
             <Polish>SerialKillers - Wynik</Polish>
         </Key>
