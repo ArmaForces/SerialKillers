@@ -93,6 +93,14 @@
             <English>Police instantly wins scenario. Overrides everything in this category.</English>
             <Polish>Natychmiast kończy scenariusz zwycięstwem policji. Pozostałe ustawienia nie mają żadnego wpływu.</Polish>
         </Key>
+        <Key ID="STR_AFSK_Score_TimeLimit_ExtraTime">
+            <English>Maximum extra time duration</English>
+            <Polish>Maksymalna długość dogrywki</Polish>
+        </Key>
+        <Key ID="STR_AFSK_Score_TimeLimit_ExtraTime_Description">
+            <English>After this additional time mission instantly ends with police victory.</English>
+            <Polish>Po tym dodatkowym czasie misja kończy się Natychmiastowym zwycięstwem policji.</Polish>
+        </Key>
         <Key ID="STR_AFSK_Score_TimeLimit_IdleTime_Description">
             <English>Maximum timeout is adjusted to this value.</English>
             <Polish>Maksymalny odstęp czasu między zabójstwami zostaje zmieniony do tej wartości.</Polish>

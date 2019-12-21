@@ -22,4 +22,7 @@
     GVAR(idleTimeMax) = GVAR(timeLimitIdleTime);
     GVAR(idleTimeouts) = 0;
     GVAR(idleTimeoutsMax) = GVAR(timeLimitIdleTimeoutsMax);
+    [{
+        [QGVAR(endMission), [TIME_LIMIT_REACHED]] call CBA_fnc_globalEvent;
+    }, [], (GVAR(timeLimitExtraTime) * 60)] call CBA_fnc_waitAndExecute;
 }, [], (GVAR(timeLimit) * 60)] call CBA_fnc_waitAndExecute;
