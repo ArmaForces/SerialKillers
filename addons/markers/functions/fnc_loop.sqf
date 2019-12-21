@@ -40,17 +40,26 @@ if (playerSide isEqualTo WEST) then {
 };
 
 // Move marker for every killer
-if (playerSide isEqualTo EAST) then {
-    {
-        private _killer = _x;
-        private _marker = _killer getVariable [QGVAR(marker), ""];
+{
+    private _killer = _x;
+    private _hidden = !([_killer] call EFUNC(common,appearsArmed));
+    private _marker = _killer getVariable [QGVAR(marker), ""];
+    // Check if player should be able to see killer's marker
+    if (playerSide isEqualTo EAST || {_hidden}) then {
         if (_marker isEqualTo "") then {
-            _marker = [_killer] call FUNC(createKillerMarker);
+            _marker = [_killer, _hidden] call FUNC(createKillerMarker);
         } else {
             _marker setMarkerPosLocal (position _killer);
         };
-    } forEach allPlayers select {side _x isEqualTo EAST};
-};
+        if (_hidden) then {
+            _marker setMarkerColorLocal "ColorGreen";
+        };
+    } else {
+        if !(playerSide isEqualTo EAST && {!(_marker isEqualTo "")}) then {
+            deleteMarkerLocal _marker;
+        };
+    };
+} forEach allPlayers select {side _x isEqualTo EAST};
 
 // Schedule next loop
 [FUNC(loop), [], GVAR(refreshRate)] call CBA_fnc_waitAndExecute;
