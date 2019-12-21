@@ -17,7 +17,7 @@
 
 if (GVAR(idleTimeoutsMax) isEqualTo -1 || {(GVAR(idleTimeMax)) <= 0}) exitWith {};
 
-if (GVAR(idleTimeouts) > GVAR(idleTimeoutsMax)) exitWith {
+if (GVAR(idleTimeouts) >= GVAR(idleTimeoutsMax)) exitWith {
     // Killers lose
     [QGVAR(endMission), [MAXIMUM_TIMEOUT_REACHED]] call CBA_fnc_serverEvent;
 };

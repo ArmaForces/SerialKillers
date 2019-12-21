@@ -52,7 +52,7 @@
     "SLIDER",
     [LSTRING(IdleTimeoutsMax), LSTRING(TimeLimit_IdleTimeoutsMax_Description)],
     [LSTRING(DisplayName), LSTRING(TimeLimit)],
-    [-1, 10, 0, 0],
+    [-1, 10, 1, 0],
     true
 ] call CBA_fnc_addSetting;
 
@@ -72,7 +72,7 @@
     "SLIDER",
     [LSTRING(IdleTimeoutsMax), LSTRING(IdleTimeoutsMax_Description)],
     [LSTRING(DisplayName), LSTRING(IdleTime)],
-    [-1, 10, 2, 0],
+    [-1, 10, 3, 0],
     true,
     {},
     true
