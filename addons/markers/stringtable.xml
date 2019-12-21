@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="AFSK">
     <Package name="Markers">
-        <Key ID="STR_AFSK_Markers_Display_Name">
+        <Key ID="STR_AFSK_Markers_DisplayName">
             <English>SerialKillers Markers</English>
             <Polish>SerialKillers Markery</Polish>
         </Key>
