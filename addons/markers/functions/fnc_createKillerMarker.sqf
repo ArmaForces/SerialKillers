@@ -18,7 +18,7 @@
 
 params ["_killer", ["_hidden", false]];
 
-private _marker = format["civilian_%1", _killer];
+private _marker = format["killer_%1", name _killer];
 createMarkerLocal [_marker, getPos _killer];
 _marker setMarkerTypeLocal "mil_dot";
 _marker setMarkerSizeLocal [0.5, 0.5];

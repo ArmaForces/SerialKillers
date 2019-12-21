@@ -17,7 +17,7 @@
 
 params ["_cop"];
 
-private _marker = format["civilian_%1", _cop];
+private _marker = format["cop_%1", name _cop];
 createMarkerLocal [_marker, getPos _cop];
 _marker setMarkerTypeLocal "mil_dot";
 _marker setMarkerSizeLocal [0.5, 0.5];
