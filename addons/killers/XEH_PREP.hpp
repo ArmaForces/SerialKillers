@@ -1,1 +1,2 @@
 PREP(createTeleport);
+PREP(initKillersBase);

@@ -1,8 +1,12 @@
 #include "script_component.hpp"
 
-[QGVAR(createTeleport), {
-    _this call FUNC(createTeleport);
-}] call CBA_fnc_addEventHandler;
+if (hasInterface) then {
+    [QGVAR(createTeleport), {
+        if !(playerSide isEqualTo EAST) exitWith {};
+        _this call FUNC(createTeleport);
+    }] call CBA_fnc_addEventHandler;
+
+};
 
 [QGVAR(teleport), {
     params ["_teleporter", "_caller", "_destination"];
