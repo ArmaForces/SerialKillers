@@ -37,6 +37,11 @@ switch (_endType) do {
         private _win = if (playerSide isEqualTo WEST) then {true} else {false};
         [QGVAR(timeoutLimit), _win, nil, false] call BIS_fnc_endMission;
     };
+    // 3
+    case TIME_LIMIT_REACHED: {
+        private _win = if (playerSide isEqualTo WEST) then {true} else {false};
+        [QGVAR(timeoutLimit), _win, nil, false] call BIS_fnc_endMission;
+    };
     default {
         [QGVAR(emptyEnd), true] call BIS_fnc_endMission;
     };

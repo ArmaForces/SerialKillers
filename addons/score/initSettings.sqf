@@ -10,6 +10,44 @@
 ] call CBA_fnc_addSetting;
 
 [
+    QGVAR(timeLimit),
+    "SLIDER",
+    [LSTRING(TimeLimit), LSTRING(TimeLimit_Description)],
+    [LSTRING(DisplayName), LSTRING(TimeLimit)],
+    [-1, 120, 60, 0],
+    true,
+    {},
+    true
+] call CBA_fnc_addSetting;
+
+[
+    QGVAR(timeLimitInstantEnd),
+    "CHECKBOX",
+    [LSTRING(TimeLimit_InstantEnd), LSTRING(TimeLimit_InstantEnd_Description)],
+    [LSTRING(DisplayName), LSTRING(TimeLimit)],
+    false,
+    true
+] call CBA_fnc_addSetting;
+
+[
+    QGVAR(timeLimitIdleTime),
+    "SLIDER",
+    [LSTRING(IdleTimeMax), LSTRING(TimeLimit_IdleTime_Description)],
+    [LSTRING(DisplayName), LSTRING(TimeLimit)],
+    [-1, 900, 150, 0],
+    true
+] call CBA_fnc_addSetting;
+
+[
+    QGVAR(timeLimitIdleTimeoutsMax),
+    "SLIDER",
+    [LSTRING(IdleTimeoutsMax), LSTRING(TimeLimit_IdleTimeoutsMax_Description)],
+    [LSTRING(DisplayName), LSTRING(TimeLimit)],
+    [-1, 10, 0, 0],
+    true
+] call CBA_fnc_addSetting;
+
+[
     QGVAR(idleTimeMax),
     "SLIDER",
     [LSTRING(IdleTimeMax), LSTRING(IdleTimeMax_Description)],
@@ -25,7 +63,7 @@
     "SLIDER",
     [LSTRING(IdleTimeoutsMax), LSTRING(IdleTimeoutsMax_Description)],
     [LSTRING(DisplayName), LSTRING(IdleTime)],
-    [-1, 10, 3, 0],
+    [-1, 10, 2, 0],
     true,
     {},
     true

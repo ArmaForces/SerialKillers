@@ -34,6 +34,10 @@ switch (_endType) do {
     case MAXIMUM_TIMEOUT_REACHED: {
 
     };
+    // 3
+    case TIME_LIMIT_REACHED: {
+
+    };
     default {
 
     };

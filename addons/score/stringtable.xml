@@ -77,5 +77,29 @@
             <English>Timeouts limit reached</English>
             <Polish>Osiągnięty limit przekroczeń limitu czasu</Polish>
         </Key>
+        <Key ID="STR_AFSK_Score_TimeLimit">
+            <English>Mission time limit</English>
+            <Polish>Limit czasu misji</Polish>
+        </Key>
+        <Key ID="STR_AFSK_Score_TimeLimit_Description">
+            <English>After this time (in minutes) rules change accordingly to other settings in this category.</English>
+            <Polish>Po tym czasie (w minutach) zasady zmieniają się zgodnie z innymi ustawieniami w tej kategorii.</Polish>
+        </Key>
+        <Key ID="STR_AFSK_Score_TimeLimit_InstantEnd">
+            <English>Instant lose</English>
+            <Polish>Natychmiastowa przegrana</Polish>
+        </Key>
+        <Key ID="STR_AFSK_Score_TimeLimit_InstantEnd_Description">
+            <English>Police instantly wins scenario. Overrides everything in this category.</English>
+            <Polish>Natychmiast kończy scenariusz zwycięstwem policji. Pozostałe ustawienia nie mają żadnego wpływu.</Polish>
+        </Key>
+        <Key ID="STR_AFSK_Score_TimeLimit_IdleTime_Description">
+            <English>Maximum timeout is adjusted to this value.</English>
+            <Polish>Maksymalny odstęp czasu między zabójstwami zostaje zmieniony do tej wartości.</Polish>
+        </Key>
+        <Key ID="STR_AFSK_Score_TimeLimit_IdleTimeoutsMax_Description">
+            <English>Maximum number of timeouts is adjusted to this value.</English>
+            <Polish>Maksymalna liczba przekroczeń limitu czasu zostaje zmieniona do tej wartości.</Polish>
+        </Key>
     </Package>
 </Project>
