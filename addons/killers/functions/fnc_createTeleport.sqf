@@ -21,5 +21,8 @@ params ["_flag"];
     private _destinationName = _x getVariable ["LocationName", "Teleport"];
     _flag addAction [_destinationName, {
         [GVAR(teleport), [_this select 0, _this select 1, _this select 3 select 0]] call CBA_fnc_serverEvent;
+        call FUNC(deleteStartPositionsMarkers);
+        removeAllActions (_this select 0);
     }, [_x]];
+    [_x] call FUNC(createStartPositionMarker);
 } forEach EGVAR(modules,killersStartPositions);
