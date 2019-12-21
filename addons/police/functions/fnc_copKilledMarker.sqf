@@ -26,6 +26,6 @@ _marker setMarkerColor "ColorWEST";
 _marker setMarkerSize [0.4, 0.4];
 _marker setMarkerText _markerText;
 
-[_marker] call EFUNC(common, markerDecay);
+[_marker] call EFUNC(common,markerDecay);
 
 _marker

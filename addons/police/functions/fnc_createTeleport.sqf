@@ -25,4 +25,4 @@ private _logic = _flag getVariable ["policeStation"];
             [GVAR(teleport), [_this select 0, _this select 1, _this select 3 select 0]] call CBA_fnc_serverEvent;
         }, [_x]];
     };
-} forEach EGVAR(modules, policeStations);
+} forEach EGVAR(modules,policeStations);
