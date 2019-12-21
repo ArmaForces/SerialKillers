@@ -48,6 +48,23 @@ class CfgVehicles {
         class ModuleDescription: ModuleDescription {};
     };
 
+    class GVAR(moduleKillersBase): Module_F {
+        scope = 2;
+        displayName = CSTRING(Killers_Base);
+        category = QUOTE(PREFIX);
+        function = QFUNC(moduleKillersBase);
+        functionPriority = 1;
+        isGlobal = 0;
+        isTriggerActivated = 0;
+        isDisposable = 1;
+        is3DEN = 0;
+
+        class Attributes: AttributesBase {
+            class ModuleDescription: ModuleDescription {};
+        };
+        class ModuleDescription: ModuleDescription {};
+    };
+
     class GVAR(moduleKillersStart): Module_F {
         scope = 2;
         displayName = CSTRING(Killers_Start);
