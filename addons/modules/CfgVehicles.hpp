@@ -70,4 +70,21 @@ class CfgVehicles {
         };
         class ModuleDescription: ModuleDescription {};
     };
+
+    class GVAR(moduleKillersStash): Module_F {
+        scope = 2;
+        displayName = CSTRING(Killers_Stash);
+        category = QUOTE(PREFIX);
+        function = QFUNC(moduleKillersStash);
+        functionPriority = 1;
+        isGlobal = 0;
+        isTriggerActivated = 0;
+        isDisposable = 1;
+        is3DEN = 0;
+
+        class Attributes: AttributesBase {
+            class ModuleDescription: ModuleDescription {};
+        };
+        class ModuleDescription: ModuleDescription {};
+    };
 };
