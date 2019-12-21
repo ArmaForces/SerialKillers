@@ -4,6 +4,4 @@ ADDON = false;
 
 #include "initSettings.sqf"
 
-call FUNC(loop);
-
 ADDON = true;
