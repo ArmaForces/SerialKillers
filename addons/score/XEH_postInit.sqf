@@ -21,7 +21,7 @@ if (isServer) then {
     if (GVAR(idleTimeMax) isEqualTo -1) exitWith {};
     [{
         private _msg = composeText [
-            text format [LSTRING(idleTime_Inital_Message), (GVAR(IdleTimeMax) / 60) toFixed 1],
+            text format [LSTRING(IdleTime_Inital_Message), (GVAR(IdleTimeMax) / 60) toFixed 1],
             lineBreak,
             lineBreak,
             text format ["%1: %2", ELSTRING(killers,Killers), GVAR(idleTimeKillersScoreChange)],
