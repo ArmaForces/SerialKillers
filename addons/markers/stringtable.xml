@@ -2,12 +2,12 @@
 <Project name="AFSK">
     <Package name="Markers">
         <Key ID="STR_AFSK_Markers_DisplayName">
-            <English>SerialKillers Markers</English>
-            <Polish>SerialKillers Markery</Polish>
+            <English>SerialKillers - Markers</English>
+            <Polish>SerialKillers - Markery</Polish>
         </Key>
         <Key ID="STR_AFSK_Markers_RefreshRate">
-            <English>Refresh Rate</English>
-            <Polish>Częstotliwość odświeżania</Polish>
+            <English>Refresh Rate (s)</English>
+            <Polish>Częstotliwość odświeżania (s)</Polish>
         </Key>
         <Key ID="STR_AFSK_Markers_RefreshRate_Description">
             <English>Controls how often markers are updated.</English>
