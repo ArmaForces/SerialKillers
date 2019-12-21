@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="AFSK">
+    <Package name="Markers">
+        <Key ID="STR_AFSK_Markers_Display_Name">
+            <English>SerialKillers Markers</English>
+            <Polish>SerialKillers Markery</Polish>
+        </Key>
+        <Key ID="STR_AFSK_Markers_RefreshRate">
+            <English>Refresh Rate</English>
+            <Polish>Częstotliwość odświeżania</Polish>
+        </Key>
+        <Key ID="STR_AFSK_Markers_RefreshRate_Description">
+            <English>Controls how often markers are updated.</English>
+            <Polish>Kontroluje jak często markery są aktualizowane.</Polish>
+        </Key>
+    </Package>
+</Project>
