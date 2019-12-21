@@ -4,7 +4,7 @@
     QGVAR(killersScoreMax),
     "SLIDER",
     [LSTRING(KillersScoreMax), LSTRING(KillersScoreMax_Description)],
-    LSTRING(DisplayName),
+    [LSTRING(DisplayName), LSTRING(Score)],
     [10, 200, 50, 0],
     true
 ] call CBA_fnc_addSetting;

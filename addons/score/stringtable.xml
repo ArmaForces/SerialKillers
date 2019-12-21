@@ -13,6 +13,10 @@
             <English>When killers reach given score, they win.</English>
             <Polish>Zabójcy wygrywają, gdy osiągną wskazany wynik.</Polish>
         </Key>
+        <Key ID="STR_AFSK_Score_Score">
+            <English>Score</English>
+            <Polish>Wynik</Polish>
+        </Key>
         <Key ID="STR_AFSK_Score_IdleTime">
             <English>Timeout between kills</English>
             <Polish>Odstęp czasu pomiędzy zabójstwami</Polish>
