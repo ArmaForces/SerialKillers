@@ -1,5 +1,9 @@
 #include "script_component.hpp"
 
+[QGVAR(killerKilled), {
+    _this call FUNC(killerKilled);
+}] call CBA_fnc_addEventHandler;
+
 if (hasInterface) then {
     [QGVAR(createTeleport), {
         if !(playerSide isEqualTo EAST) exitWith {};
