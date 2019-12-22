@@ -9,3 +9,7 @@ if (isServer) then {
         _this call FUNC(playMusicServer);
     }] call CBA_fnc_addEventHandler;
 };
+
+[QGVAR(showMessage), {
+    _this call FUNC(showMessage);
+}] call CBA_fnc_addEventHandler;

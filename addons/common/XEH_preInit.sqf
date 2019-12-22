@@ -2,6 +2,8 @@
 ADDON = false;
 #include "XEH_PREP.hpp"
 
+GVAR(ACE_Loaded) = isClass (configFile >> "CfgPatches" >> "ace_common");
+
 if (isServer) then {
     GVAR(musicEH) = -1;
     GVAR(musicPlaying) = false;

@@ -1,0 +1,21 @@
+class CfgDebriefing {
+    class GVAR(emptyEnd) {
+        title = "";
+        subtitle = "";
+        description = "";
+        pictureBackground = "";
+        picture = "";
+        pictureColor[] = {0.0, 0.0, 0.0, 0.0};
+    };
+    class GVAR(killersScoreReached): GVAR(emptyEnd) {
+        title = CSTRING(Killers_Win);
+        subtitle = CSTRING(Killers_Score_Reached);
+    };
+    class GVAR(killersDead): GVAR(emptyEnd) {
+        title = CSTRING(Police_Win);
+        subtitle = CSTRING(Killers_Dead);
+    };
+    class GVAR(timeoutLimit): GVAR(killersDead) {
+        subtitle = CSTRING(Timeout_Limit);
+    };
+};
