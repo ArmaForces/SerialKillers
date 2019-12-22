@@ -1,3 +1,4 @@
+PREP(appearsArmed);
 PREP(getAllMapCities);
 PREP(getLocationType);
 PREP(getRandomEmptyPosition);
