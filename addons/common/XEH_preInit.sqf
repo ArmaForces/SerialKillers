@@ -2,10 +2,14 @@
 ADDON = false;
 #include "XEH_PREP.hpp"
 
-GVAR(AFM_Loaded) = isClass (configFile >> "CfgPatches" >> "afm_common");
+GVAR(ACE_Loaded) = isClass (configFile >> "CfgPatches" >> "ace_common");
 
-GVAR(musicEH) = -1;
-GVAR(musicPlaying) = false;
-GVAR(musicQueue) = [];
+if (isServer) then {
+    GVAR(musicEH) = -1;
+    GVAR(musicPlaying) = false;
+    GVAR(musicQueue) = [];
+
+    GVAR(cities) = call FUNC(getAllMapCities);
+};
 
 ADDON = true;
