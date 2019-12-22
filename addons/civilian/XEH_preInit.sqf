@@ -5,7 +5,7 @@ ADDON = false;
 if (isServer) then {
     // Create namespace for linking location classname with city
     GVAR(citiesLocations) = true call CBA_fnc_createNamespace;
-    publicVariable QUOTE(GVAR(citiesLocations));
+    publicVariable QGVAR(citiesLocations);
     // All cities and civilians
     GVAR(cities) = [];
     GVAR(civilians) = [];
