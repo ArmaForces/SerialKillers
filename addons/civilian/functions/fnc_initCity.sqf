@@ -18,7 +18,7 @@
 params ["_cityLocation"];
 
 if (_cityLocation isEqualType configNull) then {
-    _cityLocation = [getArray (_x >> 'position'), 10] call EFUNC(common,nearestLocation);
+    _cityLocation = [getArray (_cityLocation >> 'position'), 10] call EFUNC(common,nearestLocation);
 };
 
 
@@ -27,7 +27,9 @@ private _cityNamespace = true call CBA_fnc_createNamespace;
 GVAR(citiesLocations) setVariable [className _cityLocation, _cityNamespace, true];
 _cityNamespace setVariable [QGVAR(Location), _cityLocation, true];
 _cityNamespace setVariable [QGVAR(Name), [_cityLocation] call FUNC(getCityName), true];
-_cityNamespace setVariable [QGVAR(Position), (position _cityLocation) set [3, 0], true];
+private _cityPosition = (position _cityLocation);
+_cityPosition set [2, 0]; // Location position has negative third coordinate
+_cityNamespace setVariable [QGVAR(Position), _cityPosition, true];
 _cityNamespace setVariable [QGVAR(CiviliansList), []];
 
 private _cityType = [_cityLocation] call EFUNC(common,getLocationType);

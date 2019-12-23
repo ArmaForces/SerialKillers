@@ -18,6 +18,7 @@
 params ["_cityNamespace"];
 
 private _newGroup = createGroup CIVILIAN;
-private _position = [[_cityNamespace getVariable [QGVAR(Position), [0, 0, 0]], 100]] call BIS_fnc_randomPos;
+private _cityPosition = _cityNamespace getVariable [QGVAR(Position), [0, 0, 0]];
+private _position = [[[_cityPosition, 100]]] call BIS_fnc_randomPos;
 
 _newGroup createUnit ["C_man_polo_1_F", _position, [], 0, "NONE"];

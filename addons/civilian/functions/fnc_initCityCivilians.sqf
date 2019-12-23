@@ -32,6 +32,7 @@ for "_y" from 1 to _cityCiviliansCount step 1 do {
     private _civilian = [_cityNamespace] call FUNC(createCivilian);
     [_civilian, _cityNamespace] call FUNC(initCivilian);
     _cityCivilians pushBack _civilian;
+    GVAR(civilians) pushBack _civilian;
 };
 
 _cityCivilians
