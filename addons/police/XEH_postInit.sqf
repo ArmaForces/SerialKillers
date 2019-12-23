@@ -1,5 +1,9 @@
 #include "script_component.hpp"
 
+{
+    [_x] call FUNC(initPoliceStation);
+} forEach EGVAR(modules,policeStations);
+
 [QGVAR(copKilled), {
     _this call FUNC(copKilled);
 }] call CBA_fnc_addEventHandler;
