@@ -1,6 +1,14 @@
 class CfgSerialKillers {
     class Equipment {
         class Vanilla {
+            class Common {
+                class Binocular {};
+                class ItemMap {};
+                class ItemGPS {};
+                class ItemCompass {};
+                class ItemWatch {};
+                class ItemRadio {};
+            };
             class Police {
                 class hgun_P07_F {
                     requiredScore = 0;
