@@ -62,26 +62,11 @@ GVAR(killersEquipment) = "true" configClasses (_equipmentConfig > "Killers" > "E
         // Check if magazines for this weapon are disabled (must be "false")
         private _loadMagazines = getText (_x > "loadMagazines");
         if (_loadMagazines isEqualTo "false") exitwith {};
-        // Check for magazineWells and use their magazines if possible
-        private _weaponMagazineWells = getArray (_weaponConfig > "magazineWell");
-        if (_weaponMagazineWells isEqualTo []) then {
-            {
-                if (!(GVAR(policeEquipmentList) pushBackUnique _x) isEqualTo -1) then {
-                    _requiredScoreList pushBack _x;
-                };
-            } forEach (getArray (_weaponConfig > "magazines"));
-        } else {
-            {
-                private _magazineWellConfig = configFile > "CfgMagazineWells" > _x;
-                {
-                    private _magazines = getArray (_x);
-                    {
-                        if (!(GVAR(policeEquipmentList) pushBackUnique _x) isEqualTo -1) then {
-                            _requiredScoreList pushBack _x;
-                        };
-                    } forEach _magazines;
-                } forEach (configProperties [_magazineWellConfig, "true"]);
-            } forEach _weaponMagazineWells;
-        };
+        private _magazines = [_itemClassName] call EFUNC(common,getWeaponMagazines);
+        {
+            if (!(GVAR(policeEquipmentList) pushBackUnique _x) isEqualTo -1) then {
+                _requiredScoreList pushBack _x;
+            };
+        } forEach _magazines;
     };
 } forEach ("true" configClasses (_equipmentConfig > "Police" > "Equipment"));

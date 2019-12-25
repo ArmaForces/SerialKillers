@@ -2,6 +2,7 @@ PREP(appearsArmed);
 PREP(getAllMapCities);
 PREP(getLocationType);
 PREP(getRandomEmptyPosition);
+PREP(getWeaponMagazines);
 PREP(nearestLocation);
 PREP(playMusicServer);
 PREP(removeItemsFromArsenal);
