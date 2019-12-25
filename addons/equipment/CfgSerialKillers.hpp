@@ -86,6 +86,7 @@ class CfgSerialKillers {
                     class optic_lrps: srifle_LRR_F {};
                     class optic_lrps_tna_f: optic_lrps {};
                     class optic_lrps_ghex_f: optic_lrps {};
+                };
             };
         };
     };
