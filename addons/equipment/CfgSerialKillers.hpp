@@ -14,17 +14,20 @@ class CfgSerialKillers {
                     requiredScore = 0;
                 };
                 class hgun_ACPC2_F: hgun_P07_F {};
+
                 class hgun_Pistol_heavy_01_F {
                     requiredScore = 2;
                 };
                 class acc_flashlight_pistol: hgun_Pistol_heavy_01_F {};
                 class optic_mrd: hgun_Pistol_heavy_01_F {};
                 class optic_mrd_black: optic_mrd {};
+
                 class hgun_PDW2000_F {
                     requiredScore = 5;
                 };
                 class optic_yorris: hgun_PDW2000_F {};
                 class sgun_HunterShotgun_01_F: hgun_PDW2000_F {};
+
                 class SMG_05_F {
                     requiredScore = 10;
                 };
@@ -39,15 +42,18 @@ class CfgSerialKillers {
                 class SmokeShellPurple: SmokeShell {};
                 class SmokeShellRed: SmokeShell {};
                 class SmokeShellYellow: SmokeShell {};
+
                 class SMG_01_F {
                     requiredScore = 15;
                 };
                 class acc_flashlight_smg_01: SMG_01_F {};
+
                 class arifle_TRG20_F {
                     requiredScore = 20;
                 };
                 class optic_aco: arifle_TRG20_F {};
                 class optic_aco_grn: optic_aco {};
+
                 class arifle_TRG21_F {
                     requiredScore = 25;
                 };
@@ -59,13 +65,16 @@ class CfgSerialKillers {
                 class optic_holosight_smg_khk_f: optic_holosight_smg {};
                 class acc_pointer_ir: arifle_TRG21_F {};
                 class HandGrenade: arifle_TRG21_F {};
+
                 class SMG_03_TR_black {
                     requiredScore = 30;
                 };
+
                 class LMG_Mk200_F {
                     requiredScore = 35;
                 };
                 class arifle_TRG21_GL_F: LMG_Mk200_F {};
+
                 class srifle_LRR_F {
                     requiredScore = 40;
                 };
