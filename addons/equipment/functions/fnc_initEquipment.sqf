@@ -44,5 +44,15 @@ if (GVAR(equipmentPresetCustom) && {!(_missionEquipmentConfig isEqualTo configNu
 
 GVAR(equipmentPreset) = _equipmentConfig;
 GVAR(commonEquipment) = "true" configClasses (_equipmentConfig > "Common" > "Equipment");
-GVAR(policeEquipment) = "true" configClasses (_equipmentConfig > "Police" > "Equipment");
 GVAR(killersEquipment) = "true" configClasses (_equipmentConfig > "Killers" > "Equipment");
+
+GVAR(policeEquipmentScores) = call CBA_fnc_createNamespace;
+{
+    private _itemClassName = getText _x;
+    private _itemRequiredScore = getNumber (_x > "requiredScore");
+    private _requiredScoreList = _policeEquipment getVariable [_itemRequiredScore, []];
+    if (_requiredScoreList isEqualTo []) then {
+        _policeEquipment setVariable [_itemRequiredScore, _requiredScoreList];
+    };
+    _requiredScoreList pushBack _itemClassName;
+} forEach ("true" configClasses (_equipmentConfig > "Police" > "Equipment"));
