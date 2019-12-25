@@ -2,6 +2,7 @@ PREP(copKilled);
 PREP(copKilledMarker);
 PREP(copKilledMsg);
 PREP(createTeleport);
+PREP(equipmentScoreCheck);
 PREP(initPoliceStation);
 PREP(policeStationAlarm);
 PREP(policeStationMarker);
