@@ -18,7 +18,7 @@
 private _equipmentConfig = configFile > "CfgSerialKillers" > "Equipment_Presets";
 private _missionEquipmentConfig = missionConfigFile > "CfgSerialKillers" > "Equipment_Presets";
 
-if (GVAR(equipmentPresetCustom) && {!(_missionEquipmentConfig isEqualTo configNull)}) then {
+if (GVAR(equipmentPresetCustom) && {isClass _missionEquipmentConfig}) then {
     _equipmentConfig = _missionEquipmentConfig > "Custom";
 } else {
     _equipmentConfig = switch (GVAR(equipmentPreset)) do {
@@ -55,4 +55,28 @@ GVAR(policeEquipmentScores) = call CBA_fnc_createNamespace;
         _policeEquipment setVariable [_itemRequiredScore, _requiredScoreList];
     };
     _requiredScoreList pushBack _itemClassName;
+    private _weaponConfig = (configFile > "CfgWeapons" > _itemClassName);
+    if (isClass _weaponConfig) then {
+        private _loadMagazines = getText (_x > "loadMagazines");
+        if (_loadMagazines isEqualTo "" || {_loadMagazines isEqualTo "false"}) exitwith {};
+        // Add weapon magazines to list
+        private _weaponMagazines = [];
+        private _weaponMagazineWells = getArray (_weaponConfig > "magazineWell");
+        if (_weaponMagazineWells isEqualTo []) then {
+            _weaponMagazines = getArray (_weaponConfig > "magazines");
+        } else {
+            {
+                private _magazineWellConfig = configFile > "CfgMagazineWells" > _x;
+                {
+                    private _magazines = getArray (_x);
+                    {
+                        _requiredScoreList pushBackUnique _x;
+                    } forEach _magazines;
+                } forEach (configProperties [_magazineWellConfig, "true"]);
+            } forEach _weaponMagazineWells;
+        };
+        {
+            _requiredScoreList pushBack _x;
+        } forEach _weaponMagazines;
+    };
 } forEach ("true" configClasses (_equipmentConfig > "Police" > "Equipment"));
