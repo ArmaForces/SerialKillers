@@ -18,16 +18,12 @@
 
 params ["_object", "_items"];
 
+if (_items isEqualType "") then {
+    _items = [_items];
+};
+
 if (GVAR(ACE_Loaded)) then {
-    if (_items isEqualType []) then {
-        [_object, _items] call ACE_arsenal_fnc_addVirtualItems;
-    } else {
-        [_object, [_items]] call ACE_arsenal_fnc_addVirtualItems;
-    }
+    [_object, _items] call ACE_arsenal_fnc_addVirtualItems;
 } else {
-    if (_items isEqualType []) then {
-        [_object, _items] call BIS_fnc_addVirtualItemCargo;
-    } else {
-        [_object, [_items]] call BIS_fnc_addVirtualItemCargo;
-    };
+    [_object, _items] call BIS_fnc_addVirtualItemCargo;
 };
