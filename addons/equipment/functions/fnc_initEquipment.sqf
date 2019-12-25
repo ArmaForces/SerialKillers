@@ -46,12 +46,20 @@ GVAR(equipmentPreset) = _equipmentConfig;
 GVAR(commonEquipment) = "true" configClasses (_equipmentConfig > "Common" > "Equipment");
 GVAR(killersEquipment) = "true" configClasses (_equipmentConfig > "Killers" > "Equipment");
 
+private _policeEquipment = [];
 {
-    private _itemClassName = getText _x;
     private _itemRequiredScore = getNumber (_x > "requiredScore");
-    private _requiredScoreList = _policeEquipment getVariable [_itemRequiredScore, []];
+    _policeEquipment pushBack [_itemRequiredScore, _x];
+} forEach ("true" configClasses (_equipmentConfig > "Police" > "Equipment"));
+_policeEquipment sort true;
+
+{
+    private _itemRequiredScore = _x select 0;
+    private _item = _x select 1;
+    private _itemClassName = getText _item;
+    private _requiredScoreList = GVAR(policeEquipmentScores) getVariable [_itemRequiredScore, []];
     if (_requiredScoreList isEqualTo []) then {
-        _policeEquipment setVariable [_itemRequiredScore, _requiredScoreList];
+        GVAR(policeEquipmentScores) setVariable [_itemRequiredScore, _requiredScoreList];
     };
     if (!(GVAR(policeEquipmentList) pushBackUnique _itemClassName) isEqualTo -1) then {
         _requiredScoreList pushBack _itemClassName;
@@ -60,7 +68,7 @@ GVAR(killersEquipment) = "true" configClasses (_equipmentConfig > "Killers" > "E
     private _weaponConfig = (configFile > "CfgWeapons" > _itemClassName);
     if (isClass _weaponConfig) then {
         // Check if magazines for this weapon are disabled (must be "false")
-        private _loadMagazines = getText (_x > "loadMagazines");
+        private _loadMagazines = getText (_item > "loadMagazines");
         if (_loadMagazines isEqualTo "false") exitwith {};
         private _magazines = [_itemClassName] call EFUNC(common,getWeaponMagazines);
         {
@@ -69,4 +77,4 @@ GVAR(killersEquipment) = "true" configClasses (_equipmentConfig > "Killers" > "E
             };
         } forEach _magazines;
     };
-} forEach ("true" configClasses (_equipmentConfig > "Police" > "Equipment"));
+} forEach _policeEquipment;
