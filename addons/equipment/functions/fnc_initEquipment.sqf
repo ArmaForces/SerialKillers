@@ -46,7 +46,6 @@ GVAR(equipmentPreset) = _equipmentConfig;
 GVAR(commonEquipment) = "true" configClasses (_equipmentConfig > "Common" > "Equipment");
 GVAR(killersEquipment) = "true" configClasses (_equipmentConfig > "Killers" > "Equipment");
 
-GVAR(policeEquipmentScores) = call CBA_fnc_createNamespace;
 {
     private _itemClassName = getText _x;
     private _itemRequiredScore = getNumber (_x > "requiredScore");
@@ -54,7 +53,9 @@ GVAR(policeEquipmentScores) = call CBA_fnc_createNamespace;
     if (_requiredScoreList isEqualTo []) then {
         _policeEquipment setVariable [_itemRequiredScore, _requiredScoreList];
     };
-    _requiredScoreList pushBack _itemClassName;
+    if (!(GVAR(policeEquipmentList) pushBackUnique _itemClassName) isEqualTo -1) then {
+        _requiredScoreList pushBack _itemClassName;
+    };
     private _weaponConfig = (configFile > "CfgWeapons" > _itemClassName);
     if (isClass _weaponConfig) then {
         private _loadMagazines = getText (_x > "loadMagazines");
@@ -64,19 +65,23 @@ GVAR(policeEquipmentScores) = call CBA_fnc_createNamespace;
         private _weaponMagazineWells = getArray (_weaponConfig > "magazineWell");
         if (_weaponMagazineWells isEqualTo []) then {
             _weaponMagazines = getArray (_weaponConfig > "magazines");
+            {
+                if (!(GVAR(policeEquipmentList) pushBackUnique _x) isEqualTo -1) then {
+                    _requiredScoreList pushBack _x;
+                };
+            } forEach _weaponMagazines;
         } else {
             {
                 private _magazineWellConfig = configFile > "CfgMagazineWells" > _x;
                 {
                     private _magazines = getArray (_x);
                     {
-                        _requiredScoreList pushBackUnique _x;
+                        if (!(GVAR(policeEquipmentList) pushBackUnique _x) isEqualTo -1) then {
+                            _requiredScoreList pushBack _x;
+                        };
                     } forEach _magazines;
                 } forEach (configProperties [_magazineWellConfig, "true"]);
             } forEach _weaponMagazineWells;
         };
-        {
-            _requiredScoreList pushBack _x;
-        } forEach _weaponMagazines;
     };
 } forEach ("true" configClasses (_equipmentConfig > "Police" > "Equipment"));

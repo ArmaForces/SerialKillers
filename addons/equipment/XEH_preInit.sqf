@@ -6,7 +6,8 @@ ADDON = false;
 
 GVAR(equipmentPreset) = configNull;
 GVAR(commonEquipment) = [configNull];
-GVAR(policeEquipment) = [configNull];
+GVAR(policeEquipmentList) = [];
+GVAR(policeEquipmentScores) = call CBA_fnc_createNamespace;
 GVAR(killersEquipment) = [configNull];
 
 call FUNC(initEquipment);
