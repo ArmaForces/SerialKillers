@@ -15,42 +15,42 @@
  * Public: No
  */
 
-private _equipmentConfig = configFile > "CfgSerialKillers" > "Equipment_Presets";
-private _missionEquipmentConfig = missionConfigFile > "CfgSerialKillers" > "Equipment_Presets";
+private _equipmentConfig = (configFile >> "CfgSerialKillers" >> "Equipment_Presets");
+private _missionEquipmentConfig = (missionConfigFile >> "CfgSerialKillers" >> "Equipment_Presets");
 
 if (GVAR(equipmentPresetCustom) && {isClass _missionEquipmentConfig}) then {
-    _equipmentConfig = _missionEquipmentConfig > "Custom";
+    _equipmentConfig = (_missionEquipmentConfig >> "Custom");
 } else {
     _equipmentConfig = switch (GVAR(equipmentPreset)) do {
         // Vanilla config
-        case 1: {_equipmentConfig > "Vanilla"};
+        case 1: {_equipmentConfig >> "Vanilla"};
         // RHS config
-        case 2: {_equipmentConfig > "RHS"};
+        case 2: {_equipmentConfig >> "RHS"};
         // CUP config
-        case 3: {_equipmentConfig > "CUP"};
+        case 3: {_equipmentConfig >> "CUP"};
         // CUP & RHS config
-        case 4: {_equipmentConfig > "CUP_RHS"};
+        case 4: {_equipmentConfig >> "CUP_RHS"};
         // Automatic config selection based on loaded addons
         default {
             if (EGVAR(common,RHS_Loaded) && {EGVAR(common,CUP_Loaded)}) exitWith {
-                _equipmentConfig > "CUP_RHS"
+                _equipmentConfig >> "CUP_RHS"
             };
-            if (EGVAR(common,RHS_Loaded)) exitWith {_equipmentConfig > "RHS"};
-            if (EGVAR(common,CUP_Loaded)) exitWith {_equipmentConfig > "CUP"};
-            _equipmentConfig > "Vanilla"
+            if (EGVAR(common,RHS_Loaded)) exitWith {_equipmentConfig >> "RHS"};
+            if (EGVAR(common,CUP_Loaded)) exitWith {_equipmentConfig >> "CUP"};
+            _equipmentConfig >> "Vanilla"
         };
     };
 };
 
 GVAR(equipmentPreset) = _equipmentConfig;
-GVAR(commonEquipment) = "true" configClasses (_equipmentConfig > "Common" > "Equipment");
-GVAR(killersEquipment) = "true" configClasses (_equipmentConfig > "Killers" > "Equipment");
+GVAR(commonEquipment) = "true" configClasses (_equipmentConfig >> "Common" >> "Equipment");
+GVAR(killersEquipment) = "true" configClasses (_equipmentConfig >> "Killers" >> "Equipment");
 
 private _policeEquipment = [];
 {
-    private _itemRequiredScore = getNumber (_x > "requiredScore");
+    private _itemRequiredScore = getNumber (_x >> "requiredScore");
     _policeEquipment pushBack [_itemRequiredScore, _x];
-} forEach ("true" configClasses (_equipmentConfig > "Police" > "Equipment"));
+} forEach ("true" configClasses (_equipmentConfig >> "Police" >> "Equipment"));
 _policeEquipment sort true;
 
 {
@@ -65,10 +65,10 @@ _policeEquipment sort true;
         _requiredScoreList pushBack _itemClassName;
     };
     // If item is weapon, load it's magazines
-    private _weaponConfig = (configFile > "CfgWeapons" > _itemClassName);
+    private _weaponConfig = (configFile >> "CfgWeapons" >> _itemClassName);
     if (isClass _weaponConfig) then {
         // Check if magazines for this weapon are disabled (must be "false")
-        private _loadMagazines = getText (_item > "loadMagazines");
+        private _loadMagazines = getText (_item >> "loadMagazines");
         if (_loadMagazines isEqualTo "false") exitwith {};
         private _magazines = [_itemClassName] call EFUNC(common,getWeaponMagazines);
         {

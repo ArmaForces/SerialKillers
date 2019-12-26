@@ -18,19 +18,19 @@
 params ["_weapon"];
 
 private _weaponMagazines = [];
-private _weaponConfig = (configFile > "CfgWeapons" > _itemClassName);
+private _weaponConfig = (configFile >> "CfgWeapons" >> _itemClassName);
 if (isClass _weaponConfig) then {
     // Check for magazineWells and use their magazines if possible
-    private _weaponMagazineWells = getArray (_weaponConfig > "magazineWell");
+    private _weaponMagazineWells = getArray (_weaponConfig >> "magazineWell");
     if (_weaponMagazineWells isEqualTo []) then {
         {
             _weaponMagazines pushBackUnique _x;
-        } forEach (getArray (_weaponConfig > "magazines"));
+        } forEach (getArray (_weaponConfig >> "magazines"));
     } else {
         {
-            private _magazineWellConfig = configFile > "CfgMagazineWells" > _x;
+            private _magazineWellConfig = (configFile >> "CfgMagazineWells" >> _x);
             {
-                private _magazines = getArray (_x);
+                private _magazines = getArray _x;
                 {
                     _weaponMagazines pushBack _x;
                 } forEach _magazines;
