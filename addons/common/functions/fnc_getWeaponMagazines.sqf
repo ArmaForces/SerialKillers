@@ -39,4 +39,4 @@ if (isClass _weaponConfig) then {
     };
 };
 
-_magazines
+_weaponMagazines
