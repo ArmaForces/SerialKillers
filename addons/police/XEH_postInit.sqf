@@ -29,4 +29,4 @@
     params ["_side", "_change", ["_reason", ""]];
     if (_side isEqualTo EAST) exitwith {};
     call FUNC(equipmentScoreCheck);
-}]
+}] call CBA_fnc_addEventHandler;
