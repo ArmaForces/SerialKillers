@@ -1,4 +1,6 @@
+PREP(addItemsToArsenal);
 PREP(appearsArmed);
+PREP(createArsenal);
 PREP(getAllMapCities);
 PREP(getLocationType);
 PREP(getRandomEmptyPosition);
