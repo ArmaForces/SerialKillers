@@ -4,6 +4,8 @@
     [_x] call FUNC(initPoliceStation);
 } forEach EGVAR(modules,policeStations);
 
+call FUNC(equipmentScoreCheck);
+
 [QGVAR(copKilled), {
     _this call FUNC(copKilled);
 }] call CBA_fnc_addEventHandler;
