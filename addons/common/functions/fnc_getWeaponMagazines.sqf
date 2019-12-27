@@ -32,10 +32,34 @@ if (isClass _weaponConfig) then {
             {
                 private _magazines = getArray _x;
                 {
-                    _weaponMagazines pushBack _x;
+                    _weaponMagazines pushBackUnique _x;
                 } forEach _magazines;
             } forEach (configProperties [_magazineWellConfig, "true"]);
         } forEach _weaponMagazineWells;
+    };
+
+    // Check for underbarrel weapons
+    private _muzzles = getArray (_weaponConfig >> "muzzles");
+    if (!(_muzzles isEqualTo ["this"])) then {
+        {
+            private _muzzleWeaponConfig = (_weaponConfig >> _x);
+            private _muzzleWeaponMagazineWells = getArray (_muzzleWeaponConfig >> "magazineWell");
+            if (_muzzleWeaponMagazineWells isEqualTo []) then {
+                {
+                    _weaponMagazines pushBackUnique _x;
+                } forEach (getArray (_muzzleWeaponConfig >> "magazines"));
+            } else {
+                {
+                    private _magazineWellConfig = (configFile >> "CfgMagazineWells" >> _x);
+                    {
+                        private _magazines = getArray _x;
+                        {
+                            _weaponMagazines pushBackUnique _x;
+                        } forEach _magazines;
+                    } forEach (configProperties [_magazineWellConfig, "true"]);
+                } forEach _muzzleWeaponMagazineWells;
+            };
+        } forEach (_muzzles select {_x != "this"})
     };
 };
 
