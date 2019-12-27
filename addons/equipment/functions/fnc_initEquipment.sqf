@@ -70,7 +70,7 @@ _policeEquipment sort true;
         // Check if magazines for this weapon are disabled (must be "false")
         private _loadMagazines = getText (_item >> "loadMagazines");
         if (_loadMagazines isEqualTo "false") exitwith {};
-        private _magazines = [_itemClassName] call EFUNC(common,getWeaponMagazines);
+        private _magazines = [_itemClassName] call CBA_fnc_compatibleMagazines;
         {
             if (!((GVAR(policeEquipmentList) pushBackUnique _x) isEqualTo -1)) then {
                 _requiredScoreList pushBack _x;
