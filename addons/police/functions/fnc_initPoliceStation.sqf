@@ -22,13 +22,18 @@ if !(isServer) exitWith {};
 private _baseName = _logic getVariable ["LocationName", str random(999)];
 private _hasHelipad = _logic getVariable ["HasHelipad", false];
 private _basePos = getPos _logic;
-// Init vehicle spawners here
-// Init arsenal here
-private _flag = "Flag_US_F" createVehicle _basePos;
+private _flag = createVehicle ["Flag_US_F", _basePos, [], 0, "NONE"];
 _flag setVariable ["policeStation", _logic, true];
-_logic setVariable ["Arsenal", _flag, true];
-[_flag] call EFUNC(common,createArsenal);
-GVAR(arsenals) pushBack _flag;
+// Init vehicle spawners here
+// Init arsenal
+private _box = createVehicle ["B_CargoNet_01_ammo_F", _basePos, [], 0, "NONE"];
+clearItemCargoGlobal _box;
+clearWeaponCargoGlobal _box;
+clearMagazineCargoGlobal _box;
+_logic setVariable ["Arsenal", _box, true];
+_box setVariable ["policeStation", _logic, true];
+[_box] call EFUNC(common,createArsenal);
+GVAR(arsenals) pushBack _box;
 
 // Create marker
 private _marker = [_baseName, _basePos] call FUNC(policeStationMarker);
