@@ -23,6 +23,10 @@ if (_items isEqualType "") then {
 };
 
 if (GVAR(ACE_Loaded)) then {
+    private _arsenal = _object getVariable ["ace_arsenal_virtualItems", []];
+    if (_arsenal isEqualTo []) then {
+        [_object] call FUNC(createArsenal);
+    };
     [_object, _items] call ACE_arsenal_fnc_addVirtualItems;
 } else {
     [_object, _items] call BIS_fnc_addVirtualItemCargo;
