@@ -56,12 +56,12 @@ _policeEquipment sort true;
 {
     private _itemRequiredScore = _x select 0;
     private _item = _x select 1;
-    private _itemClassName = getText _item;
+    private _itemClassName = configName _item;
     private _requiredScoreList = GVAR(policeEquipmentScores) getVariable [str _itemRequiredScore, []];
     if (_requiredScoreList isEqualTo []) then {
         GVAR(policeEquipmentScores) setVariable [str _itemRequiredScore, _requiredScoreList];
     };
-    if (!(GVAR(policeEquipmentList) pushBackUnique _itemClassName) isEqualTo -1) then {
+    if (!((GVAR(policeEquipmentList) pushBackUnique _itemClassName) isEqualTo -1)) then {
         _requiredScoreList pushBack _itemClassName;
     };
     // If item is weapon, load it's magazines
@@ -72,7 +72,7 @@ _policeEquipment sort true;
         if (_loadMagazines isEqualTo "false") exitwith {};
         private _magazines = [_itemClassName] call EFUNC(common,getWeaponMagazines);
         {
-            if (!(GVAR(policeEquipmentList) pushBackUnique _x) isEqualTo -1) then {
+            if (!((GVAR(policeEquipmentList) pushBackUnique _x) isEqualTo -1)) then {
                 _requiredScoreList pushBack _x;
             };
         } forEach _magazines;
