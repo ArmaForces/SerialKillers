@@ -22,6 +22,7 @@ private _cityPosition = _cityNamespace getVariable QGVAR(Position);
 private _cityArea = _cityNamespace getVariable QGVAR(cityArea);
 private _cityAreaSize = [_cityArea select 1 select 0, _cityArea select 1 select 1];
 
+// Function returns position random position in area
 private _fnc_randomPos = {
     params ["_cityPosition", "_cityAreaSize", "_nearRoad"];
     if (_nearRoad) then {
@@ -34,12 +35,13 @@ private _fnc_randomPos = {
     };
 };
 
+// If no object is given, just random position is enough
 if (_object isEqualTo objNull) exitWith {[_cityPosition, _cityAreaSize, _nearRoad] call _fnc_randomPos};
 
 private _location = _cityNamespace getVariable QGVAR(Location);
-
-private _randomPos = [0, 0, 0];
+private _randomPos = [];
 private _loopLimit = 100;
+// Loop until acquired random empty pos is within location area (or loop limit reached)
 while {(_loopLimit >= 0) && {!(_randomPos isEqualTo []) && {!(_randomPos inArea _location)}}} do {
     _randomPos = [_cityPosition, _cityAreaSize, _nearRoad] call _fnc_randomPos;
     _randomPos = _randomPos findEmptyPosition [0, _emptyPosSearchRadius, _object];

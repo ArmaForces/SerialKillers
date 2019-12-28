@@ -20,7 +20,7 @@ private _i = GVAR(emptyVehiclesLimit);
 private _cities = +GVAR(cities);
 private _weights = [];
 
-//
+// Create weights array for cities
 {
     private _cityType = _x getVariable QGVAR(cityType);
     _cityWeight = switch (_cityType) do {
@@ -36,6 +36,7 @@ private _weights = [];
 _cities pushBack "RuralArea";
 _weights pushBack GVAR(weightRural);
 
+// Retrieve all civilian car types from config
 private _civilianCarTypes = "( (getNumber (_x >> 'scope') >= 2)
                                     && {
                                         getText (_x >> 'vehicleClass') in ['Car']

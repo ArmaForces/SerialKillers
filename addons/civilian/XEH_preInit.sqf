@@ -27,6 +27,7 @@ if (isServer) then {
     GVAR(weightVillage) = ceil (random (6));
     GVAR(weightRural) = ceil (random (10));
 
+    // We need some improvements in determining civilian vehicles limit
     GVAR(emptyVehiclesLimit) = GVAR(emptyVehiclesLimitMultiplier) * 200;
     call FUNC(initVehicles);
 };

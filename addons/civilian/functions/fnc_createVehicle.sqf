@@ -25,6 +25,7 @@ if (_vehicleClassname isEqualType configNull) then {
 
 private _vehicle = createVehicle [_vehicleClassname, _position, [], 0, "NONE"];
 _vehicle setDir _dir;
+// Disable randomization and use own function to set texture on vehicle globally (so everyone can see the same color!)
 _vehicle setVariable ["BIS_enableRandomization", false];
 [_vehicle] call FUNC(setVehicleRandomTexture);
 
@@ -34,6 +35,7 @@ if (_emptyCargo) then {
     clearWeaponCargoGlobal _vehicle;
 };
 
+// For ACE support so players can repair their wheels/tracks if crashed
 if (EGVAR(common,ACE_Loaded)) then {
     if (_vehicle isKindOf "Tank") then {
         ["ACE_Track", _veh] call ace_cargo_fnc_loadItem;
