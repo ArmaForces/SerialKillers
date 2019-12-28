@@ -2,6 +2,8 @@
 ADDON = false;
 #include "XEH_PREP.hpp"
 
+#include "initSettings.sqf"
+
 if (isServer) then {
     // Create namespace for linking location classname with city
     GVAR(citiesLocations) = true call CBA_fnc_createNamespace;
@@ -19,8 +21,7 @@ if (isServer) then {
 
     publicVariable QGVAR(cities);
 
-    GVAR(emptyVehiclesLimit) = 200;
-
+    GVAR(emptyVehiclesLimit) = GVAR(emptyVehiclesLimitMultiplier) * 200;
     call FUNC(initVehicles);
 };
 

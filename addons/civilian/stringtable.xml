@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="AFSK">
+    <Package name="Civilian">
+        <Key ID="STR_AFSK_Civilian_DisplayName">
+            <English>SerialKillers - Civilian</English>
+            <Polish>SerialKillers - Cywile</Polish>
+        </Key>
+        <Key ID="STR_AFSK_Civilian_EmptyVehiclesLimit">
+            <English>Civilian vehicles limit</English>
+            <Polish>Limit pojazdów cywilnych</Polish>
+        </Key>
+        <Key ID="STR_AFSK_Civilian_EmptyVehiclesLimit_Description">
+            <English>Controls how much civilian vehicles will be created on the whole map.</English>
+            <Polish>Ustala jak dużo pojazdów cywilnych będzie utworzonych na całej mapie.</Polish>
+        </Key>
+        <Key ID="STR_AFSK_Civilian_Low">
+            <English>Low</English>
+            <Polish>Mało</Polish>
+        </Key>
+        <Key ID="STR_AFSK_Civilian_Medium">
+            <English>Mediun</English>
+            <Polish>Średnio</Polish>
+        </Key>
+        <Key ID="STR_AFSK_Civilian_High">
+            <English>High</English>
+            <Polish>Dużo</Polish>
+        </Key>
+    </Package>
+</Project>
