@@ -45,11 +45,18 @@ private _civilianCarTypes = "( (getNumber (_x >> 'scope') >= 2)
 
 while {_i > 0} do {
     private _city = _cities selectRandomWeighted _weights;
+    private _carType = selectRandom _civilianCarTypes;
     private _pos = if (_city isEqualTo "RuralArea") then {
         [nil, ["water"]] call BIS_fnc_randomPos;
     } else {
-        [_city] call FUNC(getCityRandomPos);
+        private _pos = [_city, _carType, true] call FUNC(getCityRandomPos);
+        if (_pos isEqualTo []) then {
+            _pos = [_city, _carType] call FUNC(getCityRandomPos);
+        };
+        _pos
     };
-    [selectRandom _civilianCarTypes, _pos] call FUNC(createVehicle);
-    _i = _i - 1;
+    if (!(_pos isEqualTo [])) then {
+        [_carType, _pos] call FUNC(createVehicle);
+        _i = _i - 1;
+    };
 };
