@@ -47,7 +47,7 @@ while {_i > 0} do {
     private _city = _cities selectRandomWeighted _weights;
     private _carType = selectRandom _civilianCarTypes;
     private _pos = if (_city isEqualTo "RuralArea") then {
-        [nil, ["water"]] call BIS_fnc_randomPos;
+        [_carType, true] call FUNC(getRandomPos);
     } else {
         private _pos = [_city, _carType, true] call FUNC(getCityRandomPos);
         if (_pos isEqualTo []) then {
