@@ -18,6 +18,10 @@ if (isServer) then {
     } forEach EGVAR(common,cities);
 
     publicVariable QGVAR(cities);
+
+    GVAR(emptyVehiclesLimit) = 200;
+
+    call FUNC(initVehicles);
 };
 
 ADDON = true;
