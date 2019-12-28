@@ -4,7 +4,7 @@
  * Function creates vehicle on given position.
  *
  * Arguments:
- * 0: Vehicle classname <STRING>
+ * 0: Vehicle classname or config <STRING/CONFIG>
  * 1: Position <POSITION>
  * 2: Remove cargo <BOOL>
  *
@@ -18,6 +18,10 @@
  */
 
 params ["_vehicleClassname", "_position", ["_emptyCargo", true]];
+
+if (_vehicleClassname isEqualType configNull) then {
+    _vehicleClassname = configName _vehicleClassname;
+};
 
 private _vehicle = createVehicle [_vehicleClassname, _position, [], 0, "NONE"];
 _vehicle setVariable ["BIS_enableRandomization", false];

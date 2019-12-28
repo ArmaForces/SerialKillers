@@ -36,6 +36,12 @@ private _weights = [];
 _cities pushBack "RuralArea";
 _weights pushBack (ceil (random (10)));
 
+private _civilianCarTypes = "( (getNumber (_x >> 'scope') >= 2)
+                                    && {
+                                        getText (_x >> 'vehicleClass') in ['Car']
+                                        && {getNumber (_x >> 'side') == 3}
+                                    })" configClasses (configFile >> "CfgVehicles");
+
 while {_i > 0} do {
     private _city = _cities selectRandomWeighted _weights;
     private _pos = if (_city isEqualTo "RuralArea") then {
@@ -43,6 +49,6 @@ while {_i > 0} do {
     } else {
         [_city] call FUNC(getCityRandomPos);
     };
-    ["C_Offroad_01_F", _pos] call FUNC(createVehicle);
+    [selectRandom _civilianCarTypes, _pos] call FUNC(createVehicle);
     _i = _i - 1;
 };
