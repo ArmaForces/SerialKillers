@@ -37,6 +37,7 @@ if (_emptyCargo) then {
 
 // For ACE support so players can repair their wheels/tracks if crashed
 if (EGVAR(common,ACE_Loaded)) then {
+    if (_vehicle isKindOf "Air" || {_vehicle isKindOf "Ship"}) exitWith {};
     if (_vehicle isKindOf "Tank") then {
         ["ACE_Track", _veh] call ace_cargo_fnc_loadItem;
     } else {
