@@ -7,3 +7,4 @@ PREP(initCity);
 PREP(initCityCivilians);
 //PREP(initCityVehicles);
 PREP(initCivilian);
+PREP(setVehicleRandomTexture);
