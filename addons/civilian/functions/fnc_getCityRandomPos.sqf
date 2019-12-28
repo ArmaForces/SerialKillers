@@ -5,7 +5,7 @@
  *
  * Arguments:
  * 0: City namespace <CBA_NAMESPACE>
- * 1: Object to fit in <OBJECT>
+ * 1: Object (classname/config) to fit in <OBJECT/STRING/CONFIG>
  *
  * Return Value:
  * 0: Random position inside city <POSITION>
@@ -16,7 +16,7 @@
  * Public: No
  */
 
-params ["_cityNamespace", ["_object", objNull], ["_nearRoad", false], ["_emptyPosSearchRadius", 25]];
+params ["_cityNamespace", ["_objectType", ""], ["_nearRoad", false], ["_emptyPosSearchRadius", 25]];
 
 private _cityPosition = _cityNamespace getVariable QGVAR(Position);
 private _cityArea = _cityNamespace getVariable QGVAR(cityArea);
@@ -35,8 +35,17 @@ private _fnc_randomPos = {
     };
 };
 
+if (!(_objectType isEqualType "")) then {
+    if (_objectType isEqualType configNull) then {
+        _objectType = configName _objectType;
+    };
+    if (_objectType isEqualType objNull) then {
+        _objectType = typeOf _objectType;
+    };
+};
+
 // If no object is given, just random position is enough
-if (_object isEqualTo objNull) exitWith {[_cityPosition, _cityAreaSize, _nearRoad] call _fnc_randomPos};
+if (_objectType isEqualTo "") exitWith {[_cityPosition, _cityAreaSize, _nearRoad] call _fnc_randomPos};
 
 private _location = _cityNamespace getVariable QGVAR(Location);
 private _randomPos = [];
@@ -44,7 +53,7 @@ private _loopLimit = 100;
 // Loop until acquired random empty pos is within location area (or loop limit reached)
 while {(_loopLimit >= 0) && {!(_randomPos isEqualTo []) && {!(_randomPos inArea _location)}}} do {
     _randomPos = [_cityPosition, _cityAreaSize, _nearRoad] call _fnc_randomPos;
-    _randomPos = _randomPos findEmptyPosition [0, _emptyPosSearchRadius, _object];
+    _randomPos = _randomPos findEmptyPosition [0, _emptyPosSearchRadius, _objectType];
     _loopLimit = _loopLimit - 1;
 };
 
