@@ -14,6 +14,12 @@ if (isServer) then {
     // Maximum civilians count (TODO: as setting with randomization options)
     GVAR(civiliansCount) = 100 + floor (random (101));
 
+    // Weights for vehicles and civilians creation
+    GVAR(weightCapital) = ceil (random (10));
+    GVAR(weightCity) = ceil (random (8));
+    GVAR(weightVillage) = ceil (random (6));
+    GVAR(weightRural) = ceil (random (10));
+
     // Initialize all cities found on the map
     {
         GVAR(cities) pushBack ([_x] call FUNC(initCity));
@@ -21,11 +27,6 @@ if (isServer) then {
 
     publicVariable QGVAR(cities);
 
-    // Weights for vehicles and civilians creation
-    GVAR(weightCapital) = ceil (random (10));
-    GVAR(weightCity) = ceil (random (8));
-    GVAR(weightVillage) = ceil (random (6));
-    GVAR(weightRural) = ceil (random (10));
 
     // We need some improvements in determining civilian vehicles limit
     GVAR(emptyVehiclesLimit) = GVAR(emptyVehiclesLimitMultiplier) * 200;
