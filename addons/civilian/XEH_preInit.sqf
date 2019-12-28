@@ -21,6 +21,12 @@ if (isServer) then {
 
     publicVariable QGVAR(cities);
 
+    // Weights for vehicles and civilians creation
+    GVAR(weightCapital) = ceil (random (10));
+    GVAR(weightCity) = ceil (random (8));
+    GVAR(weightVillage) = ceil (random (6));
+    GVAR(weightRural) = ceil (random (10));
+
     GVAR(emptyVehiclesLimit) = GVAR(emptyVehiclesLimitMultiplier) * 200;
     call FUNC(initVehicles);
 };

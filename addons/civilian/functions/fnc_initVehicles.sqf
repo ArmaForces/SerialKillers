@@ -24,17 +24,17 @@ private _weights = [];
 {
     private _cityType = _x getVariable QGVAR(cityType);
     _cityWeight = switch (_cityType) do {
-        case "NameCityCapital": {ceil (random (10))};
-        case "NameCity": {ceil (random (8))};
-        case "NameVillage": {ceil (random (6))};
-        default {ceil (random (4))};
+        case "NameCityCapital": {GVAR(weightCapital)};
+        case "NameCity": {GVAR(weightCity)};
+        case "NameVillage": {GVAR(weightVillage)};
+        default {GVAR(weightRural)};
     };
     _weights pushBack (_cityWeight);
 } forEach _cities;
 
 // Add entry for non city area
 _cities pushBack "RuralArea";
-_weights pushBack (ceil (random (10)));
+_weights pushBack GVAR(weightRural);
 
 private _civilianCarTypes = "( (getNumber (_x >> 'scope') >= 2)
                                     && {
