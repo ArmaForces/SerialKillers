@@ -17,13 +17,14 @@
  * Public: No
  */
 
-params ["_vehicleClassname", "_position", ["_emptyCargo", true]];
+params ["_vehicleClassname", "_position", ["_dir", random 360], ["_emptyCargo", true]];
 
 if (_vehicleClassname isEqualType configNull) then {
     _vehicleClassname = configName _vehicleClassname;
 };
 
 private _vehicle = createVehicle [_vehicleClassname, _position, [], 0, "NONE"];
+_vehicle setDir _dir;
 _vehicle setVariable ["BIS_enableRandomization", false];
 [_vehicle] call FUNC(setVehicleRandomTexture);
 
