@@ -43,6 +43,8 @@ private _civilianCarTypes = "( (getNumber (_x >> 'scope') >= 2)
                                         && {getNumber (_x >> 'side') == 3}
                                     })" configClasses (configFile >> "CfgVehicles");
 
+GVAR(citiesVehicles) = call CBA_fnc_createNamespace;
+
 while {_i > 0} do {
     private _city = _cities selectRandomWeighted _weights;
     private _carType = selectRandom _civilianCarTypes;
@@ -56,7 +58,20 @@ while {_i > 0} do {
         _pos
     };
     if (!(_pos isEqualTo [])) then {
-        [_carType, _pos] call FUNC(createVehicle);
+        private _vehicle = [_carType, _pos] call FUNC(createVehicle);
+        if (_city isEqualTo "RuralArea") then {
+            private _list = GVAR(citiesVehicles) getVariable ["RuralArea", []];
+            _list pushBack _vehicle;
+            GVAR(citiesVehicles) setVariable ["RuralArea", _list];
+        } else {
+            private _list = GVAR(citiesVehicles) getVariable [[_city] call FUNC(getCityName), []];
+            if (count _list > 10) then {
+                GVAR(citiesVehicles) setVariable [[_city] call FUNC(getCityName), nil];
+                private _index = (_cities findIf {_x isEqualTo _city});
+                _cities deleteAt _index;
+                _weights deleteAt _index;
+            };
+        };
         _i = _i - 1;
     };
 };
