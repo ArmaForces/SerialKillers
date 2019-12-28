@@ -29,7 +29,7 @@ private _fnc_randomPos = {
         private _roads = _cityPosition nearRoads ((_cityAreaSize select 0) max (_cityAreaSize select 1));
         private _randomRoadPos = getPos (selectRandom _roads);
         if (_emptyPosSearchRadius isEqualTo 0) exitWith {_randomRoadPos};
-        [[[_cityPosition, _emptyPosSearchRadius]]] call BIS_fnc_randomPos;
+        [[[_randomRoadPos, _emptyPosSearchRadius]]] call BIS_fnc_randomPos;
     } else {
         [[[_cityPosition, [_cityAreaSize select 0, _cityAreaSize select 1, 0, true]]]] call BIS_fnc_randomPos;
     };
