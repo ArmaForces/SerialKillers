@@ -1,4 +1,5 @@
 PREP(assignCityCivilian);
+PREP(civilianKilled);
 PREP(createCivilian);
 PREP(getCityByLocation);
 PREP(getCityName);
