@@ -20,6 +20,10 @@
 
 params ["_civilian", "_killer", "_instigator", "_useEffects"];
 
+// Remove civilian from game
+[_civilian] call EFUNC(civilian,unassignCivilianFromCity);
+GVAR(civilians) deleteAt (GVAR(civilians) findIf {_x isEqualTo _civilian});
+
 // Killer can be vehicle sometimes so get driver
 _killer = driver _killer;
 // If killer was police, we need to change score accordingly
