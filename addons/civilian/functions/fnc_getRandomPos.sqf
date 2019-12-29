@@ -6,7 +6,9 @@
  * Arguments:
  * 0: Object (classname/config) to fit in <OBJECT/STRING/CONFIG>
  * 1: Position must be near road <BOOL>
- * 2: Search radius for empty position
+ * 2: Position can be on road <BOOL>
+ * 3: Position must be near house <BOOL>
+ * 4: Search radius for empty position <NUMBER>
  *
  * Return Value:
  * 0: Random position on the map <POSITION>
@@ -17,26 +19,25 @@
  * Public: No
  */
 
-params [["_objectType", ""], ["_nearRoad", false], ["_emptyPosSearchRadius", 25]];
+params [["_objectType", ""], ["_nearRoad", false], ["_allowOnRoad", true], ["_nearHouse", false], ["_emptyPosSearchRadius", 25]];
 
 // Function returns random position
 private _fnc_randomPos = {
-    params ["_nearRoad", "_emptyPosSearchRadius"];
-    if (_nearRoad) then {
-        private _randomPos = [];
-        while {_randomPos isEqualTo []} do {
-            private _randomMapPos = [] call BIS_fnc_randomPos;
-            private _roads = _randomMapPos nearRoads 100;
-            if (!(_roads isEqualTo [])) then {
-                private _randomRoadPos = getPos (selectRandom _roads);
-                if (_emptyPosSearchRadius isEqualTo 0) exitWith {_randomRoadPos};
-                _randomPos = [[[_randomRoadPos, _emptyPosSearchRadius * 2]]] call BIS_fnc_randomPos;
-            };
+    params ["_nearRoad", "_allowOnRoad", "_nearHouse"];
+    private _randomPos = [];
+    while {_randomPos isEqualTo []} do {
+        _randomPos = [] call BIS_fnc_randomPos;
+        if (!(_randomPos isEqualTo []) && {_nearHouse && {!([_randomPos] call FUNC(isHouseNearby))}}) then {
+            _randomPos = [];
         };
-        _randomPos
-    } else {
-        [] call BIS_fnc_randomPos;
+        if (!(_randomPos isEqualTo []) && {!(_allowOnRoad) && {isOnRoad _randomPos}}) then {
+            _randomPos = [];
+        };
+        if (!(_randomPos isEqualTo []) && {_nearRoad && {!([_randomPos] call FUNC(isRoadNearby))}}) then {
+            _randomPos = [];
+        };
     };
+    _randomPos
 };
 
 if (!(_objectType isEqualType "")) then {
@@ -49,13 +50,13 @@ if (!(_objectType isEqualType "")) then {
 };
 
 // If no object is given, just random position is enough
-if (_objectType isEqualTo "") exitWith {[_nearRoad, _emptyPosSearchRadius] call _fnc_randomPos};
+if (_objectType isEqualTo "") exitWith {[_nearRoad, _allowOnRoad, _nearHouse] call _fnc_randomPos};
 
 private _randomPos = [];
-private _loopLimit = 100;
+private _loopLimit = 250;
 // Loop until acquired random empty pos is within location area (or loop limit reached)
 while {(_loopLimit >= 0) && {(_randomPos isEqualTo [])}} do {
-    _randomPos = [_nearRoad, _emptyPosSearchRadius] call _fnc_randomPos;
+    _randomPos = [_nearRoad, _allowOnRoad, _nearHouse] call _fnc_randomPos;
     _randomPos = _randomPos findEmptyPosition [0, _emptyPosSearchRadius, _objectType];
     _loopLimit = _loopLimit - 1;
 };
