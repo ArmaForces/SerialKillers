@@ -13,6 +13,38 @@
             <English>When killers reach given score, they win.</English>
             <Polish>Zabójcy wygrywają, gdy osiągną wskazany wynik.</Polish>
         </Key>
+        <Key ID="STR_AFSK_Score_KilledCivilianKillersScore">
+            <English>Killers score for killing civilian</English>
+            <Polish>Wynik zabójców za zabicie cywila</Polish>
+        </Key>
+        <Key ID="STR_AFSK_Score_KilledCivilianKillersScore_Description">
+            <English>When killers kill civilian they get this many points.</English>
+            <Polish>Zabójcy dostają tyle punktów gdy zabiją cywila.</Polish>
+        </Key>
+        <Key ID="STR_AFSK_Score_KilledCivilianPoliceScore">
+            <English>Police score when civilian is killed</English>
+            <Polish>Wynik policji gdy zabójcy zabiją cywila</Polish>
+        </Key>
+        <Key ID="STR_AFSK_Score_KilledCivilianPoliceScore_Description">
+            <English>When civilian is killed by killers police get this many points.</English>
+            <Polish>Policja dostaje tyle punktów gdy cywil zginie z rąk zabójców.</Polish>
+        </Key>
+        <Key ID="STR_AFSK_Score_PoliceKilledCivilianPoliceScore">
+            <English>Killers score when civilian is killed</English>
+            <Polish>Wynik zabójców gdy cywil zostanie zabity</Polish>
+        </Key>
+        <Key ID="STR_AFSK_Score_PoliceKilledCivilianPoliceScore_Description">
+            <English>When civilian is killed by police killers get this many points.</English>
+            <Polish>Zabójcy dostają tyle punktów gdy cywil zginie z rąk policji.</Polish>
+        </Key>
+        <Key ID="STR_AFSK_Score_PoliceKilledCivilianPoliceScore">
+            <English>Police score for kiling civilian</English>
+            <Polish>Wynik policji za zabicie cywila</Polish>
+        </Key>
+        <Key ID="STR_AFSK_Score_PoliceKilledCivilianPoliceScore_Description">
+            <English>Police get this many points when they kill civilian.</English>
+            <Polish>Policja dostaje tyle punktów gdy zabije cywila.</Polish>
+        </Key>
         <Key ID="STR_AFSK_Score_Score">
             <English>Score</English>
             <Polish>Wynik</Polish>
