@@ -29,7 +29,7 @@ if (isServer) then {
 
 
     // We need some improvements in determining civilian vehicles limit
-    GVAR(emptyVehiclesLimit) = GVAR(emptyVehiclesLimitMultiplier) * (3 * count (GVAR(cities)));
+    GVAR(emptyVehiclesLimit) = GVAR(emptyVehiclesLimitMultiplier) * (5 * count (GVAR(cities)));
     call FUNC(initVehicles);
 };
 
