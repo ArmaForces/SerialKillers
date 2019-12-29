@@ -17,25 +17,6 @@
 
 private _i = GVAR(emptyVehiclesLimit);
 
-private _cities = +GVAR(cities);
-private _weights = [];
-
-// Create weights array for cities
-{
-    private _cityType = _x getVariable QGVAR(cityType);
-    _cityWeight = switch (_cityType) do {
-        case "NameCityCapital": {GVAR(weightCapital)};
-        case "NameCity": {GVAR(weightCity)};
-        case "NameVillage": {GVAR(weightVillage)};
-        default {GVAR(weightRural)};
-    };
-    _weights pushBack (_cityWeight);
-} forEach _cities;
-
-// Add entry for non city area
-_cities pushBack "RuralArea";
-_weights pushBack GVAR(weightRural);
-
 // Retrieve all civilian car types from config
 private _civilianCarTypes = "( (getNumber (_x >> 'scope') >= 2)
                                     && {
@@ -46,7 +27,6 @@ private _civilianCarTypes = "( (getNumber (_x >> 'scope') >= 2)
 GVAR(citiesVehicles) = call CBA_fnc_createNamespace;
 
 while {_i > 0} do {
-    private _city = _cities selectRandomWeighted _weights;
     private _carType = selectRandom _civilianCarTypes;
     private _pos = [_carType, true, false, true] call FUNC(getRandomPos);
     if (!(_pos isEqualTo [])) then {
