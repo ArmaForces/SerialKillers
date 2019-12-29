@@ -29,11 +29,11 @@
             <English>When civilian is killed by killers police get this many points.</English>
             <Polish>Policja dostaje tyle punktów gdy cywil zginie z rąk zabójców.</Polish>
         </Key>
-        <Key ID="STR_AFSK_Score_PoliceKilledCivilianPoliceScore">
+        <Key ID="STR_AFSK_Score_PoliceKilledCivilianKillersScore">
             <English>Killers score when civilian is killed</English>
             <Polish>Wynik zabójców gdy cywil zostanie zabity</Polish>
         </Key>
-        <Key ID="STR_AFSK_Score_PoliceKilledCivilianPoliceScore_Description">
+        <Key ID="STR_AFSK_Score_PoliceKilledCivilianKillersScore_Description">
             <English>When civilian is killed by police killers get this many points.</English>
             <Polish>Zabójcy dostają tyle punktów gdy cywil zginie z rąk policji.</Polish>
         </Key>
