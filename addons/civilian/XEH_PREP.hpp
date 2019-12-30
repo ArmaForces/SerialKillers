@@ -1,4 +1,7 @@
 PREP(assignCityCivilian);
+PREP(civilianKilled);
+PREP(civilianKilledMarker);
+PREP(civilianKilledMsg);
 PREP(createCivilian);
 PREP(createVehicle);
 PREP(getCityByLocation);
@@ -10,6 +13,7 @@ PREP(initCity);
 PREP(initCityCivilians);
 PREP(initVehicles);
 PREP(initCivilian);
+PREP(unassignCivilianFromCity);
 PREP(isHouseNearby);
 PREP(isRoadNearby);
 PREP(setVehicleRandomTexture);
