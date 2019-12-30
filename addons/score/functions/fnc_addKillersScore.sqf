@@ -23,7 +23,6 @@ private _time = [daytime] call BIS_fnc_timeToString;
 // Change killers score
 GVAR(killersScore) = GVAR(killersScore) + _scoreChange;
 publicVariable QGVAR(killersScore);
-[EAST, _scoreChange] call BIS_fnc_respawnTickets;
 
 GVAR(killersScoreChange) = GVAR(killersScoreChange) + _scoreChange;
 publicVariable QGVAR(killersScoreChange);

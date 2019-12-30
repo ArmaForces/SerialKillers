@@ -19,10 +19,10 @@
 params ["_cityNamespace", "_cityType"];
 
 private _cityCiviliansCount = switch (_cityType) do {
-    case "NameCityCapital": {ceil (random (10))};
-    case "NameCity": {ceil (random (8))};
-    case "NameVillage": {ceil (random (6))};
-    default {ceil (random (4))};
+    case "NameCityCapital": {GVAR(weightCapital)};
+    case "NameCity": {GVAR(weightCity)};
+    case "NameVillage": {GVAR(weightVillage)};
+    default {GVAR(weightRural)};
 };
 
 private _cityCivilians = [];
