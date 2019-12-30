@@ -17,12 +17,19 @@
 
 params ["_flag"];
 
+private _teleportActionsIDs = [];
 {
     private _destinationName = _x getVariable ["LocationName", "Teleport"];
-    _flag addAction [_destinationName, {
+    private _teleportActionID = _flag addAction [_destinationName, {
         [QGVAR(teleport), [_this select 0, _this select 1, _this select 3 select 0]] call CBA_fnc_serverEvent;
         call FUNC(deleteStartPositionsMarkers);
-        removeAllActions (_this select 0);
+        private _teleportActionsIDs = (_this select 0) getVariable [QGVAR(teleportActionsIDs), []];
+        {
+            (_this select 0 ) removeAction (_x);
+        } forEach _teleportActionsIDs;
     }, [_x]];
     [_x] call FUNC(createStartPositionMarker);
+    _teleportActionsIDs pushBack _teleportActionID;
 } forEach EGVAR(modules,killersStartPositions);
+
+_flag setVariable [QGVAR(teleportActionsIDs), _teleportActionsIDs];
