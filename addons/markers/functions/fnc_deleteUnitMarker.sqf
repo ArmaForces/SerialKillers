@@ -19,3 +19,4 @@ params ["_unit"];
 
 private _marker = _unit getVariable [QGVAR(marker), ""];
 deleteMarkerLocal _marker;
+_unit setVariable [QGVAR(marker), nil];

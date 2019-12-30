@@ -13,6 +13,9 @@
             <English>When killers reach given score, they win.</English>
             <Polish>Zabójcy wygrywają, gdy osiągną wskazany wynik.</Polish>
         </Key>
+        <!--
+            Civilian killed score changes
+        -->
         <Key ID="STR_AFSK_Score_KilledCivilianKillersScore">
             <English>Killers score for killing civilian</English>
             <Polish>Wynik zabójców za zabicie cywila</Polish>
@@ -45,10 +48,48 @@
             <English>Police get this many points when they kill civilian.</English>
             <Polish>Policja dostaje tyle punktów gdy zabije cywila.</Polish>
         </Key>
+        <!--
+            Cop killed score changes
+        -->
+        <Key ID="STR_AFSK_Score_KilledCopKillersScore">
+            <English>Killers score for killing cop</English>
+            <Polish>Wynik zabójców za zabicie policjanta</Polish>
+        </Key>
+        <Key ID="STR_AFSK_Score_KilledCopKillersScore_Description">
+            <English>When killers kill cop they get this many points.</English>
+            <Polish>Zabójcy dostają tyle punktów gdy zabiją policjanta.</Polish>
+        </Key>
+        <Key ID="STR_AFSK_Score_KilledCopPoliceScore">
+            <English>Police score when cop is killed</English>
+            <Polish>Wynik policji gdy zabójcy zabiją policjanta</Polish>
+        </Key>
+        <Key ID="STR_AFSK_Score_KilledCopPoliceScore_Description">
+            <English>When cop is killed by killers police get this many points.</English>
+            <Polish>Policja dostaje tyle punktów gdy policjant zginie z rąk zabójców.</Polish>
+        </Key>
+        <Key ID="STR_AFSK_Score_CopKilledCopKillersScore">
+            <English>Killers score when cop is killed</English>
+            <Polish>Wynik zabójców gdy policjant zostanie zabity</Polish>
+        </Key>
+        <Key ID="STR_AFSK_Score_CopKilledCopKillersScore_Description">
+            <English>When cop is killed by police killers get this many points.</English>
+            <Polish>Zabójcy dostają tyle punktów gdy policjant zginie z rąk policji.</Polish>
+        </Key>
+        <Key ID="STR_AFSK_Score_CopKilledCopPoliceScore">
+            <English>Police score for kiling cop</English>
+            <Polish>Wynik policji za zabicie policjanta</Polish>
+        </Key>
+        <Key ID="STR_AFSK_Score_CopKilledCopPoliceScore_Description">
+            <English>Police get this many points when they kill cop.</English>
+            <Polish>Policja dostaje tyle punktów gdy zabije policjanta.</Polish>
+        </Key>
         <Key ID="STR_AFSK_Score_Score">
             <English>Score</English>
             <Polish>Wynik</Polish>
         </Key>
+        <!--
+            Idle Time settings
+        -->
         <Key ID="STR_AFSK_Score_IdleTime">
             <English>Timeout between kills</English>
             <Polish>Odstęp czasu pomiędzy zabójstwami</Polish>

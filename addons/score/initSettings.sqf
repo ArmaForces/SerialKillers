@@ -9,6 +9,8 @@
     true
 ] call CBA_fnc_addSetting;
 
+// Civilian killed score changes
+
 [
     QGVAR(killedCivilianKillersScore),
     "SLIDER",
@@ -45,6 +47,46 @@
     true
 ] call CBA_fnc_addSetting;
 
+// Cop killed score changes
+
+[
+    QGVAR(killedCopKillersScore),
+    "SLIDER",
+    [LSTRING(KilledCopKillersScore), LSTRING(KilledCopKillersScore_Description)],
+    [LSTRING(DisplayName), LSTRING(Score)],
+    [-10, 10, 2, 0],
+    true
+] call CBA_fnc_addSetting;
+
+[
+    QGVAR(killedCopPoliceScore),
+    "SLIDER",
+    [LSTRING(KilledCopPoliceScore), LSTRING(KilledCopPoliceScore_Description)],
+    [LSTRING(DisplayName), LSTRING(Score)],
+    [-10, 10, 2, 0],
+    true
+] call CBA_fnc_addSetting;
+
+[
+    QGVAR(copKilledCopKillersScore),
+    "SLIDER",
+    [LSTRING(CopKilledCopKillersScore), LSTRING(CopKilledCopKillersScore_Description)],
+    [LSTRING(DisplayName), LSTRING(Score)],
+    [-10, 10, 2, 0],
+    true
+] call CBA_fnc_addSetting;
+
+[
+    QGVAR(copKilledCopPoliceScore),
+    "SLIDER",
+    [LSTRING(CopKilledCopPoliceScore), LSTRING(CopKilledCopPoliceScore_Description)],
+    [LSTRING(DisplayName), LSTRING(Score)],
+    [-10, 10, -1, 0],
+    true
+] call CBA_fnc_addSetting;
+
+// Time limit
+
 [
     QGVAR(timeLimit),
     "SLIDER",
@@ -73,6 +115,8 @@
     [-1, 120, 15, 0],
     true
 ] call CBA_fnc_addSetting;
+
+// Idle Time
 
 [
     QGVAR(timeLimitIdleTime),

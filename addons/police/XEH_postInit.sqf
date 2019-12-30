@@ -24,3 +24,10 @@
 [QGVAR(teleport), {
     _this call FUNC(teleport);
 }] call CBA_fnc_addEventHandler;
+
+if (!isServer) then {
+    ["B_Soldier_F", "killed", {
+        if (!(local (_this select 0))) exitWith {};
+        [QGVAR(copKilled), _this] call CBA_fnc_serverEvent;
+    }] call CBA_fnc_addClassEventHandler;
+};
