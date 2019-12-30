@@ -1,9 +1,15 @@
 PREP(assignCityCivilian);
 PREP(createCivilian);
+PREP(createVehicle);
 PREP(getCityByLocation);
 PREP(getCityName);
+PREP(getCityRandomPos);
 PREP(getNearestCity);
+PREP(getRandomPos);
 PREP(initCity);
 PREP(initCityCivilians);
-//PREP(initCityVehicles);
+PREP(initVehicles);
 PREP(initCivilian);
+PREP(isHouseNearby);
+PREP(isRoadNearby);
+PREP(setVehicleRandomTexture);
