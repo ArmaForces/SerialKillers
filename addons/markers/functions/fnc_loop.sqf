@@ -36,7 +36,7 @@ if (playerSide isEqualTo WEST) then {
         } else {
             _marker setMarkerPosLocal (position _cop);
         };
-    } forEach allPlayers select {side _x isEqualTo WEST};
+    } forEach (allPlayers select {side _x isEqualTo WEST});
 };
 
 // Move marker for every killer
@@ -59,7 +59,7 @@ if (playerSide isEqualTo WEST) then {
             [_killer] call FUNC(deleteUnitMarker);
         };
     };
-} forEach allPlayers select {side _x isEqualTo EAST};
+} forEach (allPlayers select {side _x isEqualTo EAST});
 
 // Schedule next loop
 [FUNC(loop), [], GVAR(refreshRate)] call CBA_fnc_waitAndExecute;
