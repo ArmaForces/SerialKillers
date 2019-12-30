@@ -1,7 +1,10 @@
+PREP(addItemsToArsenal);
 PREP(appearsArmed);
+PREP(createArsenal);
 PREP(getAllMapCities);
 PREP(getLocationType);
 PREP(getRandomEmptyPosition);
 PREP(nearestLocation);
 PREP(playMusicServer);
+PREP(removeItemsFromArsenal);
 PREP(showMessage);

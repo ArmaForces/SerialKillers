@@ -6,13 +6,18 @@ if (isServer) then {
         _this call FUNC(endMissionServer);
     }] call CBA_fnc_addEventHandler;
 
-    [QGVAR(scoreChanged), {
+    [QGVAR(changeScore), {
         params ["_side", "_change", ["_reason", ""]];
         if (_side isEqualTo WEST) then {
             [_change, _reason] call FUNC(addPoliceScore);
         } else {
             [_change, _reason] call FUNC(addKillersScore);
         };
+        [QGVAR(scoreChanged), _this] call CBA_fnc_serverEvent;
+    }] call CBA_fnc_addEventHandler;
+
+    [QGVAR(scoreChanged), {
+        params ["_side", "_change", ["_reason", ""]];
         [QGVAR(showScore), [_reason]] call CBA_fnc_globalEvent;
     }] call CBA_fnc_addEventHandler;
 

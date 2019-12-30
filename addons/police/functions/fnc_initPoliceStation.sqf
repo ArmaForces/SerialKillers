@@ -22,15 +22,23 @@ if !(isServer) exitWith {};
 private _baseName = _logic getVariable ["LocationName", str random(999)];
 private _hasHelipad = _logic getVariable ["HasHelipad", false];
 private _basePos = getPos _logic;
+private _flag = createVehicle ["Flag_US_F", _basePos, [], 0, "NONE"];
+_flag setVariable ["policeStation", _logic, true];
 // Init vehicle spawners here
-// Init arsenal here
+// Init arsenal
+private _box = createVehicle ["B_CargoNet_01_ammo_F", _basePos, [], 0, "NONE"];
+clearItemCargoGlobal _box;
+clearWeaponCargoGlobal _box;
+clearMagazineCargoGlobal _box;
+_logic setVariable ["Arsenal", _box, true];
+_box setVariable ["policeStation", _logic, true];
+[_box] call EFUNC(common,createArsenal);
+GVAR(arsenals) pushBack _box;
 
 // Create marker
 private _marker = [_baseName, _basePos] call FUNC(policeStationMarker);
 _logic setVariable ["Marker", _marker];
 
 // Create teleporter
-private _flag = "Flag_US_F" createVehicle _basePos;
-_flag setVariable ["policeStation", _logic, true];
 _logic setVariable ["Teleporter", _flag, true];
 [QGVAR(createTeleport), [_flag]] call CBA_fnc_globalEventJIP;

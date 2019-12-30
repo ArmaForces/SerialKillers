@@ -21,18 +21,25 @@ if (_cityLocation isEqualType configNull) then {
     _cityLocation = [getArray (_cityLocation >> 'position'), 10] call EFUNC(common,nearestLocation);
 };
 
+private _cityLocationConfig = (configFile >> "CfgWorlds" >> worldName >> "Names" >> className _cityLocation);
 
 // Create city namespace
 private _cityNamespace = true call CBA_fnc_createNamespace;
 GVAR(citiesLocations) setVariable [className _cityLocation, _cityNamespace, true];
 _cityNamespace setVariable [QGVAR(Location), _cityLocation, true];
 _cityNamespace setVariable [QGVAR(Name), [_cityLocation] call FUNC(getCityName), true];
+private _cityType = [_cityLocation] call EFUNC(common,getLocationType);
+_cityNamespace setVariable [QGVAR(cityType), _cityType, true];
+
+// Set city position and area variables
 private _cityPosition = (position _cityLocation);
 _cityPosition set [2, 0]; // Location position has negative third coordinate
 _cityNamespace setVariable [QGVAR(Position), _cityPosition, true];
-_cityNamespace setVariable [QGVAR(CiviliansList), []];
+private _cityArea = [_cityPosition, [getNumber (_cityLocationConfig >> 'radiusA'), getNumber (_cityLocationConfig >> 'radiusB'), 0, false]];
+_cityNamespace setVariable [QGVAR(cityArea), _cityArea];
 
-private _cityType = [_cityLocation] call EFUNC(common,getLocationType);
+// Create city civilians list
+_cityNamespace setVariable [QGVAR(CiviliansList), []];
 
 // Init civilians
 [_cityNamespace, _cityType] call FUNC(initCityCivilians);
