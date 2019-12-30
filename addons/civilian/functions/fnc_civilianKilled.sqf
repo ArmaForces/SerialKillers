@@ -24,6 +24,13 @@ params ["_civilian", "_killer", "_instigator", "_useEffects"];
 [_civilian] call EFUNC(civilian,unassignCivilianFromCity);
 GVAR(civilians) deleteAt (GVAR(civilians) findIf {_x isEqualTo _civilian});
 
+private _time = [daytime] call BIS_fnc_timeToString;
+// Call function to create marker at killed unit's position.
+[_civilian, _time] call FUNC(civilianKilledMarker);
+// Show message for all cops that cop has been killed near some location with timestamp
+private _msg = [_civilian, _time] call FUNC(civilianKilledMsg);
+[QEGVAR(police,showMsg), [_msg]] call CBA_fnc_globalEvent;
+
 // Killer can be vehicle sometimes so get driver
 _killer = driver _killer;
 // If killer was police, we need to change score accordingly
