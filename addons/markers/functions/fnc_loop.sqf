@@ -56,7 +56,7 @@ if (playerSide isEqualTo WEST) then {
         };
     } else {
         if !(playerSide isEqualTo EAST && {!(_marker isEqualTo "")}) then {
-            deleteMarkerLocal _marker;
+            [_killer] call FUNC(deleteUnitMarker);
         };
     };
 } forEach allPlayers select {side _x isEqualTo EAST};
