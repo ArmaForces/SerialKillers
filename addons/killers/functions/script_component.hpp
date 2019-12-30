@@ -1,0 +1,1 @@
+#include "\z\afsk\addons\killers\script_component.hpp"

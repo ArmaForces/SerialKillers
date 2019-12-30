@@ -17,5 +17,13 @@
             <English>Has helipad</English>
             <Polish>Posiada lądowisko dla helikoptera</Polish>
         </Key>
+        <Key ID="STR_AFSK_Modules_Killers_Start">
+            <English>Killers Start</English>
+            <Polish>Start Zabójców</Polish>
+        </Key>
+        <Key ID="STR_AFSK_Modules_Killers_Stash">
+            <English>Killers Weapon Stash</English>
+            <Polish>Skład broni zabójców</Polish>
+        </Key>
     </Package>
 </Project>
