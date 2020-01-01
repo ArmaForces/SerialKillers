@@ -23,6 +23,7 @@ params ["_civilian", "_killer", "_instigator", "_useEffects"];
 // Remove civilian from game
 [_civilian] call EFUNC(civilian,unassignCivilianFromCity);
 GVAR(civilians) deleteAt (GVAR(civilians) findIf {_x isEqualTo _civilian});
+[_civilian] call EFUNC(markers,deleteUnitMarker);
 
 private _time = [daytime] call BIS_fnc_timeToString;
 // Call function to create marker at killed unit's position.
