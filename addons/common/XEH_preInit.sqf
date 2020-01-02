@@ -7,8 +7,7 @@ GVAR(CUP_Loaded) = isClass (configFile >> "CfgPatches" >> "cup_common"); // Prob
 GVAR(RHS_Loaded) = isClass (configFile >> "CfgPatches" >> "rhs_common"); // Same here
 
 // Prepare all location types for getNearestLocation function
-GVAR(allLocationTypes) = [];
-QUOTE(GVAR(allLocationTypes) pushBack configName _x) configClasses (configFile >> "CfgLocationTypes");
+GVAR(allLocationTypes) = ("true" configClasses (configFile >> "CfgLocationTypes")) apply {configName _x};
 
 // Location names cache namespace (to prevent reading from config every time)
 GVAR(locationNames) = call CBA_fnc_createNamespace;
