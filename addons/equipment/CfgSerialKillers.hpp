@@ -11,6 +11,51 @@ class CfgSerialKillers {
                     class ItemRadio {};
                 };
             };
+            class Killers {
+                class Equipment {
+                    /* Primary */
+                    class arifle_Mk20_F {
+                        availableOnStart = 0;
+                        availableInStash = 1;
+                    };
+                    class arifle_Mk20_GL_F: arifle_Mk20_F {};
+                    class arifle_Katiba_F {
+                        availableOnStart = 1;
+                        availableInStash = 1;
+                    };
+                    class LMG_Zafir_F {
+                        availableOnStart = 0;
+                        availableInStash = 1;
+                    };
+                    class srifle_GM6_F: LMG_Zafir_F {};
+                    /* Pistols */
+                    class hgun_Rook40_F {
+                        availableOnStart = 1;
+                        availableInStash = 1;
+                    };
+                    class hgun_Pistol_01_F: hgun_Rook40_F {};
+                    /* Launchers */
+                    class launch_O_Vorona_green_F {
+                        availableOnStart = 0;
+                        availableInStash = 1;
+                    };
+                    class launch_B_Titan_olive_F: launch_O_Vorona_green_F {};
+                    class launch_I_Titan_short_F: launch_O_Vorona_green_F {};
+                    class launch_MRAWS_green_rail_F: launch_O_Vorona_green_F {};
+                    class launch_NLAW_F {
+                        availableOnStart = 1;
+                        availableInStash = 1;
+                    };
+                    /* Explosives and equipment */
+                    class DemoCharge_Remote_Mag {
+                        availableOnStart = 1;
+                        availableInStash = 1;
+                    };
+                    class IEDUrbanSmall_Remote_Mag: DemoCharge_Remote_Mag {};
+                    class ClaymoreDirectionalMine_Remote_Mag: DemoCharge_Remote_Mag {};
+                    class SLAMDirectionalMine_Wire_Mag: DemoCharge_Remote_Mag {};
+                };
+            };
             class Police {
                 class Equipment {
                     class hgun_P07_F {
