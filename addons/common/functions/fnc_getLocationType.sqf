@@ -11,7 +11,7 @@
  * 0: Location type <STRING>
  *
  * Example:
- * [[player] call afsk_common_fnc_getNearestLocation] call afsk_common_fnc_getCitySize
+ * [[player] call afsk_common_fnc_getNearestLocation] call afsk_common_fnc_getLocationType
  *
  * Public: No
  */

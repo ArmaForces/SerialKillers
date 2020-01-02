@@ -10,7 +10,7 @@
  * 0: City namespace <CBA_NAMESPACE> or objNull if not found
  *
  * Example:
- * [[player] call afsk_common_fnc_getNearestLocation] call afsk_civilian_fnc_getCityByLocation
+ * [[player] call afsk_common_fnc_getNearestCityLocation] call afsk_civilian_fnc_getCityByLocation
  *
  * Public: No
  */

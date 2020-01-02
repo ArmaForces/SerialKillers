@@ -24,7 +24,7 @@ if (_timeOfDeath isEqualType 0) then {
 };
 
 if (isNull _nearestTown) then {
-    _nearestTown = [_deadCop] call EFUNC(common,getNearestLocation);
+    _nearestTown = [_deadCop] call EFUNC(common,getNearestCityLocation);
 };
 
 private _msg = "";
