@@ -4,6 +4,11 @@
     _this call FUNC(killerKilled);
 }] call CBA_fnc_addEventHandler;
 
+if (isServer) then {
+    call FUNC(initKillersBase);
+    call FUNC(initKillersStashes);
+};
+
 if (hasInterface) then {
     [QGVAR(createTeleport), {
         if !(playerSide isEqualTo EAST) exitWith {};
