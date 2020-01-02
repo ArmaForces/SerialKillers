@@ -10,6 +10,9 @@ GVAR(RHS_Loaded) = isClass (configFile >> "CfgPatches" >> "rhs_common"); // Same
 GVAR(allLocationTypes) = [];
 QUOTE(GVAR(allLocationTypes) pushBack configName _x) configClasses (configFile >> "CfgLocationTypes");
 
+// Location names cache namespace (to prevent reading from config every time)
+GVAR(locationNames) = call CBA_fnc_createNamespace;
+
 if (isServer) then {
     GVAR(musicEH) = -1;
     GVAR(musicPlaying) = false;

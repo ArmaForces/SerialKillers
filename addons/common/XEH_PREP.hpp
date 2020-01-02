@@ -2,6 +2,7 @@ PREP(addItemsToArsenal);
 PREP(appearsArmed);
 PREP(createArsenal);
 PREP(getAllMapCities);
+PREP(getLocationName);
 PREP(getLocationType);
 PREP(getNearestCityLocation);
 PREP(getNearestLocation);

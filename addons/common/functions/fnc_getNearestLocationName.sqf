@@ -22,4 +22,4 @@ params ["_pos", ["_searchRadius", 2000]];
 private _nearestLocation = [_pos, _searchRadius] call FUNC(getNearestLocation);
 if (_nearestLocation isEqualTo locationNull) exitWith {""};
 
-name _nearestLocation
+[_nearestLocation] call FUNC(getLocationName);
