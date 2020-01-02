@@ -10,7 +10,7 @@
  * 0: City namespace <CBA_NAMESPACE>
  *
  * Example:
- * [[player] call afsk_common_fnc_nearestLocation] call afsk_common_fnc_initCity
+ * [[player] call afsk_common_fnc_getNearestLocation] call afsk_common_fnc_initCity
  *
  * Public: No
  */
@@ -18,7 +18,7 @@
 params ["_cityLocation"];
 
 if (_cityLocation isEqualType configNull) then {
-    _cityLocation = [getArray (_cityLocation >> 'position'), 10] call EFUNC(common,nearestLocation);
+    _cityLocation = [getArray (_cityLocation >> 'position'), 10] call EFUNC(common,getNearestLocation);
 };
 
 private _cityLocationConfig = (configFile >> "CfgWorlds" >> worldName >> "Names" >> className _cityLocation);

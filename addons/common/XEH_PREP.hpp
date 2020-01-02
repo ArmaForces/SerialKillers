@@ -4,7 +4,7 @@ PREP(createArsenal);
 PREP(getAllMapCities);
 PREP(getLocationType);
 PREP(getRandomEmptyPosition);
-PREP(nearestLocation);
+PREP(getNearestLocation);
 PREP(playMusicServer);
 PREP(removeItemsFromArsenal);
 PREP(showMessage);
