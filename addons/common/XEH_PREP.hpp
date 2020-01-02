@@ -5,6 +5,7 @@ PREP(getAllMapCities);
 PREP(getLocationType);
 PREP(getNearestCityLocation);
 PREP(getNearestLocation);
+PREP(getNearestLocationName);
 PREP(getRandomEmptyPosition);
 PREP(playMusicServer);
 PREP(removeItemsFromArsenal);
