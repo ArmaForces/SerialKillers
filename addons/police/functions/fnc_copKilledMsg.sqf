@@ -28,7 +28,7 @@ if (isNull _nearestTown) then {
 };
 
 private _msg = "";
-private _distance = _deadCop distance _nearestTown;
+private _distance = (position _deadCop) distance _nearestTown;
 // Check if distance is greater than 250 m. If so then change output a bit to represent that.
 if (_distance <= 250) then {
     _msg = format [LSTRING(Cop_Killed_In_City), _timeOfDeath, text _nearestTown];

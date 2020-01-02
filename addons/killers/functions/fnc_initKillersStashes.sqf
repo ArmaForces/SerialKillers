@@ -17,6 +17,7 @@
  */
 
 private _stashes = +EGVAR(modules,killersStashes);
+if (_stashes isEqualTo []) exitWith {};
 
 private _stashesCount = count (_stashes);
 // Number of stashes to randomly select and create (so around 75% of them should appear on average)

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="AFSK">
+    <Package name="Killers">
+        <Key ID="STR_AFSK_Killers_DisplayName">
+            <English>SerialKillers - Killers</English>
+            <Polish>SerialKillers - Zabójcy</Polish>
+        </Key>
+        <Key ID="STR_AFSK_Killers_Killers">
+            <English>Killers</English>
+            <Polish>Zabójcy</Polish>
+        </Key>
+    </Package>
+</Project>
