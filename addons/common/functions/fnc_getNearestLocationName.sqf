@@ -16,7 +16,7 @@
  * Public: No
  */
 
-params ["_pos", ["_searchRadius", nil]];
+params ["_pos", ["_searchRadius", 2000]];
 
 // Get nearest location
 private _nearestLocation = [_pos, _searchRadius] call FUNC(getNearestLocation);
