@@ -6,6 +6,12 @@ GVAR(ACE_Loaded) = isClass (configFile >> "CfgPatches" >> "ace_common");
 GVAR(CUP_Loaded) = isClass (configFile >> "CfgPatches" >> "cup_common"); // Probably something else, not "cup_common"
 GVAR(RHS_Loaded) = isClass (configFile >> "CfgPatches" >> "rhs_common"); // Same here
 
+// Prepare all location types for getNearestLocation function
+GVAR(allLocationTypes) = ("true" configClasses (configFile >> "CfgLocationTypes")) apply {configName _x};
+
+// Location names cache namespace (to prevent reading from config every time)
+GVAR(locationNames) = call CBA_fnc_createNamespace;
+
 if (isServer) then {
     GVAR(musicEH) = -1;
     GVAR(musicPlaying) = false;

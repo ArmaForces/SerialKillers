@@ -10,7 +10,7 @@
  * 0: Nearest map location <LOCATION>
  *
  * Example:
- * [player] call afsk_common_fnc_nearestLocation
+ * [player] call afsk_common_fnc_getNearestLocation
  *
  * Public: No
  */
@@ -26,7 +26,7 @@ if (_pos isEqualType objNull) then {
 };
 
 // Get nearest locations to object.
-private _towns = nearestLocations [_pos, ["NameVillage", "NameCity", "NameCityCapital"], _searchRadius];
-diag_log format ["[AFSK] [COMMON] [nearestLocation] Pos: %1, Town: %2", _pos, _towns param [0, locationNull]];
+private _locations = nearestLocations [_pos, GVAR(allLocationTypes), _searchRadius];
+diag_log format ["[AFSK] [COMMON] [getNearestLocation] Pos: %1, Location: %2", _pos, _locations param [0, locationNull]];
 // Select nearest location from array.
-_towns param [0, locationNull]
+_locations param [0, locationNull]
