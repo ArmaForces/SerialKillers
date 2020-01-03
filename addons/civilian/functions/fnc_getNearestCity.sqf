@@ -23,7 +23,7 @@ if (_position isEqualType objNull) then {
 };
 
 // Find nearest city location
-_nearestTown = [_position, _searchRadius] call EFUNC(common,nearestLocation);
+_nearestTown = [_position, _searchRadius] call EFUNC(common,getNearestCityLocation);
 
 // Return city namespace or objNull if not found
 if (_nearestTown isEqualTo locationNull) exitWith {objNull};
