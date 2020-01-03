@@ -11,6 +11,32 @@ class CfgVehicles {
         };
     };
 
+    class GVAR(moduleJail): Module_F {
+        scope = 2;
+        displayName = CSTRING(Jail);
+        category = QUOTE(PREFIX);
+        function = QFUNC(moduleJail);
+        functionPriority = 1;
+        isGlobal = 0;
+        isTriggerActivated = 0;
+        isDisposable = 1;
+        is3DEN = 0;
+
+        canSetArea = 1;
+        canSetAreaHeight = 0;
+        canSetAreaShape = 1;
+        class AttributeValues {
+            size2[] = {50, 50};
+            size3[] = {50, 50, -1};
+            isRectangle = 1;
+        };
+
+        class Attributes: AttributesBase {
+            class ModuleDescription: ModuleDescription {};
+        };
+        class ModuleDescription: ModuleDescription {};
+    };
+
     class GVAR(modulePoliceStation): Module_F {
         scope = 2;
         displayName = CSTRING(PoliceStation_Name);
