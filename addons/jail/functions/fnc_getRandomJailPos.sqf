@@ -15,4 +15,4 @@
  * Public: No
  */
 
-[[GVAR(jail) getVariable "objectArea"], ["water"]] call BIS_fnc_randomPos;
+[[[getPos GVAR(jail), GVAR(jail) getVariable "objectArea"]], ["water"]] call BIS_fnc_randomPos;
