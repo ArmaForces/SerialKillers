@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="AFSK">
+    <Package name="Jail">
+        <Key ID="STR_AFSK_Jail_DisplayName">
+            <English>SerialKillers - Jail</English>
+            <Polish>SerialKillers - Więzienie</Polish>
+        </Key>
+        <Key ID="STR_AFSK_Jail_Jail">
+            <English>Jail</English>
+            <Polish>Więzienie</Polish>
+        </Key>
+    </Package>
+</Project>
