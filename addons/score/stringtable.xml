@@ -134,6 +134,9 @@
             <English>Killers get this many points on timeout.</English>
             <Polish>Po upłynięciu maksymalnego czasu pomiędzy zabójstwami policja dostanie tyle punktów.</Polish>
         </Key>
+        <!--
+            Endings
+        -->
         <Key ID="STR_AFSK_Score_Killers_Win">
             <English>Killers win!</English>
             <Polish>Zabójcy wygrywają!</Polish>
@@ -154,6 +157,13 @@
             <English>Timeouts limit reached</English>
             <Polish>Osiągnięty limit przekroczeń limitu czasu</Polish>
         </Key>
+        <Key ID="STR_AFSK_Score_Civilians_Dead">
+            <English>All civilians are dead</English>
+            <Polish>Wszyscy cywile nie żyją</Polish>
+        </Key>
+        <!--
+            Time limit settings
+        -->
         <Key ID="STR_AFSK_Score_TimeLimit">
             <English>Mission time limit</English>
             <Polish>Limit czasu misji</Polish>

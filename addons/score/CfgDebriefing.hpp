@@ -18,4 +18,7 @@ class CfgDebriefing {
     class GVAR(timeoutLimit): GVAR(killersDead) {
         subtitle = CSTRING(Timeout_Limit);
     };
+    class GVAR(civiliansDead): GVAR(killersScoreReached) {
+        subtitle = CSTRING(Civilians_Dead);
+    };
 };
