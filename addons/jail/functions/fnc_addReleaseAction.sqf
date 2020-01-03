@@ -21,7 +21,7 @@ if (GVAR(ACE_Loaded)) exitWith {};
 
 private _actionID = [
     _prisoner,
-    "Release prisoner",
+    LLSTRING(Release_Prisoner),
     QUOTE(_this distance _target < 3 && {alive _target && {_target getVariable [QGVAR(isImprisoned), false]}}),
     QUOTE(_caller distance _target < 3 && {alive _target && {_target getVariable [QGVAR(isImprisoned), false]}}),
     "true", "true", {}, {},

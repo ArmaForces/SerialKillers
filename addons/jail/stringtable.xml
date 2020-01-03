@@ -9,5 +9,9 @@
             <English>Jail</English>
             <Polish>Więzienie</Polish>
         </Key>
+        <Key ID="STR_AFSK_Jail_Release_Prisoner">
+            <English>Release prisoner</English>
+            <Polish>Uwolnij więźnia</Polish>
+        </Key>
     </Package>
 </Project>
