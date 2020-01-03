@@ -41,7 +41,7 @@ _cityNamespace setVariable [QGVAR(cityArea), _cityArea];
 // Create city civilians variables
 _cityNamespace setVariable [QGVAR(CiviliansList), []];
 _cityNamespace setVariable [QGVAR(CiviliansCount), 0];
-_cityNamespace setVariable [QGVAR(InitialCiviliansCount), 0];
+_cityNamespace setVariable [QGVAR(initialCiviliansCount), 0];
 
 // Init vehicles
 _cityNamespace

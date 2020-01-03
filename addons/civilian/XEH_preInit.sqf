@@ -35,6 +35,11 @@ if (isServer) then {
 
     // Initialize civilians
     call FUNC(initCivilians);
+    {
+        private _civiliansCount = count (_x getVariable [QGVAR(CiviliansList), []]);
+        _x setVariable [QGVAR(CiviliansCount), _civiliansCount];
+        _x setVariable [QGVAR(initialCiviliansCount), _civiliansCount];
+    } forEach GVAR(cities);
 
 
     // We need some improvements in determining civilian vehicles limit
