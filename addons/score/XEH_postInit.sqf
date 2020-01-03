@@ -6,6 +6,11 @@ if (isServer) then {
         _this call FUNC(endMissionServer);
     }] call CBA_fnc_addEventHandler;
 
+    // All killers killed or in custody
+    [QGVAR(killersKilled), {
+        [QGVAR(endMission), [KILLERS_DEAD]] call CBA_fnc_serverEvent;
+    }] call CBA_fnc_addEventHandler;
+
     [QGVAR(changeScore), {
         params ["_side", "_change", ["_reason", ""]];
         if (_side isEqualTo WEST) then {
