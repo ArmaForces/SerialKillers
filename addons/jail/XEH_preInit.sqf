@@ -5,7 +5,7 @@ ADDON = false;
 // All prisoners, synced by server
 GVAR(prisoners) = [];
 // Variable storing prisoner - holdActionID connection
-if (EGVAR(common,ACE_Loaded)) then {
+if (!(EGVAR(common,ACE_Loaded))) then {
     GVAR(releaseActions) = call CBA_fnc_createNamespace;
 };
 
