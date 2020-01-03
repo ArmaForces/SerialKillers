@@ -31,8 +31,10 @@ if (isServer) then {
     {
         GVAR(cities) pushBack ([_x] call FUNC(initCity));
     } forEach EGVAR(common,cities);
-
     publicVariable QGVAR(cities);
+
+    // Initialize civilians
+    call FUNC(initCivilians);
 
 
     // We need some improvements in determining civilian vehicles limit

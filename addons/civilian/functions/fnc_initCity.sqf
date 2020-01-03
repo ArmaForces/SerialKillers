@@ -38,11 +38,10 @@ _cityNamespace setVariable [QGVAR(Position), _cityPosition, true];
 private _cityArea = [_cityPosition, [getNumber (_cityLocationConfig >> 'radiusA'), getNumber (_cityLocationConfig >> 'radiusB'), 0, false]];
 _cityNamespace setVariable [QGVAR(cityArea), _cityArea];
 
-// Create city civilians list
+// Create city civilians variables
 _cityNamespace setVariable [QGVAR(CiviliansList), []];
-
-// Init civilians
-[_cityNamespace, _cityType] call FUNC(initCityCivilians);
+_cityNamespace setVariable [QGVAR(CiviliansCount), 0];
+_cityNamespace setVariable [QGVAR(InitialCiviliansCount), 0];
 
 // Init vehicles
 _cityNamespace
