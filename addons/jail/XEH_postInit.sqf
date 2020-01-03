@@ -1,5 +1,8 @@
 #include "script_component.hpp"
 
+// Jail module
+GVAR(jail) = EGVAR(modules,jail);
+
 if (isServer) then {
     [QGVAR(free), {
         _this call FUNC(free);
@@ -8,6 +11,10 @@ if (isServer) then {
     [QGVAR(imprison), {
         _this call FUNC(imprison);
     }] call CBA_fnc_addEventHandler;
+
+    if (!(GVAR(jail) isEqualTo objNull)) then {
+        call FUNC(jailMarker);
+    };
 };
 
 if (hasInterface) then {
