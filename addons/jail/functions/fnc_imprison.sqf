@@ -30,7 +30,8 @@ if (EGVAR(common,ACE_Loaded)) then {
     // Tie the prisoner. He will be set free on untie.
     [QACEGVAR(captives,setHandcuffed), [_unit, true], _unit] call CBA_fnc_targetEvent;
 } else {
-    // TODO: Add own release action to prisoner.
+    // Add own release action to prisoner.
+    [QGVAR(addReleaseAction), [_unit]] call CBA_fnc_globalEvent;
 };
 
 // Create spectator for prisoner so he won't get bored.

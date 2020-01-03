@@ -12,6 +12,14 @@ if (isServer) then {
 
 if (hasInterface) then {
     if (playerSide isEqualTo EAST) then {
+        // Add/remove prisoner release action EH for EAST only
+        [QGVAR(addReleaseAction), {
+            _this call FUNC(addReleaseAction);
+        }] call CBA_fnc_addEventHandler;
+        [QGVAR(removeReleaseAction), {
+            _this call FUNC(removeReleaseAction);
+        }] call CBA_fnc_addEventHandler;
+
         // Add local EH for release from prison. Supports ACE captives tie/untie.
         if (EGVAR(common,ACE_Loaded)) then {
             // Add ACE EH for handcuffing
@@ -32,5 +40,10 @@ if (hasInterface) then {
                 };
             }] call CBA_fnc_addEventHandler;
         };
+
+        // JIP compatibility for own release action
+        {
+            [QGVAR(addReleaseAction), [_x]] call CBA_fnc_localEvent;
+        } forEach GVAR(prisoners);
     };
 };
