@@ -1,4 +1,5 @@
 PREP(addReleaseAction);
+PREP(canRelease);
 PREP(free);
 PREP(getRandomJailPos);
 PREP(imprison);

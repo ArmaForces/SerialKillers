@@ -22,13 +22,16 @@ if (GVAR(ACE_Loaded)) exitWith {};
 private _actionID = [
     _prisoner,
     LLSTRING(Release_Prisoner),
-    QUOTE((_this distance _target < 3) && (alive _target) && (_target getVariable [QQGVAR(isImprisoned), false])),
-    QUOTE((_caller distance _target < 3) && (alive _target) && (_target getVariable [QQGVAR(isImprisoned), false])),
-    "true", "true", {}, {},
+    "",
+    "",
+    QUOTE([ARR_2(_this, _target)] call FUNC(canRelease)),
+    QUOTE([ARR_2(_caller, _target)] call FUNC(canRelease)),
+    {}, {},
     {
         params ["_target", "_caller", "_actionId", "_arguments"];
         [QGVAR(released), [_target], _target] call CBA_fnc_targetEvent;
         [QGVAR(removeReleaseAction)] call CBA_fnc_globalEvent;
     }, {}, [], 1, 10, true, false
 ] call BIS_fnc_holdActionAdd;
-GVAR(releaseActions) setVariable [_prisoner, _actionID];
+
+GVAR(releaseActions) setVariable [str _prisoner, _actionID];
