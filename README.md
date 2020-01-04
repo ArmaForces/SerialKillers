@@ -22,7 +22,6 @@ The mod and mission are on the same foundation as the ACE3 mod, using its framew
 
 Huge appreciation and thanks to [ACE3 Team](http://ace3mod.com/team.html) for their open-source nature and permission to use their systems.
 
-
 ## Setup
 
 ### Requirements
@@ -43,11 +42,13 @@ _Replace `hemtt` with `hemtt.exe` on Windows._
 - Run `$ hemtt clean` to clean build files
 
 **Windows Helpers:**
+
 - Double-click `build.bat` to create a development build
 
 ### Recommended tools
 
 It's recommended to use [Visual Studio Code](https://) editor with following plugins to ensure equal development environment for all contributors:
+
 - [EditorConfig](https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig)
 - [SQFLint](https://marketplace.visualstudio.com/items?itemName=skacekachna.sqflint)
 - [SQF Langauge](https://marketplace.visualstudio.com/items?itemName=Armitxes.sqf)
