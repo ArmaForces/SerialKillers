@@ -18,7 +18,7 @@
 
 Idea based on Arma 2 SerialKillers 2009 gamemode by NeoArmageddon and Mondkalb.
 
-The mod and mission are on the same foundation as the ACE3 mod, using its framework, systems, tools and standards. It is entirely **open-source** and licensed under the GNU General Public License ([GPLv2](https://github.com/ArmaForces/Mods/blob/master/LICENSE)).
+The mod and mission are on the same foundation as the ACE3 mod, using its framework, systems, tools and standards. It is entirely **open-source** and licensed under the GNU General Public License ([GPLv2](https://github.com/ArmaForces/SerialKillers/blob/master/LICENSE)).
 
 Huge appreciation and thanks to [ACE3 Team](http://ace3mod.com/team.html) for their open-source nature and permission to use their systems.
 
