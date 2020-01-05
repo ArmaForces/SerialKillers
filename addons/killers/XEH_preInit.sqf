@@ -5,5 +5,7 @@ ADDON = false;
 #include "initSettings.sqf"
 
 GVAR(killersStartPositionsMarkers) = [];
+GVAR(startPositions) = call FUNC(initStartPositions);
+publicVariable QGVAR(startPositions);
 
 ADDON = true;
