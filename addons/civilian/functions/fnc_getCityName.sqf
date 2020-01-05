@@ -10,7 +10,7 @@
  * 0: City name <STRING>
  *
  * Example:
- * [[player] call afsk_common_nearestLocation] call afsk_civilian_fnc_getCityName
+ * [[player] call afsk_common_getNearestCityLocation] call afsk_civilian_fnc_getCityName
  *
  * Public: No
  */
@@ -27,7 +27,7 @@ private _name = _city getVariable [QGVAR(Name), ""];
 if !(_name isEqualTo "") exitWith {_name};
 
 // Get logic assigned location
-private _location = _city getVariable [QGVAR(Location), [_city] call EFUNC(common,nearestLocation)];
+private _location = _city getVariable [QGVAR(Location), [_city] call EFUNC(common,getNearestCityLocation)];
 if (_location isEqualTo locationNull) exitWith {""};
 
 // Get location name from config and save as logic variable for future calls

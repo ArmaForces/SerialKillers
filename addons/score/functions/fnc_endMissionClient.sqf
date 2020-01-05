@@ -42,6 +42,11 @@ switch (_endType) do {
         private _win = if (playerSide isEqualTo WEST) then {true} else {false};
         [QGVAR(timeoutLimit), _win, nil, false] call BIS_fnc_endMission;
     };
+    // 4
+    case ALL_CIVILIANS_DEAD: {
+        private _win = if (playerSide isEqualTo EAST) then {true} else {false};
+        [QGVAR(civiliansDead), _win, nil, false] call BIS_fnc_endMission;
+    };
     default {
         [QGVAR(emptyEnd), true] call BIS_fnc_endMission;
     };

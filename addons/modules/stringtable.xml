@@ -25,5 +25,9 @@
             <English>Killers Weapon Stash</English>
             <Polish>Skład broni zabójców</Polish>
         </Key>
+        <Key ID="STR_AFSK_Modules_Jail">
+            <English>Jail</English>
+            <Polish>Więzienie</Polish>
+        </Key>
     </Package>
 </Project>

@@ -2,8 +2,17 @@
 
 if (isServer) then {
     /* Serverside events */
+    [QGVAR(allCiviliansDead), {
+        [QGVAR(endMission), [ALL_CIVILIANS_DEAD]] call CBA_fnc_serverEvent;
+    }] call CBA_fnc_addEventHandler;
+
     [QGVAR(endMission), {
         _this call FUNC(endMissionServer);
+    }] call CBA_fnc_addEventHandler;
+
+    // All killers killed or in custody
+    [QGVAR(killersKilled), {
+        [QGVAR(endMission), [KILLERS_DEAD]] call CBA_fnc_serverEvent;
     }] call CBA_fnc_addEventHandler;
 
     [QGVAR(changeScore), {

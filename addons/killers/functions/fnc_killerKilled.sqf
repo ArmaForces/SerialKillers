@@ -19,3 +19,8 @@
 params ["_unit", "_killer"];
 
 if !(isServer) exitWith {};
+
+private _aliveKillers = allPlayers select {side _x isEqualTo EAST && {!(_x getVariable [QGVAR(isImprisoned), false])}};
+if (_aliveKillers isEqualTo []) then {
+    [QEGVAR(score,killersKilled)] call CBA_fnc_serverEvent;
+};

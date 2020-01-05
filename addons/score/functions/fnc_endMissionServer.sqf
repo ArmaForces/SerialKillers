@@ -38,6 +38,10 @@ switch (_endType) do {
     case TIME_LIMIT_REACHED: {
 
     };
+    // 4
+    case ALL_CIVILIANS_DEAD: {
+
+    };
     default {
 
     };

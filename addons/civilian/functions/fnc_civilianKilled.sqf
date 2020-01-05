@@ -25,6 +25,11 @@ params ["_civilian", "_killer", "_instigator", "_useEffects"];
 GVAR(civilians) deleteAt (GVAR(civilians) findIf {_x isEqualTo _civilian});
 [_civilian] call EFUNC(markers,deleteUnitMarker);
 
+// Check if there any civilians left
+if (count GVAR(civilians) isEqualTo 0) then {
+    [QEGVAR(score,allCiviliansDead)] call CBA_fnc_serverEvent;
+};
+
 private _time = [daytime] call BIS_fnc_timeToString;
 // Call function to create marker at killed unit's position.
 [_civilian, _time] call FUNC(civilianKilledMarker);
