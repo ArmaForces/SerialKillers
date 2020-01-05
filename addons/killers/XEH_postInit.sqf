@@ -8,6 +8,16 @@
     _this call FUNC(killerRespawned);
 }] call CBA_fnc_addEventHandler;
 
+[QGVAR(teleport), {
+    params ["_teleporter", "_caller", "_destination"];
+    _caller setPos (getPos _destination);
+}] call CBA_fnc_addEventHandler;
+
+if (isServer) then {
+    call FUNC(initKillersBase);
+    call FUNC(initKillersStashes);
+};
+
 if (hasInterface) then {
     [QGVAR(createTeleport), {
         if !(playerSide isEqualTo EAST) exitWith {};
@@ -28,8 +38,3 @@ if (hasInterface) then {
         }] call CBA_fnc_waitUntilAndExecute;
     }] call CBA_fnc_addClassEventHandler;
 };
-
-[QGVAR(teleport), {
-    params ["_teleporter", "_caller", "_destination"];
-    _caller setPos (getPos _destination);
-}] call CBA_fnc_addEventHandler;

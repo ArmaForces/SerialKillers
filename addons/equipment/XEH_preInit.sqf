@@ -8,7 +8,8 @@ GVAR(equipmentPreset) = configNull;
 GVAR(commonEquipment) = [configNull];
 GVAR(policeEquipmentList) = [];
 GVAR(policeEquipmentScores) = call CBA_fnc_createNamespace;
-GVAR(killersEquipment) = [configNull];
+GVAR(killersStartEquipment) = [];
+GVAR(killersStashEquipment) = [];
 
 call FUNC(initEquipment);
 

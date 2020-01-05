@@ -4,9 +4,4 @@ ADDON = false;
 
 GVAR(killersStartPositionsMarkers) = [];
 
-if (isServer) then {
-    call FUNC(initKillersBase);
-    call FUNC(initKillersStashes);
-};
-
 ADDON = true;
