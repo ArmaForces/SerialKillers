@@ -17,7 +17,11 @@
 
 params ["_location"];
 
-private _locationClassname = className _location;
+private _locationClassname = if (_location isEqualType locationNull) then {
+    className _location;
+} else {
+    _location
+};
 // Try to get name from cache
 private _name = GVAR(locationNames) getVariable [_locationClassname, ""];
 
