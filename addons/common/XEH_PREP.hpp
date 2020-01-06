@@ -8,6 +8,7 @@ PREP(getNearestCityLocation);
 PREP(getNearestLocation);
 PREP(getNearestLocationName);
 PREP(getRandomEmptyPosition);
+PREP(getRandomPos);
 PREP(playMusicServer);
 PREP(removeItemsFromArsenal);
 PREP(showMessage);
