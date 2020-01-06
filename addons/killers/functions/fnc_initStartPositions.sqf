@@ -21,13 +21,21 @@ private _i = GVAR(startPositionsCount);
 private _positions = call CBA_fnc_createNamespace;
 
 while {_i > 0} do {
-    private _pos = [nil, false, false, true] call EFUNC(civilian,getRandomPos);
+    private _pos = [nil, false, false, true] call EFUNC(common,getRandomPos);
+    //diag_log format ["[AFSK] [KILLERS] [initStartPositions] Pos: %1", _pos];
     if (!(_pos isEqualTo [])) then {
-        private _nearestCity = [_pos, 1500] call EFUNC(civilian,getNearestCity);
-        if (_nearestCity isEqualTo objNull) exitWith {};
-        private _nearestLocation = [_pos, 1500] call EFUNC(common,getNearestLocation);
-        if (!(_positions getVariable [className _nearestLocation, []] isEqualTo [])) exitWith {};
-        _positions setVariable [className _nearestLocation, _pos];
+        private _nearestCity = [_pos, 1500] call EFUNC(common,getNearestCityLocation);
+        //diag_log format ["[AFSK] [KILLERS] [initStartPositions] City: %1", _nearestCity];
+        if (_nearestCity isEqualTo locationNull) exitWith {};
+        private _nearestLocation = [_pos, 1500] call EFUNC(common,getNearestLocationWithAvailableName);
+        //diag_log format ["[AFSK] [KILLERS] [initStartPositions] Location: %1", _nearestLocation];
+        if (_nearestLocation isEqualTo locationNull) exitWith {};
+        private _locationClassname = className _nearestLocation;
+        if (_locationClassname isEqualTo "") exitWith {};
+        //diag_log format ["[AFSK] [KILLERS] [initStartPositions] Location Classname: %1", _locationClassname];
+        if (!(_positions getVariable [_locationClassname, []] isEqualTo [])) exitWith {};
+        _positions setVariable [_locationClassname, _pos];
+        //diag_log format ["[AFSK] [KILLERS] [initStartPositions] Success"];
         _i = _i - 1;
     };
 };
