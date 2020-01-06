@@ -11,6 +11,7 @@ if (isServer) then {
     if (GVAR(startPositionsCount) <= 0) then {
         GVAR(startPositionsCount) = ceil (random [10, 15, 20]);
     };
+    // Namespace containing location name - position connection
     GVAR(startPositions) = call FUNC(initStartPositions);
     publicVariable QGVAR(startPositions);
 };

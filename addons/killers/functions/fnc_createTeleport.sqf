@@ -20,8 +20,8 @@ params ["_flag"];
 private _teleportActionsIDs = [];
 private _positionID = 0;
 {
-    // _x is location className and value is position assigned
-    private _destinationName = format ["%1 - %2", _positionID, [_x] call EFUNC(common,getLocationName)];
+    // _x is location name and value is position assigned
+    private _destinationName = format ["%1 - %2", _positionID, _x];
     private _destinationPos = GVAR(startPositions) getVariable _x;
     private _teleportActionID = _flag addAction [_destinationName, {
         [QGVAR(teleport), [_this select 0, _this select 1, _this select 3 select 0]] call CBA_fnc_serverEvent;
