@@ -10,7 +10,7 @@
 
 [QGVAR(teleport), {
     params ["_teleporter", "_caller", "_destination"];
-    _caller setPos (getPos _destination);
+    _caller setPos _destination;
 }] call CBA_fnc_addEventHandler;
 
 if (isServer) then {
