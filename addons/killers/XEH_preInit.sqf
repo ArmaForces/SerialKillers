@@ -4,16 +4,4 @@ ADDON = false;
 
 #include "initSettings.sqf"
 
-// Start positions markers array for easy deletion after teleportation
-GVAR(startPositionsMarkers) = [];
-if (isServer) then {
-    // Random number of start positions if 0 or -1
-    if (GVAR(startPositionsCount) <= 0) then {
-        GVAR(startPositionsCount) = ceil (random [10, 15, 20]);
-    };
-    // Namespace containing location name - position connection
-    GVAR(startPositions) = call FUNC(initStartPositions);
-    publicVariable QGVAR(startPositions);
-};
-
 ADDON = true;
