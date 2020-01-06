@@ -20,6 +20,7 @@
 private _i = GVAR(startPositionsCount);
 private _positions = call CBA_fnc_createNamespace;
 
+// Generate positions
 while {_i > 0} do {
     private _pos = [nil, false, false, true] call EFUNC(common,getRandomPos);
     //diag_log format ["[AFSK] [KILLERS] [initStartPositions] Pos: %1", _pos];

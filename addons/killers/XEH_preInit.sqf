@@ -5,7 +5,13 @@ ADDON = false;
 #include "initSettings.sqf"
 
 GVAR(killersStartPositionsMarkers) = [];
-GVAR(startPositions) = call FUNC(initStartPositions);
-publicVariable QGVAR(startPositions);
+if (isServer) then {
+    // Random number of start positions if 0 or -1
+    if (GVAR(startPositionsCount) <= 0) then {
+        GVAR(startPositionsCount) = ceil (random [10, 15, 20]);
+    };
+    GVAR(startPositions) = call FUNC(initStartPositions);
+    publicVariable QGVAR(startPositions);
+};
 
 ADDON = true;
