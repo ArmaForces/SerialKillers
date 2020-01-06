@@ -7,6 +7,7 @@ PREP(getLocationType);
 PREP(getNearestCityLocation);
 PREP(getNearestLocation);
 PREP(getNearestLocationName);
+PREP(getNearestLocationWithAvailableName);
 PREP(getRandomEmptyPosition);
 PREP(getRandomPos);
 PREP(playMusicServer);
