@@ -22,11 +22,15 @@ private _locationClassname = if (_location isEqualType locationNull) then {
 } else {
     _location
 };
+
+// Location does not have classname so no name also
+if (_locationClassname isEqualTo "") exitWith {""};
+
 // Try to get name from cache
 private _name = GVAR(locationNames) getVariable [_locationClassname, ""];
 
 if (_name isEqualTo "") then {
-    _name = getText (configFile >> "CfgWorlds" >> worldName >> "Names" >> className _location >> "name");
+    _name = getText (configFile >> "CfgWorlds" >> worldName >> "Names" >> _locationClassname >> "name");
     // Fill cache
     GVAR(locationNames) setVariable [_locationClassname, _name];
 };
