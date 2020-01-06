@@ -21,7 +21,7 @@ private _i = GVAR(startPositionsCount);
 private _positions = call CBA_fnc_createNamespace;
 
 while {_i > 0} do {
-    private _pos = [nil, false, false, true] call EFUNC(common,getRandomPos);
+    private _pos = [nil, false, false, true] call EFUNC(civilian,getRandomPos);
     if (!(_pos isEqualTo [])) then {
         private _nearestCity = [_pos, 1500] call EFUNC(civilian,getNearestCity);
         if (_nearestCity isEqualTo objNull) exitWith {};
