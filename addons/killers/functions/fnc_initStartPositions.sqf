@@ -41,4 +41,19 @@ while {_i > 0} do {
     };
 };
 
+// Load any start position modules
+{
+    private _pos = getPos _x;
+    private _locationName = _x getVariable ["LocationName", ""];
+    if (_locationName isEqualTo "") then {
+        private _nearestLocation = [_pos] call EFUNC(common,getNearestLocationWithAvailableName);
+        _locationName = if (_nearestLocation isEqualTo locationNull) then {
+            random (999) toFixed 1
+        } else {
+            [_nearestLocation] call EFUNC(common,getLocationName);
+        };
+    };
+    _positions setVariable [_locationName, _pos];
+} forEach EGVAR(modules,killersStartPositions);
+
 _positions
