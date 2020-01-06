@@ -19,17 +19,21 @@ params ["_flag"];
 
 private _teleportActionsIDs = [];
 {
-    private _destinationName = _x getVariable ["LocationName", "Teleport"];
+    // _x is location className and value is position assigned
+    private _destinationName = [_x] call EFUNC(common,getLocationName);
+    private _destinationPos = GVAR(startPositions) getVariable _x;
     private _teleportActionID = _flag addAction [_destinationName, {
         [QGVAR(teleport), [_this select 0, _this select 1, _this select 3 select 0]] call CBA_fnc_serverEvent;
+        // Delete all teleport actions and markers
         call FUNC(deleteStartPositionsMarkers);
         private _teleportActionsIDs = (_this select 0) getVariable [QGVAR(teleportActionsIDs), []];
         {
             (_this select 0 ) removeAction (_x);
         } forEach _teleportActionsIDs;
-    }, [_x]];
-    [_x] call FUNC(createStartPositionMarker);
+    }, [_destinationPos]];
+    [_destinationPos, _destinationName] call FUNC(createStartPositionMarker);
+    // Add for deletion after teleportation
     _teleportActionsIDs pushBack _teleportActionID;
-} forEach EGVAR(modules,killersStartPositions);
+} forEach (allVariables GVAR(startPositions));
 
 _flag setVariable [QGVAR(teleportActionsIDs), _teleportActionsIDs];
