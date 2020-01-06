@@ -4,7 +4,8 @@ ADDON = false;
 
 #include "initSettings.sqf"
 
-GVAR(killersStartPositionsMarkers) = [];
+// Start positions markers array for easy deletion after teleportation
+GVAR(startPositionsMarkers) = [];
 if (isServer) then {
     // Random number of start positions if 0 or -1
     if (GVAR(startPositionsCount) <= 0) then {

@@ -27,6 +27,6 @@ _marker setMarkerColorlocal "ColorEAST";
 _marker setMarkerSizelocal [0.5,0.5];
 _marker setMarkerTypelocal "mil_end";
 _marker setMarkerTextLocal _name;
-GVAR(killersStartPositionsMarkers) pushback _marker;
+GVAR(startPositionsMarkers) pushback _marker;
 
 _marker
