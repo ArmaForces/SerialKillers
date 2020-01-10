@@ -11,10 +11,17 @@ if (isServer) then {
     // All cities and civilians
     GVAR(cities) = [];
     GVAR(civilians) = [];
-    // Maximum civilians count (TODO: as setting with randomization options)
-    GVAR(civiliansCount) = 100 + floor (random (101));
 
-    // Weights for vehicles and civilians creation
+    // Civilians quantity according to settings
+    if (GVAR(initialCiviliansCount) isEqualTo 0) then {
+        GVAR(initialCiviliansCount) = ceil (random [100, 150, 200]);
+    } else {
+        private _tenPercent = GVAR(initialCiviliansCount)/10;
+        GVAR(initialCiviliansCount) = GVAR(initialCiviliansCount) + round (random (2 * _tenPercent) - _tenPercent);
+    };
+    publicVariable QGVAR(initialCiviliansCount);
+
+    // Weights for civilians creation
     GVAR(weightCapital) = ceil (random (10));
     GVAR(weightCity) = ceil (random (8));
     GVAR(weightVillage) = ceil (random (6));
@@ -24,8 +31,15 @@ if (isServer) then {
     {
         GVAR(cities) pushBack ([_x] call FUNC(initCity));
     } forEach EGVAR(common,cities);
-
     publicVariable QGVAR(cities);
+
+    // Initialize civilians
+    call FUNC(initCivilians);
+    {
+        private _civiliansCount = count (_x getVariable [QGVAR(CiviliansList), []]);
+        _x setVariable [QGVAR(CiviliansCount), _civiliansCount];
+        _x setVariable [QGVAR(initialCiviliansCount), _civiliansCount];
+    } forEach GVAR(cities);
 
 
     // We need some improvements in determining civilian vehicles limit

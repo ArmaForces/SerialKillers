@@ -21,6 +21,14 @@
             <English>Civilian was killed at %1 near %2!</English>
             <Polish>Cywil został zabity o godzinie %1 w pobliżu %2!</Polish>
         </Key>
+        <Key ID="STR_AFSK_Civilian_InitialCiviliansCount">
+            <English>Civilians count</English>
+            <Polish>Liczba cywili</Polish>
+        </Key>
+        <Key ID="STR_AFSK_Civilian_InitialCiviliansCount_Description">
+            <English>Number of generated civilians on mission startup. Final number will be in +-10% range. Set 0 to randomize between 100-200.</English>
+            <Polish>Liczba generowanych cywili na starcie misji. Właściwa liczba będzie z przedziału +-10%. Losowana z przedziału 100-200 gdy ustawienie jest równe 0.</Polish>
+        </Key>
         <Key ID="STR_AFSK_Civilian_Low">
             <English>Low</English>
             <Polish>Mało</Polish>
