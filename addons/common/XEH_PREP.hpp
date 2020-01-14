@@ -15,4 +15,5 @@ PREP(isHouseNearby);
 PREP(isRoadNearby);
 PREP(playMusicServer);
 PREP(removeItemsFromArsenal);
+PREP(setVehicleRandomTexture);
 PREP(showMessage);

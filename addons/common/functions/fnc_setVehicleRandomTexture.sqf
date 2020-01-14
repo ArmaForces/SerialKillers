@@ -10,7 +10,7 @@
  * None
  *
  * Example:
- * [vehicle player] call afsk_civilian_fnc_setVehicleRandomTexture
+ * [vehicle player] call afsk_common_fnc_setVehicleRandomTexture
  *
  * Public: No
  */
