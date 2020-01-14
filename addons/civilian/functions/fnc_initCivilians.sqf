@@ -18,7 +18,7 @@
 private _i = GVAR(initialCiviliansCount);
 
 while {_i > 0} do {
-    private _pos = [nil, false, true, true] call FUNC(getRandomPos);
+    private _pos = [nil, false, true, true] call EFUNC(common,getRandomPos);
     if (!(_pos isEqualTo [])) then {
         private _nearestCity = [_pos, 1500] call FUNC(getNearestCity);
         if (_nearestCity isEqualTo objNull) exitWith {};

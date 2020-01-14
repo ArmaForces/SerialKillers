@@ -8,7 +8,6 @@ PREP(getCityByLocation);
 PREP(getCityName);
 PREP(getCityRandomPos);
 PREP(getNearestCity);
-PREP(getRandomPos);
 PREP(initCity);
 PREP(initCivilians);
 PREP(initVehicles);
