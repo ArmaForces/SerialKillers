@@ -54,6 +54,17 @@ It's recommended to use [Visual Studio Code](https://) editor with following plu
 - [SQF Langauge](https://marketplace.visualstudio.com/items?itemName=Armitxes.sqf)
 - [psioniq File Header](https://marketplace.visualstudio.com/items?itemName=psioniq.psi-header)
 
+# Overwiew
+
+Police obtained information that up to 4 well equipped killers want to wreak havoc on Chernarus. Their task is simple - stop the assassins as soon as possible. However no one really cares about their predictions of the attack, so they have very limited equipment at the beginning, which is growing the closer killers are to their goal.
+
+- Play as a killer or a cop in this asymmetric yet somewhat balanced PvP scenario
+- Cops start as ordinary patrol units armed with pistols
+- As killer experience increasing difficulty the more civilians you kill
+- Automatic civilians/vehicles generation according to settings
+- Highly customizable gameplay settings
+- Supports own weapons/vehicles configuration
+
 ## Supported Mods
 
 - [ACE](http://steamcommunity.com/sharedfiles/filedetails/?id=463939057) arsenal and interactions supersede vanilla solutions if possible
