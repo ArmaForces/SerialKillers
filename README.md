@@ -53,3 +53,11 @@ It's recommended to use [Visual Studio Code](https://) editor with following plu
 - [SQFLint](https://marketplace.visualstudio.com/items?itemName=skacekachna.sqflint)
 - [SQF Langauge](https://marketplace.visualstudio.com/items?itemName=Armitxes.sqf)
 - [psioniq File Header](https://marketplace.visualstudio.com/items?itemName=psioniq.psi-header)
+
+## Supported Mods
+
+- [ACE](http://steamcommunity.com/sharedfiles/filedetails/?id=463939057) arsenal and interactions supersede vanilla solutions if possible
+
+## Supported Maps
+
+Every map with defined locations will work.
