@@ -18,11 +18,6 @@ call FUNC(equipmentScoreCheck);
     _this call FUNC(policeStationAlarm);
 }] call CBA_fnc_addEventHandler;
 
-[QGVAR(showMsg), {
-    params ["_msg"];
-    [WEST, "HQ"] sideChat _msg;
-}] call CBA_fnc_addEventHandler;
-
 [QGVAR(teleport), {
     _this call FUNC(teleport);
 }] call CBA_fnc_addEventHandler;

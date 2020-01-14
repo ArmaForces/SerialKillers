@@ -27,7 +27,7 @@ private _vehicle = createVehicle [_vehicleClassname, _position, [], 0, "NONE"];
 _vehicle setDir _dir;
 // Disable randomization and use own function to set texture on vehicle globally (so everyone can see the same color!)
 _vehicle setVariable ["BIS_enableRandomization", false];
-[_vehicle] call FUNC(setVehicleRandomTexture);
+[_vehicle] call EFUNC(common,setVehicleRandomTexture);
 
 if (_emptyCargo) then {
     clearItemCargoGlobal _vehicle;

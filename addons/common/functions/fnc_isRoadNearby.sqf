@@ -1,7 +1,7 @@
 #include "script_component.hpp"
 /*
  * Author: 3Mydlo3
- * Function checks if there is any house nearby.
+ * Function checks if there is any road nearby.
  *
  * Arguments:
  * 0: Position to check <POSITION>
@@ -10,15 +10,15 @@
  * 0: Result <BOOL>
  *
  * Example:
- * [position player] call afsk_civilian_fnc_isHouseNearby
+ * [position player] call afsk_common_fnc_isRoadNearby
  *
  * Public: No
  */
 
 params ["_position"];
 
-private _houses = nearestTerrainObjects [_position, ["House"], 50, false];
-if (_houses isEqualTo []) then {
+private _roads = _position nearRoads 50;
+if (_roads isEqualTo []) then {
     false
 } else {
     true

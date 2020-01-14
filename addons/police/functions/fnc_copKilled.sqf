@@ -25,7 +25,7 @@ private _time = [daytime] call BIS_fnc_timeToString;
 [_unit, _time] call FUNC(copKilledMarker);
 // Show message for all cops that cop has been killed near some location with timestamp
 private _msg = [_unit, _time] call FUNC(copKilledMsg);
-[QGVAR(showMsg), [_msg]] call CBA_fnc_globalEvent;
+[QEGVAR(common,showSideChatMsg), [WEST, _msg]] call CBA_fnc_globalEvent;
 // Check why unit died and call funcion to change score.
 if (side _killer == EAST || {_unit == _killer}) then {
     [QEGVAR(score,changeScore), [EAST, EGVAR(score,killedCopKillersScore), "COP KILLED PLACEHOLDER"]] call CBA_fnc_serverEvent;
