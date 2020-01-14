@@ -11,6 +11,7 @@ PREP(getNearestLocationName);
 PREP(getNearestLocationWithAvailableName);
 PREP(getRandomEmptyPosition);
 PREP(getRandomPos);
+PREP(isHouseNearby);
 PREP(playMusicServer);
 PREP(removeItemsFromArsenal);
 PREP(showMessage);

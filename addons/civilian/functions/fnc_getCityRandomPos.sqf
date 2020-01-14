@@ -30,7 +30,7 @@ private _fnc_randomPos = {
     private _randomPos = [];
     while {_randomPos isEqualTo []} do {
         _randomPos = [[_cityArea]] call BIS_fnc_randomPos;
-        if (!(_randomPos isEqualTo []) && {_nearHouse && {!([_randomPos] call FUNC(isHouseNearby))}}) then {
+        if (!(_randomPos isEqualTo []) && {_nearHouse && {!([_randomPos] call EFUNC(common,isHouseNearby))}}) then {
             _randomPos = [];
         };
         if (!(_randomPos isEqualTo []) && {!(_allowOnRoad) && {isOnRoad _randomPos}}) then {
