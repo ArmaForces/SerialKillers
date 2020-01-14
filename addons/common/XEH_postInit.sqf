@@ -14,6 +14,11 @@ if (isServer) then {
     _this call FUNC(showMessage);
 }] call CBA_fnc_addEventHandler;
 
+[QGVAR(teleport), {
+    params ["_caller", "_destination"];
+    _caller setPos _destination;
+}] call CBA_fnc_addEventHandler;
+
 if (hasInterface) then {
     /* Spectator events */
     [QGVAR(initializeSideSpectator), {

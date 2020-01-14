@@ -8,11 +8,6 @@
     _this call FUNC(killerRespawned);
 }] call CBA_fnc_addEventHandler;
 
-[QGVAR(teleport), {
-    params ["_teleporter", "_caller", "_destination"];
-    _caller setPos _destination;
-}] call CBA_fnc_addEventHandler;
-
 // Start positions markers array for easy deletion after teleportation
 GVAR(startPositionsMarkers) = [];
 if (isServer) then {

@@ -23,4 +23,4 @@ if !(side _caller isEqualTo WEST) exitWith {
     [GVAR(policeStationAlarm), [_teleporter]] call CBA_fnc_serverEvent;
 };
 
-_caller setPos (getPos _destination);
+[QEGVAR(common,teleport), [_caller, _destination]] call CBA_fnc_serverEvent;
