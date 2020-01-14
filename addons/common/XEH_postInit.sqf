@@ -32,4 +32,14 @@ if (hasInterface) then {
     [QGVAR(terminateSpectator), {
         ["Terminate"] call BIS_fnc_EGSpectator;
     }] call CBA_fnc_addEventHandler;
+
+    /* Sidechat msg event */
+    [QGVAR(showSideChatMsg), {
+        params [["_side", sideEmpty], ["_msg", ""]];
+        if (_msg isEqualTo "") exitWith {};
+        // If side is empty we want to show message to everyone
+        if (_side isEqualTo sideEmpty || {playerSide isEqualTo _side}) then {
+            [_side, "HQ"] sideChat _msg;
+        };
+    }] call CBA_fnc_addEventHandler;
 };

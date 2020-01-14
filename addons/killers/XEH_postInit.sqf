@@ -28,11 +28,6 @@ if (hasInterface) then {
         _this call FUNC(createTeleport);
     }] call CBA_fnc_addEventHandler;
 
-    [QGVAR(showMsg), {
-        params ["_msg"];
-        [EAST, "HQ"] sideChat _msg;
-    }] call CBA_fnc_addEventHandler;
-
     // Killer killed EH
     ["O_Soldier_F", "killed", {
         if (!(local (_this select 0))) exitWith {};
