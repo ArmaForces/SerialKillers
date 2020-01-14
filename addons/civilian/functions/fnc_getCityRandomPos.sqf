@@ -15,7 +15,7 @@
  * 0: Random position inside city <POSITION>
  *
  * Example:
- * [] call afsk_common_fnc_getCityRandomPos
+ * [] call afsk_civilian_fnc_getCityRandomPos
  *
  * Public: No
  */
@@ -36,7 +36,7 @@ private _fnc_randomPos = {
         if (!(_randomPos isEqualTo []) && {!(_allowOnRoad) && {isOnRoad _randomPos}}) then {
             _randomPos = [];
         };
-        if (!(_randomPos isEqualTo []) && {_nearRoad && {!([_randomPos] call FUNC(isRoadNearby))}}) then {
+        if (!(_randomPos isEqualTo []) && {_nearRoad && {!([_randomPos] call EFUNC(common,isRoadNearby))}}) then {
             _randomPos = [];
         };
     };

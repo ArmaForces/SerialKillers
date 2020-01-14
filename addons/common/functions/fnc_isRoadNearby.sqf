@@ -10,7 +10,7 @@
  * 0: Result <BOOL>
  *
  * Example:
- * [position player] call afsk_civilian_fnc_isRoadNearby
+ * [position player] call afsk_common_fnc_isRoadNearby
  *
  * Public: No
  */

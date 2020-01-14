@@ -13,5 +13,4 @@ PREP(initCivilians);
 PREP(initVehicles);
 PREP(initCivilian);
 PREP(unassignCivilianFromCity);
-PREP(isRoadNearby);
 PREP(setVehicleRandomTexture);

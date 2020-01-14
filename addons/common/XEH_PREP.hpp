@@ -12,6 +12,7 @@ PREP(getNearestLocationWithAvailableName);
 PREP(getRandomEmptyPosition);
 PREP(getRandomPos);
 PREP(isHouseNearby);
+PREP(isRoadNearby);
 PREP(playMusicServer);
 PREP(removeItemsFromArsenal);
 PREP(showMessage);
