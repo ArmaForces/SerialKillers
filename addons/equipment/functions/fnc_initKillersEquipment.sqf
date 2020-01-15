@@ -33,12 +33,14 @@ private _killersEquipment = "true" configClasses (_equipmentConfig >> "Killers" 
 
 // Add common equipment
 {
-    private _availableOnStart = _x getVariable ["availableOnStart", 1];
-    private _availableInStash = _x getVariable ["availableInStash", 1];
+    private _itemClassname = _x;
+    private _item = GVAR(commonEquipment) getVariable _itemClassname;
+    private _availableOnStart = _item getVariable ["availableOnStart", 1];
+    private _availableInStash = _item getVariable ["availableInStash", 1];
     if (_availableOnStart isEqualTo 1) then {
-        GVAR(killersStartEquipment) pushBackUnique (configName _x);
+        GVAR(killersStartEquipment) pushBackUnique (_itemClassname);
     };
     if (_availableInStash isEqualTo 1) then {
-        GVAR(killersStashCommonEquipment) pushBackUnique (configName _x);
+        GVAR(killersStashCommonEquipment) pushBackUnique (_itemClassname);
     };
 } forEach (allVariables GVAR(commonEquipment));
