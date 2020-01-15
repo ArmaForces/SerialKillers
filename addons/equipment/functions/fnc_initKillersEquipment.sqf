@@ -17,6 +17,8 @@
 
 params ["_equipmentConfig"];
 
+private _killersEquipment = "true" configClasses (_equipmentConfig >> "Killers" >> "Equipment");
+
 {
     private _availableOnStart = getNumber (_x >> "availableOnStart");
     private _availableInStash = getNumber (_x >> "availableInStash");
@@ -26,4 +28,4 @@ params ["_equipmentConfig"];
     if (_availableInStash isEqualTo 1) then {
         GVAR(killersStashEquipment) pushBackUnique (configName _x);
     };
-} forEach GVAR(killersEquipment);
+} forEach _killersEquipment;
