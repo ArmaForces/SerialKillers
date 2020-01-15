@@ -47,14 +47,4 @@ GVAR(commonEquipment) = "true" configClasses (_equipmentConfig >> "Common" >> "E
 GVAR(killersEquipment) = "true" configClasses (_equipmentConfig >> "Killers" >> "Equipment");
 
 [_equipmentConfig] call FUNC(initPoliceEquipment);
-
-{
-    private _availableOnStart = getNumber (_x >> "availableOnStart");
-    private _availableInStash = getNumber (_x >> "availableInStash");
-    if (_availableOnStart isEqualTo 1) then {
-        GVAR(killersStartEquipment) pushBackUnique (configName _x);
-    };
-    if (_availableInStash isEqualTo 1) then {
-        GVAR(killersStashEquipment) pushBackUnique (configName _x);
-    };
-} forEach GVAR(killersEquipment);
+[_equipmentConfig] call FUNC(initKillersEquipment);
