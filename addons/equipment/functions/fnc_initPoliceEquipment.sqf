@@ -23,6 +23,13 @@ private _policeEquipment = [];
     private _itemRequiredScore = getNumber (_x >> "requiredScore");
     _policeEquipment pushBack [_itemRequiredScore, _x];
 } forEach ("true" configClasses (_equipmentConfig >> "Police" >> "Equipment"));
+// Add common equipment
+{
+    private _itemClassname = _x;
+    private _item = GVAR(commonEquipment) getVariable _itemClassname;
+    private _itemRequiredScore = _item getVariable ["requiredScore", 0];
+    _policeEquipment pushBack [_itemRequiredScore, _itemClassname];
+} forEach (allVariables GVAR(commonEquipment));
 _policeEquipment sort true;
 
 {
