@@ -1,1 +1,2 @@
 PREP(initEquipment);
+PREP(initPoliceEquipment);
