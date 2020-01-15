@@ -43,7 +43,7 @@ if (GVAR(equipmentPresetCustom) && {isClass _missionEquipmentConfig}) then {
 };
 
 GVAR(equipmentPreset) = _equipmentConfig;
-GVAR(commonEquipment) = "true" configClasses (_equipmentConfig >> "Common" >> "Equipment");
 
-[_equipmentConfig] call FUNC(initPoliceEquipment);
-[_equipmentConfig] call FUNC(initKillersEquipment);
+[GVAR(equipmentPreset)] call FUNC(initCommonEquipment);
+[GVAR(equipmentPreset)] call FUNC(initPoliceEquipment);
+[GVAR(equipmentPreset)] call FUNC(initKillersEquipment);

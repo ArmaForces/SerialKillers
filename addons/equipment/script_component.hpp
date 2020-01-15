@@ -12,3 +12,6 @@
 #endif
 
 #include "\z\afsk\addons\main\script_macros.hpp"
+
+#define SUPPORTED_PROPERTIES ["requiredScore", "availableInStash", "availableOnStart"]
+#define SUPPORTED_PROPERTIES_DEFAULTS [0, 1, 1]
