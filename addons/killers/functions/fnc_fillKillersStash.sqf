@@ -17,6 +17,7 @@
 
 params ["_box"];
 
+// Add regular items
 private _stashAvailableItemsCount = count EGVAR(equipment,killersStashEquipment);
 private _itemsCount = ceil (random 3) + floor (_stashAvailableItemsCount/10);
 
@@ -24,4 +25,14 @@ for "_y" from 0 to _itemsCount step 1 do {
     private _newItem = selectRandom EGVAR(equipment,killersStashEquipment);
     private _itemQuantity = ceil (random 2);
     [_box, _newItem, _itemQuantity] call FUNC(addItemToStash);
+};
+
+// Add common items independently
+private _stashAvailableCommonItemsCount = count EGVAR(equipment,killersStashCommonEquipment);
+private _commonItemsCount = ceil (random 3) + floor (_stashAvailableCommonItemsCount/10);
+
+for "_y" from 0 to _itemsCount step 1 do {
+    private _newCommonItem = selectRandom EGVAR(equipment,killersStashCommonEquipment);
+    private _itemQuantity = ceil (random 2);
+    [_box, _newCommonItem, _itemQuantity] call FUNC(addItemToStash);
 };

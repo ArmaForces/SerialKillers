@@ -10,6 +10,8 @@ GVAR(commonEquipment) = call CBA_fnc_createNamespace;
 GVAR(policeEquipmentList) = [];
 GVAR(policeEquipmentScores) = call CBA_fnc_createNamespace;
 GVAR(killersStartEquipment) = [];
+// Killers equipment (weapons and stuff) available in stashes
+GVAR(killersStashCommonEquipment) = [];
 GVAR(killersStashEquipment) = [];
 
 call FUNC(initEquipment);
