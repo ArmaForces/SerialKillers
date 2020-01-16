@@ -15,14 +15,14 @@
  * Public: No
  */
 
-params ["_equipmentConfig"];
+params ["_equipmentPresetConfig"];
 
 // Get all defined equipment and sort by required score from lowest to highest
 private _policeEquipment = [];
 {
     private _itemRequiredScore = getNumber (_x >> "requiredScore");
     _policeEquipment pushBack [_itemRequiredScore, _x];
-} forEach ("true" configClasses (_equipmentConfig >> "Police" >> "Equipment"));
+} forEach ("true" configClasses (_equipmentPresetConfig >> "Police" >> "Equipment"));
 // Add common equipment
 {
     private _itemClassname = _x;

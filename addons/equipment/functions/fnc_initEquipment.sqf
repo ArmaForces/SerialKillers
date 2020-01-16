@@ -15,34 +15,34 @@
  * Public: No
  */
 
-private _equipmentConfig = (configFile >> "CfgSerialKillers" >> "Equipment_Presets");
+private _equipmentPresetConfig = (configFile >> "CfgSerialKillers" >> "Equipment_Presets");
 private _missionEquipmentConfig = (missionConfigFile >> "CfgSerialKillers" >> "Equipment_Presets");
 
 if (GVAR(equipmentPresetCustom) && {isClass _missionEquipmentConfig}) then {
-    _equipmentConfig = (_missionEquipmentConfig >> "Custom");
+    _equipmentPresetConfig = (_missionEquipmentConfig >> "Custom");
 } else {
-    _equipmentConfig = switch (GVAR(equipmentPreset)) do {
+    _equipmentPresetConfig = switch (GVAR(equipmentPreset)) do {
         // Vanilla config
-        case 1: {_equipmentConfig >> "Vanilla"};
+        case 1: {_equipmentPresetConfig >> "Vanilla"};
         // RHS config
-        case 2: {_equipmentConfig >> "RHS"};
+        case 2: {_equipmentPresetConfig >> "RHS"};
         // CUP config
-        case 3: {_equipmentConfig >> "CUP"};
+        case 3: {_equipmentPresetConfig >> "CUP"};
         // CUP & RHS config
-        case 4: {_equipmentConfig >> "CUP_RHS"};
+        case 4: {_equipmentPresetConfig >> "CUP_RHS"};
         // Automatic config selection based on loaded addons
         default {
             if (EGVAR(common,RHS_Loaded) && {EGVAR(common,CUP_Loaded)}) exitWith {
-                _equipmentConfig >> "CUP_RHS"
+                _equipmentPresetConfig >> "CUP_RHS"
             };
-            if (EGVAR(common,RHS_Loaded)) exitWith {_equipmentConfig >> "RHS"};
-            if (EGVAR(common,CUP_Loaded)) exitWith {_equipmentConfig >> "CUP"};
-            _equipmentConfig >> "Vanilla"
+            if (EGVAR(common,RHS_Loaded)) exitWith {_equipmentPresetConfig >> "RHS"};
+            if (EGVAR(common,CUP_Loaded)) exitWith {_equipmentPresetConfig >> "CUP"};
+            _equipmentPresetConfig >> "Vanilla"
         };
     };
 };
 
-GVAR(equipmentPreset) = _equipmentConfig;
+GVAR(equipmentPreset) = _equipmentPresetConfig;
 
 [GVAR(equipmentPreset)] call FUNC(initCommonEquipment);
 [GVAR(equipmentPreset)] call FUNC(initPoliceEquipment);

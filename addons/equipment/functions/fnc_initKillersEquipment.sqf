@@ -15,9 +15,9 @@
  * Public: No
  */
 
-params ["_equipmentConfig"];
+params ["_equipmentPresetConfig"];
 
-private _killersEquipment = "true" configClasses (_equipmentConfig >> "Killers" >> "Equipment");
+private _killersEquipment = "true" configClasses (_equipmentPresetConfig >> "Killers" >> "Equipment");
 
 // Add killers equipment
 {
