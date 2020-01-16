@@ -18,24 +18,26 @@
 params ["_equipmentPresetConfig"];
 
 // Get all defined equipment and sort by required score from lowest to highest
-private _policeEquipment = [];
+private _policeEquipment = [(_equipmentPresetConfig >> "Police" >> "Equipment")] call FUNC(readConfigToNamespace);
+private _policeEquipmentList = [];
 {
-    private _itemRequiredScore = getNumber (_x >> "requiredScore");
-    _policeEquipment pushBack [_itemRequiredScore, _x];
-} forEach ("true" configClasses (_equipmentPresetConfig >> "Police" >> "Equipment"));
+    private _itemClassname = _x;
+    private _item = _policeEquipment getVariable _itemClassname;
+    private _itemRequiredScore = _item getVariable ["requiredScore", 0];
+    _policeEquipmentList pushBack [_itemRequiredScore, _x];
+} forEach (allVariables _policeEquipment);
 // Add common equipment
 {
     private _itemClassname = _x;
     private _item = GVAR(commonEquipment) getVariable _itemClassname;
     private _itemRequiredScore = _item getVariable ["requiredScore", 0];
-    _policeEquipment pushBack [_itemRequiredScore, _itemClassname];
+    _policeEquipmentList pushBack [_itemRequiredScore, _itemClassname];
 } forEach (allVariables GVAR(commonEquipment));
-_policeEquipment sort true;
+_policeEquipmentList sort true;
 
 {
     private _itemRequiredScore = _x select 0;
-    private _item = _x select 1;
-    private _itemClassName = configName _item;
+    private _itemClassName = _x select 1;
     private _requiredScoreList = GVAR(policeEquipmentScores) getVariable [str _itemRequiredScore, []];
     if (_requiredScoreList isEqualTo []) then {
         GVAR(policeEquipmentScores) setVariable [str _itemRequiredScore, _requiredScoreList];
@@ -47,8 +49,14 @@ _policeEquipment sort true;
     private _weaponConfig = (configFile >> "CfgWeapons" >> _itemClassName);
     if (isClass _weaponConfig) then {
         // Check if magazines for this weapon are disabled (must be "false")
-        private _loadMagazines = getText (_item >> "loadMagazines");
+        private _itemNamespace = _policeEquipment getVariable [_itemClassname, "Not Available"];
+        // If item wasn't in policeEquipment it should be in common equipment (as it's the only way it could reach this part)
+        if (_itemNamespace isEqualTo "Not Available") then {
+            _itemNamespace = GVAR(commonEquipment) getVariable [_itemClassname, call CBA_fnc_createNamespace];
+        };
+        private _loadMagazines = _itemNamespace getVariable ["loadMagazines", true];
         if (_loadMagazines isEqualTo "false") exitwith {};
+        // Get compatible magazines and add them if not added yet
         private _magazines = [_itemClassName, true] call CBA_fnc_compatibleMagazines;
         {
             if (!((GVAR(policeEquipmentList) pushBackUnique _x) isEqualTo -1)) then {
@@ -56,4 +64,4 @@ _policeEquipment sort true;
             };
         } forEach _magazines;
     };
-} forEach _policeEquipment;
+} forEach _policeEquipmentList;
