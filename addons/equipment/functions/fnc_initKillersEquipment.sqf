@@ -17,19 +17,21 @@
 
 params ["_equipmentPresetConfig"];
 
-private _killersEquipment = "true" configClasses (_equipmentPresetConfig >> "Killers" >> "Equipment");
+private _killersEquipment = [_equipmentPresetConfig >> "Killers" >> "Equipment"] call FUNC(readConfigToNamespace);
 
 // Add killers equipment
 {
-    private _availableOnStart = getNumber (_x >> "availableOnStart");
-    private _availableInStash = getNumber (_x >> "availableInStash");
+    private _itemClassname = _x;
+    private _item = _killersEquipment getVariable _itemClassname;
+    private _availableOnStart = _item getVariable ["availableOnStart", 1];
+    private _availableInStash = _item getVariable ["availableInStash", 1];
     if (_availableOnStart isEqualTo 1) then {
-        GVAR(killersStartEquipment) pushBackUnique (configName _x);
+        GVAR(killersStartEquipment) pushBackUnique (_itemClassname);
     };
     if (_availableInStash isEqualTo 1) then {
-        GVAR(killersStashEquipment) pushBackUnique (configName _x);
+        GVAR(killersStashEquipment) pushBackUnique (_itemClassname);
     };
-} forEach _killersEquipment;
+} forEach (allVariables _killersEquipment);
 
 // Add common equipment
 {
