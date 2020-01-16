@@ -29,7 +29,13 @@ params ["_config", ["_namespace", call CBA_fnc_createNamespace]];
     private _foundProperties = SUPPORTED_PROPERTIES arrayIntersect (configProperties [_x, "true", true]);
     // Read config values for found properties
     {
-        _itemNamespace setVariable [_x, getNumber (_itemConfig >> _x)];
+        private _value = switch (true) do {
+            case (isNumber _x): {getNumber (_itemConfig >> _x)};
+            case (isText _x): {getText (_itemConfig >> _x)};
+            case (isArray _x): {getArray (_itemConfig >> _x)};
+            default {configNull};
+        };
+        _itemNamespace setVariable [_x, _value];
     } forEach _foundProperties;
 } forEach ("true" configClasses _config);
 
