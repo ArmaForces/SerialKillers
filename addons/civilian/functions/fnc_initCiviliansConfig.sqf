@@ -28,5 +28,8 @@ private _civilianUnitsConfigs = QUOTE((configFile >> 'CfgVehicles' >> 'C_man_1')
         };
     } forEach (getArray (_x >> "headgearList"));
     // Get uniform
-    GVAR(uniforms) pushBackUnique (getText (_x >> "uniformClass"));
+    private _uniform = getText (_x >> "uniformClass");
+    if (!(_uniform isEqualTo "")) then {
+        GVAR(uniforms) pushBackUnique _uniform;
+    };
 } forEach _civilianUnitsConfigs;
