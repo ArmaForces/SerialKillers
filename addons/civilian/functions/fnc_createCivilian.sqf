@@ -18,6 +18,6 @@
 params ["_position"];
 
 private _newGroup = createGroup CIVILIAN;
-private _civilian = _newGroup createUnit ["C_man_polo_1_F", _position, [], 0, "NONE"];
+private _civilian = _newGroup createUnit [selectRandom GVAR(units), _position, [], 0, "NONE"];
 
 [_civilian] call FUNC(initCivilian);
