@@ -30,6 +30,6 @@ if (GVAR(idleTimeouts) >= GVAR(idleTimeoutsMax)) exitWith {
     // Killers failed to increase their score within time limit
     GVAR(killersScoreLastChangeTime) = CBA_missionTime;
     GVAR(policeScoreLastChangeTime) = CBA_missionTime;
-    private _msg = format [LSTRING(IdleTime_TimeoutReached), GVAR(idleTimeouts), GVAR(idleTimeoutsMax)];
+    private _msg = format [LLSTRING(IdleTime_TimeoutReached), GVAR(idleTimeouts), GVAR(idleTimeoutsMax)];
     [QGVAR(scoreChanged), [WEST, 5, _msg]] call CBA_fnc_serverEvent;
 }] call CBA_fnc_waitUntilAndExecute;
