@@ -22,21 +22,19 @@ params ["_config", ["_namespace", call CBA_fnc_createNamespace]];
 
 {
     // Add item to list
-    private _itemConfig = _x;
     private _itemNamespace = call CBA_fnc_createNamespace;
     _namespace setVariable [configName _x, _itemNamespace];
     // Get item properties
-    private _foundProperties = SUPPORTED_PROPERTIES arrayIntersect (configProperties [_x, "true", true]);
     // Read config values for found properties
     {
         private _value = switch (true) do {
-            case (isNumber _x): {getNumber (_itemConfig >> _x)};
-            case (isText _x): {getText (_itemConfig >> _x)};
-            case (isArray _x): {getArray (_itemConfig >> _x)};
+            case (isNumber _x): {getNumber _x};
+            case (isText _x): {getText _x};
+            case (isArray _x): {getArray _x};
             default {configNull};
         };
-        _itemNamespace setVariable [_x, _value];
-    } forEach _foundProperties;
+        _itemNamespace setVariable [configName _x, _value];
+    } forEach (configProperties [_x, "true", true]);
 } forEach ("true" configClasses _config);
 
 _namespace
