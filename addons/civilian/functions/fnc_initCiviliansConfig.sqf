@@ -32,4 +32,9 @@ private _civilianUnitsConfigs = QUOTE((configFile >> 'CfgVehicles' >> 'C_man_1')
     if (!(_uniform isEqualTo "")) then {
         GVAR(uniforms) pushBackUnique _uniform;
     };
+    // Get backpack
+    private _backpack = getText (_x >> "backpack");
+    if (!(_backpack isEqualTo "")) then {
+        GVAR(backpacks) pushBackUnique _backpack;
+    };
 } forEach _civilianUnitsConfigs;
