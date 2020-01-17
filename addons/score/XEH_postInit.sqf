@@ -38,9 +38,9 @@ if (isServer) then {
             text format [LLSTRING(IdleTime_Inital_Message), (GVAR(IdleTimeMax) / 60) toFixed 1],
             lineBreak,
             lineBreak,
-            text format ["%1: %2", ELLSTRING(killers,Killers), GVAR(idleTimeKillersScoreChange)],
+            text format ["%1: %2", LELSTRING(killers,Killers), GVAR(idleTimeKillersScoreChange)],
             lineBreak,
-            text format ["%1: %2", ELLSTRING(police,Police), GVAR(idleTimePoliceScoreChange)]
+            text format ["%1: %2", LELSTRING(police,Police), GVAR(idleTimePoliceScoreChange)]
         ];
         _msg setAttributes ["valign", "middle"];
         [QEGVAR(common,showMessage), [_msg, [3]]] call CBA_fnc_globalEvent;

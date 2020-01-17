@@ -33,13 +33,13 @@ _separator setAttributes ["align", "center"];
 private _msgHour = text format ["%1", [daytime] call BIS_fnc_timeToString];
 _msgHour setAttributes ["align", "center"];
 
-private _msgKillers = text format ["%1", ELLSTRING(killers,Killers)];
+private _msgKillers = text format ["%1", LELSTRING(killers,Killers)];
 _msgKillers setAttributes ["align", "center"];
 
 private _msgKillersScore = text format ["%1/%2 (%4%3)", GVAR(killersScore), GVAR(killersScoreMax), GVAR(killersScoreChange), [GVAR(killersScoreChange)] call _fnc_determineSign];
 _msgKillersScore setAttributes ["align", "center"];
 
-private _msgPolice = text format ["%1", ELLSTRING(police,Police)];
+private _msgPolice = text format ["%1", LELSTRING(police,Police)];
 _msgPolice setAttributes ["align", "center"];
 
 private _msgPoliceScore = text format ["%1/%2 (%4%3)", GVAR(policeScore), GVAR(policeScoreMax), GVAR(policeScoreChange), [GVAR(policeScoreChange)] call _fnc_determineSign];
