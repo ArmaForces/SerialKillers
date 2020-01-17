@@ -1,7 +1,7 @@
 #include "script_component.hpp"
 /*
  * Author: 3Mydlo3
- * Function loads civilian uniforms and headgear from config.
+ * Function loads civilian uniforms, vests, backpacks and headgear from config.
  *
  * Arguments:
  * None
@@ -37,4 +37,11 @@ private _civilianUnitsConfigs = QUOTE((configFile >> 'CfgVehicles' >> 'C_man_1')
     if (!(_backpack isEqualTo "")) then {
         GVAR(backpacks) pushBackUnique _backpack;
     };
+    // Get vest
+    private _linkedItems = getArray (_x >> "linkedItems");
+    {
+        if (getNumber (configFile >> "CfgWeapons" >> _x >> "ItemInfo" >> "type") isEqualTo 701) then {
+            GVAR(vests) pushBackUnique _x;
+        }
+    } forEach _linkedItems;
 } forEach _civilianUnitsConfigs;

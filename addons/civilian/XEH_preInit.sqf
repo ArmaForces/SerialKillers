@@ -37,6 +37,7 @@ if (isServer) then {
     GVAR(units) = [];
     GVAR(backpacks) = [];
     GVAR(uniforms) = [];
+    GVAR(vests) = [];
     GVAR(headgear) = [];
     call FUNC(initCiviliansConfig);
     // Initialize civilians
