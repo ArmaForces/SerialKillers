@@ -17,10 +17,10 @@
 
 params ["_object"];
 
-titleText [LSTRING(Bad_Idea), "PLAIN", 5];
+titleText [LLSTRING(Bad_Idea), "PLAIN", 5];
 
 private _nearestTown = [_object] call EFUNC(common,getNearestCityLocation);
-private _msg = format [LSTRING(Alarm), text _nearestTown];
+private _msg = format [LLSTRING(Alarm), text _nearestTown];
 
 // Show sideChat message to all cops.
 [{
