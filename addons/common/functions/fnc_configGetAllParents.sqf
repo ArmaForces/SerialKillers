@@ -22,8 +22,7 @@ if (!isClass _config) exitWith {[]};
 private _parents = [];
 
 // Get direct parent for every parent config
-while {!isNull _config} do
-{
+while {!isNull _config} do {
     _parents pushBack _config;
     _config = inheritsFrom _config;
 };
