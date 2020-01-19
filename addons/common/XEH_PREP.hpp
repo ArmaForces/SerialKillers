@@ -1,5 +1,6 @@
 PREP(addItemsToArsenal);
 PREP(appearsArmed);
+PREP(configGetAllParents);
 PREP(createArsenal);
 PREP(deleteAtRandom);
 PREP(getAllMapCities);

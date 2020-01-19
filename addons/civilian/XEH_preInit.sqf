@@ -33,6 +33,13 @@ if (isServer) then {
     } forEach EGVAR(common,cities);
     publicVariable QGVAR(cities);
 
+    // Prepare civilian units and available equipment for them
+    GVAR(units) = [];
+    GVAR(backpacks) = [];
+    GVAR(uniforms) = [];
+    GVAR(vests) = [];
+    GVAR(headgear) = [];
+    call FUNC(initCiviliansConfig);
     // Initialize civilians
     call FUNC(initCivilians);
     {
