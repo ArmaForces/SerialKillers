@@ -7,6 +7,10 @@
 call FUNC(equipmentScoreCheck);
 
 [QGVAR(copKilled), {
+    params ["_unit"];
+    // Check if unit was already killed (thanks to new ACE medical)
+    if (_unit getVariable [QGVAR(alreadyKilled), false]) exitWith {};
+    _unit setVariable [QGVAR(alreadyKilled), true];
     _this call FUNC(copKilled);
 }] call CBA_fnc_addEventHandler;
 
