@@ -1,3 +1,4 @@
+PREP(addItemToStash);
 PREP(createStartPositionMarker);
 PREP(createTeleport);
 PREP(deleteStartPositionsMarkers);
