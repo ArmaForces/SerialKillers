@@ -131,6 +131,27 @@ class CfgSerialKillers {
                     class optic_lrps: srifle_LRR_F {};
                     class optic_lrps_tna_f: optic_lrps {};
                     class optic_lrps_ghex_f: optic_lrps {};
+
+                    /* Uniforms */
+                    class U_B_GEN_Soldier_F {};
+                    class U_B_GEN_Commander_F {};
+                    class U_Rangemaster {};
+                    class U_Marshal {};
+                    class U_BG_Guerilla2_1 {};
+                    /* Vests */
+                    class V_Rangemaster_belt {};
+                    class V_TacVest_blk_POLICE: SMG_05_F {};
+                    class V_PlateCarrier2_blk: arifle_TRG21_F {};
+                    class V_PlateCarrierSpec_blk: srifle_LRR_F {};
+                    /* Backpacks */
+                    /* Headgear */
+                    class H_Cap_police {};
+                    class H_MilCap_blue {};
+                    class H_MilCap_gen_F {};
+                    class H_Beret_gen_F {};
+                    class H_Beret_blk {};
+                    class H_HelmetB_light_black: V_PlateCarrier2_blk {};
+                    class H_PASGT_basic_blue_F: V_PlateCarrierSpec_blk {};
                 };
             };
         };
