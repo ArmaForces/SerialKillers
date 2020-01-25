@@ -22,14 +22,21 @@ if (GVAR(idleTimeouts) >= GVAR(idleTimeoutsMax)) exitWith {
     [QGVAR(endMission), [MAXIMUM_TIMEOUT_REACHED]] call CBA_fnc_serverEvent;
 };
 
-[{GVAR(killersScoreChange) > 0}, {
-    // Killers managed to increase their score within time limit
-    GVAR(killersScoreLastChangeTime) = CBA_missionTime;
-    call FUNC(monitorTimeouts);
-}, [], GVAR(idleTimeMax), {
-    // Killers failed to increase their score within time limit
-    GVAR(killersScoreLastChangeTime) = CBA_missionTime;
-    GVAR(policeScoreLastChangeTime) = CBA_missionTime;
-    private _msg = format [LLSTRING(IdleTime_TimeoutReached), GVAR(idleTimeouts), GVAR(idleTimeoutsMax)];
-    [QGVAR(scoreChanged), [WEST, 5, _msg]] call CBA_fnc_serverEvent;
-}] call CBA_fnc_waitUntilAndExecute;
+if (GVAR(killersScoreChange) isEqualTo 0) then {
+    [{GVAR(killersScoreChange) > 0}, {
+        // Killers managed to increase their score within time limit
+        call FUNC(monitorTimeouts);
+    }, [], GVAR(idleTimeMax), {
+        // Killers failed to increase their score within time limit
+        GVAR(killersScoreLastChangeTime) = CBA_missionTime;
+        GVAR(policeScoreLastChangeTime) = CBA_missionTime;
+        private _msg = format [LLSTRING(IdleTime_TimeoutReached), GVAR(idleTimeouts), GVAR(idleTimeoutsMax)];
+        [QGVAR(scoreChanged), [WEST, 5, _msg]] call CBA_fnc_serverEvent;
+    }] call CBA_fnc_waitUntilAndExecute;
+} else {
+    [{GVAR(killersScoreChange) isEqualTo 0}, {
+        // Killers no longer increase their score so let's save current time
+        GVAR(killersScoreLastChangeTime) = CBA_missionTime;
+        call FUNC(monitorTimeouts);
+    }] call CBA_fnc_waitUntilAndExecute;
+};
