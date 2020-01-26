@@ -12,7 +12,7 @@ if (isServer) then {
 
     // All killers killed or in custody
     [QGVAR(killersKilled), {
-        [QGVAR(endMission), [KILLERS_DEAD]] call CBA_fnc_serverEvent;
+        [QGVAR(endMission), [KILLERS_DEAD]] call CBA_fnc_globalEvent;
     }] call CBA_fnc_addEventHandler;
 
     [QGVAR(changeScore), {
