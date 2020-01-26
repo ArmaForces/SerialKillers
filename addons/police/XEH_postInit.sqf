@@ -4,17 +4,22 @@ if (isServer) then {
     {
         [_x] call FUNC(initPoliceStation);
     } forEach EGVAR(modules,policeStations);
+
+    [QGVAR(copKilled), {
+        params ["_unit"];
+        // Check if unit was already killed (thanks to new ACE medical)
+        if (_unit getVariable [QGVAR(alreadyKilled), false]) exitWith {};
+        _unit setVariable [QGVAR(alreadyKilled), true];
+        _this call FUNC(copKilled);
+    }] call CBA_fnc_addEventHandler;
+
+    [QGVAR(copRespawned), {
+        params ["_unit"];
+        _unit setVariable [QGVAR(alreadyKilled), false];
+    }] call CBA_fnc_addEventHandler;
 };
 
 call FUNC(equipmentScoreCheck);
-
-[QGVAR(copKilled), {
-    params ["_unit"];
-    // Check if unit was already killed (thanks to new ACE medical)
-    if (_unit getVariable [QGVAR(alreadyKilled), false]) exitWith {};
-    _unit setVariable [QGVAR(alreadyKilled), true];
-    _this call FUNC(copKilled);
-}] call CBA_fnc_addEventHandler;
 
 [QGVAR(createTeleport), {
     _this call FUNC(createTeleport);
@@ -35,8 +40,11 @@ call FUNC(equipmentScoreCheck);
 }] call CBA_fnc_addEventHandler;
 
 if (!isServer) then {
-    ["B_Soldier_F", "killed", {
-        if (!(local (_this select 0))) exitWith {};
+    if !(playerSide isEqualTo WEST) exitWith {};
+    player addEventHandler ["Killed", {
         [QGVAR(copKilled), _this] call CBA_fnc_serverEvent;
-    }] call CBA_fnc_addClassEventHandler;
+    }];
+    player addEventHandler ["Respawned", {
+        [QGVAR(copRespawned), _this] call CBA_fnc_serverEvent;
+    }];
 };
