@@ -24,3 +24,6 @@ private _aliveKillers = allPlayers select {side _x isEqualTo EAST && {!(_x getVa
 if (_aliveKillers isEqualTo []) then {
     [QEGVAR(score,killersKilled)] call CBA_fnc_serverEvent;
 };
+
+// Create spectator for killer so he won't get bored when he's dead or imprisoned.
+[QEGVAR(common,initializeSpectator), [], _unit] call CBA_fnc_targetEvent;

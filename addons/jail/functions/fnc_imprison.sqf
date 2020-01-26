@@ -33,6 +33,3 @@ if (EGVAR(common,ACE_Loaded)) then {
     // Add own release action to prisoner.
     [QGVAR(addReleaseAction), [_unit]] call CBA_fnc_globalEvent;
 };
-
-// Create spectator for prisoner so he won't get bored.
-[QEGVAR(common,initializeSpectator), [], _unit] call CBA_fnc_targetEvent;
