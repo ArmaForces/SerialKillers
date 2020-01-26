@@ -34,3 +34,8 @@ publicVariable QGVAR(killersScoreChange);
 }, [GVAR(killersScoreChange)], 5] call CBA_fnc_waitAndExecute;
 
 [_reason] call FUNC(showScore);
+
+// Check if killers have reached their goal
+if (GVAR(killersScore) >= GVAR(killersScoreMax)) then {
+    [QGVAR(killersScoreReached), [KILLERS_SCORE_REACHED]] call CBA_fnc_serverEvent;
+};

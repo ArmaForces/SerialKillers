@@ -15,6 +15,11 @@ if (isServer) then {
         [QGVAR(endMission), [KILLERS_DEAD]] call CBA_fnc_globalEvent;
     }] call CBA_fnc_addEventHandler;
 
+    // Killers have reached their goal
+    [QGVAR(killersScoreReached), {
+        [QGVAR(endMission), [KILLERS_SCORE_REACHED]] call CBA_fnc_globalEvent;
+    }] call CBA_fnc_addEventHandler;
+
     [QGVAR(changeScore), {
         params ["_side", "_change", ["_reason", ""]];
         if (_side isEqualTo WEST) then {
