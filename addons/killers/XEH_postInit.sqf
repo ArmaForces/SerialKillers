@@ -15,8 +15,6 @@
 // Start positions markers array for easy deletion after teleportation
 GVAR(startPositionsMarkers) = [];
 if (isServer) then {
-    call FUNC(initKillersBase);
-    call FUNC(initKillersStashes);
     // Random number of start positions if 0 or -1
     if (GVAR(startPositionsCount) <= 0) then {
         GVAR(startPositionsCount) = ceil (random [10, 15, 20]);
@@ -24,6 +22,8 @@ if (isServer) then {
     // Namespace containing location name - position connection
     GVAR(startPositions) = call FUNC(initStartPositions);
     publicVariable QGVAR(startPositions);
+    call FUNC(initKillersBase);
+    call FUNC(initKillersStashes);
 };
 
 if (hasInterface) then {

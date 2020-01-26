@@ -18,7 +18,7 @@
  */
 
 private _i = GVAR(startPositionsCount);
-private _positions = call CBA_fnc_createNamespace;
+private _positions = true call CBA_fnc_createNamespace;
 
 // Generate positions
 while {_i > 0} do {
@@ -35,7 +35,7 @@ while {_i > 0} do {
         if (_locationName isEqualTo "") exitWith {};
         //diag_log format ["[AFSK] [KILLERS] [initStartPositions] Location Name: %1", _locationName];
         if (!(_positions getVariable [_locationName, []] isEqualTo [])) exitWith {};
-        _positions setVariable [_locationName, _pos];
+        _positions setVariable [_locationName, _pos, true];
         //diag_log format ["[AFSK] [KILLERS] [initStartPositions] Success"];
         _i = _i - 1;
     };
@@ -53,7 +53,7 @@ while {_i > 0} do {
             [_nearestLocation] call EFUNC(common,getLocationName);
         };
     };
-    _positions setVariable [_locationName, _pos];
+    _positions setVariable [_locationName, _pos, true];
 } forEach EGVAR(modules,killersStartPositions);
 
 _positions
