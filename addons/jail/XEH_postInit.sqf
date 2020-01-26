@@ -13,7 +13,8 @@ if (isServer) then {
     }] call CBA_fnc_addEventHandler;
 
     if (!(GVAR(jail) isEqualTo objNull)) then {
-        call FUNC(jailMarker);
+        GVAR(jailMarker) = call FUNC(jailMarker);
+        call FUNC(createKillersRespawn);
     };
 };
 
