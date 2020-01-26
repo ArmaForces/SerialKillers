@@ -33,7 +33,7 @@ if (hasInterface) then {
     }] call CBA_fnc_addEventHandler;
 
     // Killer killed EH
-    ["O_Soldier_F", "killed", {
+    ["C_man_p_fugitive_F", "killed", {
         if (!(local (_this select 0))) exitWith {};
         [QGVAR(killerKilled), _this] call CBA_fnc_serverEvent;
         [{alive player}, {
