@@ -16,6 +16,9 @@ if (isServer) then {
 
 [QGVAR(teleport), {
     params ["_caller", "_destination"];
+    if (_destination isEqualType objNull) then {
+        _destination = position _destination;
+    };
     _caller setPos _destination;
 }] call CBA_fnc_addEventHandler;
 
