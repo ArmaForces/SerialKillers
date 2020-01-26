@@ -1,8 +1,10 @@
 #include "script_component.hpp"
 
-{
-    [_x] call FUNC(initPoliceStation);
-} forEach EGVAR(modules,policeStations);
+if (isServer) then {
+    {
+        [_x] call FUNC(initPoliceStation);
+    } forEach EGVAR(modules,policeStations);
+};
 
 call FUNC(equipmentScoreCheck);
 
