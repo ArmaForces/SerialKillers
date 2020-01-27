@@ -4,6 +4,8 @@ if (isServer) then {
     // Initialize police stations
     {
         [_x] call FUNC(initPoliceStation);
+        // Initialize respawn for given police station
+        [WEST, _x] call BIS_fnc_addRespawnPosition;
     } forEach EGVAR(modules,policeStations);
 
     [QGVAR(copKilled), {

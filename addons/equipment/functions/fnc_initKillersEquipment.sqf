@@ -26,10 +26,15 @@ private _killersEquipment = [_equipmentPresetConfig >> "Killers" >> "Equipment"]
     private _availableOnStart = _item getVariable ["availableOnStart", 1];
     private _availableInStash = _item getVariable ["availableInStash", 1];
     if (_availableOnStart isEqualTo 1) then {
-        GVAR(killersStartEquipment) pushBackUnique (_itemClassname);
+        GVAR(killersStartEquipment) pushBackUnique _itemClassname;
+        if (isClass (configFile >> "CfgWeapons" >> _itemClassname)) then {
+            {
+                GVAR(killersStartEquipment) pushBackUnique _x;
+            } forEach ([_itemClassname, true] call CBA_fnc_compatibleMagazines);
+        };
     };
     if (_availableInStash isEqualTo 1) then {
-        GVAR(killersStashEquipment) pushBackUnique (_itemClassname);
+        GVAR(killersStashEquipment) pushBackUnique _itemClassname;
     };
 } forEach (allVariables _killersEquipment);
 
@@ -40,9 +45,14 @@ private _killersEquipment = [_equipmentPresetConfig >> "Killers" >> "Equipment"]
     private _availableOnStart = _item getVariable ["availableOnStart", 1];
     private _availableInStash = _item getVariable ["availableInStash", 1];
     if (_availableOnStart isEqualTo 1) then {
-        GVAR(killersStartEquipment) pushBackUnique (_itemClassname);
+        GVAR(killersStartEquipment) pushBackUnique _itemClassname;
+        if (isClass (configFile >> "CfgWeapons" >> _itemClassname)) then {
+            {
+                GVAR(killersStartEquipment) pushBackUnique _x;
+            } forEach ([_itemClassname, true] call CBA_fnc_compatibleMagazines);
+        };
     };
     if (_availableInStash isEqualTo 1) then {
-        GVAR(killersStashCommonEquipment) pushBackUnique (_itemClassname);
+        GVAR(killersStashCommonEquipment) pushBackUnique _itemClassname;
     };
 } forEach (allVariables GVAR(commonEquipment));

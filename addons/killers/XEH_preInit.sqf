@@ -4,4 +4,6 @@ ADDON = false;
 
 #include "initSettings.sqf"
 
+GVAR(killersRespawnMarker) = "";
+
 ADDON = true;
