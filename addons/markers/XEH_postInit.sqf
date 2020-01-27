@@ -18,6 +18,10 @@ if (isServer) then {
     [_unit] call FUNC(deleteUnitMarker);
 }];
 
+[QGVAR(deleteUnitMarker), {
+    _this call FUNC(deleteUnitMarker);
+}] call CBA_fnc_addEventHandler;
+
 if (hasInterface) then {
     call FUNC(loop);
 };

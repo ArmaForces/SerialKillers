@@ -23,7 +23,8 @@ params ["_civilian", "_killer", "_instigator", "_useEffects"];
 // Remove civilian from game
 [_civilian] call EFUNC(civilian,unassignCivilianFromCity);
 GVAR(civilians) deleteAt (GVAR(civilians) findIf {_x isEqualTo _civilian});
-[_civilian] call EFUNC(markers,deleteUnitMarker);
+publicVariable QGVAR(civilians);
+[QEGVAR(markers,deleteUnitMarker), [_civilian]] call CBA_fnc_globalEvent;
 
 // Check if there any civilians left
 if (count GVAR(civilians) isEqualTo 0) then {

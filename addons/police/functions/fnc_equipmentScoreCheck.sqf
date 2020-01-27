@@ -15,8 +15,6 @@
  * Public: No
  */
 
-if !(isServer) exitWith {};
-
 private _step = if ((EGVAR(score,policeScore) - GVAR(lastEquipmentUpdateScore)) > 0) then {1} else {-1};
 diag_log format ["[AFSK] [POLICE] [equipmentScoreCheck] Performing check from %1 to %2 step %%3", GVAR(lastEquipmentUpdateScore), EGVAR(score,policeScore), _step];
 while {GVAR(lastEquipmentUpdateScore) != EGVAR(score,policeScore)} do {

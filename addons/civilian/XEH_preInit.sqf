@@ -42,6 +42,7 @@ if (isServer) then {
     call FUNC(initCiviliansConfig);
     // Initialize civilians
     call FUNC(initCivilians);
+    publicVariable QGVAR(civilians);
     {
         private _civiliansCount = count (_x getVariable [QGVAR(CiviliansList), []]);
         _x setVariable [QGVAR(CiviliansCount), _civiliansCount];
