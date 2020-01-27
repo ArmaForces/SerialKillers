@@ -16,3 +16,7 @@ class CfgPatches {
 
 
 #include "CfgEventHandlers.hpp"
+
+class CfgSerialKillers {
+    #include "CfgStateMachine.hpp"
+};
