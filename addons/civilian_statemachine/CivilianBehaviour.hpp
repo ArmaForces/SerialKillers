@@ -1,6 +1,4 @@
 class CivilianBehaviour {
-    // Class properties have the same name as the corresponding function parameters
-    // and code goes into strings.
     list = "allUnits select {side _x isEqualTo CIVILIAN}";
     skipNull = 1;
 
@@ -41,6 +39,7 @@ class CivilianBehaviour {
         };
     };
 
+    // Unit is in combat state
     class Combat {
         onState = "";
         onStateEntered = "_this setSpeedMode 'FULL'";

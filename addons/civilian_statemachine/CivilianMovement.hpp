@@ -1,6 +1,4 @@
 class CivilianMovement {
-    // Class properties have the same name as the corresponding function parameters
-    // and code goes into strings.
     list = "allGroups select {side leader _x isEqualTo CIVILIAN}";
     skipNull = 1;
 
