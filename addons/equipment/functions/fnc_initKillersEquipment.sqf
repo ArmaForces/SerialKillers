@@ -56,3 +56,9 @@ private _killersEquipment = [_equipmentPresetConfig >> "Killers" >> "Equipment"]
         GVAR(killersStashCommonEquipment) pushBackUnique _itemClassname;
     };
 } forEach (allVariables GVAR(commonEquipment));
+
+// Add ACRE radios
+if (EGVAR(common,ACRE_Loaded)) then {
+    GVAR(killersStartEquipment) pushBackUnique GVAR(killersRadio);
+    GVAR(killersStashCommonEquipment) pushBackUnique GVAR(killersRadio);
+};

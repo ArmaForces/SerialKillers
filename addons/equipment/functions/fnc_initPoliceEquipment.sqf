@@ -33,7 +33,13 @@ private _policeEquipmentList = [];
     private _itemRequiredScore = _item getVariable ["requiredScore", 0];
     _policeEquipmentList pushBack [_itemRequiredScore, _itemClassname];
 } forEach (allVariables GVAR(commonEquipment));
+
+// Add ACRE radios
+if (EGVAR(common,ACRE_Loaded)) then {
+    _policeEquipmentList pushBackUnique [0, GVAR(policeRadio)];
+};
 _policeEquipmentList sort true;
+
 
 {
     private _itemRequiredScore = _x select 0;
