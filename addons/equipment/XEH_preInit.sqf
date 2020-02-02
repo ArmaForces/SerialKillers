@@ -18,6 +18,10 @@ GVAR(killersStartEquipment) = [];
 GVAR(killersStashCommonEquipment) = [];
 GVAR(killersStashEquipment) = [];
 
+// ACRE radios compatibility
+GVAR(policeRadio) = "ACRE_PRC152";
+GVAR(killersRadio) = "ACRE_SEM52SL";
+
 call FUNC(initEquipment);
 
 ADDON = true;
