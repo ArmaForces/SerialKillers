@@ -46,4 +46,5 @@ GVAR(equipmentPreset) = _equipmentPresetConfig;
 
 [GVAR(equipmentPreset)] call FUNC(initCommonEquipment);
 [GVAR(equipmentPreset)] call FUNC(initPoliceEquipment);
+[GVAR(equipmentPreset)] call FUNC(initPoliceVehicles);
 [GVAR(equipmentPreset)] call FUNC(initKillersEquipment);
