@@ -24,6 +24,10 @@ if (_vehicleClassname isEqualType configNull) then {
     _vehicleClassname = configName _vehicleClassname;
 };
 
+if (_position isEqualType objNull) then {
+    _position = getPos _position;
+};
+
 private _vehicle = createVehicle [_vehicleClassname, _position, [], 0, "NONE"];
 _vehicle setDir _dir;
 // Disable randomization and use own function to set texture on vehicle globally (so everyone can see the same color!)
