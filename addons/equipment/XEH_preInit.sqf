@@ -12,6 +12,8 @@ GVAR(commonEquipment) = call CBA_fnc_createNamespace;
 GVAR(policeEquipmentList) = [];
 // Namespace using requiredScore as key and list of unlocked equipment as value
 GVAR(policeEquipmentScores) = call CBA_fnc_createNamespace;
+// Killers civilian equipment (clothes, backpacks, headgear)
+GVAR(killersCivilianEquipment) = [];
 // Killers stuff available to choose from before action begins
 GVAR(killersStartEquipment) = [];
 // Killers equipment (weapons and stuff) available in stashes
