@@ -8,4 +8,5 @@ PREP(initPoliceStation);
 PREP(policeStationAlarm);
 PREP(policeStationMarker);
 PREP(removeVehiclesFromSpawner);
+PREP(spawnVehicle);
 PREP(teleport);

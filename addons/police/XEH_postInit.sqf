@@ -25,6 +25,11 @@ if (isServer) then {
     [QGVAR(policeStationAlarm), {
         _this call FUNC(policeStationAlarm);
     }] call CBA_fnc_addEventHandler;
+
+    // Event creating new police vehicle
+    [QGVAR(spawnVehicle), {
+        _this call FUNC(spawnVehicle);
+    }] call CBA_fnc_addEventHandler;
 };
 
 // Fill arsenal with starting items
