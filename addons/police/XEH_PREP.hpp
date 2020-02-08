@@ -1,3 +1,4 @@
+PREP(addVehiclesToSpawner);
 PREP(copKilled);
 PREP(copKilledMarker);
 PREP(copKilledMsg);
@@ -6,4 +7,5 @@ PREP(equipmentScoreCheck);
 PREP(initPoliceStation);
 PREP(policeStationAlarm);
 PREP(policeStationMarker);
+PREP(removeVehiclesFromSpawner);
 PREP(teleport);
