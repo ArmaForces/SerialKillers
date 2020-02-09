@@ -19,8 +19,13 @@
 
 params ["_box", "_itemClassname", ["_itemQuantity", 1]];
 
-_box addItemCargoGlobal [_itemClassname, _itemQuantity];
-private _compatibleMagazines = [_itemClassname] call CBA_fnc_compatibleMagazines;
-if (!(_compatibleMagazines isEqualTo [])) then {
-    _box addItemCargoGlobal [selectRandom _compatibleMagazines, ceil (random 4)];
+// Check for backpack
+if (isClass (configFile >> "CfgVehicles" >> _itemClassname)) then {
+    _box addBackpackCargoGlobal [_itemClassname, _itemQuantity];
+} else {
+    _box addItemCargoGlobal [_itemClassname, _itemQuantity];
+    private _compatibleMagazines = [_itemClassname] call CBA_fnc_compatibleMagazines;
+    if (!(_compatibleMagazines isEqualTo [])) then {
+        _box addItemCargoGlobal [selectRandom _compatibleMagazines, ceil (random 4)];
+    };
 };
