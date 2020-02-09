@@ -32,5 +32,3 @@ publicVariable QGVAR(policeScoreChange);
         publicVariable QGVAR(policeScoreChange);
     };
 }, [GVAR(policeScoreChange)], 5] call CBA_fnc_waitAndExecute;
-
-[_reason] call FUNC(showScore);
