@@ -26,6 +26,8 @@ if (_hidden) then {
     _marker setMarkerColorLocal "ColorGreen";
 } else {
     _marker setMarkerColorLocal "ColorEAST";
+};
+if (playerSide isEqualTo EAST) then {
     _marker setMarkerTextLocal (name _killer);
 };
 _killer setVariable [QGVAR(marker), _marker];
