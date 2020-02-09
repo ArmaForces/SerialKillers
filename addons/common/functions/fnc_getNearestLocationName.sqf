@@ -27,7 +27,7 @@ if (_pos isEqualType objNull) then {
 };
 
 // Get nearest location
-private _nearestLocation = [_pos, _searchRadius] call FUNC(getNearestLocation);
+private _nearestLocation = [_pos, _searchRadius] call FUNC(getNearestLocationWithAvailableName);
 if (_nearestLocation isEqualTo locationNull) exitWith {""};
 
 [_nearestLocation] call FUNC(getLocationName);
