@@ -26,6 +26,13 @@ if (isServer) then {
     call FUNC(initKillersStashes);
 };
 
+// Event for killers starting arsenal initialization
+[QGVAR(initStartingEquipment), {
+    private _arsenal = EGVAR(modules,killersBase) getVariable "Arsenal";;
+    [_arsenal, EGVAR(equipment,killersStartEquipment)] call EFUNC(common,addItemsToArsenal);
+    [_arsenal, EGVAR(equipment,killersCivilianEquipment)] call EFUNC(common,addItemsToArsenal);
+}] call CBA_fnc_addEventHandler;
+
 if (hasInterface) then {
     [QGVAR(createTeleport), {
         if !(playerSide isEqualTo EAST) exitWith {};
