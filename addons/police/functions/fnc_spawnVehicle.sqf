@@ -32,8 +32,9 @@ private _position = [];
 private _direction = 0;
 while {_position isEqualTo [] && {!(_spawnPoints isEqualTo [])}} do {
     private _spawnPoint = [_spawnPoints] call EFUNC(common,deleteAtRandom);
-    _position = getPos (_spawnPoint) findEmptyPosition [0, 0, _vehicleClassname];
-    if (!(_position isEqualTo [])) exitWith {
+    private _objects = (getPos _spawnPoint) nearEntities 5;
+    if (_objects isEqualTo []) exitWith {
+        _position = getPos _spawnPoint;
         _direction = getDir _spawnPoint;
     };
 };
