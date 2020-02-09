@@ -40,4 +40,26 @@ if (hasInterface) then {
             [QGVAR(killerRespawned), [player]] call CBA_fnc_serverEvent;
         }] call CBA_fnc_waitUntilAndExecute;
     }] call CBA_fnc_addClassEventHandler;
+
+    [QGVAR(teleportedToStart), {
+        params ["_flag"];
+        private _actionID = player addAction ["Teleport back", {
+            player setPos (_this select 3)
+        }, _flag, 10, true];
+        // Wait until player teleports back or times out
+        [{player distance (_this select 0) < 10}, {
+            // Player teleported back
+            player removeAction (_this select 1);
+        }, [_flag, _actionID], 10, {
+            // Player did not teleport back
+            player removeAction (_this select 1);
+            [QGVAR(teleportFinished)] call CBA_fnc_localEvent;
+        }] call CBA_fnc_waitUntilAndExecute;
+    }] call CBA_fnc_addEventHandler;
+
+    // Deletes all teleport actions and markers
+    [QGVAR(teleportFinished), {
+        call FUNC(deleteStartPositionsMarkers);
+        call FUNC(disableTeleport);
+    }] call CBA_fnc_addEventHandler;
 };

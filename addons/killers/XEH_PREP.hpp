@@ -2,6 +2,7 @@ PREP(addItemToStash);
 PREP(createStartPositionMarker);
 PREP(createTeleport);
 PREP(deleteStartPositionsMarkers);
+PREP(disableTeleport);
 PREP(fillKillersStash);
 PREP(initKillersBase);
 PREP(initKillersStashes);
