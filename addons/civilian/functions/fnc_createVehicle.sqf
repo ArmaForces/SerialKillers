@@ -35,7 +35,6 @@ _vehicle setVariable ["BIS_enableRandomization", false];
 if (_enableRandomization) then {
     [_vehicle] call EFUNC(common,setVehicleRandomTexture);
 };
-[_vehicle] call EFUNC(common,setVehicleRandomTexture);
 
 if (_emptyCargo) then {
     clearItemCargoGlobal _vehicle;
