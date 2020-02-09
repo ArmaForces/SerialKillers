@@ -18,7 +18,7 @@
  * Public: No
  */
 
-params ["_vehicleClassname", "_position", ["_dir", random 360], ["_emptyCargo", true], ["_enableRandomization", true]];
+params ["_vehicleClassname", "_position", ["_dir", random 360], ["_emptyCargo", true], ["_enableRandomization", true], ["_forcePosition", false]];
 
 if (_vehicleClassname isEqualType configNull) then {
     _vehicleClassname = configName _vehicleClassname;
@@ -28,7 +28,8 @@ if (_position isEqualType objNull) then {
     _position = getPos _position;
 };
 
-private _vehicle = createVehicle [_vehicleClassname, _position, [], 0, "NONE"];
+private _mode = if (_forcePosition) then {"CAN_COLLIDE"} else {"NONE"};
+private _vehicle = createVehicle [_vehicleClassname, _position, [], 0, _mode];
 _vehicle setDir _dir;
 // Disable randomization and use own function to set texture on vehicle globally (so everyone can see the same color!)
 _vehicle setVariable ["BIS_enableRandomization", false];

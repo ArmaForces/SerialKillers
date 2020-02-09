@@ -48,4 +48,4 @@ if (_position isEqualTo []) exitWith {
 };
 
 // Spawn vehicle
-[_vehicleClassname, _position, _direction, true, false] call EFUNC(civilian,createVehicle);
+[_vehicleClassname, _position, _direction, true, false, true] call EFUNC(civilian,createVehicle);
