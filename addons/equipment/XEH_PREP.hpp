@@ -1,3 +1,4 @@
+PREP(getRequiredScoreForItem);
 PREP(initCommonEquipment);
 PREP(initEquipment);
 PREP(initKillersEquipment);
