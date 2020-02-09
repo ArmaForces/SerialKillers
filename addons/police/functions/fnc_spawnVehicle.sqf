@@ -27,6 +27,7 @@ private _spawnPoints = if (_vehicleType isEqualTo "Helicopter" || {_vehicleType 
     +(_spawner getVariable QGVAR(spawnPoints))
 };
 
+// Find empty spawn position
 private _position = [];
 private _direction = 0;
 while {_position isEqualTo [] && {!(_spawnPoints isEqualTo [])}} do {
@@ -37,6 +38,7 @@ while {_position isEqualTo [] && {!(_spawnPoints isEqualTo [])}} do {
     };
 };
 
+// Show message if no empty spawn position
 if (_position isEqualTo []) exitWith {
     private _baseName = (_spawner getVariable "policeStation") getVariable "LocationName";
     private _vehicleName = getText (configFile >> "CfgVehicles" >> _vehicleClassname >> "displayName");
@@ -44,4 +46,5 @@ if (_position isEqualTo []) exitWith {
     [QEGVAR(common,showSideChatMsg), [WEST, _msg]] call CBA_fnc_globalEvent;
 };
 
+// Spawn vehicle
 [_vehicleClassname, _position, _direction, true, false] call EFUNC(civilian,createVehicle);

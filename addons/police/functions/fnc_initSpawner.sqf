@@ -21,7 +21,7 @@ private _policeBase = _spawner getVariable "policeStation";
 private _baseArea = [getPos _policeBase] + (_policeBase getVariable "objectArea");
 
 // Variable contains vehicle classname -> action id connection
-_spawner setVariable [QGVAR(vehicleActions), true call CBA_fnc_createNamespace];
+_spawner setVariable [QGVAR(vehicleActions), true call CBA_fnc_createNamespace, true];
 
 // Find all spawn points within police base
 private _spawnPoints = (allMissionObjects "VR_Area_01_circle_4_grey_F") inAreaArray _baseArea;
