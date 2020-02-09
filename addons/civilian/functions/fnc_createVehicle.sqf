@@ -39,11 +39,11 @@ if (_emptyCargo) then {
 if (EGVAR(common,ACE_Loaded)) then {
     if (_vehicle isKindOf "Air" || {_vehicle isKindOf "Ship"}) exitWith {};
     if (_vehicle isKindOf "Tank") then {
-        ["ACE_Track", _veh] call ace_cargo_fnc_loadItem;
+        ["ACE_Track", _vehicle] call ace_cargo_fnc_loadItem;
     } else {
-        ["ACE_Wheel", _veh] call ace_cargo_fnc_loadItem;
-        ["ACE_Wheel", _veh] call ace_cargo_fnc_loadItem;
-        ["ACE_Wheel", _veh] call ace_cargo_fnc_loadItem;
+        ["ACE_Wheel", _vehicle] call ace_cargo_fnc_loadItem;
+        ["ACE_Wheel", _vehicle] call ace_cargo_fnc_loadItem;
+        ["ACE_Wheel", _vehicle] call ace_cargo_fnc_loadItem;
     };
 };
 
