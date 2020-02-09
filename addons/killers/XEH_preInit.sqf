@@ -5,5 +5,6 @@ ADDON = false;
 #include "initSettings.sqf"
 
 GVAR(killersRespawnMarker) = "";
+GVAR(stashes) = [];
 
 ADDON = true;

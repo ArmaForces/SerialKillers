@@ -34,6 +34,13 @@ if (isServer) then {
 }] call CBA_fnc_addEventHandler;
 
 if (hasInterface) then {
+    // Create stashes markers
+    if (playerSide isEqualTo EAST) then {
+        [QGVAR(createStashesMarkers), {
+            _this call FUNC(createStashesMarkers);
+        }] call CBA_fnc_addEventHandler;
+    };
+
     [QGVAR(createTeleport), {
         if !(playerSide isEqualTo EAST) exitWith {};
         _this call FUNC(createTeleport);
