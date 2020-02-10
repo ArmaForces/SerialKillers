@@ -73,12 +73,10 @@ class CfgSerialKillers {
             };
             class Police {
                 class Equipment {
-                    // P99
-                    class hgun_P07_F {
+                    // Custom Covert II
+                    class hgun_ACPC2_F {
                         requiredScore = 0;
                     };
-                    // Custom Covert II
-                    class hgun_ACPC2_F: hgun_P07_F {};
 
                     // FNX-45 Tactical
                     class hgun_Pistol_heavy_01_F {
@@ -88,19 +86,23 @@ class CfgSerialKillers {
                     class optic_mrd: hgun_Pistol_heavy_01_F {};
                     class optic_mrd_black: optic_mrd {};
 
-                    // CPW
-                    class hgun_PDW2000_F {
+                    // Kozlice 12G
+                    class sgun_HunterShotgun_01_F {
                         requiredScore = 5;
                     };
+
+                    // P99
+                    class hgun_P07_F {
+                        requiredScore = 10;
+                    };
+                    // CPW
+                    class hgun_PDW2000_F: hgun_P07_F {};
                     class optic_yorris: hgun_PDW2000_F {};
-                    class sgun_HunterShotgun_01_F: hgun_PDW2000_F {};
 
                     // MP5K
                     class SMG_05_F {
-                        requiredScore = 10;
+                        requiredScore = 15;
                     };
-                    // Scorpion Evo 3 A1
-                    class SMG_02_F: SMG_05_F {};
                     class optic_aco_smg: SMG_05_F {};
                     class optic_aco_grn_smg: optic_aco_smg {};
                     class acc_flashlight: SMG_05_F {};
@@ -114,20 +116,25 @@ class CfgSerialKillers {
 
                     // Vector SMG
                     class SMG_01_F {
-                        requiredScore = 15;
+                        requiredScore = 20;
                     };
                     class acc_flashlight_smg_01: SMG_01_F {};
 
+                    // Scorpion Evo 3 A1
+                    class SMG_02_F {
+                        requiredScore = 25;
+                    };
+
                     // CTAR-21
                     class arifle_TRG20_F {
-                        requiredScore = 20;
+                        requiredScore = 30;
                     };
                     class optic_aco: arifle_TRG20_F {};
                     class optic_aco_grn: optic_aco {};
 
                     // TAR-21
                     class arifle_TRG21_F {
-                        requiredScore = 25;
+                        requiredScore = 35;
                     };
                     class optic_holosight: arifle_TRG21_F {};
                     class optic_holosight_blk_f: optic_holosight {};
@@ -140,20 +147,18 @@ class CfgSerialKillers {
 
                     // P90
                     class SMG_03_TR_black {
-                        requiredScore = 30;
+                        requiredScore = 35;
                     };
 
                     // Stoner 99 LMG
                     class LMG_Mk200_F {
-                        requiredScore = 35;
+                        requiredScore = 40;
                     };
                     // GTAR-21 EGLM
                     class arifle_TRG21_GL_F: LMG_Mk200_F {};
 
                     // M200 Intervention
-                    class srifle_LRR_F {
-                        requiredScore = 40;
-                    };
+                    class srifle_LRR_F: LMG_Mk200_F {};
                     class srifle_LRR_camo_F: srifle_LRR_F {};
                     class srifle_LRR_tna_F: srifle_LRR_F {};
                     class optic_lrps: srifle_LRR_F {};
