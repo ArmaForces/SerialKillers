@@ -4,6 +4,9 @@ ADDON = false;
 
 #include "initSettings.sqf"
 
+// Killswitch
+if (!EGVAR(common,enabled)) exitWith {};
+
 // Selected equipment preset config
 GVAR(equipmentPreset) = configNull;
 // Namespace containing common item name variables with value being loaded properties as namespace

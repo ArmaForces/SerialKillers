@@ -4,6 +4,9 @@ ADDON = false;
 
 #include "initSettings.sqf"
 
+// Killswitch
+if (!EGVAR(common,enabled)) exitWith {};
+
 // Current scores
 GVAR(policeScore) = 0;
 GVAR(killersScore) = 0;
