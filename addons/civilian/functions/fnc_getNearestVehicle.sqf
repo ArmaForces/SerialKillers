@@ -25,4 +25,6 @@ private _nearbyVehicles = _pos nearEntities [["Air", "Car", "Motorcycle", "Tank"
 
 private _vehiclesSorted = [_nearbyVehicles, _pos] call BIS_fnc_nearestPosition;
 
+if (_vehiclesSorted isEqualTo [0, 0, 0]) exitWith {objNull};
+
 _vehiclesSorted param [0, objNull]
