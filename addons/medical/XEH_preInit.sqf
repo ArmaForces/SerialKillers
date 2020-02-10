@@ -4,4 +4,6 @@ ADDON = false;
 
 GVAR(ACE_Medical_Loaded) = isClass (configFile >> "CfgPatches" >> "ace_medical_engine");
 
+GVAR(items) = ["FirstAidKit"];
+
 ADDON = true;

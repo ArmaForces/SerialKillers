@@ -8,7 +8,8 @@ class CfgPatches {
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {
             "afsk_common",
-            "afsk_civilian"
+            "afsk_civilian",
+            "afsk_medical"
         };
         author = "ArmaForces";
         VERSION_CONFIG;
