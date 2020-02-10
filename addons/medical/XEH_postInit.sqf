@@ -6,6 +6,8 @@ if (GVAR(ACE_Medical_Loaded)) then {
 
     // Disable ACE HandleDamage EH
     if (hasInterface) then {
-        player removeEventHandler ["HandleDamage", player getVariable QACEGVAR(medical,HandleDamageEHID)];
+        [{!(player getVariable [QACEGVAR(medical,HandleDamageEHID), -1] isEqualTo -1)}, {
+            player removeEventHandler ["HandleDamage", player getVariable QACEGVAR(medical,HandleDamageEHID)];
+        }] call CBA_fnc_waitUntilAndExecute;
     };
 };
