@@ -10,4 +10,13 @@ if (GVAR(ACE_Medical_Loaded)) then {
             player removeEventHandler ["HandleDamage", player getVariable QACEGVAR(medical,HandleDamageEHID)];
         }] call CBA_fnc_waitUntilAndExecute;
     };
+
+    // Remove ACE HandleDamage EH for all AIs
+    if (isServer) then {
+        {
+            [{!(_this getVariable [QACEGVAR(medical,HandleDamageEHID), -1] isEqualTo -1)}, {
+                _this removeEventHandler ["HandleDamage", _this getVariable QACEGVAR(medical,HandleDamageEHID)];
+            }, _x] call CBA_fnc_waitUntilAndExecute;
+        } forEach EGVAR(civilian,civilians)
+    };
 };
