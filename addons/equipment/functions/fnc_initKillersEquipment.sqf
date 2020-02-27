@@ -57,6 +57,14 @@ private _killersEquipment = [_equipmentPresetConfig >> "Killers" >> "Equipment"]
     };
 } forEach (allVariables GVAR(commonEquipment));
 
+// Add civilian equipment
+private _civilianEquipmentTypes = [EGVAR(civilian,backpacks), EGVAR(civilian,uniforms), EGVAR(civilian,vests), EGVAR(civilian,headgear)];
+{
+    {
+        GVAR(killersCivilianEquipment) pushBackUnique _x;
+    } forEach _x;
+} forEach _civilianEquipmentTypes;
+
 // Add ACRE radios
 if (EGVAR(common,ACRE_Loaded)) then {
     GVAR(killersStartEquipment) pushBackUnique GVAR(killersRadio);

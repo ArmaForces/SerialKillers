@@ -15,3 +15,4 @@ class CfgPatches {
 };
 
 #include "CfgModuleCategories.hpp"
+#include "CfgMPGameTypes.hpp"

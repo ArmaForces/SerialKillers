@@ -27,12 +27,7 @@ if (isServer) then {
         } else {
             [_change, _reason] call FUNC(addKillersScore);
         };
-        [QGVAR(scoreChanged), _this] call CBA_fnc_serverEvent;
-    }] call CBA_fnc_addEventHandler;
-
-    [QGVAR(scoreChanged), {
-        params ["_side", "_change", ["_reason", ""]];
-        [QGVAR(showScore), [_reason]] call CBA_fnc_globalEvent;
+        [QGVAR(scoreChanged), _this] call CBA_fnc_globalEvent;
     }] call CBA_fnc_addEventHandler;
 
     /* Serverside score logic init */
@@ -52,6 +47,11 @@ if (isServer) then {
         call FUNC(monitorTimeouts);
     }, [], GVAR(idleTimeMax)] call CBA_fnc_waitAndExecute;
 };
+
+[QGVAR(scoreChanged), {
+    params ["_side", "_change", ["_reason", ""]];
+    [QGVAR(showScore), [_reason]] call CBA_fnc_localEvent;
+}] call CBA_fnc_addEventHandler;
 
 
 if (hasInterface) then {

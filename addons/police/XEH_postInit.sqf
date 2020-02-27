@@ -56,7 +56,7 @@ if (!isServer) then {
     player addEventHandler ["Killed", {
         [QGVAR(copKilled), _this] call CBA_fnc_serverEvent;
     }];
-    player addEventHandler ["Respawned", {
+    player addEventHandler ["Respawn", {
         [QGVAR(copRespawned), _this] call CBA_fnc_serverEvent;
     }];
 };
