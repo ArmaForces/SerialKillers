@@ -153,6 +153,18 @@ class CfgSerialKillers {
                     class H_HelmetB_light_black: V_PlateCarrier2_blk {};
                     class H_PASGT_basic_blue_F: V_PlateCarrierSpec_blk {};
                 };
+
+                class Vehicles {
+                    /* Vehicles */
+                    class B_GEN_Offroad_01_gen_F {};
+                    class B_G_Offroad_01_armed_F {
+                        requiredScore = 20;
+                    };
+                    /* Helicopters */
+                    class I_Heli_light_03_unarmed_F {
+                        requiredScore = 15;
+                    };
+                };
             };
         };
     };

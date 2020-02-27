@@ -24,7 +24,7 @@ private _hasHelipad = _logic getVariable ["HasHelipad", false];
 private _basePos = getPos _logic;
 private _flag = createVehicle ["Flag_US_F", _basePos, [], 0, "NONE"];
 _flag setVariable ["policeStation", _logic, true];
-// Init vehicle spawners here
+
 // Init arsenal
 private _box = createVehicle ["B_CargoNet_01_ammo_F", _basePos, [], 0, "NONE"];
 clearItemCargoGlobal _box;
@@ -35,6 +35,9 @@ _box setVariable ["policeStation", _logic, true];
 [_box] call EFUNC(common,createArsenal);
 GVAR(arsenals) pushBack _box;
 publicVariable QGVAR(arsenals);
+
+// Init vehicle spawner
+[_box] call FUNC(initSpawner);
 
 // Create marker
 private _marker = [_baseName, _basePos] call FUNC(policeStationMarker);
