@@ -7,9 +7,7 @@ class CfgPatches {
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {
-            "afsk_common",
-            "afsk_civilian",
-            "afsk_medical"
+            "afsk_common"
         };
         author = "ArmaForces";
         VERSION_CONFIG;
@@ -18,4 +16,3 @@ class CfgPatches {
 
 
 #include "CfgEventHandlers.hpp"
-#include "CfgSerialKillers.hpp"

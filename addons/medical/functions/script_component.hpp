@@ -1,0 +1,1 @@
+#include "\z\afsk\addons\medical\script_component.hpp"
