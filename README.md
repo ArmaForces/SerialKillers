@@ -18,10 +18,9 @@
 
 Idea based on Arma 2 SerialKillers 2009 gamemode by NeoArmageddon and Mondkalb.
 
-The mod and mission are on the same foundation as the ACE3 mod, using its framework, systems, tools and standards. It is entirely **open-source** and licensed under the GNU General Public License ([GPLv2](https://github.com/ArmaForces/Mods/blob/master/LICENSE)).
+The mod and mission are on the same foundation as the ACE3 mod, using its framework, systems, tools and standards. It is entirely **open-source** and licensed under the GNU General Public License ([GPLv2](https://github.com/ArmaForces/SerialKillers/blob/master/LICENSE)).
 
 Huge appreciation and thanks to [ACE3 Team](http://ace3mod.com/team.html) for their open-source nature and permission to use their systems.
-
 
 ## Setup
 
@@ -43,12 +42,33 @@ _Replace `hemtt` with `hemtt.exe` on Windows._
 - Run `$ hemtt clean` to clean build files
 
 **Windows Helpers:**
+
 - Double-click `build.bat` to create a development build
 
 ### Recommended tools
 
 It's recommended to use [Visual Studio Code](https://) editor with following plugins to ensure equal development environment for all contributors:
+
 - [EditorConfig](https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig)
 - [SQFLint](https://marketplace.visualstudio.com/items?itemName=skacekachna.sqflint)
 - [SQF Langauge](https://marketplace.visualstudio.com/items?itemName=Armitxes.sqf)
 - [psioniq File Header](https://marketplace.visualstudio.com/items?itemName=psioniq.psi-header)
+
+# Overwiew
+
+Police obtained information that up to 4 well equipped killers want to wreak havoc on Chernarus. Their task is simple - stop the assassins as soon as possible. However no one really cares about their predictions of the attack, so they have very limited equipment at the beginning, which is growing the closer killers are to their goal.
+
+- Play as a killer or a cop in this asymmetric yet somewhat balanced PvP scenario
+- Cops start as ordinary patrol units armed with pistols
+- As killer experience increasing difficulty the more civilians you kill
+- Automatic civilians/vehicles generation according to settings
+- Highly customizable gameplay settings
+- Supports own weapons/vehicles configuration
+
+## Supported Mods
+
+- [ACE](http://steamcommunity.com/sharedfiles/filedetails/?id=463939057) arsenal and interactions supersede vanilla solutions if possible
+
+## Supported Maps
+
+Every map with defined locations will work.
