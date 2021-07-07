@@ -14,38 +14,53 @@ class CfgSerialKillers {
             class Killers {
                 class Equipment {
                     /* Primary */
+                    // F2000
                     class arifle_Mk20_F {
                         availableOnStart = 0;
                         availableInStash = 1;
                     };
+                    // F2000 EGLM
                     class arifle_Mk20_GL_F: arifle_Mk20_F {};
+                    // KH2002 Sama
                     class arifle_Katiba_F {
                         availableOnStart = 1;
                         availableInStash = 1;
                     };
+                    // Negev NG7
                     class LMG_Zafir_F {
                         availableOnStart = 0;
                         availableInStash = 1;
                     };
+                    // GM6 Lynx
                     class srifle_GM6_F: LMG_Zafir_F {};
+
                     /* Pistols */
+                    // MP-443 Grach
                     class hgun_Rook40_F {
                         availableOnStart = 1;
                         availableInStash = 1;
                     };
+                    // Makarowa PM
                     class hgun_Pistol_01_F: hgun_Rook40_F {};
+
                     /* Launchers */
+                    // Metis-M
                     class launch_O_Vorona_green_F {
                         availableOnStart = 0;
                         availableInStash = 1;
                     };
+                    // Titan Launcher
                     class launch_B_Titan_olive_F: launch_O_Vorona_green_F {};
+                    // Titan MPRL Compact
                     class launch_I_Titan_short_F: launch_O_Vorona_green_F {};
+                    // MAAWS Mk4 Mod 0
                     class launch_MRAWS_green_rail_F: launch_O_Vorona_green_F {};
+                    // NLAW
                     class launch_NLAW_F {
                         availableOnStart = 1;
                         availableInStash = 1;
                     };
+
                     /* Explosives and equipment */
                     class DemoCharge_Remote_Mag {
                         availableOnStart = 1;
@@ -58,11 +73,12 @@ class CfgSerialKillers {
             };
             class Police {
                 class Equipment {
-                    class hgun_P07_F {
+                    // Custom Covert II
+                    class hgun_ACPC2_F {
                         requiredScore = 0;
                     };
-                    class hgun_ACPC2_F: hgun_P07_F {};
 
+                    // FNX-45 Tactical
                     class hgun_Pistol_heavy_01_F {
                         requiredScore = 2;
                     };
@@ -70,16 +86,23 @@ class CfgSerialKillers {
                     class optic_mrd: hgun_Pistol_heavy_01_F {};
                     class optic_mrd_black: optic_mrd {};
 
-                    class hgun_PDW2000_F {
+                    // Kozlice 12G
+                    class sgun_HunterShotgun_01_F {
                         requiredScore = 5;
                     };
-                    class optic_yorris: hgun_PDW2000_F {};
-                    class sgun_HunterShotgun_01_F: hgun_PDW2000_F {};
 
-                    class SMG_05_F {
+                    // P99
+                    class hgun_P07_F {
                         requiredScore = 10;
                     };
-                    class SMG_02_F: SMG_05_F {};
+                    // CPW
+                    class hgun_PDW2000_F: hgun_P07_F {};
+                    class optic_yorris: hgun_PDW2000_F {};
+
+                    // MP5K
+                    class SMG_05_F {
+                        requiredScore = 15;
+                    };
                     class optic_aco_smg: SMG_05_F {};
                     class optic_aco_grn_smg: optic_aco_smg {};
                     class acc_flashlight: SMG_05_F {};
@@ -91,19 +114,27 @@ class CfgSerialKillers {
                     class SmokeShellRed: SmokeShell {};
                     class SmokeShellYellow: SmokeShell {};
 
+                    // Vector SMG
                     class SMG_01_F {
-                        requiredScore = 15;
+                        requiredScore = 20;
                     };
                     class acc_flashlight_smg_01: SMG_01_F {};
 
+                    // Scorpion Evo 3 A1
+                    class SMG_02_F {
+                        requiredScore = 25;
+                    };
+
+                    // CTAR-21
                     class arifle_TRG20_F {
-                        requiredScore = 20;
+                        requiredScore = 30;
                     };
                     class optic_aco: arifle_TRG20_F {};
                     class optic_aco_grn: optic_aco {};
 
+                    // TAR-21
                     class arifle_TRG21_F {
-                        requiredScore = 25;
+                        requiredScore = 35;
                     };
                     class optic_holosight: arifle_TRG21_F {};
                     class optic_holosight_blk_f: optic_holosight {};
@@ -114,18 +145,20 @@ class CfgSerialKillers {
                     class acc_pointer_ir: arifle_TRG21_F {};
                     class HandGrenade: arifle_TRG21_F {};
 
+                    // P90
                     class SMG_03_TR_black {
-                        requiredScore = 30;
-                    };
-
-                    class LMG_Mk200_F {
                         requiredScore = 35;
                     };
-                    class arifle_TRG21_GL_F: LMG_Mk200_F {};
 
-                    class srifle_LRR_F {
+                    // Stoner 99 LMG
+                    class LMG_Mk200_F {
                         requiredScore = 40;
                     };
+                    // GTAR-21 EGLM
+                    class arifle_TRG21_GL_F: LMG_Mk200_F {};
+
+                    // M200 Intervention
+                    class srifle_LRR_F: LMG_Mk200_F {};
                     class srifle_LRR_camo_F: srifle_LRR_F {};
                     class srifle_LRR_tna_F: srifle_LRR_F {};
                     class optic_lrps: srifle_LRR_F {};
