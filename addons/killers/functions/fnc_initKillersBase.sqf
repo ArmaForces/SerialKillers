@@ -30,5 +30,4 @@ clearWeaponCargoGlobal _box;
 clearMagazineCargoGlobal _box;
 _killersBase setVariable ["Arsenal", _box, true];
 _box setVariable ["killersBase", _killersBase, true];
-[_box, EGVAR(equipment,killersStartEquipment)] call EFUNC(common,addItemsToArsenal);
-[_box, EGVAR(equipment,killersCivilianEquipment)] call EFUNC(common,addItemsToArsenal);
+[QGVAR(initStartingEquipment)] call CBA_fnc_globalEventJIP;

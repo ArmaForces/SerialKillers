@@ -31,4 +31,8 @@ for "_y" from 0 to _createStatshesCount step 1 do {
     _box setVariable [QGVAR(killersStash), _stash];
     _stash setVariable [QGVAR(box), _box];
     _box call FUNC(fillKillersStash);
+    GVAR(stashes) pushback _box;
+    publicVariable QGVAR(stashes);
 };
+
+[QGVAR(createStashesMarkers)] call CBA_fnc_globalEventJIP;

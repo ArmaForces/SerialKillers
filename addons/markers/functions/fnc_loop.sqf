@@ -46,6 +46,7 @@ if (playerSide isEqualTo WEST) then {
     private _marker = _killer getVariable [QGVAR(marker), ""];
     // Check if player should be able to see killer's marker
     if (playerSide isEqualTo EAST || {_hidden}) then {
+        // Check if killer already has marker
         if (_marker isEqualTo "") then {
             _marker = [_killer, _hidden] call FUNC(createKillerMarker);
         } else {
