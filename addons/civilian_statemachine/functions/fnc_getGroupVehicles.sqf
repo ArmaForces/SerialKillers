@@ -21,7 +21,7 @@ params ["_group"];
 private _groupVehicles = [];
 {
     private _vehicle = _x getVariable [QGVAR(ownedVehicle), objNull];
-    if (!(_vehicle isEqualTo objNull)) then {
+    if (!isNull _vehicle) then {
         _groupVehicles pushBackUnique _vehicle;
     };
 } forEach (units _group);

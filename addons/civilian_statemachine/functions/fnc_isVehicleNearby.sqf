@@ -17,4 +17,4 @@
 
 params ["_group"];
 
-!(([_group] call FUNC(getNearestVehicle)) isEqualTo objNull)
+!isNull ([_group] call FUNC(getNearestVehicle))

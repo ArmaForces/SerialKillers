@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 /*
- * Author: <author>
+ * Author: 3Mydlo3
  * Function description
  *
  * Arguments:
