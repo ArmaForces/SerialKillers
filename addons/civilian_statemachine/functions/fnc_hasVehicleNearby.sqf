@@ -19,4 +19,4 @@ params ["_group"];
 
 private _nearestVehicle = [_group] call FUNC(getGroupNearestVehicle);
 
-((leader _group) distance (_nearestVehicle)) < 500
+((leader _group) distance (_nearestVehicle)) < VEHICLE_SEARCH_RADIUS

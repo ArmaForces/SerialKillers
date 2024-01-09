@@ -12,3 +12,5 @@
 #endif
 
 #include "\z\afsk\addons\main\script_macros.hpp"
+
+#define VEHICLE_SEARCH_RADIUS 500
