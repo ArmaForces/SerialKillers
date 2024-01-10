@@ -58,7 +58,7 @@ if (hasInterface) then {
     [QGVAR(teleportedToStart), {
         params ["_flag"];
         private _actionID = player addAction ["Teleport back", {
-            player setPos (_this select 3)
+            player setPos getPos (_this select 3)
         }, _flag, 10, true];
         // Wait until player teleports back or times out
         [{player distance (_this select 0) < 10}, {
