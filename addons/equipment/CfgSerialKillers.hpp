@@ -253,68 +253,164 @@ class CfgSerialKillers
                 class Equipment
                 {
                     /* Primary */
-                    // F2000
-                    class arifle_Mk20_F
+                    class CUP_lmg_M60
                     {
-                        availableOnStart = 0;
-                        availableInStash = 1;
+                        availableOnStart = 1;
+                        availableInStash = 0;
                     };
-                    // F2000 EGLM
-                    class arifle_Mk20_GL_F: arifle_Mk20_F {};
-                    // KH2002 Sama
-                    class arifle_Katiba_F
+                    class rhs_weap_pm63
+                    {
+                        availableOnStart = 1;
+                    };
+                    class CUP_arifle_G3A3_ris
                     {
                         availableOnStart = 1;
                         availableInStash = 1;
                     };
-                    // Negev NG7
-                    class LMG_Zafir_F
+                    class CUP_optic_SB_11_4x20_PM_od : CUP_arifle_G3A3_ris {};
+                    class CUP_muzzle_snds_socom762rc : CUP_arifle_G3A3_ris {};
+                    class CUP_smg_p90_black
                     {
-                        availableOnStart = 0;
+                        availableOnStart = 3;
                         availableInStash = 1;
                     };
-                    // GM6 Lynx
-                    class srifle_GM6_F: LMG_Zafir_F {};
+                    class CUP_arifle_FNFAL5060
+                    {
+                        availableOnStart = 4;
+                        availableInStash = 1;
+                    };
+
+                    class rhs_weap_m21a
+                    {
+                        availableInStash = 1;
+                    };
+                    class rhs_acc_pkas : rhs_weap_m21a {};
+                    class rhs_weap_akm
+                    {
+                        availableInStash = 1;
+                    };
+                    class CUP_arifle_M16A2_GL
+                    {
+                        availableInStash = 1;
+                    };
+
+                    class rhs_weap_m249_pip_L
+                    {
+                        availableInStash = 1;
+                    };
+                    class rhsusf_acc_eotech_552 : rhs_weap_m249_pip_L {};
+
+                    class CUP_sgun_AA12
+                    {
+                        availableInStash = 1;
+                    };
 
                     /* Pistols */
-                    // MP-443 Grach
-                    class hgun_Rook40_F
+                    class CUP_hgun_Deagle
                     {
                         availableOnStart = 1;
                         availableInStash = 1;
                     };
-                    // Makarowa PM
-                    class hgun_Pistol_01_F: hgun_Rook40_F {};
+                    class rhs_weap_pp2000_folded
+                    {
+                        availableOnStart = 3;
+                        availableInStash = 1;
+                    };
+                    class CUP_hgun_BallisticShield_Armed_M9
+                    {
+                        availableInStash = 1;
+                    };
+                    class CUP_hgun_MicroUzi
+                    {
+                        availableInStash = 1;
+                    };
+                    class CUP_hgun_UZI : CUP_hgun_MicroUzi {};
+                    class CUP_hgun_TEC9_FA : CUP_hgun_MicroUzi {};
+                    class CUP_hgun_MP7 : CUP_hgun_MicroUzi {};
+
+                    /* Sniper Rifles */
+                    class rhs_weap_M107
+                    {
+                        availableInStash = 1;
+                    };
+                    class rhsusf_acc_leupoldmk4_2 : rhs_weap_M107 {};
+                    class rhsusf_acc_eotech_552 : rhs_weap_M107 {};
 
                     /* Launchers */
-                    // Metis-M
-                    class launch_O_Vorona_green_F
+                    class rhs_weap_panzerfaust60
                     {
-                        availableOnStart = 0;
-                        availableInStash = 1;
+                        availableOnStart = 4;
                     };
-                    // Titan Launcher
-                    class launch_B_Titan_olive_F: launch_O_Vorona_green_F {};
-                    // Titan MPRL Compact
-                    class launch_I_Titan_short_F: launch_O_Vorona_green_F {};
-                    // MAAWS Mk4 Mod 0
-                    class launch_MRAWS_green_rail_F: launch_O_Vorona_green_F {};
-                    // NLAW
-                    class launch_NLAW_F
+                    class rhs_weap_rpg7
                     {
                         availableOnStart = 1;
+                    };
+                    class CUP_glaunch_6G30
+                    {
                         availableInStash = 1;
                     };
+                    class rhs_weap_m32 : CUP_glaunch_6G30 {};
+                    class rhs_weap_fgm148 : CUP_glaunch_6G30 {};
+                    class rhs_weap_fim92 : CUP_glaunch_6G30 {};
+                    class rhs_weap_maaws : CUP_glaunch_6G30 {};
+                    class rhs_weap_m80 : CUP_glaunch_6G30 {};
+                    class rhs_weap_rshg2 : CUP_glaunch_6G30 {};
 
-                    /* Explosives and equipment */
+                    /* Explosives */
                     class DemoCharge_Remote_Mag
                     {
                         availableOnStart = 1;
                         availableInStash = 1;
                     };
+                    class IEDUrbanBig_Remote_Mag : DemoCharge_Remote_Mag {};
                     class IEDUrbanSmall_Remote_Mag: DemoCharge_Remote_Mag {};
                     class ClaymoreDirectionalMine_Remote_Mag: DemoCharge_Remote_Mag {};
                     class SLAMDirectionalMine_Wire_Mag: DemoCharge_Remote_Mag {};
+
+                    /* Grenades */
+                    class rhs_mag_m67
+                    {
+                        availableOnStart = 4;
+                    };
+                    class rhs_mag_an_m8hc
+                    {
+                        availableOnStart = 2;
+                    };
+                    class rhs_mag_an_m14_th3
+                    {
+                        availableOnStart = 1;
+                    };
+                    class rhs_mag_rgo
+                    {
+                        availableOnStart = 3;
+                    };
+                    class rhs_mag_rdg2_black
+                    {
+                        availableOnStart = 2;
+                    };
+                    class rhs_mag_rgn
+                    {
+                        availableOnStart = 2;
+                    };
+
+                    /* Other equipment */
+                    class ACRE_SEM52SL
+                    {
+                        availableOnStart = 4;
+                    };
+                    class ACE_M26_Clacker
+                    {
+                        availableOnStart = 1;
+                    };
+                    class O_UavTerminal
+                    {
+                        availableOnStart = 1;
+                    };
+                    class O_UAV_01_backpack_F : O_UavTerminal {};
+                    class optic_Holosight_smg_blk_F
+                    {
+                        availableInStash = 1;
+                    };
                 };
             };
             class Police
