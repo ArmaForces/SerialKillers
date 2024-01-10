@@ -7,7 +7,7 @@ class Header
 
 author = "3Mydlo3";
 onLoadIntro = "ArmaForces SerialKillers Test";
-onLoadMission = "Police obtained information that up to 4 well equipped killers want to wreak havoc on Chernarus. Their task is simple - stop the assassins as soon as possible.";
+onLoadMission = "Police obtained information that up to 4 well equipped killers want to wreak havoc on Malden. Their task is simple - stop the assassins as soon as possible.";
 briefingName = "ArmaForces SerialKillers Test";
 
 disabledAI = true;
