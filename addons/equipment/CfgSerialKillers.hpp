@@ -411,6 +411,1276 @@ class CfgSerialKillers
                     {
                         availableInStash = 1;
                     };
+
+                    /* Clothing */
+                    class rhs_balaclava1_olive
+                    {
+                        availableOnStart = 1;
+                    };
+                    class G_Bandanna_tan
+                    {
+                        availableOnStart = 1;
+                    };
+                    class G_Bandanna_blk
+                    {
+                        availableOnStart = 1;
+                    };
+                    class G_Bandanna_khk
+                    {
+                        availableOnStart = 1;
+                    };
+                    class G_Bandanna_beast
+                    {
+                        availableOnStart = 1;
+                    };
+                    class G_Bandanna_aviator
+                    {
+                        availableOnStart = 1;
+                    };
+                    class G_Bandanna_shades
+                    {
+                        availableOnStart = 1;
+                    };
+                    class G_Bandanna_oli
+                    {
+                        availableOnStart = 1;
+                    };
+                    class G_Bandanna_sport
+                    {
+                        availableOnStart = 1;
+                    };
+                    class None
+                    {
+                        availableOnStart = 1;
+                    };
+                    class G_Lady_Blue
+                    {
+                        availableOnStart = 1;
+                    };
+                    class rhs_ess_black
+                    {
+                        availableOnStart = 1;
+                    };
+                    class G_Diving
+                    {
+                        availableOnStart = 1;
+                    };
+                    class G_Combat_Goggles_tna_F
+                    {
+                        availableOnStart = 1;
+                    };
+                    class G_Combat
+                    {
+                        availableOnStart = 1;
+                    };
+                    class G_I_Diving
+                    {
+                        availableOnStart = 1;
+                    };
+                    class G_O_Diving
+                    {
+                        availableOnStart = 1;
+                    };
+                    class G_B_Diving
+                    {
+                        availableOnStart = 1;
+                    };
+                    class G_Lowprofile
+                    {
+                        availableOnStart = 1;
+                    };
+                    class G_Goggles_VR
+                    {
+                        availableOnStart = 1;
+                    };
+                    class rhs_balaclava
+                    {
+                        availableOnStart = 1;
+                    };
+                    class G_Balaclava_blk
+                    {
+                        availableOnStart = 1;
+                    };
+                    class G_Balaclava_lowprofile
+                    {
+                        availableOnStart = 1;
+                    };
+                    class G_Balaclava_oli
+                    {
+                        availableOnStart = 1;
+                    };
+                    class G_Balaclava_combat
+                    {
+                        availableOnStart = 1;
+                    };
+                    class G_Balaclava_TI_blk_F
+                    {
+                        availableOnStart = 1;
+                    };
+                    class G_Balaclava_TI_tna_F
+                    {
+                        availableOnStart = 1;
+                    };
+                    class G_Balaclava_TI_G_blk_F
+                    {
+                        availableOnStart = 1;
+                    };
+                    class G_Balaclava_TI_G_tna_F
+                    {
+                        availableOnStart = 1;
+                    };
+                    class G_Squares
+                    {
+                        availableOnStart = 1;
+                    };
+                    class G_Squares_Tinted
+                    {
+                        availableOnStart = 1;
+                    };
+                    class rds_long_hair_02
+                    {
+                        availableOnStart = 1;
+                    };
+                    class rds_long_hair_01
+                    {
+                        availableOnStart = 1;
+                    };
+                    class rds_long_hair_03
+                    {
+                        availableOnStart = 1;
+                    };
+                    class G_Respirator_white_F
+                    {
+                        availableOnStart = 1;
+                    };
+                    class G_Respirator_yellow_F
+                    {
+                        availableOnStart = 1;
+                    };
+                    class G_Respirator_blue_F
+                    {
+                        availableOnStart = 1;
+                    };
+                    class G_Spectacles
+                    {
+                        availableOnStart = 1;
+                    };
+                    class rhs_googles_orange
+                    {
+                        availableOnStart = 1;
+                    };
+                    class rhs_googles_black
+                    {
+                        availableOnStart = 1;
+                    };
+                    class rhs_googles_yellow
+                    {
+                        availableOnStart = 1;
+                    };
+                    class rhs_googles_clear
+                    {
+                        availableOnStart = 1;
+                    };
+                    class G_Aviator
+                    {
+                        availableOnStart = 1;
+                    };
+                    class G_EyeProtectors_F
+                    {
+                        availableOnStart = 1;
+                    };
+                    class G_Shades_Red
+                    {
+                        availableOnStart = 1;
+                    };
+                    class G_EyeProtectors_Earpiece_F
+                    {
+                        availableOnStart = 1;
+                    };
+                    class G_Shades_Green
+                    {
+                        availableOnStart = 1;
+                    };
+                    class G_Sport_Red
+                    {
+                        availableOnStart = 1;
+                    };
+                    class G_Sport_Blackyellow
+                    {
+                        availableOnStart = 1;
+                    };
+                    class G_Sport_Checkered
+                    {
+                        availableOnStart = 1;
+                    };
+                    class G_Sport_BlackWhite
+                    {
+                        availableOnStart = 1;
+                    };
+                    class G_Sport_Greenblack
+                    {
+                        availableOnStart = 1;
+                    };
+                    class G_Tactical_Black
+                    {
+                        availableOnStart = 1;
+                    };
+                    class G_Spectacles_Tinted
+                    {
+                        availableOnStart = 1;
+                    };
+                    class G_Tactical_Clear
+                    {
+                        availableOnStart = 1;
+                    };
+                    class rhsusf_shemagh_white
+                    {
+                        availableOnStart = 1;
+                    };
+                    class rhsusf_shemagh_tan
+                    {
+                        availableOnStart = 1;
+                    };
+                    class rhsusf_shemagh2_tan
+                    {
+                        availableOnStart = 1;
+                    };
+                    class rhsusf_shemagh2_od
+                    {
+                        availableOnStart = 1;
+                    };
+                    class rhsusf_shemagh2_grn
+                    {
+                        availableOnStart = 1;
+                    };
+                    class rhsusf_shemagh_grn
+                    {
+                        availableOnStart = 1;
+                    };
+                    class rhsusf_shemagh2_white
+                    {
+                        availableOnStart = 1;
+                    };
+                    class rhsusf_shemagh2_gogg_grn
+                    {
+                        availableOnStart = 1;
+                    };
+                    class rhsusf_shemagh_gogg_grn
+                    {
+                        availableOnStart = 1;
+                    };
+                    class rhsusf_shemagh2_gogg_od
+                    {
+                        availableOnStart = 1;
+                    };
+                    class rhsusf_shemagh_gogg_tan
+                    {
+                        availableOnStart = 1;
+                    };
+                    class rhsusf_shemagh2_gogg_tan
+                    {
+                        availableOnStart = 1;
+                    };
+                    class rhsusf_shemagh_gogg_white
+                    {
+                        availableOnStart = 1;
+                    };
+                    class rhsusf_shemagh_gogg_od
+                    {
+                        availableOnStart = 1;
+                    };
+                    class rhsusf_oakley_goggles_clr
+                    {
+                        availableOnStart = 1;
+                    };
+                    class rhsusf_oakley_goggles_blk
+                    {
+                        availableOnStart = 1;
+                    };
+                    class rhsusf_shemagh2_gogg_white
+                    {
+                        availableOnStart = 1;
+                    };
+                    class G_Shades_Black
+                    {
+                        availableOnStart = 1;
+                    };
+                    class G_Sport_Blackred
+                    {
+                        availableOnStart = 1;
+                    };
+                    class G_Shades_Blue
+                    {
+                        availableOnStart = 1;
+                    };
+                    class rhsusf_oakley_goggles_ylw
+                    {
+                        availableOnStart = 1;
+                    };
+                    class rhs_scarf
+                    {
+                        availableOnStart = 1;
+                    };
+                    class G_WirelessEarpiece_F
+                    {
+                        availableOnStart = 1;
+                    };
+                    class rds_worker_cap4
+                    {
+                        availableOnStart = 1;
+                    };
+                    class rds_worker_cap3
+                    {
+                        availableOnStart = 1;
+                    };
+                    class rds_worker_cap2
+                    {
+                        availableOnStart = 1;
+                    };
+                    class rds_worker_cap1
+                    {
+                        availableOnStart = 1;
+                    };
+                    class rds_Villager_cap1
+                    {
+                        availableOnStart = 1;
+                    };
+                    class rds_Villager_cap2
+                    {
+                        availableOnStart = 1;
+                    };
+                    class rds_Villager_cap3
+                    {
+                        availableOnStart = 1;
+                    };
+                    class rds_Villager_cap4
+                    {
+                        availableOnStart = 1;
+                    };
+                    class rds_Woodlander_cap4
+                    {
+                        availableOnStart = 1;
+                    };
+                    class rds_Woodlander_cap1
+                    {
+                        availableOnStart = 1;
+                    };
+                    class rds_Woodlander_cap2
+                    {
+                        availableOnStart = 1;
+                    };
+                    class rds_Woodlander_cap3
+                    {
+                        availableOnStart = 1;
+                    };
+                    class H_Shemag_olive_hs
+                    {
+                        availableOnStart = 1;
+                    };
+                    class H_Shemag_olive
+                    {
+                        availableOnStart = 1;
+                    };
+                    class H_ShemagOpen_tan
+                    {
+                        availableOnStart = 1;
+                    };
+                    class H_HeadSet_orange_F
+                    {
+                        availableOnStart = 1;
+                    };
+                    class H_HeadSet_red_F
+                    {
+                        availableOnStart = 1;
+                    };
+                    class H_HeadSet_white_F
+                    {
+                        availableOnStart = 1;
+                    };
+                    class H_HeadSet_black_F
+                    {
+                        availableOnStart = 1;
+                    };
+                    class H_HeadSet_yellow_F
+                    {
+                        availableOnStart = 1;
+                    };
+                    class rds_Profiteer_cap1
+                    {
+                        availableOnStart = 1;
+                    };
+                    class rds_Profiteer_cap3
+                    {
+                        availableOnStart = 1;
+                    };
+                    class rds_Profiteer_cap4
+                    {
+                        availableOnStart = 1;
+                    };
+                    class rds_Profiteer_cap2
+                    {
+                        availableOnStart = 1;
+                    };
+                    class H_HeadBandage_bloody_F
+                    {
+                        availableOnStart = 1;
+                    };
+                    class H_HeadBandage_clean_F
+                    {
+                        availableOnStart = 1;
+                    };
+                    class H_HeadBandage_stained_F
+                    {
+                        availableOnStart = 1;
+                    };
+                    class H_EarProtectors_red_F
+                    {
+                        availableOnStart = 1;
+                    };
+                    class H_EarProtectors_orange_F
+                    {
+                        availableOnStart = 1;
+                    };
+                    class H_EarProtectors_black_F
+                    {
+                        availableOnStart = 1;
+                    };
+                    class H_EarProtectors_white_F
+                    {
+                        availableOnStart = 1;
+                    };
+                    class H_EarProtectors_yellow_F
+                    {
+                        availableOnStart = 1;
+                    };
+                    class rds_rocker_hair3
+                    {
+                        availableOnStart = 1;
+                    };
+                    class rds_rocker_hair2
+                    {
+                        availableOnStart = 1;
+                    };
+                    class rds_rocker_hair1
+                    {
+                        availableOnStart = 1;
+                    };
+                    class H_RacingHelmet_1_yellow_F
+                    {
+                        availableOnStart = 1;
+                    };
+                    class H_RacingHelmet_1_white_F
+                    {
+                        availableOnStart = 1;
+                    };
+                    class H_RacingHelmet_2_F
+                    {
+                        availableOnStart = 1;
+                    };
+                    class H_RacingHelmet_1_black_F
+                    {
+                        availableOnStart = 1;
+                    };
+                    class H_RacingHelmet_1_red_F
+                    {
+                        availableOnStart = 1;
+                    };
+                    class H_RacingHelmet_1_F
+                    {
+                        availableOnStart = 1;
+                    };
+                    class H_RacingHelmet_1_orange_F
+                    {
+                        availableOnStart = 1;
+                    };
+                    class H_RacingHelmet_1_blue_F
+                    {
+                        availableOnStart = 1;
+                    };
+                    class H_RacingHelmet_4_F
+                    {
+                        availableOnStart = 1;
+                    };
+                    class H_RacingHelmet_1_green_F
+                    {
+                        availableOnStart = 1;
+                    };
+                    class H_RacingHelmet_3_F
+                    {
+                        availableOnStart = 1;
+                    };
+                    class H_Helmet_Skate
+                    {
+                        availableOnStart = 1;
+                    };
+                    class H_Construction_headset_vrana_F
+                    {
+                        availableOnStart = 1;
+                    };
+                    class H_Construction_earprot_vrana_F
+                    {
+                        availableOnStart = 1;
+                    };
+                    class H_Construction_basic_vrana_F
+                    {
+                        availableOnStart = 1;
+                    };
+                    class H_Construction_headset_orange_F
+                    {
+                        availableOnStart = 1;
+                    };
+                    class H_Construction_earprot_orange_F
+                    {
+                        availableOnStart = 1;
+                    };
+                    class H_Construction_headset_red_F
+                    {
+                        availableOnStart = 1;
+                    };
+                    class H_Construction_basic_orange_F
+                    {
+                        availableOnStart = 1;
+                    };
+                    class H_Construction_headset_black_F
+                    {
+                        availableOnStart = 1;
+                    };
+                    class H_Construction_earprot_red_F
+                    {
+                        availableOnStart = 1;
+                    };
+                    class H_Construction_basic_red_F
+                    {
+                        availableOnStart = 1;
+                    };
+                    class H_Construction_earprot_black_F
+                    {
+                        availableOnStart = 1;
+                    };
+                    class H_Construction_basic_black_F
+                    {
+                        availableOnStart = 1;
+                    };
+                    class H_Construction_headset_white_F
+                    {
+                        availableOnStart = 1;
+                    };
+                    class H_Construction_earprot_white_F
+                    {
+                        availableOnStart = 1;
+                    };
+                    class H_Construction_earprot_yellow_F
+                    {
+                        availableOnStart = 1;
+                    };
+                    class H_Construction_basic_white_F
+                    {
+                        availableOnStart = 1;
+                    };
+                    class H_Construction_headset_yellow_F
+                    {
+                        availableOnStart = 1;
+                    };
+                    class H_Construction_basic_yellow_F
+                    {
+                        availableOnStart = 1;
+                    };
+                    class H_Booniehat_tna_F
+                    {
+                        availableOnStart = 1;
+                    };
+                    class H_Booniehat_mcamo
+                    {
+                        availableOnStart = 1;
+                    };
+                    class H_Booniehat_khk
+                    {
+                        availableOnStart = 1;
+                    };
+                    class H_Hat_Safari_sand_F
+                    {
+                        availableOnStart = 1;
+                    };
+                    class H_Hat_Safari_olive_F
+                    {
+                        availableOnStart = 1;
+                    };
+                    class H_StrawHat_dark
+                    {
+                        availableOnStart = 1;
+                    };
+                    class H_StrawHat
+                    {
+                        availableOnStart = 1;
+                    };
+                    class rhs_Booniehat_flora
+                    {
+                        availableOnStart = 1;
+                    };
+                    class rhs_Booniehat_digi
+                    {
+                        availableOnStart = 1;
+                    };
+                    class H_Booniehat_tan
+                    {
+                        availableOnStart = 1;
+                    };
+                    class H_Booniehat_oli
+                    {
+                        availableOnStart = 1;
+                    };
+                    class H_Hat_grey
+                    {
+                        availableOnStart = 1;
+                    };
+                    class H_Hat_blue
+                    {
+                        availableOnStart = 1;
+                    };
+                    class H_Hat_checker
+                    {
+                        availableOnStart = 1;
+                    };
+                    class H_Hat_tan
+                    {
+                        availableOnStart = 1;
+                    };
+                    class H_Hat_brown
+                    {
+                        availableOnStart = 1;
+                    };
+                    class H_Hat_camo
+                    {
+                        availableOnStart = 1;
+                    };
+                    class rhsgref_fieldcap_ttsko_urban
+                    {
+                        availableOnStart = 1;
+                    };
+                    class rhsgref_fieldcap_ttsko_mountain
+                    {
+                        availableOnStart = 1;
+                    };
+                    class rhsgref_fieldcap_ttsko_digi
+                    {
+                        availableOnStart = 1;
+                    };
+                    class rhsgref_fieldcap_ttsko_forest
+                    {
+                        availableOnStart = 1;
+                    };
+                    class H_MilCap_dgtl
+                    {
+                        availableOnStart = 1;
+                    };
+                    class H_MilCap_ghex_F
+                    {
+                        availableOnStart = 1;
+                    };
+                    class H_MilCap_tna_F
+                    {
+                        availableOnStart = 1;
+                    };
+                    class H_MilCap_gry
+                    {
+                        availableOnStart = 1;
+                    };
+                    class H_MilCap_blue
+                    {
+                        availableOnStart = 1;
+                    };
+                    class H_MilCap_mcamo
+                    {
+                        availableOnStart = 1;
+                    };
+                    class H_MilCap_ocamo
+                    {
+                        availableOnStart = 1;
+                    };
+                    class H_Cap_marshal
+                    {
+                        availableOnStart = 1;
+                    };
+                    class rhs_fieldcap_vsr
+                    {
+                        availableOnStart = 1;
+                    };
+                    class rhs_fieldcap_khk
+                    {
+                        availableOnStart = 1;
+                    };
+                    class rhs_fieldcap_ml
+                    {
+                        availableOnStart = 1;
+                    };
+                    class rhs_fieldcap_digi2
+                    {
+                        availableOnStart = 1;
+                    };
+                    class rhs_fieldcap_digi
+                    {
+                        availableOnStart = 1;
+                    };
+                    class H_Watchcap_khk
+                    {
+                        availableOnStart = 1;
+                    };
+                    class H_Watchcap_blk
+                    {
+                        availableOnStart = 1;
+                    };
+                    class H_Cap_headphones
+                    {
+                        availableOnStart = 1;
+                    };
+                    class H_Watchcap_camo
+                    {
+                        availableOnStart = 1;
+                    };
+                    class H_Watchcap_cbr
+                    {
+                        availableOnStart = 1;
+                    };
+                    class H_Cap_brn_SPECOPS
+                    {
+                        availableOnStart = 1;
+                    };
+                    class H_Cap_blk_Raven
+                    {
+                        availableOnStart = 1;
+                    };
+                    class H_Cap_grn
+                    {
+                        availableOnStart = 1;
+                    };
+                    class H_Cap_tan_specops_US
+                    {
+                        availableOnStart = 1;
+                    };
+                    class H_Cap_khaki_specops_UK
+                    {
+                        availableOnStart = 1;
+                    };
+                    class rhs_fieldcap
+                    {
+                        availableOnStart = 1;
+                    };
+                    class H_Cap_surfer
+                    {
+                        availableOnStart = 1;
+                    };
+                    class H_Cap_Orange_IDAP_F
+                    {
+                        availableOnStart = 1;
+                    };
+                    class H_Cap_oli
+                    {
+                        availableOnStart = 1;
+                    };
+                    class H_Cap_oli_hs
+                    {
+                        availableOnStart = 1;
+                    };
+                    class H_Cap_blu
+                    {
+                        availableOnStart = 1;
+                    };
+                    class H_Cap_press
+                    {
+                        availableOnStart = 1;
+                    };
+                    class H_Cap_tan
+                    {
+                        availableOnStart = 1;
+                    };
+                    class H_Cap_blk_ION
+                    {
+                        availableOnStart = 1;
+                    };
+                    class H_Cap_red
+                    {
+                        availableOnStart = 1;
+                    };
+                    class H_Cap_grn_BI
+                    {
+                        availableOnStart = 1;
+                    };
+                    class H_Cap_blk_CMMG
+                    {
+                        availableOnStart = 1;
+                    };
+                    class H_Cap_usblack
+                    {
+                        availableOnStart = 1;
+                    };
+                    class H_Cap_White_IDAP_F
+                    {
+                        availableOnStart = 1;
+                    };
+                    class H_Cap_blk
+                    {
+                        availableOnStart = 1;
+                    };
+                    class H_Cap_Black_IDAP_F
+                    {
+                        availableOnStart = 1;
+                    };
+                    class rhssaf_booniehat_md2camo
+                    {
+                        availableOnStart = 1;
+                    };
+                    class H_Booniehat_dgtl
+                    {
+                        availableOnStart = 1;
+                    };
+                    class rhsgref_Booniehat_alpen
+                    {
+                        availableOnStart = 1;
+                    };
+                    class rhs_Booniehat_m81
+                    {
+                        availableOnStart = 1;
+                    };
+                    class rhs_booniehat2_marpatd
+                    {
+                        availableOnStart = 1;
+                    };
+                    class rhs_Booniehat_ocp
+                    {
+                        availableOnStart = 1;
+                    };
+                    class rhs_Booniehat_ucp
+                    {
+                        availableOnStart = 1;
+                    };
+                    class rhs_booniehat2_marpatwd
+                    {
+                        availableOnStart = 1;
+                    };
+                    class H_Booniehat_khk_hs
+                    {
+                        availableOnStart = 1;
+                    };
+                    class rhssaf_booniehat_woodland
+                    {
+                        availableOnStart = 1;
+                    };
+                    class rhssaf_booniehat_digital
+                    {
+                        availableOnStart = 1;
+                    };
+                    class H_ShemagOpen_khk
+                    {
+                        availableOnStart = 1;
+                    };
+                    class rhssaf_bandana_digital
+                    {
+                        availableOnStart = 1;
+                    };
+                    class rhssaf_bandana_digital_desert
+                    {
+                        availableOnStart = 1;
+                    };
+                    class rhssaf_bandana_md2camo
+                    {
+                        availableOnStart = 1;
+                    };
+                    class rhssaf_bandana_smb
+                    {
+                        availableOnStart = 1;
+                    };
+                    class H_Bandanna_gry
+                    {
+                        availableOnStart = 1;
+                    };
+                    class rhssaf_bandana_oakleaf
+                    {
+                        availableOnStart = 1;
+                    };
+                    class H_Bandanna_khk
+                    {
+                        availableOnStart = 1;
+                    };
+                    class H_Bandanna_khk_hs
+                    {
+                        availableOnStart = 1;
+                    };
+                    class H_Bandanna_camo
+                    {
+                        availableOnStart = 1;
+                    };
+                    class H_Bandanna_mcamo
+                    {
+                        availableOnStart = 1;
+                    };
+                    class H_Bandanna_cbr
+                    {
+                        availableOnStart = 1;
+                    };
+                    class H_Bandanna_surfer
+                    {
+                        availableOnStart = 1;
+                    };
+                    class H_Bandanna_sand
+                    {
+                        availableOnStart = 1;
+                    };
+                    class H_Bandanna_sgg
+                    {
+                        availableOnStart = 1;
+                    };
+                    class H_Bandanna_blu
+                    {
+                        availableOnStart = 1;
+                    };
+                    class H_Bandanna_surfer_grn
+                    {
+                        availableOnStart = 1;
+                    };
+                    class rhsgref_bcap_specter
+                    {
+                        availableOnStart = 1;
+                    };
+                    class H_Bandanna_surfer_blk
+                    {
+                        availableOnStart = 1;
+                    };
+                    class rhs_beanie_green
+                    {
+                        availableOnStart = 1;
+                    };
+                    class rhs_beanie
+                    {
+                        availableOnStart = 1;
+                    };
+                    class rhssaf_beret_green
+                    {
+                        availableOnStart = 1;
+                    };
+                    class rhssaf_beret_para
+                    {
+                        availableOnStart = 1;
+                    };
+                    class rhssaf_beret_black
+                    {
+                        availableOnStart = 1;
+                    };
+                    class rhssaf_beret_red
+                    {
+                        availableOnStart = 1;
+                    };
+                    class H_Beret_gen_F
+                    {
+                        availableOnStart = 1;
+                    };
+                    class H_Beret_blk
+                    {
+                        availableOnStart = 1;
+                    };
+                    class rhssaf_beret_blue_un
+                    {
+                        availableOnStart = 1;
+                    };
+                    class rds_uniform_citizen1
+                    {
+                        availableOnStart = 1;
+                    };
+                    class rds_uniform_assistant
+                    {
+                        availableOnStart = 1;
+                    };
+                    class rds_uniform_citizen2
+                    {
+                        availableOnStart = 1;
+                    };
+                    class rds_uniform_citizen3
+                    {
+                        availableOnStart = 1;
+                    };
+                    class rds_uniform_citizen4
+                    {
+                        availableOnStart = 1;
+                    };
+                    class rds_uniform_doctor
+                    {
+                        availableOnStart = 1;
+                    };
+                    class rds_uniform_Functionary2
+                    {
+                        availableOnStart = 1;
+                    };
+                    class rds_uniform_Functionary1
+                    {
+                        availableOnStart = 1;
+                    };
+                    class U_C_ConstructionCoverall_Vrana_F
+                    {
+                        availableOnStart = 1;
+                    };
+                    class U_C_ConstructionCoverall_Red_F
+                    {
+                        availableOnStart = 1;
+                    };
+                    class U_C_ConstructionCoverall_Blue_F
+                    {
+                        availableOnStart = 1;
+                    };
+                    class U_C_ConstructionCoverall_Black_F
+                    {
+                        availableOnStart = 1;
+                    };
+                    class U_OrestesBody
+                    {
+                        availableOnStart = 1;
+                    };
+                    class U_I_C_Soldier_Bandit_2_F
+                    {
+                        availableOnStart = 1;
+                    };
+                    class U_I_C_Soldier_Bandit_5_F
+                    {
+                        availableOnStart = 1;
+                    };
+                    class U_I_C_Soldier_Bandit_1_F
+                    {
+                        availableOnStart = 1;
+                    };
+                    class U_I_C_Soldier_Bandit_4_F
+                    {
+                        availableOnStart = 1;
+                    };
+                    class U_I_C_Soldier_Bandit_3_F
+                    {
+                        availableOnStart = 1;
+                    };
+                    class U_C_Man_casual_5_F
+                    {
+                        availableOnStart = 1;
+                    };
+                    class U_C_Man_casual_1_F
+                    {
+                        availableOnStart = 1;
+                    };
+                    class U_C_man_sport_2_F
+                    {
+                        availableOnStart = 1;
+                    };
+                    class U_C_man_sport_1_F
+                    {
+                        availableOnStart = 1;
+                    };
+                    class U_BG_Guerilla1_2_F
+                    {
+                        availableOnStart = 1;
+                    };
+                    class U_C_man_sport_3_F
+                    {
+                        availableOnStart = 1;
+                    };
+                    class U_BG_Guerilla1_1
+                    {
+                        availableOnStart = 1;
+                    };
+                    class U_C_Man_casual_6_F
+                    {
+                        availableOnStart = 1;
+                    };
+                    class U_C_Man_casual_4_F
+                    {
+                        availableOnStart = 1;
+                    };
+                    class U_C_Man_casual_3_F
+                    {
+                        availableOnStart = 1;
+                    };
+                    class U_C_Man_casual_2_F
+                    {
+                        availableOnStart = 1;
+                    };
+                    class rds_uniform_Profiteer1
+                    {
+                        availableOnStart = 1;
+                    };
+                    class rds_uniform_priest
+                    {
+                        availableOnStart = 1;
+                    };
+                    class rds_uniform_Profiteer4
+                    {
+                        availableOnStart = 1;
+                    };
+                    class rds_uniform_Profiteer3
+                    {
+                        availableOnStart = 1;
+                    };
+                    class rds_uniform_Profiteer2
+                    {
+                        availableOnStart = 1;
+                    };
+                    class rds_uniform_Rocker1
+                    {
+                        availableOnStart = 1;
+                    };
+                    class rds_uniform_Rocker2
+                    {
+                        availableOnStart = 1;
+                    };
+                    class rds_uniform_Rocker3
+                    {
+                        availableOnStart = 1;
+                    };
+                    class rds_uniform_Rocker4
+                    {
+                        availableOnStart = 1;
+                    };
+                    class rds_uniform_schoolteacher
+                    {
+                        availableOnStart = 1;
+                    };
+                    class U_BG_Guerilla2_2
+                    {
+                        availableOnStart = 1;
+                    };
+                    class U_BG_Guerilla2_1
+                    {
+                        availableOnStart = 1;
+                    };
+                    class U_BG_Guerilla2_3
+                    {
+                        availableOnStart = 1;
+                    };
+                    class U_Competitor
+                    {
+                        availableOnStart = 1;
+                    };
+                    class U_C_IDAP_Man_shorts_F
+                    {
+                        availableOnStart = 1;
+                    };
+                    class U_C_IDAP_Man_casual_F
+                    {
+                        availableOnStart = 1;
+                    };
+                    class U_C_IDAP_Man_TeeShorts_F
+                    {
+                        availableOnStart = 1;
+                    };
+                    class U_C_IDAP_Man_Jeans_F
+                    {
+                        availableOnStart = 1;
+                    };
+                    class U_C_IDAP_Man_Tee_F
+                    {
+                        availableOnStart = 1;
+                    };
+                    class U_C_IDAP_Man_cargo_F
+                    {
+                        availableOnStart = 1;
+                    };
+                    class U_Marshal
+                    {
+                        availableOnStart = 1;
+                    };
+                    class U_C_Journalist
+                    {
+                        availableOnStart = 1;
+                    };
+                    class U_C_Mechanic_01_F
+                    {
+                        availableOnStart = 1;
+                    };
+                    class U_C_HunterBody_grn
+                    {
+                        availableOnStart = 1;
+                    };
+                    class U_BG_Guerrilla_6_1
+                    {
+                        availableOnStart = 1;
+                    };
+                    class U_C_Scientist
+                    {
+                        availableOnStart = 1;
+                    };
+                    class U_BG_leader
+                    {
+                        availableOnStart = 1;
+                    };
+                    class rds_uniform_Villager1
+                    {
+                        availableOnStart = 1;
+                    };
+                    class rds_uniform_Villager2
+                    {
+                        availableOnStart = 1;
+                    };
+                    class rds_uniform_Villager3
+                    {
+                        availableOnStart = 1;
+                    };
+                    class rds_uniform_Villager4
+                    {
+                        availableOnStart = 1;
+                    };
+                    class rds_uniform_Woodlander4
+                    {
+                        availableOnStart = 1;
+                    };
+                    class rds_uniform_Woodlander3
+                    {
+                        availableOnStart = 1;
+                    };
+                    class rds_uniform_Woodlander2
+                    {
+                        availableOnStart = 1;
+                    };
+                    class rds_uniform_Woodlander1
+                    {
+                        availableOnStart = 1;
+                    };
+                    class rds_uniform_Worker4
+                    {
+                        availableOnStart = 1;
+                    };
+                    class rds_uniform_Worker3
+                    {
+                        availableOnStart = 1;
+                    };
+                    class rds_uniform_Worker2
+                    {
+                        availableOnStart = 1;
+                    };
+                    class rds_uniform_Worker1
+                    {
+                        availableOnStart = 1;
+                    };
+                    class U_C_Poor_1
+                    {
+                        availableOnStart = 1;
+                    };
+                    class U_C_Poloshirt_burgundy
+                    {
+                        availableOnStart = 1;
+                    };
+                    class U_C_Poloshirt_salmon
+                    {
+                        availableOnStart = 1;
+                    };
+                    class U_C_Poloshirt_redwhite
+                    {
+                        availableOnStart = 1;
+                    };
+                    class U_C_Poloshirt_blue
+                    {
+                        availableOnStart = 1;
+                    };
+                    class U_C_Poloshirt_tricolour
+                    {
+                        availableOnStart = 1;
+                    };
+                    class U_C_Poloshirt_stripped
+                    {
+                        availableOnStart = 1;
+                    };
                 };
             };
             class Police
@@ -593,8 +1863,60 @@ class CfgSerialKillers
                     // class G_RM_SWAT_Balaclava {};
                     // class G_RM_SWAT_Glasses {};
 
-                    // ["kka3_ace_extension_Land_BagFence_Long_F","kka3_ace_extension_Land_BagFence_Round_F","kka3_ace_extension_Campfire_burning_F","kka3_ace_extension_Land_CampingTable_F","kka3_ace_extension_Land_Camping_Light_off_F","kka3_ace_extension_Land_CampingChair_V1_F","kka3_ace_extension_Land_DrillAku_F","kka3_ace_extension_roadcone_l_f","kka3_ace_extension_roadcone_f","kka3_ace_extension_roadbarrier_small_f","kka3_ace_extension_roadbarrier_f","kka3_ace_extension_Land_PortableLight_single_F",,"kka3_ace_extension_TapeSign_F","kka3_ace_extension_Land_Wrench_F",
-                    // "rhsusf_mag_15Rnd_9x19_JHP","rhsusf_mag_17Rnd_9x19_JHP"]
+                    // ["kka3_ace_extension_Land_BagFence_Long_F
+                    {
+                        availableOnStart = 1;
+                    };
+                    class kka3_ace_extension_Land_BagFence_Round_F
+                    {
+                        availableOnStart = 1;
+                    };
+                    class kka3_ace_extension_Campfire_burning_F
+                    {
+                        availableOnStart = 1;
+                    };
+                    class kka3_ace_extension_Land_CampingTable_F
+                    {
+                        availableOnStart = 1;
+                    };
+                    class kka3_ace_extension_Land_Camping_Light_off_F
+                    {
+                        availableOnStart = 1;
+                    };
+                    class kka3_ace_extension_Land_CampingChair_V1_F
+                    {
+                        availableOnStart = 1;
+                    };
+                    class kka3_ace_extension_Land_DrillAku_F
+                    {
+                        availableOnStart = 1;
+                    };
+                    class kka3_ace_extension_roadcone_l_f
+                    {
+                        availableOnStart = 1;
+                    };
+                    class kka3_ace_extension_roadcone_f
+                    {
+                        availableOnStart = 1;
+                    };
+                    class kka3_ace_extension_roadbarrier_small_f
+                    {
+                        availableOnStart = 1;
+                    };
+                    class kka3_ace_extension_roadbarrier_f
+                    {
+                        availableOnStart = 1;
+                    };
+                    class kka3_ace_extension_Land_PortableLight_single_F",,"kka3_ace_extension_TapeSign_F
+                    {
+                        availableOnStart = 1;
+                    };
+                    class kka3_ace_extension_Land_Wrench_F",
+                    // "rhsusf_mag_15Rnd_9x19_JHP
+                    {
+                        availableOnStart = 1;
+                    };
+                    class rhsusf_mag_17Rnd_9x19_JHP"]
                 };
 
                 class Vehicles
