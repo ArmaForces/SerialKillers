@@ -1863,60 +1863,8 @@ class CfgSerialKillers
                     // class G_RM_SWAT_Balaclava {};
                     // class G_RM_SWAT_Glasses {};
 
-                    // ["kka3_ace_extension_Land_BagFence_Long_F
-                    {
-                        availableOnStart = 1;
-                    };
-                    class kka3_ace_extension_Land_BagFence_Round_F
-                    {
-                        availableOnStart = 1;
-                    };
-                    class kka3_ace_extension_Campfire_burning_F
-                    {
-                        availableOnStart = 1;
-                    };
-                    class kka3_ace_extension_Land_CampingTable_F
-                    {
-                        availableOnStart = 1;
-                    };
-                    class kka3_ace_extension_Land_Camping_Light_off_F
-                    {
-                        availableOnStart = 1;
-                    };
-                    class kka3_ace_extension_Land_CampingChair_V1_F
-                    {
-                        availableOnStart = 1;
-                    };
-                    class kka3_ace_extension_Land_DrillAku_F
-                    {
-                        availableOnStart = 1;
-                    };
-                    class kka3_ace_extension_roadcone_l_f
-                    {
-                        availableOnStart = 1;
-                    };
-                    class kka3_ace_extension_roadcone_f
-                    {
-                        availableOnStart = 1;
-                    };
-                    class kka3_ace_extension_roadbarrier_small_f
-                    {
-                        availableOnStart = 1;
-                    };
-                    class kka3_ace_extension_roadbarrier_f
-                    {
-                        availableOnStart = 1;
-                    };
-                    class kka3_ace_extension_Land_PortableLight_single_F",,"kka3_ace_extension_TapeSign_F
-                    {
-                        availableOnStart = 1;
-                    };
-                    class kka3_ace_extension_Land_Wrench_F",
-                    // "rhsusf_mag_15Rnd_9x19_JHP
-                    {
-                        availableOnStart = 1;
-                    };
-                    class rhsusf_mag_17Rnd_9x19_JHP"]
+                    // ["kka3_ace_extension_Land_BagFence_Long_F","kka3_ace_extension_Land_BagFence_Round_F","kka3_ace_extension_Campfire_burning_F","kka3_ace_extension_Land_CampingTable_F","kka3_ace_extension_Land_Camping_Light_off_F","kka3_ace_extension_Land_CampingChair_V1_F","kka3_ace_extension_Land_DrillAku_F","kka3_ace_extension_roadcone_l_f","kka3_ace_extension_roadcone_f","kka3_ace_extension_roadbarrier_small_f","kka3_ace_extension_roadbarrier_f","kka3_ace_extension_Land_PortableLight_single_F",,"kka3_ace_extension_TapeSign_F","kka3_ace_extension_Land_Wrench_F",
+                    // "rhsusf_mag_15Rnd_9x19_JHP","rhsusf_mag_17Rnd_9x19_JHP"]
                 };
 
                 class Vehicles
