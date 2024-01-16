@@ -9,6 +9,7 @@ class CfgSerialKillers
                 class Equipment
                 {
                     class Binocular {};
+                    class FirstAidKit {};
                     class ItemMap {};
                     class ItemGPS {};
                     class ItemCompass {};
@@ -236,6 +237,7 @@ class CfgSerialKillers
                 class Equipment
                 {
                     class Binocular {};
+                    class FirstAidKit {};
                     class ItemMap {};
                     class ItemGPS {};
                     class ItemCompass {};
