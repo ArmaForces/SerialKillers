@@ -1834,7 +1834,7 @@ class CfgSerialKillers
                     class V_LegStrapBag_coyote_F {};
                     class V_LegStrapBag_olive_F {};
                     class V_TacVest_blk_POLICE: SMG_05_F {};
-                    class V_PlateCarrier2_blk: arifle_TRG21_F {};
+                    class V_PlateCarrier2_blk: rhs_weap_m4a1_carryhandle_m203 {};
                     class V_PlateCarrierSpec_blk: srifle_LRR_F {};
                     // class RM_SWAT_Vest_01 {};
                     // class RM_SWAT_Vest_Blue_01 {};
