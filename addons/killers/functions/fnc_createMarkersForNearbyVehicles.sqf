@@ -20,6 +20,9 @@
 params ["_position", ["_radius", 1000]];
 
 private _nearbyVehicles = _position nearEntities [["Air", "Car", "Motorcycle", "Tank"], _radius];
+private _emptyVehicles = _nearbyVehicles select {
+    crew _x isEqualTo []
+};
 
 {
     private _vehicle = _x;
@@ -33,6 +36,6 @@ private _nearbyVehicles = _position nearEntities [["Air", "Car", "Motorcycle", "
     _marker setMarkerTypeLocal _markerType;
 
     [_marker, 2, true] call EFUNC(markers,markerDecay);
-} forEach _nearbyVehicles;
+} forEach _emptyVehicles;
 
 nil
