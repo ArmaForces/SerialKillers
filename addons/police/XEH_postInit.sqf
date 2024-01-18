@@ -52,7 +52,7 @@ if (!isServer) then {
         [QGVAR(copKilled), _this] call CBA_fnc_serverEvent;
     }];
     player addEventHandler ["Respawn", {
-        player setUnitLoadout GVAR(playerLoadout);
+        player setUnitLoadout EGVAR(common,playerLoadout);
         [QGVAR(copRespawned), _this] call CBA_fnc_serverEvent;
     }];
 };
