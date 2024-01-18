@@ -28,6 +28,7 @@ while {GVAR(lastEquipmentUpdateScore) != EGVAR(score,policeScore)} do {
         if (_step > 0) then {
             [_x, _scoreItems] call EFUNC(common,addItemsToArsenal);
         } else {
+            if (EGVAR(score,policeScore) < 0) exitWith {};
             [_x, _scoreItems] call EFUNC(common,removeItemsFromArsenal);
         };
     } forEach GVAR(arsenals);
