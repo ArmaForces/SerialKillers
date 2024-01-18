@@ -46,7 +46,7 @@ call FUNC(equipmentScoreCheck);
     call FUNC(equipmentScoreCheck);
 }] call CBA_fnc_addEventHandler;
 
-if (!isServer) then {
+if (hasInterface) then {
     if !(playerSide isEqualTo WEST) exitWith {};
     player addEventHandler ["Killed", {
         [QGVAR(copKilled), _this] call CBA_fnc_serverEvent;
