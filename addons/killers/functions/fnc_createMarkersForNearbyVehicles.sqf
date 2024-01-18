@@ -32,7 +32,7 @@ private _nearbyVehicles = _position nearEntities [["Air", "Car", "Motorcycle", "
         } else { "loc_car" };
     _marker setMarkerTypeLocal _markerType;
 
-    [_marker, 2] call EFUNC(markers,markerDecay);
+    [_marker, 2, true] call EFUNC(markers,markerDecay);
 } forEach _nearbyVehicles;
 
 nil
