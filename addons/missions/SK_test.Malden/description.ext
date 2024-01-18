@@ -1,6 +1,6 @@
 class Header
 {
-	gameType = SK;
+	gameType = "SK";
 	minPlayers = 2;
 	maxPlayers = 24;
 };
@@ -10,7 +10,7 @@ onLoadIntro = "ArmaForces SerialKillers Test";
 onLoadMission = "Police obtained information that up to 4 well equipped killers want to wreak havoc on Malden. Their task is simple - stop the assassins as soon as possible.";
 briefingName = "ArmaForces SerialKillers Test";
 
-disabledAI = true;
+disabledAI = "true";
 enableDebugConsole = 1;
 respawn = 3;
 respawnDelay = 20;
