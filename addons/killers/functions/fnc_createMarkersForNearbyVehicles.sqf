@@ -19,7 +19,7 @@
 
 params ["_position", ["_radius", 1000]];
 
-private _nearbyVehicles = _position nearEntities [["Air", "Car", "Motorcycle", "Tank"], 1000];
+private _nearbyVehicles = _position nearEntities [["Air", "Car", "Motorcycle", "Tank"], _radius];
 
 {
     private _vehicle = _x;
