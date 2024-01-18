@@ -2320,6 +2320,8 @@ class Mission
 			name="fuel_station_1";
 			type="hd_pickup";
 			colorName="ColorGreen";
+			a=0.75;
+			b=0.75;
 			id=1315;
 			atlOffset=-5.5542154;
 		};
@@ -2330,6 +2332,8 @@ class Mission
 			name="fuel_station_2";
 			type="hd_pickup";
 			colorName="ColorGreen";
+			a=0.75;
+			b=0.75;
 			id=1316;
 			atlOffset=-5.5537138;
 		};
@@ -2340,6 +2344,8 @@ class Mission
 			name="fuel_station_3";
 			type="hd_pickup";
 			colorName="ColorGreen";
+			a=0.75;
+			b=0.75;
 			id=1317;
 			atlOffset=-5.5262146;
 		};
@@ -2350,6 +2356,8 @@ class Mission
 			name="fuel_station_4";
 			type="hd_pickup";
 			colorName="ColorGreen";
+			a=0.75;
+			b=0.75;
 			id=1318;
 			atlOffset=-5.5288696;
 		};
@@ -2360,6 +2368,8 @@ class Mission
 			name="fuel_station_5";
 			type="hd_pickup";
 			colorName="ColorGreen";
+			a=0.75;
+			b=0.75;
 			id=1319;
 			atlOffset=-5.1643066;
 		};
@@ -2370,6 +2380,8 @@ class Mission
 			name="fuel_station_6";
 			type="hd_pickup";
 			colorName="ColorGreen";
+			a=0.75;
+			b=0.75;
 			id=1320;
 			atlOffset=-5.5021057;
 		};
@@ -2380,6 +2392,8 @@ class Mission
 			name="fuel_station_7";
 			type="hd_pickup";
 			colorName="ColorGreen";
+			a=0.75;
+			b=0.75;
 			id=1321;
 			atlOffset=-5.526886;
 		};
@@ -2390,6 +2404,8 @@ class Mission
 			name="fuel_station_8";
 			type="hd_pickup";
 			colorName="ColorGreen";
+			a=0.75;
+			b=0.75;
 			id=1322;
 			atlOffset=-5.4935608;
 		};
@@ -2400,6 +2416,8 @@ class Mission
 			name="fuel_station_9";
 			type="hd_pickup";
 			colorName="ColorGreen";
+			a=0.75;
+			b=0.75;
 			id=1323;
 			atlOffset=-5.5549054;
 		};
@@ -2410,6 +2428,8 @@ class Mission
 			name="fuel_station_10";
 			type="hd_pickup";
 			colorName="ColorGreen";
+			a=0.75;
+			b=0.75;
 			id=1324;
 			atlOffset=-5.5246835;
 		};
@@ -2420,6 +2440,8 @@ class Mission
 			name="fuel_station_11";
 			type="hd_pickup";
 			colorName="ColorGreen";
+			a=0.75;
+			b=0.75;
 			id=1325;
 			atlOffset=-5.515564;
 		};
@@ -2430,6 +2452,8 @@ class Mission
 			name="fuel_station_12";
 			type="hd_pickup";
 			colorName="ColorGreen";
+			a=0.75;
+			b=0.75;
 			id=1326;
 			atlOffset=-5.5399623;
 		};
@@ -2440,6 +2464,8 @@ class Mission
 			name="fuel_station_13";
 			type="hd_pickup";
 			colorName="ColorGreen";
+			a=0.75;
+			b=0.75;
 			id=1327;
 			atlOffset=-5.5530663;
 		};
@@ -2450,6 +2476,8 @@ class Mission
 			name="fuel_station_14";
 			type="hd_pickup";
 			colorName="ColorGreen";
+			a=0.75;
+			b=0.75;
 			id=1328;
 			atlOffset=-5.5543518;
 		};
@@ -2460,6 +2488,8 @@ class Mission
 			name="fuel_station_15";
 			type="hd_pickup";
 			colorName="ColorGreen";
+			a=0.75;
+			b=0.75;
 			id=1816;
 			atlOffset=-5.5380554;
 		};
@@ -5753,8 +5783,7 @@ class Mission
 			dataType="Marker";
 			position[]={6656.6128,0,2424.0559};
 			name="respawn_east";
-			text="Więzienie";
-			type="mil_end";
+			type="Empty";
 			colorName="ColorEAST";
 			id=2059;
 			atlOffset=-6;
