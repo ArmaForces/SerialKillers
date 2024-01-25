@@ -1,5 +1,9 @@
 #include "script_component.hpp"
 
+[QGVAR(killerHandcuffed), {
+    _this call FUNC(killerHandcuffed);
+}] call CBA_fnc_addEventHandler;
+
 [QGVAR(killerKilled), {
     params ["_unit"];
     // Check if unit was already killed (thanks to new ACE medical)

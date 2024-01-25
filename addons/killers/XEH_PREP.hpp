@@ -1,4 +1,5 @@
 PREP(addItemToStash);
+PREP(anyKillerFree);
 PREP(createStartPositionMarker);
 PREP(createStashesMarkers);
 PREP(createTeleport);
@@ -8,5 +9,6 @@ PREP(fillKillersStash);
 PREP(initKillersBase);
 PREP(initKillersStashes);
 PREP(initStartPositions);
+PREP(killerHandcuffed);
 PREP(killerKilled);
 PREP(killerRespawned);

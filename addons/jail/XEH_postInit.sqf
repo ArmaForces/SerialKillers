@@ -36,7 +36,10 @@ if (hasInterface) then {
             // Add ACE EH for handcuffing
             [QACEGVAR(captives,setHandcuffed), {
                 params ["_unit", "_isHandcuffed"];
-                if (!(_unit isEqualTo player) || {_isHandcuffed}) exitWith {};
+                if !(_unit isEqualTo player) exitWith {};
+                if (_isHandcuffed) exitWith {
+                    [QEGVAR(killers,killerHandcuffed), [_unit]] call CBA_fnc_serverEvent;
+                };
                 if (_unit getVariable [QGVAR(isImprisoned), false]) then {
                     [QGVAR(free), [player]] call CBA_fnc_serverEvent;
                 };
