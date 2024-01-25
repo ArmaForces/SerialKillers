@@ -21,4 +21,6 @@ if !(GVAR(killersBase) isEqualTo objNull) exitWith {
     LOG("Multiple killers base modules placed.");
 };
 
+LOG("Killers base module.");
+
 GVAR(killersBase) = _module;

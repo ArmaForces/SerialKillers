@@ -1,8 +1,5 @@
 #include "script_component.hpp"
 
-// Jail module
-GVAR(jail) = EGVAR(modules,jail);
-
 if (isServer) then {
     [QGVAR(free), {
         _this call FUNC(free);
@@ -12,10 +9,16 @@ if (isServer) then {
         _this call FUNC(imprison);
     }] call CBA_fnc_addEventHandler;
 
-    if (!(GVAR(jail) isEqualTo objNull)) then {
+    [{(EGVAR(modules,jail) isNotEqualTo objNull)},{
+        // Jail module
+        GVAR(jail) = EGVAR(modules,jail);
+        publicVariable QGVAR(jail);
+
         GVAR(jailMarker) = call FUNC(jailMarker);
         call FUNC(createKillersRespawn);
-    };
+    }, [], 90, {
+        WARNING("Jail not found");
+    }] call CBA_fnc_waitUntilAndExecute;
 };
 
 if (hasInterface) then {

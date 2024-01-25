@@ -21,4 +21,6 @@ if !(GVAR(jail) isEqualTo objNull) exitWith {
     LOG("Multiple jail modules placed.");
 };
 
+LOG("Jail module initialized.");
+
 GVAR(jail) = _module;
