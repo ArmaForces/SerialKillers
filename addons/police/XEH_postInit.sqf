@@ -2,11 +2,15 @@
 
 if (isServer) then {
     // Initialize police stations
-    {
-        [_x] call FUNC(initPoliceStation);
-        // Initialize respawn for given police station
-        [WEST, _x] call BIS_fnc_addRespawnPosition;
-    } forEach EGVAR(modules,policeStations);
+    [{EGVAR(modules,policeStations) isNotEqualTo []},{
+        [{
+            {
+                [_x] call FUNC(initPoliceStation);
+                // Initialize respawn for given police station
+                [WEST, _x] call BIS_fnc_addRespawnPosition;
+            } forEach EGVAR(modules,policeStations);
+        }] call CBA_fnc_execNextFrame;
+    }] call CBA_fnc_waitUntilAndExecute;
 
     [QGVAR(copKilled), {
         params ["_unit"];

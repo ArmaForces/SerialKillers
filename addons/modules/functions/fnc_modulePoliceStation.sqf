@@ -17,8 +17,6 @@
 
 params ["_module"];
 
-GVAR(policeStations) pushBack _module;
-
 private _locationName = _module getVariable ["LocationName", ""];
 if (_locationName isEqualTo "") then {
     _module setVariable ["LocationName", [_module] call EFUNC(common,getNearestLocationName), true];
