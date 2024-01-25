@@ -15,6 +15,8 @@ if (isServer) then {
     if (!(GVAR(jail) isEqualTo objNull)) then {
         GVAR(jailMarker) = call FUNC(jailMarker);
         call FUNC(createKillersRespawn);
+    } else {
+        ERROR("Jail not detected!");
     };
 };
 
