@@ -493,6 +493,21 @@ class CfgSerialKillers
                     class armaforces_inflatable_boat_bag {};
                     class armaforces_inflatable_boat_engine_bag {};
 
+                    class rhs_Tow_Gun_Bag {};
+                    class rhs_TOW_Tripod_Bag {};
+                    class RHS_Mk19_Gun_Bag {};
+                    class RHS_Mk19_Tripod_Bag {};
+
+                    class RHS_DShkM_Gun_Bag {};
+                    class RHS_DShkM_TripodHigh_Bag {};
+                    class RHS_DShkM_TripodLow_Bag {};
+                    class RHS_AGS30_Gun_Bag {};
+                    class RHS_AGS30_Tripod_Bag {};
+                    class RHS_Kornet_Tripod_Bag {};
+                    class RHS_Kornet_Gun_Bag {};
+                    class RHS_Metis_Tripod_Bag {};
+                    class RHS_Metis_Gun_Bag {};
+
                     /* Clothing */
                     #include "presets/cup-rhs/killers-civilian-clothing.hpp"
                     class rhssaf_uniform_m93_oakleaf {};
