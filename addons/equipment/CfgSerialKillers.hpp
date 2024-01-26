@@ -1768,7 +1768,7 @@ class CfgSerialKillers
                     // M249
                     class rhs_weap_m249_pip_L
                     {
-                        requiredScore = 30;
+                        requiredScore = 35;
                     };
                     // M4A1
                     class rhs_weap_m4a1_carryhandle_m203 : rhs_weap_m249_pip_L {};
