@@ -1886,7 +1886,6 @@ class CfgSerialKillers
                         requiredScore = 20;
                     };
                     class rhsgref_cdf_reg_uaz_dshkm : rhsusf_m1025_w {};
-                    class CUP_I_Hilux_M2_IND_G_F : rhsusf_m1025_w {};
 
                     class rhsusf_m1025_w_m2
                     {
@@ -1897,6 +1896,7 @@ class CfgSerialKillers
                     {
                         requiredScore = 35;
                     };
+                    class CUP_I_Hilux_M2_IND_G_F : rhs_btr80a_vdv {};
 
                     class rhs_tigr_sts_msv
                     {
