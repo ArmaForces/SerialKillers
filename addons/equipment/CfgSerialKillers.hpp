@@ -1885,12 +1885,12 @@ class CfgSerialKillers
                     {
                         requiredScore = 20;
                     };
-                    class rhsgref_cdf_reg_uaz_dshkm : rhsusf_m1025_w {};
 
                     class rhsusf_m1025_w_m2
                     {
                         requiredScore = 30;
                     };
+                    class rhsgref_cdf_reg_uaz_dshkm : rhsusf_m1025_w_m2 {};
 
                     class rhs_btr80a_vdv
                     {
