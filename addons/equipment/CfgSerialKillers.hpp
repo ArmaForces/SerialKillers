@@ -1707,7 +1707,10 @@ class CfgSerialKillers
                     // Kozlice 12G
                     class sgun_HunterShotgun_01_F {
                         requiredScore = 5;
+                        loadMagazines = "false";
                     };
+                    class 2Rnd_12Gauge_Pellets : sgun_HunterShotgun_01_F {};
+                    class 2Rnd_12Gauge_Slug : sgun_HunterShotgun_01_F {};
 
                     // M9 with ballistic shield
                     class CUP_hgun_M9
@@ -1725,12 +1728,18 @@ class CfgSerialKillers
                     class SmokeShellYellow: SmokeShell {};
 
                     // M590 Shotgun
-                    class rhs_weap_M590_8RD : CUP_hgun_M9 {};
+                    class rhs_weap_M590_8RD : CUP_hgun_M9
+                    {
+                        loadMagazines = "false";
+                    };
+                    class rhsusf_8Rnd_00Buck : rhs_weap_M590_8RD {};
+                    class rhsusf_8Rnd_Slug : rhs_weap_M590_8RD {};
 
                     // SPAS-12
                     class CUP_sgun_SPAS12
                     {
                         requiredScore = 15;
+                        loadMagazines = "false";
                     };
 
                     // MP5A5
