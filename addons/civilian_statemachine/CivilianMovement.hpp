@@ -37,9 +37,20 @@ class CivilianMovement {
         onStateEntered = "";
         onStateLeaving = "";
         class InVehicle {
-            targetState = "IdleInVehicle";
+            targetState = "EnteredVehicle";
             condition = "!((vehicle leader _this) isEqualTo (leader _this))";
             onTransition = "";
+        };
+    };
+
+    class EnteredVehicle {
+        onState = "";
+        onStateEntered = "";
+        onStateLeaving = "";
+        class DriveSomewhere {
+            targetState = "Driving";
+            condition = "true";
+            onTransition = QUOTE([_this] call FUNC(driveSomewhere));
         };
     };
 
@@ -49,7 +60,7 @@ class CivilianMovement {
         onStateLeaving = "";
         class DoGetOut {
             targetState = "Idle";
-            condition = "random 1 > 0.9";
+            condition = "random 1 > 0.7";
             onTransition = "";
         };
 
