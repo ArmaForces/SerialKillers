@@ -1,0 +1,1 @@
+#include "\z\afsk\addons\missions\script_component.hpp"
