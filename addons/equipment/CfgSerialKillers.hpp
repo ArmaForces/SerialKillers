@@ -416,6 +416,35 @@ class CfgSerialKillers
 
                     /* Clothing */
                     #include "presets/cup-rhs/killers-civilian-clothing.hpp"
+                    class rhssaf_uniform_m93_oakleaf {};
+
+                    /* Vests */
+                    // class rds_pistol_holster {};
+                    class rhs_vest_pistol_holster {};
+                    class rhs_vest_commander {};
+                    class rhs_6sh46 {};
+                    class V_BandollierB_blk {};
+                    class V_BandollierB_khk {};
+                    class V_BandollierB_oli {};
+                    class V_BandollierB_rgr {};
+                    class rhssaf_vest_md99_woodland_rifleman_radio {};
+                    class rhssaf_vest_md99_woodland_rifleman {};
+                    class rhsgref_alice_webbing {};
+
+                    /* Backpacks */
+                    class B_FieldPack_cbr {};
+                    class B_FieldPack_khk {};
+                    class B_FieldPack_oli {};
+                    class B_Carryall_cbr {};
+                    class B_Carryall_oli {};
+                    class B_Kitbag_cbr {};
+                    class B_Kitbag_rgr {};
+                    class B_Kitbag_tan {};
+                    class rhssaf_alice_md2camo {};
+                    class rhssaf_kitbag_md2camo {};
+
+                    /* Headgear (Helmets) */
+                    class rhssaf_helmet_m97_oakleaf {};
                 };
             };
             class Police
