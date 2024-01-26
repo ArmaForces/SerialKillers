@@ -1,4 +1,5 @@
 PREP(addItemToStash);
+PREP(createMarkersForNearbyVehicles);
 PREP(createStartPositionMarker);
 PREP(createTeleport);
 PREP(deleteStartPositionsMarkers);

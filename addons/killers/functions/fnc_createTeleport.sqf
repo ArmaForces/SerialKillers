@@ -24,7 +24,7 @@ private _positionID = 0;
     private _destinationName = format ["%1 - %2", _positionID, _x];
     private _destinationPos = GVAR(startPositions) getVariable _x;
     private _teleportActionID = _flag addAction [_destinationName, {
-        [QEGVAR(common,teleport), [_this select 1, _this select 3 select 0]] call CBA_fnc_serverEvent;
+        [QEGVAR(killers,teleport), [_this select 1, _this select 3 select 0]] call CBA_fnc_localEvent;
         // Delete all teleport actions and markers
         call FUNC(deleteStartPositionsMarkers);
         private _teleportActionsIDs = (_this select 0) getVariable [QGVAR(teleportActionsIDs), []];
