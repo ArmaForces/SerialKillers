@@ -453,6 +453,13 @@ class CfgSerialKillers
                     };
                     class rhs_mag_mk3a2 : rhs_mag_m67 {};
                     class ACE_M84 : rhs_mag_an_m14_th3 {};
+                    class SmokeShell {};
+                    class SmokeShellBlue : SmokeShell {};
+                    class SmokeShellGreen : SmokeShell {};
+                    class SmokeShellOrange : SmokeShell {};
+                    class SmokeShellPurple : SmokeShell {};
+                    class SmokeShellRed : SmokeShell {};
+                    class SmokeShellYellow : SmokeShell {};
                     class ACE_HuntIR_M203 {};
 
                     /* Optics */
