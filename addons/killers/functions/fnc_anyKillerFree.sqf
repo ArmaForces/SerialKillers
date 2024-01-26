@@ -25,7 +25,7 @@ if (EGVAR(common,ACE_Loaded)) then {
     allPlayers findIf {
         side _x isEqualTo EAST
         && {alive _x
-        && {!(_x getVariable [QGVAR(jail,isImprisoned), false])
+        && {!(_x getVariable [QEGVAR(jail,isImprisoned), false])
     }}}!= -1
 };
 
