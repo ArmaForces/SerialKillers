@@ -1727,6 +1727,12 @@ class CfgSerialKillers
                     // M590 Shotgun
                     class rhs_weap_M590_8RD : CUP_hgun_M9 {};
 
+                    // SPAS-12
+                    class CUP_sgun_SPAS12
+                    {
+                        requiredScore = 15;
+                    };
+
                     // MP5A5
                     class CUP_smg_MP5A5
                     {
@@ -1741,9 +1747,6 @@ class CfgSerialKillers
                     {
                         requiredScore = 25;
                     };
-
-                    // SPAS-12
-                    class CUP_sgun_SPAS12 : CUP_smg_MP5SD6 {};
 
                     // Flashbangs
                     class rhs_mag_mk84 : CUP_smg_MP5SD6 {};
