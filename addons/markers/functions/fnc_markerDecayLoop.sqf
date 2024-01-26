@@ -28,4 +28,4 @@ if (_local) then {
     _marker setMarkerAlpha (_currentAlpha - _decayRate);
 };
 
-[FUNC(markerDecayLoop), [_marker, _decayRate], 15] call CBA_fnc_waitAndExecute;
+[FUNC(markerDecayLoop), [_marker, _decayRate, _local], 15] call CBA_fnc_waitAndExecute;
