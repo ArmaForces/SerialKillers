@@ -248,6 +248,56 @@ class CfgSerialKillers
                     class ACE_DAGR {};
                     class ACE_CableTie {};
                     class ACE_HandFlare_White {};
+                    class ACE_Flashlight_XL50 {};
+                    class ACE_Flashlight_KSF1 {};
+                    class ACE_Flashlight_MX991 {};
+                    class ACE_MapTools {};
+                    class ACE_PlottingBoard {};
+                    class ACE_wirecutter {};
+                    class ToolKit {};
+
+                    class ace_marker_flags_yellow {};
+                    class ace_marker_flags_white {};
+                    class ace_marker_flags_black {};
+                    class ace_marker_flags_red {};
+                    class ace_marker_flags_purple {};
+                    class ace_marker_flags_blue {};
+                    class ace_marker_flags_orange {};
+                    class ace_marker_flags_green {};
+
+                    class ACE_SpraypaintYellow {};
+                    class ACE_SpraypaintWhite {};
+                    class ACE_SpraypaintBlack {};
+                    class ACE_SpraypaintRed {};
+                    class ACE_SpraypaintBlue {};
+                    class ACE_SpraypaintGreen {};
+
+                    class ACE_rope3 {};
+                    class ACE_rope6 {};
+                    class ACE_rope12 {};
+                    class ACE_rope15 {};
+                    class ACE_rope18 {};
+                    class ACE_rope27 {};
+                    class ACE_rope36 {};
+
+                    class Chemlight_blue {};
+                    class Chemlight_green {};
+                    class Chemlight_red {};
+                    class Chemlight_yellow {};
+                    class ACE_Chemlight_HiYellow {};
+                    class ACE_Chemlight_HiWhite {};
+                    class ACE_Chemlight_HiRed {};
+                    class ACE_Chemlight_HiBlue {};
+                    class ACE_Chemlight_HiGreen {};
+                    class ACE_Chemlight_IR {};
+                    class ACE_Chemlight_Orange {};
+                    class ACE_Chemlight_White {};
+                    class ACE_Chemlight_UltraHiOrange {};
+
+                    class ACE_HandFlare_Green {};
+                    class ACE_HandFlare_Red {};
+                    class ACE_HandFlare_White {};
+                    class ACE_HandFlare_Yellow {};
                 };
             };
             class Killers
@@ -364,9 +414,16 @@ class CfgSerialKillers
                         availableOnStart = 1;
                         availableInStash = 1;
                     };
+                    class IEDLandBig_Remote_Mag : DemoCharge_Remote_Mag {};
+                    class IEDLandSmall_Remote_Mag : DemoCharge_Remote_Mag {};
                     class IEDUrbanBig_Remote_Mag : DemoCharge_Remote_Mag {};
                     class IEDUrbanSmall_Remote_Mag: DemoCharge_Remote_Mag {};
+                    class APERSBoundingMine_Range_Mag : DemoCharge_Remote_Mag {};
+                    class APERSMine_Range_Mag : DemoCharge_Remote_Mag {};
+                    class APERSTripMine_Wire_Mag : DemoCharge_Remote_Mag {};
+                    class ATMine_Range_Mag : DemoCharge_Remote_Mag {};
                     class ClaymoreDirectionalMine_Remote_Mag: DemoCharge_Remote_Mag {};
+                    class SatchelCharge_Remote_Mag : DemoCharge_Remote_Mag {};
                     class SLAMDirectionalMine_Wire_Mag: DemoCharge_Remote_Mag {};
 
                     /* Grenades */
@@ -394,29 +451,52 @@ class CfgSerialKillers
                     {
                         availableOnStart = 2;
                     };
+                    class rhs_mag_mk3a2 : rhs_mag_m67 {};
+                    class ACE_M84 : rhs_mag_an_m14_th3 {};
+                    class ACE_HuntIR_M203 {};
+
+                    /* Optics */
+                    class optic_Holosight_smg_blk_F {};
 
                     /* Other equipment */
-                    class ACRE_SEM52SL
-                    {
-                        availableOnStart = 4;
-                    };
-                    class ACE_M26_Clacker
-                    {
-                        availableOnStart = 1;
-                    };
-                    class O_UavTerminal
-                    {
-                        availableOnStart = 1;
-                    };
+                    class ACRE_SEM52SL {};
+                    class ACE_Clacker {};
+                    class ACE_M26_Clacker {};
+                    class ACE_DeadManSwitch {};
+                    class ACE_Cellphone {};
+                    class O_UavTerminal {};
                     class O_UAV_01_backpack_F : O_UavTerminal {};
-                    class optic_Holosight_smg_blk_F
-                    {
-                        availableInStash = 1;
-                    };
+                    class ACE_EntrenchingTool {};
+
+                    class ACE_VectorDay {};
+                    class ACE_Vector {};
+                    class ACE_ATragMX {};
+                    class ACE_Kestrel4500 {};
+                    class ACE_RangeCard {};
+                    class ACE_Tripod {};
+                    class ACE_SpottingScope {};
+
+                    class ACE_HuntIR_monitor : ACE_HuntIR_M203 {};
+
+                    class NVGoggles {};
+                    class NVGoggles_OPFOR {};
+                    class NVGoggles_INDEP {};
+
+                    class Rangefinder {};
+                    class Laserdesignator {};
+                    class Laserbatteries : Laserdesignator {};
+                    class Laserdesignator_01_khk_F : Laserdesignator {};
+                    class Laserdesignator_02 : Laserdesignator {};
+                    class Laserdesignator_02_ghex_F: Laserdesignator {};
+                    class Laserdesignator_03 : Laserdesignator {};
+
+                    class armaforces_inflatable_boat_bag {};
+                    class armaforces_inflatable_boat_engine_bag {};
 
                     /* Clothing */
                     #include "presets/cup-rhs/killers-civilian-clothing.hpp"
                     class rhssaf_uniform_m93_oakleaf {};
+                    class rhssaf_uniform_m10_digital_summer {};
 
                     /* Vests */
                     // class rds_pistol_holster {};
@@ -429,6 +509,7 @@ class CfgSerialKillers
                     class V_BandollierB_rgr {};
                     class rhssaf_vest_md99_woodland_rifleman_radio {};
                     class rhssaf_vest_md99_woodland_rifleman {};
+                    class rhssaf_vest_md99_digital_rifleman {};
                     class rhsgref_alice_webbing {};
 
                     /* Backpacks */
@@ -445,6 +526,7 @@ class CfgSerialKillers
 
                     /* Headgear (Helmets) */
                     class rhssaf_helmet_m97_oakleaf {};
+                    class rhssaf_helmet_m97_digital {};
                 };
             };
             class Police
@@ -480,6 +562,15 @@ class CfgSerialKillers
                         requiredScore = 10;
                     };
                     class CUP_hgun_BallisticShield_Armed_M9 : CUP_hgun_M9 {};
+                    class CUP_decal_BallisticShield_Bullseye {};
+                    class CUP_decal_BallisticShield_Police {};
+                    class CUP_decal_BallisticShield_Police_worn {};
+                    class CUP_decal_BallisticShield_Police_Yellow {};
+                    class CUP_decal_BallisticShield_Militia {};
+                    class CUP_decal_BallisticShield_Militia_worn {};
+                    class CUP_decal_BallisticShield_Militia_Yellow {};
+                    class CUP_decal_BallisticShield_Militia_Yellow_wron {};
+
                     // Smoke grenades
                     class SmokeShell: CUP_hgun_M9 {};
                     class SmokeShellGreen: SmokeShell {};
@@ -529,6 +620,7 @@ class CfgSerialKillers
                     {
                         requiredScore = 30;
                     };
+                    class ACE_HuntIR_M203 : rhs_weap_m79 {};
                     // M16A4
                     class rhs_weap_m16a4_carryhandle : rhs_weap_m79 {};
                     class optic_aco_grn : rhs_weap_m16a4_carryhandle {};
@@ -577,11 +669,25 @@ class CfgSerialKillers
                     class optic_lrps: srifle_LRR_F {};
                     class optic_lrps_tna_f: optic_lrps {};
                     class optic_lrps_ghex_f: optic_lrps {};
+                    class ACE_VectorDay : srifle_LRR_F {};
+                    class ACE_Vector : srifle_LRR_F {};
+                    class ACE_ATragMX : srifle_LRR_F {};
+                    class ACE_Kestrel4500 : srifle_LRR_F {};
+                    class ACE_RangeCard : srifle_LRR_F {};
+                    class ACE_Tripod : srifle_LRR_F {};
+                    class ACE_SpottingScope : srifle_LRR_F {};
 
                     /* Radios */
                     class ACRE_PRC152 {};
                     class ACRE_PRC343 {};
                     class ACRE_PRC117F {};
+
+                    /* Other */
+                    class B_UavTerminal { requiredScore = 30; };
+                    class Laserdesignator : B_UavTerminal {};
+                    class ACE_DefusalKit {};
+                    // class MineDetector : ACE_DefusalKit {}; TODO: Decide if/when it should be available as it's kinda OP
+                    class ACE_HuntIR_monitor : ACE_HuntIR_M203 {};
 
                     /* Uniforms */
                     class U_B_GEN_Soldier_F {};
