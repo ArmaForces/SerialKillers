@@ -1745,11 +1745,6 @@ class CfgSerialKillers
                     // SPAS-12
                     class CUP_sgun_SPAS12 : CUP_smg_MP5SD6 {};
 
-                    // M16A4
-                    class rhs_weap_m16a4_carryhandle : CUP_smg_MP5SD6 {};
-                    class optic_aco_grn : rhs_weap_m16a4_carryhandle {};
-                    class optic_aco : rhs_weap_m16a4_carryhandle {};
-
                     // Flashbangs
                     class rhs_mag_mk84 : CUP_smg_MP5SD6 {};
                     class rhs_mag_m4009 : rhs_mag_mk84 {};
@@ -1758,8 +1753,12 @@ class CfgSerialKillers
                     // M79
                     class rhs_weap_m79
                     {
-                        requiredScore = 25;
+                        requiredScore = 30;
                     };
+                    // M16A4
+                    class rhs_weap_m16a4_carryhandle : rhs_weap_m79 {};
+                    class optic_aco_grn : rhs_weap_m16a4_carryhandle {};
+                    class optic_aco : rhs_weap_m16a4_carryhandle {};
                     // MP7 with ballistic shield
                     class CUP_smg_MP7 : rhs_weap_m79 {};
                     class CUP_smg_BallisticShield_MP7 : CUP_smg_MP7 {};
