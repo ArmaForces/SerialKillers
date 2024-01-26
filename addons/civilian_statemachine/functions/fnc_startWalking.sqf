@@ -23,7 +23,7 @@ private _waypoint = _group addWaypoint [position _leader, 0];
 
 // Randomize waypoint position
 private _nearestCity = [_leader, 500] call EFUNC(civilian,getNearestCity);
-if (random 1 > 0.75 || {_nearestCity isEqualTo objNull}) then {
+if (random 1 > 0.95 || {_nearestCity isEqualTo objNull}) then {
     _waypoint setWaypointPosition [[[[_leader, 500]]] call BIS_fnc_randomPos, 0];
 } else {
     _waypoint setWaypointPosition [[_nearestCity, typeOf _leader, true, false, true] call EFUNC(civilian,getCityRandomPos), 0];
