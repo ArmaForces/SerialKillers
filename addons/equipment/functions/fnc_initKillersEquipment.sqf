@@ -25,10 +25,19 @@ private _fnc_fillEquipmentLists = {
     {
         private _itemClassname = _x;
         private _item = _stuffNamespace getVariable _itemClassname;
+
         private _availableOnStart = _item getVariable ["availableOnStart", 1];
+        _availableOnStart = if (_availableOnStart isEqualType true) then {
+            [0, 1] select _availableOnStart
+        } else { _availableOnStart };
+
         private _availableInStash = _item getVariable ["availableInStash", 1];
+        _availableInStash = if (_availableInStash isEqualType true) then {
+            [0, 1] select _availableInStash
+        } else { _availableInStash };
+
         // Add equipment available on start
-        if (_availableOnStart isEqualTo 1) then {
+        if (_availableOnStart > 0) then {
             _startEquipmentList pushBackUnique _itemClassname;
             // Load magazines if it is a weapon
             if (isClass (configFile >> "CfgWeapons" >> _itemClassname)) then {
@@ -38,7 +47,7 @@ private _fnc_fillEquipmentLists = {
             };
         };
         // Add equipment available in stashes
-        if (_availableInStash isEqualTo 1) then {
+        if (_availableInStash > 0) then {
             _stashEquipmentList pushBackUnique _itemClassname;
             // We don't load magazines here as they get picked from weapon compatible list when filling stash
         };
