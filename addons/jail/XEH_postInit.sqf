@@ -8,6 +8,10 @@ if (isServer) then {
         _this call FUNC(free);
     }] call CBA_fnc_addEventHandler;
 
+    [QGVAR(freeAll), {
+        _this call FUNC(freeAll);
+    }] call CBA_fnc_addEventHandler;
+
     [QGVAR(imprison), {
         _this call FUNC(imprison);
     }] call CBA_fnc_addEventHandler;
