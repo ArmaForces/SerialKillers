@@ -1730,7 +1730,7 @@ class CfgSerialKillers
                     // MP5A5
                     class CUP_smg_MP5A5
                     {
-                        requiredScore = 15;
+                        requiredScore = 20;
                     };
                     class optic_aco_grn_smg : CUP_smg_MP5A5 {};
                     class optic_aco_smg : CUP_smg_MP5A5 {};
@@ -1739,7 +1739,7 @@ class CfgSerialKillers
                     // MP5SD6
                     class CUP_smg_MP5SD6
                     {
-                        requiredScore = 20;
+                        requiredScore = 25;
                     };
 
                     // SPAS-12
