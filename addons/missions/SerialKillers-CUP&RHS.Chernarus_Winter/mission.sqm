@@ -2241,7 +2241,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
-						init="this addAction [""Uwolnij więżniów"", { " \n "[jail_flag] call AFSK_jail_freeAll; " \n "}, {}, 6, true, true, """", ""true"", 5];";
+						init="this addAction [""Uwolnij więżniów"", { " \n "  [""AFSK_jail_freeAll"", [jail_flag]] call CBA_fnc_serverEvent;" \n "}, {}, 6, true, true, """", ""true"", 5];";
 						name="jail_flag";
 					};
 					id=2061;
