@@ -20,7 +20,7 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=1013;
+		nextID=1030;
 	};
 	class Camera
 	{
@@ -371,7 +371,7 @@ class ScenarioData
 };
 class CustomAttributes
 {
-	class Category0
+	class Category1
 	{
 		name="Multiplayer";
 		class Attribute0
@@ -400,7 +400,7 @@ class CustomAttributes
 		};
 		nAttributes=1;
 	};
-	class Category1
+	class Category2
 	{
 		name="Scenario";
 		class Attribute0
@@ -502,14 +502,19 @@ class Mission
 						isPlayable=1;
 						class Inventory
 						{
-							class binocular
+							class handgun
 							{
-								name="Laserdesignator";
+								name="rhsusf_weap_glock17g4";
+								firemode="rhsusf_weap_glock17g4:Single";
 								class primaryMuzzleMag
 								{
-									name="Laserbatteries";
-									ammoLeft=1;
+									name="rhsusf_mag_17Rnd_9x19_JHP";
+									ammoLeft=17;
 								};
+							};
+							class binocular
+							{
+								name="Binocular";
 							};
 							class uniform
 							{
@@ -517,30 +522,20 @@ class Mission
 								isBackpack=0;
 								class ItemCargo
 								{
-									items=5;
+									items=3;
 									class Item0
-									{
-										name="ACE_elasticBandage";
-										count=10;
-									};
-									class Item1
-									{
-										name="ACE_epinephrine";
-										count=2;
-									};
-									class Item2
-									{
-										name="ACE_morphine";
-										count=4;
-									};
-									class Item3
 									{
 										name="ACE_microDAGR";
 										count=1;
 									};
-									class Item4
+									class Item1
 									{
 										name="ACE_Flashlight_XL50";
+										count=1;
+									};
+									class Item2
+									{
+										name="FirstAidKit";
 										count=1;
 									};
 								};
@@ -549,30 +544,35 @@ class Mission
 							{
 								typeName="V_TacVest_blk_POLICE";
 								isBackpack=0;
-								class ItemCargo
+								class MagazineCargo
 								{
-									items=3;
+									items=1;
 									class Item0
 									{
-										name="ACE_EarPlugs";
+										name="rhsusf_mag_17Rnd_9x19_JHP";
+										count=3;
+										ammoLeft=17;
+									};
+								};
+								class ItemCargo
+								{
+									items=2;
+									class Item0
+									{
+										name="ACRE_PRC152";
 										count=1;
 									};
 									class Item1
 									{
-										name="ACRE_PRC343";
-										count=1;
-									};
-									class Item2
-									{
-										name="ACRE_PRC152";
-										count=1;
+										name="FirstAidKit";
+										count=3;
 									};
 								};
 							};
 							map="ItemMap";
 							compass="ItemCompass";
 							watch="ItemWatch";
-							gps="B_UavTerminal";
+							gps="ItemGPS";
 							headgear="H_Cap_police";
 						};
 					};
@@ -653,14 +653,19 @@ class Mission
 						isPlayable=1;
 						class Inventory
 						{
-							class binocular
+							class handgun
 							{
-								name="Laserdesignator";
+								name="rhsusf_weap_glock17g4";
+								firemode="rhsusf_weap_glock17g4:Single";
 								class primaryMuzzleMag
 								{
-									name="Laserbatteries";
-									ammoLeft=1;
+									name="rhsusf_mag_17Rnd_9x19_JHP";
+									ammoLeft=17;
 								};
+							};
+							class binocular
+							{
+								name="Binocular";
 							};
 							class uniform
 							{
@@ -668,30 +673,20 @@ class Mission
 								isBackpack=0;
 								class ItemCargo
 								{
-									items=5;
+									items=3;
 									class Item0
-									{
-										name="ACE_elasticBandage";
-										count=10;
-									};
-									class Item1
-									{
-										name="ACE_epinephrine";
-										count=2;
-									};
-									class Item2
-									{
-										name="ACE_morphine";
-										count=4;
-									};
-									class Item3
 									{
 										name="ACE_microDAGR";
 										count=1;
 									};
-									class Item4
+									class Item1
 									{
 										name="ACE_Flashlight_XL50";
+										count=1;
+									};
+									class Item2
+									{
+										name="FirstAidKit";
 										count=1;
 									};
 								};
@@ -700,30 +695,35 @@ class Mission
 							{
 								typeName="V_TacVest_blk_POLICE";
 								isBackpack=0;
-								class ItemCargo
+								class MagazineCargo
 								{
-									items=3;
+									items=1;
 									class Item0
 									{
-										name="ACE_EarPlugs";
+										name="rhsusf_mag_17Rnd_9x19_JHP";
+										count=3;
+										ammoLeft=17;
+									};
+								};
+								class ItemCargo
+								{
+									items=2;
+									class Item0
+									{
+										name="ACRE_PRC152";
 										count=1;
 									};
 									class Item1
 									{
-										name="ACRE_PRC343";
-										count=1;
-									};
-									class Item2
-									{
-										name="ACRE_PRC152";
-										count=1;
+										name="FirstAidKit";
+										count=3;
 									};
 								};
 							};
 							map="ItemMap";
 							compass="ItemCompass";
 							watch="ItemWatch";
-							gps="B_UavTerminal";
+							gps="ItemGPS";
 							headgear="H_Cap_police";
 						};
 					};
@@ -2476,14 +2476,19 @@ class Mission
 						isPlayable=1;
 						class Inventory
 						{
-							class binocular
+							class handgun
 							{
-								name="Laserdesignator";
+								name="rhsusf_weap_glock17g4";
+								firemode="rhsusf_weap_glock17g4:Single";
 								class primaryMuzzleMag
 								{
-									name="Laserbatteries";
-									ammoLeft=1;
+									name="rhsusf_mag_17Rnd_9x19_JHP";
+									ammoLeft=17;
 								};
+							};
+							class binocular
+							{
+								name="Binocular";
 							};
 							class uniform
 							{
@@ -2491,30 +2496,20 @@ class Mission
 								isBackpack=0;
 								class ItemCargo
 								{
-									items=5;
+									items=3;
 									class Item0
-									{
-										name="ACE_elasticBandage";
-										count=10;
-									};
-									class Item1
-									{
-										name="ACE_epinephrine";
-										count=2;
-									};
-									class Item2
-									{
-										name="ACE_morphine";
-										count=4;
-									};
-									class Item3
 									{
 										name="ACE_microDAGR";
 										count=1;
 									};
-									class Item4
+									class Item1
 									{
 										name="ACE_Flashlight_XL50";
+										count=1;
+									};
+									class Item2
+									{
+										name="FirstAidKit";
 										count=1;
 									};
 								};
@@ -2523,23 +2518,28 @@ class Mission
 							{
 								typeName="V_TacVest_blk_POLICE";
 								isBackpack=0;
-								class ItemCargo
+								class MagazineCargo
 								{
-									items=3;
+									items=1;
 									class Item0
 									{
-										name="ACE_EarPlugs";
+										name="rhsusf_mag_17Rnd_9x19_JHP";
+										count=3;
+										ammoLeft=17;
+									};
+								};
+								class ItemCargo
+								{
+									items=2;
+									class Item0
+									{
+										name="ACRE_PRC152";
 										count=1;
 									};
 									class Item1
 									{
-										name="ACRE_PRC343";
-										count=1;
-									};
-									class Item2
-									{
-										name="ACRE_PRC152";
-										count=1;
+										name="FirstAidKit";
+										count=3;
 									};
 								};
 							};
@@ -2547,7 +2547,7 @@ class Mission
 							compass="ItemCompass";
 							watch="ItemWatch";
 							gps="ItemGPS";
-							headgear="rhsusf_hgu56p_black";
+							headgear="H_Cap_police";
 						};
 					};
 					id=911;
@@ -2626,14 +2626,19 @@ class Mission
 						isPlayable=1;
 						class Inventory
 						{
-							class binocular
+							class handgun
 							{
-								name="Laserdesignator";
+								name="rhsusf_weap_glock17g4";
+								firemode="rhsusf_weap_glock17g4:Single";
 								class primaryMuzzleMag
 								{
-									name="Laserbatteries";
-									ammoLeft=1;
+									name="rhsusf_mag_17Rnd_9x19_JHP";
+									ammoLeft=17;
 								};
+							};
+							class binocular
+							{
+								name="Binocular";
 							};
 							class uniform
 							{
@@ -2641,30 +2646,20 @@ class Mission
 								isBackpack=0;
 								class ItemCargo
 								{
-									items=5;
+									items=3;
 									class Item0
-									{
-										name="ACE_elasticBandage";
-										count=10;
-									};
-									class Item1
-									{
-										name="ACE_epinephrine";
-										count=2;
-									};
-									class Item2
-									{
-										name="ACE_morphine";
-										count=4;
-									};
-									class Item3
 									{
 										name="ACE_microDAGR";
 										count=1;
 									};
-									class Item4
+									class Item1
 									{
 										name="ACE_Flashlight_XL50";
+										count=1;
+									};
+									class Item2
+									{
+										name="FirstAidKit";
 										count=1;
 									};
 								};
@@ -2673,23 +2668,28 @@ class Mission
 							{
 								typeName="V_TacVest_blk_POLICE";
 								isBackpack=0;
-								class ItemCargo
+								class MagazineCargo
 								{
-									items=3;
+									items=1;
 									class Item0
 									{
-										name="ACE_EarPlugs";
+										name="rhsusf_mag_17Rnd_9x19_JHP";
+										count=3;
+										ammoLeft=17;
+									};
+								};
+								class ItemCargo
+								{
+									items=2;
+									class Item0
+									{
+										name="ACRE_PRC152";
 										count=1;
 									};
 									class Item1
 									{
-										name="ACRE_PRC343";
-										count=1;
-									};
-									class Item2
-									{
-										name="ACRE_PRC152";
-										count=1;
+										name="FirstAidKit";
+										count=3;
 									};
 								};
 							};
@@ -2697,7 +2697,7 @@ class Mission
 							compass="ItemCompass";
 							watch="ItemWatch";
 							gps="ItemGPS";
-							headgear="rhsusf_hgu56p_black";
+							headgear="H_Cap_police";
 						};
 					};
 					id=913;
@@ -2821,14 +2821,19 @@ class Mission
 						isPlayable=1;
 						class Inventory
 						{
-							class binocular
+							class handgun
 							{
-								name="Laserdesignator";
+								name="rhsusf_weap_glock17g4";
+								firemode="rhsusf_weap_glock17g4:Single";
 								class primaryMuzzleMag
 								{
-									name="Laserbatteries";
-									ammoLeft=1;
+									name="rhsusf_mag_17Rnd_9x19_JHP";
+									ammoLeft=17;
 								};
+							};
+							class binocular
+							{
+								name="Binocular";
 							};
 							class uniform
 							{
@@ -2836,30 +2841,20 @@ class Mission
 								isBackpack=0;
 								class ItemCargo
 								{
-									items=5;
+									items=3;
 									class Item0
-									{
-										name="ACE_elasticBandage";
-										count=10;
-									};
-									class Item1
-									{
-										name="ACE_epinephrine";
-										count=2;
-									};
-									class Item2
-									{
-										name="ACE_morphine";
-										count=4;
-									};
-									class Item3
 									{
 										name="ACE_microDAGR";
 										count=1;
 									};
-									class Item4
+									class Item1
 									{
 										name="ACE_Flashlight_XL50";
+										count=1;
+									};
+									class Item2
+									{
+										name="FirstAidKit";
 										count=1;
 									};
 								};
@@ -2868,23 +2863,28 @@ class Mission
 							{
 								typeName="V_TacVest_blk_POLICE";
 								isBackpack=0;
-								class ItemCargo
+								class MagazineCargo
 								{
-									items=3;
+									items=1;
 									class Item0
 									{
-										name="ACE_EarPlugs";
+										name="rhsusf_mag_17Rnd_9x19_JHP";
+										count=3;
+										ammoLeft=17;
+									};
+								};
+								class ItemCargo
+								{
+									items=2;
+									class Item0
+									{
+										name="ACRE_PRC152";
 										count=1;
 									};
 									class Item1
 									{
-										name="ACRE_PRC343";
-										count=1;
-									};
-									class Item2
-									{
-										name="ACRE_PRC152";
-										count=1;
+										name="FirstAidKit";
+										count=3;
 									};
 								};
 							};
@@ -2971,14 +2971,19 @@ class Mission
 						isPlayable=1;
 						class Inventory
 						{
-							class binocular
+							class handgun
 							{
-								name="Laserdesignator";
+								name="rhsusf_weap_glock17g4";
+								firemode="rhsusf_weap_glock17g4:Single";
 								class primaryMuzzleMag
 								{
-									name="Laserbatteries";
-									ammoLeft=1;
+									name="rhsusf_mag_17Rnd_9x19_JHP";
+									ammoLeft=17;
 								};
+							};
+							class binocular
+							{
+								name="Binocular";
 							};
 							class uniform
 							{
@@ -2986,30 +2991,20 @@ class Mission
 								isBackpack=0;
 								class ItemCargo
 								{
-									items=5;
+									items=3;
 									class Item0
-									{
-										name="ACE_elasticBandage";
-										count=10;
-									};
-									class Item1
-									{
-										name="ACE_epinephrine";
-										count=2;
-									};
-									class Item2
-									{
-										name="ACE_morphine";
-										count=4;
-									};
-									class Item3
 									{
 										name="ACE_microDAGR";
 										count=1;
 									};
-									class Item4
+									class Item1
 									{
 										name="ACE_Flashlight_XL50";
+										count=1;
+									};
+									class Item2
+									{
+										name="FirstAidKit";
 										count=1;
 									};
 								};
@@ -3018,23 +3013,28 @@ class Mission
 							{
 								typeName="V_TacVest_blk_POLICE";
 								isBackpack=0;
-								class ItemCargo
+								class MagazineCargo
 								{
-									items=3;
+									items=1;
 									class Item0
 									{
-										name="ACE_EarPlugs";
+										name="rhsusf_mag_17Rnd_9x19_JHP";
+										count=3;
+										ammoLeft=17;
+									};
+								};
+								class ItemCargo
+								{
+									items=2;
+									class Item0
+									{
+										name="ACRE_PRC152";
 										count=1;
 									};
 									class Item1
 									{
-										name="ACRE_PRC343";
-										count=1;
-									};
-									class Item2
-									{
-										name="ACRE_PRC152";
-										count=1;
+										name="FirstAidKit";
+										count=3;
 									};
 								};
 							};
@@ -3166,14 +3166,19 @@ class Mission
 						isPlayable=1;
 						class Inventory
 						{
-							class binocular
+							class handgun
 							{
-								name="Laserdesignator";
+								name="rhsusf_weap_glock17g4";
+								firemode="rhsusf_weap_glock17g4:Single";
 								class primaryMuzzleMag
 								{
-									name="Laserbatteries";
-									ammoLeft=1;
+									name="rhsusf_mag_17Rnd_9x19_JHP";
+									ammoLeft=17;
 								};
+							};
+							class binocular
+							{
+								name="Binocular";
 							};
 							class uniform
 							{
@@ -3181,30 +3186,20 @@ class Mission
 								isBackpack=0;
 								class ItemCargo
 								{
-									items=5;
+									items=3;
 									class Item0
-									{
-										name="ACE_elasticBandage";
-										count=10;
-									};
-									class Item1
-									{
-										name="ACE_epinephrine";
-										count=2;
-									};
-									class Item2
-									{
-										name="ACE_morphine";
-										count=4;
-									};
-									class Item3
 									{
 										name="ACE_microDAGR";
 										count=1;
 									};
-									class Item4
+									class Item1
 									{
 										name="ACE_Flashlight_XL50";
+										count=1;
+									};
+									class Item2
+									{
+										name="FirstAidKit";
 										count=1;
 									};
 								};
@@ -3213,23 +3208,28 @@ class Mission
 							{
 								typeName="V_TacVest_blk_POLICE";
 								isBackpack=0;
-								class ItemCargo
+								class MagazineCargo
 								{
-									items=3;
+									items=1;
 									class Item0
 									{
-										name="ACE_EarPlugs";
+										name="rhsusf_mag_17Rnd_9x19_JHP";
+										count=3;
+										ammoLeft=17;
+									};
+								};
+								class ItemCargo
+								{
+									items=2;
+									class Item0
+									{
+										name="ACRE_PRC152";
 										count=1;
 									};
 									class Item1
 									{
-										name="ACRE_PRC343";
-										count=1;
-									};
-									class Item2
-									{
-										name="ACRE_PRC152";
-										count=1;
+										name="FirstAidKit";
+										count=3;
 									};
 								};
 							};
@@ -3316,14 +3316,19 @@ class Mission
 						isPlayable=1;
 						class Inventory
 						{
-							class binocular
+							class handgun
 							{
-								name="Laserdesignator";
+								name="rhsusf_weap_glock17g4";
+								firemode="rhsusf_weap_glock17g4:Single";
 								class primaryMuzzleMag
 								{
-									name="Laserbatteries";
-									ammoLeft=1;
+									name="rhsusf_mag_17Rnd_9x19_JHP";
+									ammoLeft=17;
 								};
+							};
+							class binocular
+							{
+								name="Binocular";
 							};
 							class uniform
 							{
@@ -3331,30 +3336,20 @@ class Mission
 								isBackpack=0;
 								class ItemCargo
 								{
-									items=5;
+									items=3;
 									class Item0
-									{
-										name="ACE_elasticBandage";
-										count=10;
-									};
-									class Item1
-									{
-										name="ACE_epinephrine";
-										count=2;
-									};
-									class Item2
-									{
-										name="ACE_morphine";
-										count=4;
-									};
-									class Item3
 									{
 										name="ACE_microDAGR";
 										count=1;
 									};
-									class Item4
+									class Item1
 									{
 										name="ACE_Flashlight_XL50";
+										count=1;
+									};
+									class Item2
+									{
+										name="FirstAidKit";
 										count=1;
 									};
 								};
@@ -3363,23 +3358,28 @@ class Mission
 							{
 								typeName="V_TacVest_blk_POLICE";
 								isBackpack=0;
-								class ItemCargo
+								class MagazineCargo
 								{
-									items=3;
+									items=1;
 									class Item0
 									{
-										name="ACE_EarPlugs";
+										name="rhsusf_mag_17Rnd_9x19_JHP";
+										count=3;
+										ammoLeft=17;
+									};
+								};
+								class ItemCargo
+								{
+									items=2;
+									class Item0
+									{
+										name="ACRE_PRC152";
 										count=1;
 									};
 									class Item1
 									{
-										name="ACRE_PRC343";
-										count=1;
-									};
-									class Item2
-									{
-										name="ACRE_PRC152";
-										count=1;
+										name="FirstAidKit";
+										count=3;
 									};
 								};
 							};
@@ -3511,14 +3511,19 @@ class Mission
 						isPlayable=1;
 						class Inventory
 						{
-							class binocular
+							class handgun
 							{
-								name="Laserdesignator";
+								name="rhsusf_weap_glock17g4";
+								firemode="rhsusf_weap_glock17g4:Single";
 								class primaryMuzzleMag
 								{
-									name="Laserbatteries";
-									ammoLeft=1;
+									name="rhsusf_mag_17Rnd_9x19_JHP";
+									ammoLeft=17;
 								};
+							};
+							class binocular
+							{
+								name="Binocular";
 							};
 							class uniform
 							{
@@ -3526,30 +3531,20 @@ class Mission
 								isBackpack=0;
 								class ItemCargo
 								{
-									items=5;
+									items=3;
 									class Item0
-									{
-										name="ACE_elasticBandage";
-										count=10;
-									};
-									class Item1
-									{
-										name="ACE_epinephrine";
-										count=2;
-									};
-									class Item2
-									{
-										name="ACE_morphine";
-										count=4;
-									};
-									class Item3
 									{
 										name="ACE_microDAGR";
 										count=1;
 									};
-									class Item4
+									class Item1
 									{
 										name="ACE_Flashlight_XL50";
+										count=1;
+									};
+									class Item2
+									{
+										name="FirstAidKit";
 										count=1;
 									};
 								};
@@ -3558,23 +3553,28 @@ class Mission
 							{
 								typeName="V_TacVest_blk_POLICE";
 								isBackpack=0;
-								class ItemCargo
+								class MagazineCargo
 								{
-									items=3;
+									items=1;
 									class Item0
 									{
-										name="ACE_EarPlugs";
+										name="rhsusf_mag_17Rnd_9x19_JHP";
+										count=3;
+										ammoLeft=17;
+									};
+								};
+								class ItemCargo
+								{
+									items=2;
+									class Item0
+									{
+										name="ACRE_PRC152";
 										count=1;
 									};
 									class Item1
 									{
-										name="ACRE_PRC343";
-										count=1;
-									};
-									class Item2
-									{
-										name="ACRE_PRC152";
-										count=1;
+										name="FirstAidKit";
+										count=3;
 									};
 								};
 							};
@@ -3661,14 +3661,19 @@ class Mission
 						isPlayable=1;
 						class Inventory
 						{
-							class binocular
+							class handgun
 							{
-								name="Laserdesignator";
+								name="rhsusf_weap_glock17g4";
+								firemode="rhsusf_weap_glock17g4:Single";
 								class primaryMuzzleMag
 								{
-									name="Laserbatteries";
-									ammoLeft=1;
+									name="rhsusf_mag_17Rnd_9x19_JHP";
+									ammoLeft=17;
 								};
+							};
+							class binocular
+							{
+								name="Binocular";
 							};
 							class uniform
 							{
@@ -3676,30 +3681,20 @@ class Mission
 								isBackpack=0;
 								class ItemCargo
 								{
-									items=5;
+									items=3;
 									class Item0
-									{
-										name="ACE_elasticBandage";
-										count=10;
-									};
-									class Item1
-									{
-										name="ACE_epinephrine";
-										count=2;
-									};
-									class Item2
-									{
-										name="ACE_morphine";
-										count=4;
-									};
-									class Item3
 									{
 										name="ACE_microDAGR";
 										count=1;
 									};
-									class Item4
+									class Item1
 									{
 										name="ACE_Flashlight_XL50";
+										count=1;
+									};
+									class Item2
+									{
+										name="FirstAidKit";
 										count=1;
 									};
 								};
@@ -3708,23 +3703,28 @@ class Mission
 							{
 								typeName="V_TacVest_blk_POLICE";
 								isBackpack=0;
-								class ItemCargo
+								class MagazineCargo
 								{
-									items=3;
+									items=1;
 									class Item0
 									{
-										name="ACE_EarPlugs";
+										name="rhsusf_mag_17Rnd_9x19_JHP";
+										count=3;
+										ammoLeft=17;
+									};
+								};
+								class ItemCargo
+								{
+									items=2;
+									class Item0
+									{
+										name="ACRE_PRC152";
 										count=1;
 									};
 									class Item1
 									{
-										name="ACRE_PRC343";
-										count=1;
-									};
-									class Item2
-									{
-										name="ACRE_PRC152";
-										count=1;
+										name="FirstAidKit";
+										count=3;
 									};
 								};
 							};
@@ -3856,14 +3856,19 @@ class Mission
 						isPlayable=1;
 						class Inventory
 						{
-							class binocular
+							class handgun
 							{
-								name="Laserdesignator";
+								name="rhsusf_weap_glock17g4";
+								firemode="rhsusf_weap_glock17g4:Single";
 								class primaryMuzzleMag
 								{
-									name="Laserbatteries";
-									ammoLeft=1;
+									name="rhsusf_mag_17Rnd_9x19_JHP";
+									ammoLeft=17;
 								};
+							};
+							class binocular
+							{
+								name="Binocular";
 							};
 							class uniform
 							{
@@ -3871,30 +3876,20 @@ class Mission
 								isBackpack=0;
 								class ItemCargo
 								{
-									items=5;
+									items=3;
 									class Item0
-									{
-										name="ACE_elasticBandage";
-										count=10;
-									};
-									class Item1
-									{
-										name="ACE_epinephrine";
-										count=2;
-									};
-									class Item2
-									{
-										name="ACE_morphine";
-										count=4;
-									};
-									class Item3
 									{
 										name="ACE_microDAGR";
 										count=1;
 									};
-									class Item4
+									class Item1
 									{
 										name="ACE_Flashlight_XL50";
+										count=1;
+									};
+									class Item2
+									{
+										name="FirstAidKit";
 										count=1;
 									};
 								};
@@ -3903,23 +3898,28 @@ class Mission
 							{
 								typeName="V_TacVest_blk_POLICE";
 								isBackpack=0;
-								class ItemCargo
+								class MagazineCargo
 								{
-									items=3;
+									items=1;
 									class Item0
 									{
-										name="ACE_EarPlugs";
+										name="rhsusf_mag_17Rnd_9x19_JHP";
+										count=3;
+										ammoLeft=17;
+									};
+								};
+								class ItemCargo
+								{
+									items=2;
+									class Item0
+									{
+										name="ACRE_PRC152";
 										count=1;
 									};
 									class Item1
 									{
-										name="ACRE_PRC343";
-										count=1;
-									};
-									class Item2
-									{
-										name="ACRE_PRC152";
-										count=1;
+										name="FirstAidKit";
+										count=3;
 									};
 								};
 							};
@@ -4006,14 +4006,19 @@ class Mission
 						isPlayable=1;
 						class Inventory
 						{
-							class binocular
+							class handgun
 							{
-								name="Laserdesignator";
+								name="rhsusf_weap_glock17g4";
+								firemode="rhsusf_weap_glock17g4:Single";
 								class primaryMuzzleMag
 								{
-									name="Laserbatteries";
-									ammoLeft=1;
+									name="rhsusf_mag_17Rnd_9x19_JHP";
+									ammoLeft=17;
 								};
+							};
+							class binocular
+							{
+								name="Binocular";
 							};
 							class uniform
 							{
@@ -4021,30 +4026,20 @@ class Mission
 								isBackpack=0;
 								class ItemCargo
 								{
-									items=5;
+									items=3;
 									class Item0
-									{
-										name="ACE_elasticBandage";
-										count=10;
-									};
-									class Item1
-									{
-										name="ACE_epinephrine";
-										count=2;
-									};
-									class Item2
-									{
-										name="ACE_morphine";
-										count=4;
-									};
-									class Item3
 									{
 										name="ACE_microDAGR";
 										count=1;
 									};
-									class Item4
+									class Item1
 									{
 										name="ACE_Flashlight_XL50";
+										count=1;
+									};
+									class Item2
+									{
+										name="FirstAidKit";
 										count=1;
 									};
 								};
@@ -4053,23 +4048,28 @@ class Mission
 							{
 								typeName="V_TacVest_blk_POLICE";
 								isBackpack=0;
-								class ItemCargo
+								class MagazineCargo
 								{
-									items=3;
+									items=1;
 									class Item0
 									{
-										name="ACE_EarPlugs";
+										name="rhsusf_mag_17Rnd_9x19_JHP";
+										count=3;
+										ammoLeft=17;
+									};
+								};
+								class ItemCargo
+								{
+									items=2;
+									class Item0
+									{
+										name="ACRE_PRC152";
 										count=1;
 									};
 									class Item1
 									{
-										name="ACRE_PRC343";
-										count=1;
-									};
-									class Item2
-									{
-										name="ACRE_PRC152";
-										count=1;
+										name="FirstAidKit";
+										count=3;
 									};
 								};
 							};
@@ -4201,14 +4201,19 @@ class Mission
 						isPlayable=1;
 						class Inventory
 						{
-							class binocular
+							class handgun
 							{
-								name="Laserdesignator";
+								name="rhsusf_weap_glock17g4";
+								firemode="rhsusf_weap_glock17g4:Single";
 								class primaryMuzzleMag
 								{
-									name="Laserbatteries";
-									ammoLeft=1;
+									name="rhsusf_mag_17Rnd_9x19_JHP";
+									ammoLeft=17;
 								};
+							};
+							class binocular
+							{
+								name="Binocular";
 							};
 							class uniform
 							{
@@ -4216,30 +4221,20 @@ class Mission
 								isBackpack=0;
 								class ItemCargo
 								{
-									items=5;
+									items=3;
 									class Item0
-									{
-										name="ACE_elasticBandage";
-										count=10;
-									};
-									class Item1
-									{
-										name="ACE_epinephrine";
-										count=2;
-									};
-									class Item2
-									{
-										name="ACE_morphine";
-										count=4;
-									};
-									class Item3
 									{
 										name="ACE_microDAGR";
 										count=1;
 									};
-									class Item4
+									class Item1
 									{
 										name="ACE_Flashlight_XL50";
+										count=1;
+									};
+									class Item2
+									{
+										name="FirstAidKit";
 										count=1;
 									};
 								};
@@ -4248,23 +4243,28 @@ class Mission
 							{
 								typeName="V_TacVest_blk_POLICE";
 								isBackpack=0;
-								class ItemCargo
+								class MagazineCargo
 								{
-									items=3;
+									items=1;
 									class Item0
 									{
-										name="ACE_EarPlugs";
+										name="rhsusf_mag_17Rnd_9x19_JHP";
+										count=3;
+										ammoLeft=17;
+									};
+								};
+								class ItemCargo
+								{
+									items=2;
+									class Item0
+									{
+										name="ACRE_PRC152";
 										count=1;
 									};
 									class Item1
 									{
-										name="ACRE_PRC343";
-										count=1;
-									};
-									class Item2
-									{
-										name="ACRE_PRC152";
-										count=1;
+										name="FirstAidKit";
+										count=3;
 									};
 								};
 							};
@@ -4351,14 +4351,19 @@ class Mission
 						isPlayable=1;
 						class Inventory
 						{
-							class binocular
+							class handgun
 							{
-								name="Laserdesignator";
+								name="rhsusf_weap_glock17g4";
+								firemode="rhsusf_weap_glock17g4:Single";
 								class primaryMuzzleMag
 								{
-									name="Laserbatteries";
-									ammoLeft=1;
+									name="rhsusf_mag_17Rnd_9x19_JHP";
+									ammoLeft=17;
 								};
+							};
+							class binocular
+							{
+								name="Binocular";
 							};
 							class uniform
 							{
@@ -4366,30 +4371,20 @@ class Mission
 								isBackpack=0;
 								class ItemCargo
 								{
-									items=5;
+									items=3;
 									class Item0
-									{
-										name="ACE_elasticBandage";
-										count=10;
-									};
-									class Item1
-									{
-										name="ACE_epinephrine";
-										count=2;
-									};
-									class Item2
-									{
-										name="ACE_morphine";
-										count=4;
-									};
-									class Item3
 									{
 										name="ACE_microDAGR";
 										count=1;
 									};
-									class Item4
+									class Item1
 									{
 										name="ACE_Flashlight_XL50";
+										count=1;
+									};
+									class Item2
+									{
+										name="FirstAidKit";
 										count=1;
 									};
 								};
@@ -4398,23 +4393,28 @@ class Mission
 							{
 								typeName="V_TacVest_blk_POLICE";
 								isBackpack=0;
-								class ItemCargo
+								class MagazineCargo
 								{
-									items=3;
+									items=1;
 									class Item0
 									{
-										name="ACE_EarPlugs";
+										name="rhsusf_mag_17Rnd_9x19_JHP";
+										count=3;
+										ammoLeft=17;
+									};
+								};
+								class ItemCargo
+								{
+									items=2;
+									class Item0
+									{
+										name="ACRE_PRC152";
 										count=1;
 									};
 									class Item1
 									{
-										name="ACRE_PRC343";
-										count=1;
-									};
-									class Item2
-									{
-										name="ACRE_PRC152";
-										count=1;
+										name="FirstAidKit";
+										count=3;
 									};
 								};
 							};
@@ -4546,14 +4546,19 @@ class Mission
 						isPlayable=1;
 						class Inventory
 						{
-							class binocular
+							class handgun
 							{
-								name="Laserdesignator";
+								name="rhsusf_weap_glock17g4";
+								firemode="rhsusf_weap_glock17g4:Single";
 								class primaryMuzzleMag
 								{
-									name="Laserbatteries";
-									ammoLeft=1;
+									name="rhsusf_mag_17Rnd_9x19_JHP";
+									ammoLeft=17;
 								};
+							};
+							class binocular
+							{
+								name="Binocular";
 							};
 							class uniform
 							{
@@ -4561,30 +4566,20 @@ class Mission
 								isBackpack=0;
 								class ItemCargo
 								{
-									items=5;
+									items=3;
 									class Item0
-									{
-										name="ACE_elasticBandage";
-										count=10;
-									};
-									class Item1
-									{
-										name="ACE_epinephrine";
-										count=2;
-									};
-									class Item2
-									{
-										name="ACE_morphine";
-										count=4;
-									};
-									class Item3
 									{
 										name="ACE_microDAGR";
 										count=1;
 									};
-									class Item4
+									class Item1
 									{
 										name="ACE_Flashlight_XL50";
+										count=1;
+									};
+									class Item2
+									{
+										name="FirstAidKit";
 										count=1;
 									};
 								};
@@ -4593,23 +4588,28 @@ class Mission
 							{
 								typeName="V_TacVest_blk_POLICE";
 								isBackpack=0;
-								class ItemCargo
+								class MagazineCargo
 								{
-									items=3;
+									items=1;
 									class Item0
 									{
-										name="ACE_EarPlugs";
+										name="rhsusf_mag_17Rnd_9x19_JHP";
+										count=3;
+										ammoLeft=17;
+									};
+								};
+								class ItemCargo
+								{
+									items=2;
+									class Item0
+									{
+										name="ACRE_PRC152";
 										count=1;
 									};
 									class Item1
 									{
-										name="ACRE_PRC343";
-										count=1;
-									};
-									class Item2
-									{
-										name="ACRE_PRC152";
-										count=1;
+										name="FirstAidKit";
+										count=3;
 									};
 								};
 							};
@@ -4696,14 +4696,19 @@ class Mission
 						isPlayable=1;
 						class Inventory
 						{
-							class binocular
+							class handgun
 							{
-								name="Laserdesignator";
+								name="rhsusf_weap_glock17g4";
+								firemode="rhsusf_weap_glock17g4:Single";
 								class primaryMuzzleMag
 								{
-									name="Laserbatteries";
-									ammoLeft=1;
+									name="rhsusf_mag_17Rnd_9x19_JHP";
+									ammoLeft=17;
 								};
+							};
+							class binocular
+							{
+								name="Binocular";
 							};
 							class uniform
 							{
@@ -4711,30 +4716,20 @@ class Mission
 								isBackpack=0;
 								class ItemCargo
 								{
-									items=5;
+									items=3;
 									class Item0
-									{
-										name="ACE_elasticBandage";
-										count=10;
-									};
-									class Item1
-									{
-										name="ACE_epinephrine";
-										count=2;
-									};
-									class Item2
-									{
-										name="ACE_morphine";
-										count=4;
-									};
-									class Item3
 									{
 										name="ACE_microDAGR";
 										count=1;
 									};
-									class Item4
+									class Item1
 									{
 										name="ACE_Flashlight_XL50";
+										count=1;
+									};
+									class Item2
+									{
+										name="FirstAidKit";
 										count=1;
 									};
 								};
@@ -4743,23 +4738,28 @@ class Mission
 							{
 								typeName="V_TacVest_blk_POLICE";
 								isBackpack=0;
-								class ItemCargo
+								class MagazineCargo
 								{
-									items=3;
+									items=1;
 									class Item0
 									{
-										name="ACE_EarPlugs";
+										name="rhsusf_mag_17Rnd_9x19_JHP";
+										count=3;
+										ammoLeft=17;
+									};
+								};
+								class ItemCargo
+								{
+									items=2;
+									class Item0
+									{
+										name="ACRE_PRC152";
 										count=1;
 									};
 									class Item1
 									{
-										name="ACRE_PRC343";
-										count=1;
-									};
-									class Item2
-									{
-										name="ACRE_PRC152";
-										count=1;
+										name="FirstAidKit";
+										count=3;
 									};
 								};
 							};
@@ -4891,14 +4891,19 @@ class Mission
 						isPlayable=1;
 						class Inventory
 						{
-							class binocular
+							class handgun
 							{
-								name="Laserdesignator";
+								name="rhsusf_weap_glock17g4";
+								firemode="rhsusf_weap_glock17g4:Single";
 								class primaryMuzzleMag
 								{
-									name="Laserbatteries";
-									ammoLeft=1;
+									name="rhsusf_mag_17Rnd_9x19_JHP";
+									ammoLeft=17;
 								};
+							};
+							class binocular
+							{
+								name="Binocular";
 							};
 							class uniform
 							{
@@ -4906,30 +4911,20 @@ class Mission
 								isBackpack=0;
 								class ItemCargo
 								{
-									items=5;
+									items=3;
 									class Item0
-									{
-										name="ACE_elasticBandage";
-										count=10;
-									};
-									class Item1
-									{
-										name="ACE_epinephrine";
-										count=2;
-									};
-									class Item2
-									{
-										name="ACE_morphine";
-										count=4;
-									};
-									class Item3
 									{
 										name="ACE_microDAGR";
 										count=1;
 									};
-									class Item4
+									class Item1
 									{
 										name="ACE_Flashlight_XL50";
+										count=1;
+									};
+									class Item2
+									{
+										name="FirstAidKit";
 										count=1;
 									};
 								};
@@ -4938,23 +4933,28 @@ class Mission
 							{
 								typeName="V_TacVest_blk_POLICE";
 								isBackpack=0;
-								class ItemCargo
+								class MagazineCargo
 								{
-									items=3;
+									items=1;
 									class Item0
 									{
-										name="ACE_EarPlugs";
+										name="rhsusf_mag_17Rnd_9x19_JHP";
+										count=3;
+										ammoLeft=17;
+									};
+								};
+								class ItemCargo
+								{
+									items=2;
+									class Item0
+									{
+										name="ACRE_PRC152";
 										count=1;
 									};
 									class Item1
 									{
-										name="ACRE_PRC343";
-										count=1;
-									};
-									class Item2
-									{
-										name="ACRE_PRC152";
-										count=1;
+										name="FirstAidKit";
+										count=3;
 									};
 								};
 							};
@@ -5041,14 +5041,19 @@ class Mission
 						isPlayable=1;
 						class Inventory
 						{
-							class binocular
+							class handgun
 							{
-								name="Laserdesignator";
+								name="rhsusf_weap_glock17g4";
+								firemode="rhsusf_weap_glock17g4:Single";
 								class primaryMuzzleMag
 								{
-									name="Laserbatteries";
-									ammoLeft=1;
+									name="rhsusf_mag_17Rnd_9x19_JHP";
+									ammoLeft=17;
 								};
+							};
+							class binocular
+							{
+								name="Binocular";
 							};
 							class uniform
 							{
@@ -5056,30 +5061,20 @@ class Mission
 								isBackpack=0;
 								class ItemCargo
 								{
-									items=5;
+									items=3;
 									class Item0
-									{
-										name="ACE_elasticBandage";
-										count=10;
-									};
-									class Item1
-									{
-										name="ACE_epinephrine";
-										count=2;
-									};
-									class Item2
-									{
-										name="ACE_morphine";
-										count=4;
-									};
-									class Item3
 									{
 										name="ACE_microDAGR";
 										count=1;
 									};
-									class Item4
+									class Item1
 									{
 										name="ACE_Flashlight_XL50";
+										count=1;
+									};
+									class Item2
+									{
+										name="FirstAidKit";
 										count=1;
 									};
 								};
@@ -5088,23 +5083,28 @@ class Mission
 							{
 								typeName="V_TacVest_blk_POLICE";
 								isBackpack=0;
-								class ItemCargo
+								class MagazineCargo
 								{
-									items=3;
+									items=1;
 									class Item0
 									{
-										name="ACE_EarPlugs";
+										name="rhsusf_mag_17Rnd_9x19_JHP";
+										count=3;
+										ammoLeft=17;
+									};
+								};
+								class ItemCargo
+								{
+									items=2;
+									class Item0
+									{
+										name="ACRE_PRC152";
 										count=1;
 									};
 									class Item1
 									{
-										name="ACRE_PRC343";
-										count=1;
-									};
-									class Item2
-									{
-										name="ACRE_PRC152";
-										count=1;
+										name="FirstAidKit";
+										count=3;
 									};
 								};
 							};
@@ -5236,14 +5236,19 @@ class Mission
 						isPlayable=1;
 						class Inventory
 						{
-							class binocular
+							class handgun
 							{
-								name="Laserdesignator";
+								name="rhsusf_weap_glock17g4";
+								firemode="rhsusf_weap_glock17g4:Single";
 								class primaryMuzzleMag
 								{
-									name="Laserbatteries";
-									ammoLeft=1;
+									name="rhsusf_mag_17Rnd_9x19_JHP";
+									ammoLeft=17;
 								};
+							};
+							class binocular
+							{
+								name="Binocular";
 							};
 							class uniform
 							{
@@ -5251,30 +5256,20 @@ class Mission
 								isBackpack=0;
 								class ItemCargo
 								{
-									items=5;
+									items=3;
 									class Item0
-									{
-										name="ACE_elasticBandage";
-										count=10;
-									};
-									class Item1
-									{
-										name="ACE_epinephrine";
-										count=2;
-									};
-									class Item2
-									{
-										name="ACE_morphine";
-										count=4;
-									};
-									class Item3
 									{
 										name="ACE_microDAGR";
 										count=1;
 									};
-									class Item4
+									class Item1
 									{
 										name="ACE_Flashlight_XL50";
+										count=1;
+									};
+									class Item2
+									{
+										name="FirstAidKit";
 										count=1;
 									};
 								};
@@ -5283,23 +5278,28 @@ class Mission
 							{
 								typeName="V_TacVest_blk_POLICE";
 								isBackpack=0;
-								class ItemCargo
+								class MagazineCargo
 								{
-									items=3;
+									items=1;
 									class Item0
 									{
-										name="ACE_EarPlugs";
+										name="rhsusf_mag_17Rnd_9x19_JHP";
+										count=3;
+										ammoLeft=17;
+									};
+								};
+								class ItemCargo
+								{
+									items=2;
+									class Item0
+									{
+										name="ACRE_PRC152";
 										count=1;
 									};
 									class Item1
 									{
-										name="ACRE_PRC343";
-										count=1;
-									};
-									class Item2
-									{
-										name="ACRE_PRC152";
-										count=1;
+										name="FirstAidKit";
+										count=3;
 									};
 								};
 							};
@@ -5386,14 +5386,19 @@ class Mission
 						isPlayable=1;
 						class Inventory
 						{
-							class binocular
+							class handgun
 							{
-								name="Laserdesignator";
+								name="rhsusf_weap_glock17g4";
+								firemode="rhsusf_weap_glock17g4:Single";
 								class primaryMuzzleMag
 								{
-									name="Laserbatteries";
-									ammoLeft=1;
+									name="rhsusf_mag_17Rnd_9x19_JHP";
+									ammoLeft=17;
 								};
+							};
+							class binocular
+							{
+								name="Binocular";
 							};
 							class uniform
 							{
@@ -5401,30 +5406,20 @@ class Mission
 								isBackpack=0;
 								class ItemCargo
 								{
-									items=5;
+									items=3;
 									class Item0
-									{
-										name="ACE_elasticBandage";
-										count=10;
-									};
-									class Item1
-									{
-										name="ACE_epinephrine";
-										count=2;
-									};
-									class Item2
-									{
-										name="ACE_morphine";
-										count=4;
-									};
-									class Item3
 									{
 										name="ACE_microDAGR";
 										count=1;
 									};
-									class Item4
+									class Item1
 									{
 										name="ACE_Flashlight_XL50";
+										count=1;
+									};
+									class Item2
+									{
+										name="FirstAidKit";
 										count=1;
 									};
 								};
@@ -5433,23 +5428,28 @@ class Mission
 							{
 								typeName="V_TacVest_blk_POLICE";
 								isBackpack=0;
-								class ItemCargo
+								class MagazineCargo
 								{
-									items=3;
+									items=1;
 									class Item0
 									{
-										name="ACE_EarPlugs";
+										name="rhsusf_mag_17Rnd_9x19_JHP";
+										count=3;
+										ammoLeft=17;
+									};
+								};
+								class ItemCargo
+								{
+									items=2;
+									class Item0
+									{
+										name="ACRE_PRC152";
 										count=1;
 									};
 									class Item1
 									{
-										name="ACRE_PRC343";
-										count=1;
-									};
-									class Item2
-									{
-										name="ACRE_PRC152";
-										count=1;
+										name="FirstAidKit";
+										count=3;
 									};
 								};
 							};
@@ -9814,7 +9814,7 @@ class Mission
 			};
 			id=2728;
 			type="armaforces_med_stretcher";
-			atlOffset=0.15792847;
+			atlOffset=0.16220093;
 		};
 		class Item89
 		{
@@ -9825,12 +9825,13 @@ class Mission
 				angles[]={0,1.737528,0};
 			};
 			side="Empty";
+			flags=4;
 			class Attributes
 			{
 			};
 			id=2729;
 			type="armaforces_med_stretcher";
-			atlOffset=0.83248901;
+			atlOffset=0.0030517578;
 		};
 		class Item90
 		{
@@ -11852,7 +11853,7 @@ class Mission
 							dataType="Object";
 							class PositionInfo
 							{
-								position[]={9794.3281,293.11243,8779.0898};
+								position[]={9794.3281,190.53824,8779.0898};
 								angles[]={0,1.596691,0};
 							};
 							side="Empty";
