@@ -24,6 +24,9 @@ private _time = [daytime] call BIS_fnc_timeToString;
 GVAR(policeScore) = GVAR(policeScore) + _scoreChange;
 publicVariable QGVAR(policeScore);
 
+// For display purposes using properly set-up sector modules
+[WEST, _scoreChange] call BIS_fnc_respawnTickets;
+
 GVAR(policeScoreChange) = GVAR(policeScoreChange) + _scoreChange;
 publicVariable QGVAR(policeScoreChange);
 [{
