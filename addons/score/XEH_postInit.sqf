@@ -65,4 +65,7 @@ if (hasInterface) then {
     [QGVAR(showScore), {
         _this call FUNC(showScore);
     }] call CBA_fnc_addEventHandler;
+
+    // Disable vanilla ratings
+    player addEventHandler ["HandleRating", { 0 }];
 };
