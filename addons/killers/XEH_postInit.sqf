@@ -41,3 +41,16 @@ if (hasInterface) then {
         }] call CBA_fnc_waitUntilAndExecute;
     }] call CBA_fnc_addClassEventHandler;
 };
+
+[QGVAR(teleport), {
+    params ["_killer", "_destination"];
+
+    if (_destination isEqualType objNull) then {
+        _destination = getPos _destination;
+    };
+
+    // Mark nearest vehicles for first couple minutes
+    [_destination] call FUNC(createMarkersForNearbyVehicles);
+
+    [QEGVAR(common,teleport), [_killer, _destination]] call CBA_fnc_localEvent;
+}] call CBA_fnc_addEventHandler;
