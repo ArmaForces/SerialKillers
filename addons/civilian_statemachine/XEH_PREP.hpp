@@ -2,6 +2,7 @@ PREP(driveSomewhere);
 PREP(getGroupNearestVehicle);
 PREP(getGroupVehicles);
 PREP(getNearestVehicle);
+PREP(getOut);
 PREP(hasVehicleNearby);
 PREP(isVehicleNearby);
 PREP(moveToVehicle);

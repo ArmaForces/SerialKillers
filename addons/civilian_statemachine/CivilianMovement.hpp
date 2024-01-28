@@ -61,7 +61,7 @@ class CivilianMovement {
         class DoGetOut {
             targetState = "Idle";
             condition = "random 1 > 0.7";
-            onTransition = "";
+            onTransition = QUOTE([_this] call FUNC(getOut));
         };
 
         class DriveSomewhere {
