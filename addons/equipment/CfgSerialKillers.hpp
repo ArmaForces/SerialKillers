@@ -775,7 +775,10 @@ class CfgSerialKillers
                     /* Vehicles */
                     class CUP_LADA_LM_CIV {};
                     class CUP_C_Volha_Limo_TKCIV {};
-                    class B_GEN_Offroad_01_gen_F {};
+                    class B_GEN_Offroad_01_gen_F
+                    {
+                        requiredScore = 10;
+                    };
 
                     class C_Hatchback_01_sport_F
                     {
