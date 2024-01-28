@@ -37,6 +37,7 @@ while {_i > 0} do {
         if (_nearbyCarsCount >= 2 && {(random 1) > 0.1}) exitWith {};
         // Create vehicle on given position. We need some way to prevent instant damage to vehicle as these empty positions are not perfect.
         private _vehicle = [_carType, _pos] call FUNC(createVehicle);
+        [_vehicle, random 1 + 0.25] call FUNC(initCarAlarm);
         _i = _i - 1;
     };
 };
