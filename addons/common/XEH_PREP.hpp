@@ -13,6 +13,7 @@ PREP(getNearestLocationWithAvailableName);
 PREP(getRandomEmptyPosition);
 PREP(getRandomPos);
 PREP(isHouseNearby);
+PREP(isPositionInCity);
 PREP(isRoadNearby);
 PREP(playMusicServer);
 PREP(removeItemsFromArsenal);

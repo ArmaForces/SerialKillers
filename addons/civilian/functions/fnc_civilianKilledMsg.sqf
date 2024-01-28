@@ -5,8 +5,9 @@
  *
  * Arguments:
  * 0: Dead civilian <OBJECT>
- * 1: Civilian's time of death <STRING>
- * 2: Nearest location <LOCATION>
+ * 1: Unit which killed civilian <OBJECT>
+ * 2: Civilian's time of death <STRING>
+ * 3: Nearest location <LOCATION>
  *
  * Return Value:
  * 0: Civilian killed message <STRING>
@@ -17,7 +18,7 @@
  * Public: No
  */
 
-params ["_deadCivilian", ["_timeOfDeath", daytime], ["_nearestTown", locationNull]];
+params ["_deadCivilian", ["_killer", objNull], ["_timeOfDeath", daytime], ["_nearestTown", locationNull]];
 
 if (_timeOfDeath isEqualType 0) then {
     _timeOfDeath = [_timeOfDeath] call BIS_fnc_timeToString;
@@ -27,13 +28,14 @@ if (isNull _nearestTown) then {
     _nearestTown = [_deadCivilian] call EFUNC(common,getNearestCityLocation);
 };
 
-private _msg = "";
-private _distance = (position _deadCivilian) distance _nearestTown;
-// Check if distance is greater than 250 m. If so then change output a bit to represent that.
-if (_distance <= 250) then {
-    _msg = format [LLSTRING(Civilian_Killed_In_City), _timeOfDeath, text _nearestTown];
+// Check if civilian died in city. If so then change output a bit to represent that.
+private _template = if ([_deadCivilian, _nearestTown] call EFUNC(common,isPositionInCity)) then {
+    if (side _killer isEqualTo WEST) then { LSTRING(KilledByCop_In_City) } else { LSTRING(Killed_In_City) };
 } else {
-    _msg = format [LLSTRING(Civilian_Killed_Near_City), _timeOfDeath, text _nearestTown];
+    if (side _killer isEqualTo WEST) then { LSTRING(KilledByCop_Near_City) } else { LSTRING(Killed_Near_City) };
 };
+
+// Supplying killer name to format, but only killed by cop should reveal name for lynch
+private _msg = format [_template, _timeOfDeath, text _nearestTown, name _killer];
 
 _msg
