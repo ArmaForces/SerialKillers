@@ -18,12 +18,7 @@
 params ["_group"];
 
 // Get all group vehicles
-private _groupVehicles = [];
-{
-    private _vehicle = _x getVariable [QGVAR(ownedVehicle), objNull];
-    if (!isNull _vehicle) then {
-        _groupVehicles pushBackUnique _vehicle;
-    };
-} forEach (units _group);
+private _groupVehicles = units _group apply {_x getVariable [QGVAR(ownedVehicle), objNull]} select {!isNull _x};
+_groupVehicles arrayIntersect _groupVehicles // return
 
 _groupVehicles

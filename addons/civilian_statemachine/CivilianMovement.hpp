@@ -38,7 +38,7 @@ class CivilianMovement {
         onStateLeaving = "";
         class InVehicle {
             targetState = "EnteredVehicle";
-            condition = "!((vehicle leader _this) isEqualTo (leader _this))";
+            condition = "(vehicle leader _this) isNotEqualTo (leader _this)";
             onTransition = "";
         };
     };
