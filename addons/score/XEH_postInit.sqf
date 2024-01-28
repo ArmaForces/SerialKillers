@@ -48,6 +48,10 @@ if (isServer) then {
             call FUNC(monitorTimeouts);
         }, [], GVAR(idleTimeMax)] call CBA_fnc_waitAndExecute;
     }] call CBA_fnc_execNextFrame;
+
+    // Initialize score display UI
+    [WEST, 0] call BIS_fnc_respawnTickets;
+    [EAST, 0] call BIS_fnc_respawnTickets;
 };
 
 [QGVAR(scoreChanged), {

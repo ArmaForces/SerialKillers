@@ -1,5 +1,6 @@
 PREP(addItemToStash);
 PREP(anyKillerFree);
+PREP(createMarkersForNearbyVehicles);
 PREP(createStartPositionMarker);
 PREP(createStashesMarkers);
 PREP(createTeleport);

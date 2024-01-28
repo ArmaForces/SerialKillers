@@ -4,14 +4,19 @@ ADDON = false;
 
 #include "initSettings.sqf"
 
+// Killswitch
+if (!EGVAR(common,enabled)) exitWith {};
+
 // Selected equipment preset config
 GVAR(equipmentPreset) = configNull;
 // Namespace containing common item name variables with value being loaded properties as namespace
 GVAR(commonEquipment) = call CBA_fnc_createNamespace;
-// Unique police equipment list to prevent config duplicates (especially with different scores)
+// Unique police equipment and vehicles lists to prevent config duplicates (especially with different scores)
 GVAR(policeEquipmentList) = [];
-// Namespace using requiredScore as key and list of unlocked equipment as value
+GVAR(policeVehiclesList) = [];
+// Namespace using requiredScore as key and list of unlocked equipment/vehicles as value
 GVAR(policeEquipmentScores) = call CBA_fnc_createNamespace;
+GVAR(policeVehiclesScores) = call CBA_fnc_createNamespace;
 // Killers civilian equipment (clothes, backpacks, headgear)
 GVAR(killersCivilianEquipment) = [];
 // Killers stuff available to choose from before action begins

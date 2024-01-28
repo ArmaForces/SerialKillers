@@ -4,4 +4,7 @@ ADDON = false;
 
 #include "initSettings.sqf"
 
+// Killswitch
+if (!EGVAR(common,enabled)) exitWith {};
+
 ADDON = true;

@@ -4,6 +4,9 @@ ADDON = false;
 
 #include "initSettings.sqf"
 
+// Killswitch
+if (!EGVAR(common,enabled)) exitWith {};
+
 if (isServer) then {
     // Create namespace for linking location classname with city
     GVAR(citiesLocations) = true call CBA_fnc_createNamespace;

@@ -23,13 +23,16 @@ while {GVAR(lastEquipmentUpdateScore) != EGVAR(score,policeScore)} do {
     };
     diag_log format ["[AFSK] [POLICE] [equipmentScoreCheck] Checking %1", GVAR(lastEquipmentUpdateScore)];
     private _scoreItems = EGVAR(equipment,policeEquipmentScores) getVariable [str GVAR(lastEquipmentUpdateScore), []];
-    diag_log format ["[AFSK] [POLICE] [equipmentScoreCheck] Found %1", _scoreItems];
+    private _scoreVehicles = EGVAR(equipment,policeVehiclesScores) getVariable [str GVAR(lastEquipmentUpdateScore), []];
+    diag_log format ["[AFSK] [POLICE] [equipmentScoreCheck] Found %1 equipment and %2 vehicles", _scoreItems, _scoreVehicles];
     {
         if (_step > 0) then {
             [_x, _scoreItems] call EFUNC(common,addItemsToArsenal);
+            [_x, _scoreVehicles] call FUNC(addVehiclesToSpawner);
         } else {
             if (EGVAR(score,policeScore) < 0) exitWith {};
             [_x, _scoreItems] call EFUNC(common,removeItemsFromArsenal);
+            [_x, _scoreVehicles] call FUNC(removeVehiclesFromSpawner);
         };
     } forEach GVAR(arsenals);
     if (_step < 0) then {

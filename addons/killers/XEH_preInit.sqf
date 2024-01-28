@@ -4,6 +4,9 @@ ADDON = false;
 
 #include "initSettings.sqf"
 
+// Killswitch
+if (!EGVAR(common,enabled)) exitWith {};
+
 GVAR(killersRespawnMarker) = "";
 GVAR(stashes) = [];
 

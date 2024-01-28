@@ -6,13 +6,11 @@ class CfgPatches {
         units[] = {};
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
-        requiredAddons[] = {
-            "cba_main"
-        };
+        requiredAddons[] = {};
         author = "ArmaForces";
         VERSION_CONFIG;
     };
 };
 
-#include "CfgModuleCategories.hpp"
-#include "CfgMPGameTypes.hpp"
+#include "CfgEventHandlers.hpp"
+#include "CfgMissions.hpp"
