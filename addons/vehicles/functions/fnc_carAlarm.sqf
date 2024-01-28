@@ -18,8 +18,14 @@
 params ["_vehicle"];
 
 if (_vehicle getVariable [QGVAR(alarmOn), false]) exitWith { false };
-if (_vehicle getVariable [QGVAR(hasGoneOff), false]) exitWith { false };
-if (_vehicle getVariable [QGVAR(offChance), 1] < random 1) exitWith { false };
+if (!GVAR(alarmAlwaysArmed) && {_vehicle getVariable [QGVAR(hasGoneOff), false]}) exitWith { false };
+if (_vehicle getVariable [QGVAR(offChance), 1] < random 1) exitWith {
+    if (GVAR(alarmDisarmIfFailed)) then {
+        _vehicle setVariable [QGVAR(alarmArmed), false];
+    };
+
+    false
+};
 
 _vehicle setVariable [QGVAR(alarmOn), true];
 _vehicle setVariable [QGVAR(hasGoneOff), true];
