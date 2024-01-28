@@ -28,9 +28,9 @@ private _msg = [_unit, _time] call FUNC(copKilledMsg);
 [QEGVAR(common,showSideChatMsg), [WEST, _msg]] call CBA_fnc_globalEvent;
 // Check why unit died and call funcion to change score.
 if (side _killer == EAST || {_unit == _killer}) then {
-    [QEGVAR(score,changeScore), [EAST, EGVAR(score,killedCopKillersScore), "COP KILLED PLACEHOLDER"]] call CBA_fnc_serverEvent;
-    [QEGVAR(score,changeScore), [WEST, EGVAR(score,killedCopPoliceScore), "COP KILLED PLACEHOLDER"]] call CBA_fnc_serverEvent;
+    [QEGVAR(score,changeScore), [EAST, EGVAR(score,killedCopKillersScore), LSTRING(Killed)]] call CBA_fnc_serverEvent;
+    [QEGVAR(score,changeScore), [WEST, EGVAR(score,killedCopPoliceScore), LSTRING(Killed)]] call CBA_fnc_serverEvent;
 } else {
-    [QEGVAR(score,changeScore), [EAST, EGVAR(score,copKilledCopKillersScore), "COP KILLED BY COP PLACEHOLDER"]] call CBA_fnc_serverEvent;
-    [QEGVAR(score,changeScore), [WEST, EGVAR(score,copKilledCopPoliceScore), "COP KILLED BY COP PLACEHOLDER"]] call CBA_fnc_serverEvent;
+    [QEGVAR(score,changeScore), [EAST, EGVAR(score,copKilledCopKillersScore), LSTRING(KilledByCop)]] call CBA_fnc_serverEvent;
+    [QEGVAR(score,changeScore), [WEST, EGVAR(score,copKilledCopPoliceScore), LSTRING(KilledByCop)]] call CBA_fnc_serverEvent;
 };

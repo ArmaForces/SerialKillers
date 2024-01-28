@@ -29,6 +29,14 @@
             <English>Number of generated civilians on mission startup. Final number will be in +-10% range. Set 0 to randomize between 100-200.</English>
             <Polish>Liczba generowanych cywili na starcie misji. Właściwa liczba będzie z przedziału +-10%. Losowana z przedziału 100-200 gdy ustawienie jest równe 0.</Polish>
         </Key>
+        <Key ID="STR_AFSK_Civilian_Killed">
+            <English>Civilian was killed</English>
+            <Polish>Cywil został zabity</Polish>
+        </Key>
+        <Key ID="STR_AFSK_Civilian_KilledByCop">
+            <English>Civilian was killed by cop</English>
+            <Polish>Cywil został zabity przez policjanta</Polish>
+        </Key>
         <Key ID="STR_AFSK_Civilian_Low">
             <English>Low</English>
             <Polish>Mało</Polish>

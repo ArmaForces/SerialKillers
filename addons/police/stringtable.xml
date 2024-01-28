@@ -25,5 +25,13 @@
             <English>Cop was killed at %1 near %2!</English>
             <Polish>Policjant został zabity o godzinie %1 w pobliżu %2!</Polish>
         </Key>
+        <Key ID="STR_AFSK_Police_Killed">
+            <English>Cop was killed</English>
+            <Polish>Policjant został zabity</Polish>
+        </Key>
+        <Key ID="STR_AFSK_Police_KilledByCop">
+            <English>Cop was killed by cop</English>
+            <Polish>Policjant został zabity przez policjanta</Polish>
+        </Key>
     </Package>
 </Project>

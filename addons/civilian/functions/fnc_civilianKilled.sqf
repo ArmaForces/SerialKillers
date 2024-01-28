@@ -42,9 +42,9 @@ private _msg = [_civilian, _time] call FUNC(civilianKilledMsg);
 _killer = driver _killer;
 // If killer was police, we need to change score accordingly
 if (side _killer isEqualTo WEST) then {
-    [QEGVAR(score,changeScore), [EAST, EGVAR(score,policekilledCivilianKillersScore), "CIVILIAN KILLED BY COP PLACEHOLDER"]] call CBA_fnc_serverEvent;
-    [QEGVAR(score,changeScore), [WEST, EGVAR(score,policeKilledCivilianPoliceScore), "CIVILIAN KILLED BY COP PLACEHOLDER"]] call CBA_fnc_serverEvent;
+    [QEGVAR(score,changeScore), [EAST, EGVAR(score,policekilledCivilianKillersScore), LSTRING(KilledByCop)]] call CBA_fnc_serverEvent;
+    [QEGVAR(score,changeScore), [WEST, EGVAR(score,policeKilledCivilianPoliceScore), LSTRING(KilledByCop)]] call CBA_fnc_serverEvent;
 } else {
-    [QEGVAR(score,changeScore), [EAST, EGVAR(score,killedCivilianKillersScore), "CIVILIAN KILLED PLACEHOLDER"]] call CBA_fnc_serverEvent;
-    [QEGVAR(score,changeScore), [WEST, EGVAR(score,killedCivilianPoliceScore), "CIVILIAN KILLED PLACEHOLDER"]] call CBA_fnc_serverEvent;
+    [QEGVAR(score,changeScore), [EAST, EGVAR(score,killedCivilianKillersScore), LSTRING(Killed)]] call CBA_fnc_serverEvent;
+    [QEGVAR(score,changeScore), [WEST, EGVAR(score,killedCivilianPoliceScore), LSTRING(Killed)]] call CBA_fnc_serverEvent;
 };
