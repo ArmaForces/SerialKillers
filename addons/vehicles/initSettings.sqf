@@ -10,3 +10,14 @@
     {},
     true
 ] call CBA_fnc_addSetting;
+
+[
+    QGVAR(alarmMinimumChance),
+    "SLIDER",
+    [LSTRING(AlarmMinimumChance), LSTRING(AlarmMinimumChance_Description)],
+    [LSTRING(DisplayName), localize "str_dn_vehicles"],
+    [-1, 1, 0.25, 1],
+    true,
+    {},
+    true
+] call CBA_fnc_addSetting;
