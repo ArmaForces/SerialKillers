@@ -17,4 +17,4 @@
 
 params ["_module"];
 
-GVAR(killersStashes) pushBack _module;
+nil

@@ -2,11 +2,15 @@
 
 if (isServer) then {
     // Initialize police stations
-    {
-        [_x] call FUNC(initPoliceStation);
-        // Initialize respawn for given police station
-        [WEST, _x] call BIS_fnc_addRespawnPosition;
-    } forEach EGVAR(modules,policeStations);
+    [{EGVAR(modules,policeStations) isNotEqualTo []},{
+        [{
+            {
+                [_x] call FUNC(initPoliceStation);
+                // Initialize respawn for given police station
+                [WEST, _x] call BIS_fnc_addRespawnPosition;
+            } forEach EGVAR(modules,policeStations);
+        }] call CBA_fnc_execNextFrame;
+    }] call CBA_fnc_waitUntilAndExecute;
 
     [QGVAR(copKilled), {
         params ["_unit"];
@@ -24,6 +28,11 @@ if (isServer) then {
     // Event triggered when killers try to use police teleport
     [QGVAR(policeStationAlarm), {
         _this call FUNC(policeStationAlarm);
+    }] call CBA_fnc_addEventHandler;
+
+    // Event creating new police vehicle
+    [QGVAR(spawnVehicle), {
+        _this call FUNC(spawnVehicle);
     }] call CBA_fnc_addEventHandler;
 };
 
@@ -46,12 +55,13 @@ call FUNC(equipmentScoreCheck);
     call FUNC(equipmentScoreCheck);
 }] call CBA_fnc_addEventHandler;
 
-if (!isServer) then {
+if (hasInterface) then {
     if !(playerSide isEqualTo WEST) exitWith {};
     player addEventHandler ["Killed", {
         [QGVAR(copKilled), _this] call CBA_fnc_serverEvent;
     }];
     player addEventHandler ["Respawn", {
+        player setUnitLoadout EGVAR(common,playerLoadout);
         [QGVAR(copRespawned), _this] call CBA_fnc_serverEvent;
     }];
 };

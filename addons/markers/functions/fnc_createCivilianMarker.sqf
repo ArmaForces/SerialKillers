@@ -17,6 +17,10 @@
 
 params ["_civilian"];
 
+if (_civilian isEqualTo objNull) exitWith {
+    WARNING("Can't create marker for null civilian");
+};
+
 private _marker = format["civilian_%1", _civilian];
 createMarkerLocal [_marker, getPos _civilian];
 _marker setMarkerTypeLocal "mil_dot";

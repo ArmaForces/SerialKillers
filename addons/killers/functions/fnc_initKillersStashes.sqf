@@ -28,7 +28,13 @@ for "_y" from 0 to _createStatshesCount step 1 do {
     private _stash = _stashes deleteAt (floor (random (count (_stashes))));
     private _stashPos = getPos _stash;
     private _box = createVehicle ["O_CargoNet_01_ammo_F", _stashPos, [], 0, "NONE"];
+    clearItemCargoGlobal _box;
     _box setVariable [QGVAR(killersStash), _stash];
     _stash setVariable [QGVAR(box), _box];
     _box call FUNC(fillKillersStash);
+    GVAR(stashes) pushback _box;
 };
+
+publicVariable QGVAR(stashes);
+
+[QGVAR(createStashesMarkers)] call CBA_fnc_globalEventJIP;
