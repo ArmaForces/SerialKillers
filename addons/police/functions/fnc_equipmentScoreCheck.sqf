@@ -30,6 +30,7 @@ while {GVAR(lastEquipmentUpdateScore) != EGVAR(score,policeScore)} do {
             [_x, _scoreItems] call EFUNC(common,addItemsToArsenal);
             [_x, _scoreVehicles] call FUNC(addVehiclesToSpawner);
         } else {
+            if (EGVAR(score,policeScore) < 0) exitWith {};
             [_x, _scoreItems] call EFUNC(common,removeItemsFromArsenal);
             [_x, _scoreVehicles] call FUNC(removeVehiclesFromSpawner);
         };

@@ -24,8 +24,15 @@ private _time = [daytime] call BIS_fnc_timeToString;
 GVAR(killersScore) = GVAR(killersScore) + _scoreChange;
 publicVariable QGVAR(killersScore);
 
+// For display purposes using properly set-up sector modules
+[EAST, _scoreChange] call BIS_fnc_respawnTickets;
+
 GVAR(killersScoreChange) = GVAR(killersScoreChange) + _scoreChange;
 publicVariable QGVAR(killersScoreChange);
+
+// Save change time
+GVAR(killersScoreLastChangeTime) = CBA_missionTime;
+
 [{
     if (GVAR(killersScoreChange) isEqualTo (_this select 0)) then {
         GVAR(killersScoreChange) = 0;

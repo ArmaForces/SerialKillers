@@ -8,5 +8,6 @@ ADDON = false;
 if (!EGVAR(common,enabled)) exitWith {};
 
 GVAR(killersRespawnMarker) = "";
+GVAR(stashes) = [];
 
 ADDON = true;

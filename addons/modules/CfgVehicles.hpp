@@ -15,7 +15,7 @@ class CfgVehicles {
         scope = 2;
         displayName = CSTRING(Jail);
         category = QUOTE(PREFIX);
-        function = QFUNC(moduleJail);
+        // function = QFUNC(moduleJail);
         functionPriority = 1;
         isGlobal = 0;
         isTriggerActivated = 0;
@@ -41,7 +41,7 @@ class CfgVehicles {
         scope = 2;
         displayName = CSTRING(PoliceStation_Name);
         category = QUOTE(PREFIX);
-        function = QFUNC(modulePoliceStation);
+        // function = QFUNC(modulePoliceStation);
         functionPriority = 1;
         isGlobal = 0;
         isTriggerActivated = 0;
@@ -78,7 +78,7 @@ class CfgVehicles {
         scope = 2;
         displayName = CSTRING(Killers_Base);
         category = QUOTE(PREFIX);
-        function = QFUNC(moduleKillersBase);
+        // function = QFUNC(moduleKillersBase);
         functionPriority = 1;
         isGlobal = 0;
         isTriggerActivated = 0;
@@ -95,7 +95,7 @@ class CfgVehicles {
         scope = 2;
         displayName = CSTRING(Killers_Start);
         category = QUOTE(PREFIX);
-        function = QFUNC(moduleKillersStart);
+        // function = QFUNC(moduleKillersStart);
         functionPriority = 1;
         isGlobal = 0;
         isTriggerActivated = 0;
@@ -118,7 +118,7 @@ class CfgVehicles {
         scope = 2;
         displayName = CSTRING(Killers_Stash);
         category = QUOTE(PREFIX);
-        function = QFUNC(moduleKillersStash);
+        // function = QFUNC(moduleKillersStash);
         functionPriority = 1;
         isGlobal = 0;
         isTriggerActivated = 0;
