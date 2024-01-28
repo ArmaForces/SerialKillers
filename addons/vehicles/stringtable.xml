@@ -5,6 +5,14 @@
             <English>SerialKillers - Vehicles</English>
             <Polish>SerialKillers - Pojazdy</Polish>
         </Key>
+        <Key ID="STR_AFSK_Vehicles_AlarmEnabled">
+            <English>Alarm enabled</English>
+            <Polish>Alarmy włączone</Polish>
+        </Key>
+        <Key ID="STR_AFSK_Vehicles_AlarmEnabled_Description">
+            <English>Add car alarms to civilian vehicles.</English>
+            <Polish>Dodaj alarmy do pojazdów cywilnych.</Polish>
+        </Key>
         <Key ID="STR_AFSK_Vehicles_AlarmMinimumChance">
             <English>Alarm Minimum Chance</English>
             <Polish>Minimalna szansa na alarm</Polish>

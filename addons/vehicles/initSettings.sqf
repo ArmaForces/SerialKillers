@@ -12,6 +12,17 @@
 ] call CBA_fnc_addSetting;
 
 [
+    QGVAR(alarmEnabled),
+    "CHECKBOX",
+    [LSTRING(AlarmEnabled), LSTRING(AlarmEnabled_Description)],
+    [LSTRING(DisplayName), localize "str_dn_vehicles"],
+    true,
+    true,
+    {},
+    true
+] call CBA_fnc_addSetting;
+
+[
     QGVAR(alarmMinimumChance),
     "SLIDER",
     [LSTRING(AlarmMinimumChance), LSTRING(AlarmMinimumChance_Description)],
