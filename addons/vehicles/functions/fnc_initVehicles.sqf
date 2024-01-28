@@ -24,8 +24,6 @@ private _civilianCarTypes = "( (getNumber (_x >> 'scope') >= 2)
                                         && {getNumber (_x >> 'side') == 3}
                                     })" configClasses (configFile >> "CfgVehicles");
 
-GVAR(citiesVehicles) = call CBA_fnc_createNamespace;
-
 while {_i > 0} do {
     private _carType = selectRandom _civilianCarTypes;
     private _pos = [_carType, true, false, true] call EFUNC(common,getRandomPos);

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="AFSK">
+    <Package name="Vehicles">
+        <Key ID="STR_AFSK_Vehicles_DisplayName">
+            <English>SerialKillers - Vehicles</English>
+            <Polish>SerialKillers - Pojazdy</Polish>
+        </Key>
+        <Key ID="STR_AFSK_Vehicles_EmptyVehiclesLimit">
+            <English>Civilian vehicles limit</English>
+            <Polish>Limit pojazdów cywilnych</Polish>
+        </Key>
+        <Key ID="STR_AFSK_Vehicles_EmptyVehiclesLimit_Description">
+            <English>Controls how much civilian vehicles will be created on the whole map.</English>
+            <Polish>Ustala jak dużo pojazdów cywilnych będzie utworzonych na całej mapie.</Polish>
+        </Key>
+        <Key ID="STR_AFSK_Vehicles_Vehicle_Stolen_In_City">
+            <English>Vehicle was stolen at %1 in %2!</English>
+            <Polish>Pojazd został skradziony o godzinie %1 w %2!</Polish>
+        </Key>
+        <Key ID="STR_AFSK_Vehicles_Vehicle_Stolen_Near_City">
+            <English>Vehicle was stolen at %1 near %2!</English>
+            <Polish>Pojazd został skradziony o godzinie %1 w pobliżu %2!</Polish>
+        </Key>
+        <Key ID="STR_AFSK_Vehicles_Low">
+            <English>Low</English>
+            <Polish>Mało</Polish>
+        </Key>
+        <Key ID="STR_AFSK_Vehicles_Medium">
+            <English>Mediun</English>
+            <Polish>Średnio</Polish>
+        </Key>
+        <Key ID="STR_AFSK_Vehicles_High">
+            <English>High</English>
+            <Polish>Dużo</Polish>
+        </Key>
+    </Package>
+</Project>

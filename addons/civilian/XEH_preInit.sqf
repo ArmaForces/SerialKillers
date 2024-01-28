@@ -51,11 +51,6 @@ if (isServer) then {
         _x setVariable [QGVAR(CiviliansCount), _civiliansCount];
         _x setVariable [QGVAR(initialCiviliansCount), _civiliansCount];
     } forEach GVAR(cities);
-
-
-    // We need some improvements in determining civilian vehicles limit
-    GVAR(emptyVehiclesLimit) = GVAR(emptyVehiclesLimitMultiplier) * (5 * count (GVAR(cities)));
-    call FUNC(initVehicles);
 };
 
 ADDON = true;
