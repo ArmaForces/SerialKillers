@@ -1,4 +1,4 @@
-#include "..\script_component.hpp"
+#include "script_component.hpp"
 /*
  * Author: 3Mydlo3
  * Function initializes car alarm on given vehicle.
