@@ -18,6 +18,6 @@
 if (EGVAR(common,ACE_Loaded)) then {
     _unit getVariable [QACEGVAR(captives,isHandcuffed), false]
 } else {
-    _unit _x getVariable [QEGVAR(jail,isImprisoned), false]
+    _unit getVariable [QEGVAR(jail,isImprisoned), false]
 };
 
