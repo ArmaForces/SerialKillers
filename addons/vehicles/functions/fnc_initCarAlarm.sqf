@@ -28,6 +28,7 @@ _vehicle setVariable [QGVAR(hasGoneOff), false];
 
 _vehicle addEventHandler ["GetIn", {
     params ["_vehicle", "_role", "_unit", "_turret"];
+    if (side _unit isEqualTo CIVILIAN) exitWith {};
 
     [QGVAR(carAlarm), [_vehicle]] call CBA_fnc_globalEvent;
 }];
