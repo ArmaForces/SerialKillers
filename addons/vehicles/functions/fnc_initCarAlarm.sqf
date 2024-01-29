@@ -26,4 +26,10 @@ _vehicle setVariable [QGVAR(offChance), _offChance];
 // Alarm should go off at most once, init a flag to keep that in mind
 _vehicle setVariable [QGVAR(hasGoneOff), false];
 
+_vehicle addEventHandler ["GetIn", {
+    params ["_vehicle", "_role", "_unit", "_turret"];
+
+    [QGVAR(carAlarm), [_vehicle]] call CBA_fnc_globalEvent;
+}];
+
 true

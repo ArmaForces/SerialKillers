@@ -16,11 +16,12 @@
  */
 
 #define ALARM_INTERVAL 0.5
+#define ALARM_LENGTH 10
 
 params ["_vehicle", "_lightsOn", "_remainingDuration", ["_currentSoundDuration", 999]];
 
 _vehicle setPilotLight _lightsOn;
-if (_currentSoundDuration > 6.7) then {
+if (_currentSoundDuration > ALARM_LENGTH) then {
     _vehicle say3D "CarAlarm";
     _currentSoundDuration = ALARM_INTERVAL;
 } else {
