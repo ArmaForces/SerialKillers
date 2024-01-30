@@ -30,8 +30,6 @@ if (_vehicle getVariable [QGVAR(offChance), 1] < random 1) exitWith {
 _vehicle setVariable [QGVAR(alarmOn), true];
 _vehicle setVariable [QGVAR(hasGoneOff), true];
 
-[_vehicle, true, 120] call FUNC(carAlarmLoop);
-
 [QGVAR(alarmOff), [_vehicle]] call CBA_fnc_globalEvent;
 
 true
