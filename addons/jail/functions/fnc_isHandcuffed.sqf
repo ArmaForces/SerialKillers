@@ -15,6 +15,8 @@
  * Public: No
  */
 
+params ["_unit"];
+
 if (EGVAR(common,ACE_Loaded)) then {
     _unit getVariable [QACEGVAR(captives,isHandcuffed), false]
 } else {
