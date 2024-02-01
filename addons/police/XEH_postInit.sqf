@@ -9,6 +9,8 @@ if (isServer) then {
                 // Initialize respawn for given police station
                 [WEST, _x] call BIS_fnc_addRespawnPosition;
             } forEach EGVAR(modules,policeStations);
+
+            publicVariable QGVAR(arsenals);
         }] call CBA_fnc_execNextFrame;
     }] call CBA_fnc_waitUntilAndExecute;
 
@@ -36,9 +38,6 @@ if (isServer) then {
     }] call CBA_fnc_addEventHandler;
 };
 
-// Fill arsenal with starting items
-call FUNC(equipmentScoreCheck);
-
 // Event creating teleport actions to all police stations
 [QGVAR(createTeleport), {
     _this call FUNC(createTeleport);
@@ -57,6 +56,12 @@ call FUNC(equipmentScoreCheck);
 
 if (hasInterface) then {
     if !(playerSide isEqualTo WEST) exitWith {};
+
+    // Fill arsenal with starting items
+    [{GVAR(arsenals) isNotEqualTo []}, {
+        call FUNC(initPoliceStationClient);
+    }] call CBA_fnc_waitUntilAndExecute;
+
     player addEventHandler ["Killed", {
         [QGVAR(copKilled), _this] call CBA_fnc_serverEvent;
     }];
