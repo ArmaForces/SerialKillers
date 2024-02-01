@@ -23,7 +23,15 @@ private _action = [
     QGVAR(saveEquipment),
     LLSTRING(SaveEquipmentForRespawn),
     "",
-    { EGVAR(common,playerLoadout) = getUnitLoadout player; },
+    {
+        EGVAR(common,playerLoadout) = getUnitLoadout player;
+        private _primaryWeapon = primaryWeapon player;
+        private _launcherWeapon = secondaryWeapon player;
+        private _handgun = handgunWeapon player;
+
+        private _msg = format [LLSTRING(SavedEquipment), _primaryWeapon, _handgun, _launcherWeapon];
+        [QGVAR(showMessage), [_msg]] call CBA_fnc_localEvent;
+    },
     _condition,
     {}, [], "", 4, [false, false, false, false, false], {}
 ] call ace_interact_menu_fnc_createAction;
