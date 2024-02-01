@@ -22,4 +22,3 @@ if (EGVAR(common,ACE_Loaded)) then {
 } else {
     _unit getVariable [QEGVAR(jail,isImprisoned), false]
 };
-
