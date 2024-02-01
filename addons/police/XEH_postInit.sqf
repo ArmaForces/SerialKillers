@@ -37,7 +37,9 @@ if (isServer) then {
 };
 
 // Fill arsenal with starting items
-call FUNC(equipmentScoreCheck);
+[{GVAR(arsenals) isNotEqualTo []}, {
+    call FUNC(equipmentScoreCheck);
+}] call CBA_fnc_waitUntilAndExecute;
 
 // Event creating teleport actions to all police stations
 [QGVAR(createTeleport), {
