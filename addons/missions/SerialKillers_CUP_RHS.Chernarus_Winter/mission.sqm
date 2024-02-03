@@ -12,7 +12,7 @@ class EditorData
 	};
 	class ItemIDProvider
 	{
-		nextID=2913;
+		nextID=2914;
 	};
 	class MarkerIDProvider
 	{
@@ -6315,8 +6315,8 @@ class Mission
 					dataType="Logic";
 					class PositionInfo
 					{
-						position[]={13380.458,5.1529346,6336.0552};
-						angles[]={0.0013439035,3.292424,0.023998277};
+						position[]={13380.935,5.1644592,6335.9971};
+						angles[]={0.0013372133,3.292424,0.023993526};
 					};
 					areaSize[]={17.025999,0,16.162001};
 					areaIsRectangle=1;
@@ -6755,8 +6755,8 @@ class Mission
 							dataType="Object";
 							class PositionInfo
 							{
-								position[]={13372.912,5.4203553,6328.8325};
-								angles[]={0.019738,4.8604498,6.2667317};
+								position[]={13371.214,5.5327287,6328.686};
+								angles[]={0,1.7308931,-0};
 							};
 							side="Empty";
 							class Attributes
@@ -6764,7 +6764,7 @@ class Mission
 							};
 							id=118;
 							type="VR_Area_01_circle_4_grey_F";
-							atlOffset=0.003115654;
+							atlOffset=0.0031208992;
 						};
 						class Item1
 						{
@@ -7072,8 +7072,8 @@ class Mission
 							dataType="Object";
 							class PositionInfo
 							{
-								position[]={13374.031,9.3583584,6343.4663};
-								angles[]={0,1.7137544,0};
+								position[]={13375.79,9.3729191,6344.272};
+								angles[]={0,3.2861826,-0};
 							};
 							side="Empty";
 							flags=5;
@@ -7083,7 +7083,6 @@ class Mission
 							};
 							id=882;
 							type="Land_Cargo_HQ_V1_F";
-							atlOffset=0.00081586838;
 						};
 						class Item19
 						{
@@ -7123,7 +7122,7 @@ class Mission
 						};
 					};
 					id=122;
-					atlOffset=0.25380516;
+					atlOffset=0.45203924;
 				};
 				class Item10
 				{
@@ -9090,7 +9089,7 @@ class Mission
 				};
 			};
 			id=2734;
-			atlOffset=-66.046509;
+			atlOffset=-66.194946;
 		};
 		class Item61
 		{
