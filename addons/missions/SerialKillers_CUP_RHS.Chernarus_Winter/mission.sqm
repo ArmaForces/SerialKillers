@@ -615,7 +615,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=66;
+		items=63;
 		class Item0
 		{
 			dataType="Group";
@@ -6171,30 +6171,6 @@ class Mission
 		};
 		class Item60
 		{
-			dataType="Marker";
-			position[]={11956.094,54,9120.6318};
-			name="marker_9";
-			type="loc_Hospital";
-			id=2730;
-		};
-		class Item61
-		{
-			dataType="Marker";
-			position[]={10516.869,6,2287.9641};
-			name="marker_10";
-			type="loc_Hospital";
-			id=2731;
-		};
-		class Item62
-		{
-			dataType="Marker";
-			position[]={6817.9175,6,2702.8372};
-			name="marker_11";
-			type="loc_Hospital";
-			id=2732;
-		};
-		class Item63
-		{
 			dataType="Layer";
 			name="Police Stations";
 			class Entities
@@ -9116,7 +9092,7 @@ class Mission
 			id=2734;
 			atlOffset=-66.046509;
 		};
-		class Item64
+		class Item61
 		{
 			dataType="Layer";
 			name="Terrorist stash";
@@ -11641,7 +11617,7 @@ class Mission
 			id=2742;
 			atlOffset=-98.122009;
 		};
-		class Item65
+		class Item62
 		{
 			dataType="Layer";
 			name="Jail";
