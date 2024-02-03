@@ -26,7 +26,7 @@ private _civilianCarTypes = "( (getNumber (_x >> 'scope') >= 2)
 
 while {_i > 0} do {
     private _carType = selectRandom _civilianCarTypes;
-    private _pos = [_carType, true, false, true] call EFUNC(common,getRandomPos);
+    private _pos = [_carType, true, false, true, nil, GVAR(vehicleBlacklistedAreas)] call EFUNC(common,getRandomPos);
     if (!(_pos isEqualTo [])) then {
         // Check if there are other vehicles nearby to prevent creating too much vehicles in one area
         private _distance = 100 * (4 - GVAR(emptyVehiclesLimitMultiplier));

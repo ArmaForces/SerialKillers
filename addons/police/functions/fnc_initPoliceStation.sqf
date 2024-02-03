@@ -46,3 +46,5 @@ _logic setVariable ["Marker", _marker];
 // Create teleporter
 _logic setVariable ["Teleporter", _flag, true];
 [QGVAR(createTeleport), [_flag]] call CBA_fnc_globalEventJIP;
+
+[QGVAR(policeStationInitialized), [_logic]] call CBA_fnc_localEvent;

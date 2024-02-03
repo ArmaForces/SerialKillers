@@ -9,6 +9,7 @@
  * 2: Position can be on road <BOOL>
  * 3: Position must be near house <BOOL>
  * 4: Search radius for empty position <NUMBER>
+ * 5: Blacklisted areas <ARRAY<OBJECT/STRING/AREA/LOCATION>>
  *
  * Return Value:
  * 0: Random position on the map <POSITION>
@@ -19,14 +20,20 @@
  * Public: No
  */
 
-params [["_objectType", ""], ["_nearRoad", false], ["_allowOnRoad", true], ["_nearHouse", false], ["_emptyPosSearchRadius", 25]];
+params [
+    ["_objectType", ""],
+    ["_nearRoad", false],
+    ["_allowOnRoad", true],
+    ["_nearHouse", false],
+    ["_emptyPosSearchRadius", 25],
+    ["_blacklistedAreas", []]];
 
 // Function returns random position
 private _fnc_randomPos = {
-    params ["_nearRoad", "_allowOnRoad", "_nearHouse"];
+    params ["_nearRoad", "_allowOnRoad", "_nearHouse", "_blacklistedAreas"];
     private _randomPos = [];
     while {_randomPos isEqualTo []} do {
-        _randomPos = [] call BIS_fnc_randomPos;
+        _randomPos = [nil, _blacklistedAreas] call BIS_fnc_randomPos;
         if (!(_randomPos isEqualTo []) && {_nearHouse && {!([_randomPos] call FUNC(isHouseNearby))}}) then {
             _randomPos = [];
         };
@@ -50,13 +57,13 @@ if (!(_objectType isEqualType "")) then {
 };
 
 // If no object is given, just random position is enough
-if (_objectType isEqualTo "") exitWith {[_nearRoad, _allowOnRoad, _nearHouse] call _fnc_randomPos};
+if (_objectType isEqualTo "") exitWith {[_nearRoad, _allowOnRoad, _nearHouse, _blacklistedAreas] call _fnc_randomPos};
 
 private _randomPos = [];
 private _loopLimit = 250;
 // Loop until acquired random empty pos is within location area (or loop limit reached)
 while {(_loopLimit >= 0) && {(_randomPos isEqualTo [])}} do {
-    _randomPos = [_nearRoad, _allowOnRoad, _nearHouse] call _fnc_randomPos;
+    _randomPos = [_nearRoad, _allowOnRoad, _nearHouse, _blacklistedAreas] call _fnc_randomPos;
     _randomPos = _randomPos findEmptyPosition [0, _emptyPosSearchRadius, _objectType];
     _loopLimit = _loopLimit - 1;
 };
