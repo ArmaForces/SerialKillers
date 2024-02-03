@@ -16,6 +16,8 @@
  * Public: No
  */
 
+#define SPAWNPOINT_SAFEZONE 5
+
 params ["_vehicleClassname", "_spawner"];
 
 private _vehicleType = (_vehicleClassname call BIS_fnc_objectType) select 1;
@@ -27,13 +29,30 @@ private _spawnPoints = if (_vehicleType isEqualTo "Helicopter" || {_vehicleType 
     +(_spawner getVariable QGVAR(spawnPoints))
 };
 
-// Find empty spawn position
+// Find spawn position
 private _position = [];
 private _direction = 0;
-while {_position isEqualTo [] && {!(_spawnPoints isEqualTo [])}} do {
-    private _spawnPoint = [_spawnPoints] call EFUNC(common,deleteAtRandom);
-    private _objects = (getPos _spawnPoint) nearEntities 5;
-    if (_objects isEqualTo []) exitWith {
+
+private _emptySpawnPointIndex = _spawnPoints findIf {getPos _x nearEntities SPAWNPOINT_SAFEZONE isEqualTo []};
+if (_emptySpawnPointIndex isNotEqualTo -1) then {
+    private _spawnPoint = _spawnPoints select _emptySpawnPointIndex;
+    _position = getPos _spawnPoint;
+    _direction = getDir _spawnPoint;
+} else {
+    // Maybe there is a position that has unoccupied vehicle
+    private _fullSpawnPointsWithoutCrew = _spawnPoints select {
+        private _nearEntities = getPos _x nearEntities SPAWNPOINT_SAFEZONE;
+        if (_nearEntities isEqualTo []) exitWith { false };
+        _nearEntities findIf {crew _x isEqualTo []} isEqualTo -1
+    };
+
+    if (_fullSpawnPointsWithoutCrew isNotEqualTo []) exitWith {
+        private _spawnPoint = [_fullSpawnPointsWithoutCrew] call EFUNC(common,deleteAtRandom);
+
+        // Clear the area
+        _spawnPoint nearEntities SPAWNPOINT_SAFEZONE
+            apply {deleteVehicle _x};
+
         _position = getPos _spawnPoint;
         _direction = getDir _spawnPoint;
     };
