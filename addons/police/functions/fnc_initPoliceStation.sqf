@@ -47,4 +47,5 @@ _logic setVariable ["Marker", _marker];
 _logic setVariable ["Teleporter", _flag, true];
 [QGVAR(createTeleport), [_flag]] call CBA_fnc_globalEventJIP;
 
+private _stationArea = _logic getVariable ["objectarea", []];
 [QGVAR(policeStationInitialized), [_logic]] call CBA_fnc_localEvent;

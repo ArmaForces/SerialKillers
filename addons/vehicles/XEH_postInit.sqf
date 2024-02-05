@@ -2,9 +2,9 @@
 
 if (isServer) then {
     [QEGVAR(police,policeStationInitialized), {
-        params ["_policeStation"];
+        params ["_policeStationArea"];
         // Register as blacklisted area for civilian vehicle spawn
-        GVAR(vehicleBlacklistedAreas) pushBackUnique _policeStation;
+        GVAR(vehicleBlacklistedAreas) pushBackUnique _policeStationArea;
     }] call CBA_fnc_addEventHandler;
 
     [FUNC(initVehicles)] call CBA_fnc_execNextFrame;
