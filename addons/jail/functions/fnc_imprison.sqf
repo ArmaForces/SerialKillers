@@ -33,3 +33,5 @@ if (EGVAR(common,ACE_Loaded)) then {
     // Add own release action to prisoner.
     [QGVAR(addReleaseAction), [_unit]] call CBA_fnc_globalEvent;
 };
+
+INFO_1("Killer %1 is now imprisoned",name _unit);

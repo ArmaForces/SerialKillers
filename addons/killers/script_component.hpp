@@ -12,3 +12,5 @@
 #endif
 
 #include "\z\afsk\addons\main\script_macros.hpp"
+
+#define KILLER_UNIT_CLASS "C_man_p_fugitive_F"

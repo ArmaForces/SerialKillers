@@ -24,3 +24,5 @@ _prisoner setVariable [QGVAR(isImprisoned), false, true];
 
 // Terminate prisoner spectator
 [QEGVAR(common,terminateSpectator), [], _prisoner] call CBA_fnc_targetEvent;
+
+INFO_1("Killer %1 is now free",name _unit);

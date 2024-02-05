@@ -28,15 +28,18 @@ if (hasInterface) then {
 
     /* Spectator events */
     [QGVAR(initializeSideSpectator), {
+        INFO("Starting side spectator");
         ["Initialize", [player, [playerSide], false, true, true, true, true, true, true, true]] call BIS_fnc_EGSpectator;
     }] call CBA_fnc_addEventHandler;
 
     [QGVAR(initializeSpectator), {
+        INFO("Starting spectator");
         ["Initialize", [player, [], false, true, true, true, true, true, true, true]] call BIS_fnc_EGSpectator;
     }] call CBA_fnc_addEventHandler;
 
     [QGVAR(terminateSpectator), {
         ["Terminate"] call BIS_fnc_EGSpectator;
+        INFO("Terminated spectator");
     }] call CBA_fnc_addEventHandler;
 
     /* Sidechat msg event */
