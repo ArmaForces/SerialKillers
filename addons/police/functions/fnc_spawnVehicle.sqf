@@ -35,23 +35,30 @@ private _direction = 0;
 
 private _emptySpawnPointIndex = _spawnPoints findIf {getPos _x nearEntities SPAWNPOINT_SAFEZONE isEqualTo []};
 if (_emptySpawnPointIndex isNotEqualTo -1) then {
+    systemChat "Found empty spawnpoint";
     private _spawnPoint = _spawnPoints select _emptySpawnPointIndex;
     _position = getPos _spawnPoint;
     _direction = getDir _spawnPoint;
 } else {
     // Maybe there is a position that has unoccupied vehicle
+    systemChat "Looking for unoccupied vehicles";
     private _fullSpawnPointsWithoutCrew = _spawnPoints select {
         private _nearEntities = getPos _x nearEntities SPAWNPOINT_SAFEZONE;
         if (_nearEntities isEqualTo []) exitWith { false };
-        _nearEntities findIf {crew _x isEqualTo []} isEqualTo -1
+        _nearEntities findIf {crew _x isEqualTo []} isNotEqualTo -1
     };
 
     if (_fullSpawnPointsWithoutCrew isNotEqualTo []) exitWith {
+        systemChat "Found unoccupied vehicles";
         private _spawnPoint = [_fullSpawnPointsWithoutCrew] call EFUNC(common,deleteAtRandom);
 
         // Clear the area
+        systemChat "Deleting vehicles";
         _spawnPoint nearEntities SPAWNPOINT_SAFEZONE
-            apply {deleteVehicle _x};
+            apply {
+                deleteVehicle _x;
+                systemChat format ["Deleted vehicle %1", typeOf _x];
+            };
 
         _position = getPos _spawnPoint;
         _direction = getDir _spawnPoint;
@@ -67,4 +74,5 @@ if (_position isEqualTo []) exitWith {
 };
 
 // Spawn vehicle
-[_vehicleClassname, _position, _direction, true, false, true] call EFUNC(civilian,createVehicle);
+systemChat "Creating vehicle";
+[EFUNC(civilian,createVehicle), [_vehicleClassname, _position, _direction, true, false, true]] call CBA_fnc_execNextFrame;
