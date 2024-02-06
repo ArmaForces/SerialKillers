@@ -610,6 +610,11 @@ class CfgSerialKillers
                     class rhsusf_8Rnd_00Buck : rhs_weap_M590_8RD {};
                     class rhsusf_8Rnd_Slug : rhs_weap_M590_8RD {};
 
+                    // Remington 700 + 1 rnd mags
+                    class CUP_srifle_Remington700 : rhs_weap_M590_8RD {};
+                    class CUP_optic_Remington : CUP_srifle_Remington700 {};
+                    class CUP_1Rnd_762x51_CZ584 : CUP_srifle_Remington700 {};
+
                     // SPAS-12
                     class CUP_sgun_SPAS12
                     {
