@@ -813,7 +813,6 @@ class CfgSerialKillers
                     };
 
                     /* Helicopters */
-                    class rhs_uh1h_hidf_unarmed {};
                     class I_Heli_light_03_unarmed_F {};
                     class RHS_UH60M2
                     {
