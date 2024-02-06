@@ -713,7 +713,7 @@ class CfgSerialKillers
                     class B_UavTerminal { requiredScore = 30; };
                     class Laserdesignator : B_UavTerminal {};
                     class ACE_DefusalKit {};
-                    // class MineDetector : ACE_DefusalKit {}; TODO: Decide if/when it should be available as it's kinda OP
+                    class MineDetector { requiredScore = 30; };
                     class ACE_HuntIR_monitor : ACE_HuntIR_M203 {};
 
                     /* Uniforms */
