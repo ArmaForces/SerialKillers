@@ -13,6 +13,14 @@ if (isServer) then {
     };
 };
 
+[QEGVAR(killers,killerKilled), {
+    _this call FUNC(deleteUnitMarker);
+}] call CBA_fnc_addEventHandler;
+
+[QEGVAR(police,copKilled), {
+    _this call FUNC(deleteUnitMarker);
+}] call CBA_fnc_addEventHandler;
+
 [QGVAR(playerDisconnected), {
     params ["_unit", "_id", "_uid", "_name"];
     [_unit] call FUNC(deleteUnitMarker);
