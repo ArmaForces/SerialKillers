@@ -25,6 +25,7 @@ if (isServer) then {
 if (hasInterface) then {
     /* Initial player loadout */
     GVAR(playerLoadout) = getUnitLoadout player;
+    player setVariable [QGVAR(side), playerSide, true];
 
     /* Spectator events */
     [QGVAR(initializeSideSpectator), {
