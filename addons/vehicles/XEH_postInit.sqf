@@ -2,6 +2,7 @@
 
 if (isServer) then {
 
+    [QGVAR(carAlarm), FUNC(carAlarm)] call CBA_fnc_addEventHandler;
 };
 
 if (hasInterface) then {
