@@ -17,12 +17,14 @@
 
 #define ALARM_INTERVAL 0.5
 #define ALARM_LENGTH 10
+#define MAX_DISTANCE 1000
+#define SOUND_WITHOUT_MUFFLING 2
 
 params ["_vehicle", "_lightsOn", "_remainingDuration", ["_currentSoundDuration", 999]];
 
 _vehicle setPilotLight _lightsOn;
 if (_currentSoundDuration > ALARM_LENGTH) then {
-    _vehicle say3D "CarAlarm";
+    _vehicle say3D ["CarAlarm", MAX_DISTANCE, nil, SOUND_WITHOUT_MUFFLING, nil];
     _currentSoundDuration = ALARM_INTERVAL;
 } else {
     _currentSoundDuration = _currentSoundDuration + ALARM_INTERVAL;
