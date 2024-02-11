@@ -17,8 +17,17 @@
 
 params ["_vehicle"];
 
+// Prevent triggering when triggered already
 if (_vehicle getVariable [QGVAR(alarmOn), false]) exitWith { false };
-if (!GVAR(alarmAlwaysArmed) && {_vehicle getVariable [QGVAR(hasGoneOff), false]}) exitWith { false };
+
+// Prevent triggering multiple times or if unarmed
+if (!GVAR(alarmAlwaysArmed) && {
+    (_vehicle getVariable [QGVAR(hasGoneOff), false] || {
+        !(_vehicle getVariable [QGVAR(alarmArmed), false])}
+    )
+}) exitWith { false };
+
+// Random chance that alarm will go off
 if (_vehicle getVariable [QGVAR(offChance), 1] < random 1) exitWith {
     if (GVAR(alarmDisarmIfFailed)) then {
         _vehicle setVariable [QGVAR(alarmArmed), false];

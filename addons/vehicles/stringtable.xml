@@ -19,7 +19,7 @@
         </Key>
         <Key ID="STR_AFSK_Vehicles_AlarmAlwaysArmed_Description">
             <English>Alarm will always be armed, even if it previously did go off.</English>
-            <Polish>Rozbrój alarm jeżeli się nie włączył gdy gracz wszedł do pojazdu. Działa tylko jeżeli Minimalna szansa na alarm jest ustawiona na mniej niż 1.</Polish>
+            <Polish>Zezwól na wielokrotne odpalenie alarmu. Działa tylko jeżeli Minimalna szansa na alarm jest ustawiona na mniej niż 1.</Polish>
         </Key>
         <Key ID="STR_AFSK_Vehicles_AlarmDisarmIfFailed">
             <English>Alarm disarm if didn't go off</English>
