@@ -52,3 +52,14 @@
     {},
     true
 ] call CBA_fnc_addSetting;
+
+[
+    QGVAR(alarmDuration),
+    "SLIDER",
+    [LSTRING(AlarmDuration), LSTRING(AlarmDuration_Description)],
+    [LSTRING(DisplayName), localize "str_dn_vehicles"],
+    [5, 300, 60, 1],
+    true,
+    {},
+    true
+] call CBA_fnc_addSetting;

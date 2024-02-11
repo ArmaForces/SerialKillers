@@ -12,6 +12,6 @@ if (hasInterface) then {
         params ["_vehicle"];
 
         [QEGVAR(common,showSideChatMsg), [WEST, [_vehicle] call FUNC(vehicleStolenMsg)]] call CBA_fnc_localEvent;
-        [_vehicle, true, 120] call FUNC(carAlarmLoop);
+        [_vehicle, true, GVAR(alarmDuration)] call FUNC(carAlarmLoop);
     }] call CBA_fnc_addEventHandler;
 };

@@ -37,6 +37,14 @@
             <English>Controls the chance of an alarm going off in a car that has the alarm armed.</English>
             <Polish>Ustala szansę na uruchomienie alarmu w pojeździe posiadającym alarm.</Polish>
         </Key>
+        <Key ID="STR_AFSK_Vehicles_AlarmDuration">
+            <English>Alarm Duration</English>
+            <Polish>Długość alarmu</Polish>
+        </Key>
+        <Key ID="STR_AFSK_Vehicles_AlarmDuration_Description">
+            <English>Controls how long will the alarm sound be heard.</English>
+            <Polish>Ustala jak długo będzie wył alarm.</Polish>
+        </Key>
         <Key ID="STR_AFSK_Vehicles_EmptyVehiclesLimit">
             <English>Civilian vehicles limit</English>
             <Polish>Limit pojazdów cywilnych</Polish>
