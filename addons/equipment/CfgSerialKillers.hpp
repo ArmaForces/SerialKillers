@@ -431,10 +431,6 @@ class CfgSerialKillers
                     {
                         availableOnStart = 4;
                     };
-                    class rhs_mag_an_m8hc
-                    {
-                        availableOnStart = 2;
-                    };
                     class rhs_mag_an_m14_th3
                     {
                         availableOnStart = 1;
