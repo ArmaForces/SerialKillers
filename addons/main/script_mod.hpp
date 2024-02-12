@@ -20,3 +20,5 @@
 #else
     #define LINKFUNC(x) FUNC(x)
 #endif
+
+#define DEV_DEBUG
