@@ -27,6 +27,10 @@ while {_i > 0} do {
     if (!(_pos isEqualTo [])) then {
         private _nearestCity = [_pos, MAX_DISTANCE_TO_NEAREST_CITY] call FUNC(getNearestCity);
         if (_nearestCity isEqualTo objNull) exitWith {};
+        private _nearbyCivilians = _pos nearEntities ["Man", 100];
+        private _nearbyCiviliansCount = count _nearbyCivilians;
+        if (_nearbyCiviliansCount >= 2 && {(random 1) - _nearbyCiviliansCount * 0.05 > 0.1}) exitWith {};
+
         [_pos] call FUNC(createCivilian);
         _i = _i - 1;
     };
