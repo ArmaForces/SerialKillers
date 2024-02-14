@@ -15,8 +15,6 @@
  * Public: No
  */
 
-params ["_logic"];
-
 {
     [_x] call FUNC(initSaveEquipmentAction);
 } forEach GVAR(arsenals);
