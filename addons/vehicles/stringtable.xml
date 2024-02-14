@@ -21,6 +21,14 @@
             <English>Alarm will always be armed, even if it previously did go off.</English>
             <Polish>Zezwól na wielokrotne odpalenie alarmu. Działa tylko jeżeli Minimalna szansa na alarm jest ustawiona na mniej niż 1.</Polish>
         </Key>
+        <Key ID="STR_AFSK_Vehicles_AlarmAudibleDistance">
+            <English>Alarm audible distance</English>
+            <Polish>Zasięg słyszalności alarmu</Polish>
+        </Key>
+        <Key ID="STR_AFSK_Vehicles_AlarmAudibleDistance_Description">
+            <English>Control exact distance (in meters) at which an alarm can be heard. Increasing the distance makes it easier for cops to spot a stolen vehicle.</English>
+            <Polish>Kontroluje dokładną odległość (w metrach), z której alarm będzie słyszalny. Zwiększenie tej odległości ułatwia policji zlokalizowanie skradzionego pojazdu.</Polish>
+        </Key>
         <Key ID="STR_AFSK_Vehicles_AlarmDisarmIfFailed">
             <English>Alarm disarm if didn't go off</English>
             <Polish>Rozbrój alarm jeżeli się nie włączył</Polish>

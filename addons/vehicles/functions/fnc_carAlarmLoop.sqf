@@ -17,7 +17,7 @@
 
 #define ALARM_INTERVAL 0.5
 #define ALARM_LENGTH 10
-#define MAX_DISTANCE 1000
+#define MAX_DISTANCE GVAR(alarmAudibleDistance)
 #define DEFAULT_PITCH 1
 #define SOUND_WITHOUT_MUFFLING 2
 

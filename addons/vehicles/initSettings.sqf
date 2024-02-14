@@ -63,3 +63,14 @@
     {},
     true
 ] call CBA_fnc_addSetting;
+
+[
+    QGVAR(alarmAudibleDistance),
+    "SLIDER",
+    [LSTRING(AlarmAudibleDistance), LSTRING(AlarmAudibleDistance_Description)],
+    [LSTRING(DisplayName), LSTRING(CarAlarm)],
+    [100, 1000, 500, 1],
+    true,
+    {},
+    true
+] call CBA_fnc_addSetting;
