@@ -45,6 +45,10 @@
             <English>Controls how long will the alarm sound be heard.</English>
             <Polish>Ustala jak długo będzie wył alarm.</Polish>
         </Key>
+        <Key ID="STR_AFSK_Vehicles_CarAlarm">
+            <English>Car alarm</English>
+            <Polish>Alarm samochodowy</Polish>
+        </Key>
         <Key ID="STR_AFSK_Vehicles_EmptyVehiclesLimit">
             <English>Civilian vehicles limit</English>
             <Polish>Limit pojazdów cywilnych</Polish>
