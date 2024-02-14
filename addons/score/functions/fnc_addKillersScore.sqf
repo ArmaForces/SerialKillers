@@ -33,6 +33,7 @@ publicVariable QGVAR(killersScoreChange);
 // Save change time
 GVAR(killersScoreLastChangeTime) = CBA_missionTime;
 
+// Keep last score change for 5 seconds to "stack it" visually if many events occur in short succession.
 [{
     if (GVAR(killersScoreChange) isEqualTo (_this select 0)) then {
         GVAR(killersScoreChange) = 0;

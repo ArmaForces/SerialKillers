@@ -20,15 +20,7 @@ if (isServer) then {
         [QGVAR(endMission), [KILLERS_SCORE_REACHED]] call CBA_fnc_globalEvent;
     }] call CBA_fnc_addEventHandler;
 
-    [QGVAR(changeScore), {
-        params ["_side", "_change", ["_reason", ""]];
-        if (_side isEqualTo WEST) then {
-            [_change, _reason] call FUNC(addPoliceScore);
-        } else {
-            [_change, _reason] call FUNC(addKillersScore);
-        };
-        [QGVAR(scoreChanged), _this] call CBA_fnc_globalEvent;
-    }] call CBA_fnc_addEventHandler;
+    [QGVAR(changeScore), FUNC(changeScore)] call CBA_fnc_addEventHandler;
 
     /* Serverside score logic init */
     // Idle timeout init
