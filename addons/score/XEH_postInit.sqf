@@ -34,20 +34,18 @@ if (isServer) then {
     // Idle timeout init
     if (GVAR(idleTimeMax) isEqualTo -1) exitWith {};
     [{
-        [{
-            private _msg = composeText [
-                text format [LLSTRING(IdleTime_Inital_Message), (GVAR(IdleTimeMax) / 60) toFixed 1],
-                lineBreak,
-                lineBreak,
-                text format ["%1: %2", LELSTRING(killers,Killers), GVAR(idleTimeKillersScoreChange)],
-                lineBreak,
-                text format ["%1: %2", LELSTRING(police,Police), GVAR(idleTimePoliceScoreChange)]
-            ];
-            _msg setAttributes ["valign", "middle"];
-            [QEGVAR(common,showMessage), [_msg, [3]]] call CBA_fnc_globalEvent;
-            call FUNC(monitorTimeouts);
-        }, [], GVAR(idleTimeMax)] call CBA_fnc_waitAndExecute;
-    }] call CBA_fnc_execNextFrame;
+        private _msg = composeText [
+            text format [LLSTRING(IdleTime_Inital_Message), (GVAR(IdleTimeMax) / 60)],
+            lineBreak,
+            lineBreak,
+            text format ["%1: %2", LELSTRING(killers,Killers), GVAR(idleTimeKillersScoreChange)],
+            lineBreak,
+            text format ["%1: %2", LELSTRING(police,Police), GVAR(idleTimePoliceScoreChange)]
+        ];
+        _msg setAttributes ["valign", "middle"];
+        [QEGVAR(common,showMessage), [_msg, [3]]] call CBA_fnc_globalEvent;
+        call FUNC(monitorTimeouts);
+    }, [], GVAR(idleTimeMax)] call CBA_fnc_waitAndExecute;
 
     // Initialize score display UI
     [WEST, 0] call BIS_fnc_respawnTickets;
