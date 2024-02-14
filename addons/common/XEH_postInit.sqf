@@ -23,6 +23,10 @@ if (isServer) then {
 }] call CBA_fnc_addEventHandler;
 
 if (hasInterface) then {
+    /* Initial player loadout */
+    GVAR(playerLoadout) = getUnitLoadout player;
+    player setVariable [QGVAR(side), playerSide, true];
+
     /* Spectator events */
     [QGVAR(initializeSideSpectator), {
         ["Initialize", [player, [playerSide], false, true, true, true, true, true, true, true]] call BIS_fnc_EGSpectator;

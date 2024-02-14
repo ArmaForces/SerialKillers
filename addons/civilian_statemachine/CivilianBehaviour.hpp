@@ -9,7 +9,7 @@ class CivilianBehaviour {
         onStateLeaving = "";
         class EnteredSafe {
             targetState = "Safe";
-            condition = "behaviour _this isEqualTo 'SAFE'"
+            condition = "behaviour _this isEqualTo 'SAFE'";
         };
     };
 
@@ -20,7 +20,7 @@ class CivilianBehaviour {
         onStateLeaving = "";
         class EnteredCombat {
             targetState = "Combat";
-            condition = "behaviour _this isEqualTo 'COMBAT'"
+            condition = "behaviour _this isEqualTo 'COMBAT'";
         };
     };
 
@@ -31,11 +31,11 @@ class CivilianBehaviour {
         onStateLeaving = "";
         class EnteredAware {
             targetState = "AwareAfterSafe";
-            condition = "behaviour _this isEqualTo 'AWARE'"
+            condition = "behaviour _this isEqualTo 'AWARE'";
         };
         class EnteredCombat {
             targetState = "Combat";
-            condition = "behaviour _this isEqualTo 'COMBAT'"
+            condition = "behaviour _this isEqualTo 'COMBAT'";
         };
     };
 
@@ -46,11 +46,11 @@ class CivilianBehaviour {
         onStateLeaving = "";
         class EnteredAware {
             targetState = "AwareAfterCombat";
-            condition = "behaviour _this isEqualTo 'AWARE'"
+            condition = "behaviour _this isEqualTo 'AWARE'";
         };
         class EnteredSafe {
             targetState = "Safe";
-            condition = "behaviour _this isEqualTo 'SAFE'"
+            condition = "behaviour _this isEqualTo 'SAFE'";
         };
     };
 };

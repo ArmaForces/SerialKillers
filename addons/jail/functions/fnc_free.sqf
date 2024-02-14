@@ -21,6 +21,14 @@ params ["_prisoner"];
 GVAR(prisoners) deleteAt (GVAR(prisoners) findIf {_x isEqualTo _prisoner});
 publicVariable QGVAR(prisoners);
 _prisoner setVariable [QGVAR(isImprisoned), false, true];
+_prisoner setVariable [QGVAR(wasImprisonedRecently), true, true];
+
+[{[_this] call FUNC(isHandcuffed)}, {
+    // Ignore if he's a prisoner again
+}, _prisoner, RECENTLY_FREED_TIMEOUT, {
+    // Clear the flag
+    _this setVariable [QGVAR(wasImprisonedRecently), false, true];
+}] call CBA_fnc_waitUntilAndExecute;
 
 // Terminate prisoner spectator
 [QEGVAR(common,terminateSpectator), [], _prisoner] call CBA_fnc_targetEvent;
