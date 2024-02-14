@@ -8,6 +8,14 @@ if (isServer) then {
     [QGVAR(playMusicServer), {
         _this call FUNC(playMusicServer);
     }] call CBA_fnc_addEventHandler;
+
+    // Log side chat messages to RPT for easier troubleshooting
+    [QGVAR(showSideChatMsg), {
+        params [["_side", sideEmpty], ["_msg", ""]];
+        if (_msg isEqualTo "") exitWith {};
+        private _sideText = if (_side isEqualTo sideEmpty) then { "ALL" } else { _side };
+        INFO_2("(Side Chat) %1: %2",_sideText,_msg);
+    }] call CBA_fnc_addEventHandler;
 };
 
 [QGVAR(showMessage), {
