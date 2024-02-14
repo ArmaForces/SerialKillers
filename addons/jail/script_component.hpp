@@ -12,3 +12,5 @@
 #endif
 
 #include "\z\afsk\addons\main\script_macros.hpp"
+
+#define RECENTLY_FREED_TIMEOUT 60
