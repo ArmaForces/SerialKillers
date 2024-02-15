@@ -17,7 +17,7 @@
 
 params ["_prisoner"];
 
-if (_prisoner getVariable [QGVAR(isImprisoned), false]) exitWith {
+if (!(_prisoner getVariable [QGVAR(isImprisoned), false])) exitWith {
     WARNING_1("Killer %1 is not in prison and can't be freed!",name _prisoner);
 };
 
