@@ -16,6 +16,8 @@
  * Public: No
  */
 
+#define SPAWNPOINT_SAFEZONE 5
+
 params ["_vehicleClassname", "_spawner"];
 
 private _vehicleType = (_vehicleClassname call BIS_fnc_objectType) select 1;
@@ -27,13 +29,37 @@ private _spawnPoints = if (_vehicleType isEqualTo "Helicopter" || {_vehicleType 
     +(_spawner getVariable QGVAR(spawnPoints))
 };
 
-// Find empty spawn position
+// Find spawn position
 private _position = [];
 private _direction = 0;
-while {_position isEqualTo [] && {!(_spawnPoints isEqualTo [])}} do {
-    private _spawnPoint = [_spawnPoints] call EFUNC(common,deleteAtRandom);
-    private _objects = (getPos _spawnPoint) nearEntities 5;
-    if (_objects isEqualTo []) exitWith {
+
+private _emptySpawnPointIndex = _spawnPoints findIf {getPos _x nearEntities SPAWNPOINT_SAFEZONE isEqualTo []};
+if (_emptySpawnPointIndex isNotEqualTo -1) then {
+    LOG("Found empty spawnpoint");
+    private _spawnPoint = _spawnPoints select _emptySpawnPointIndex;
+    _position = getPos _spawnPoint;
+    _direction = getDir _spawnPoint;
+} else {
+    // Maybe there is a position that has unoccupied vehicle
+    LOG("Looking for unoccupied vehicles");
+    private _fullSpawnPointsWithoutCrew = _spawnPoints select {
+        private _nearEntities = getPos _x nearEntities SPAWNPOINT_SAFEZONE;
+        if (_nearEntities isEqualTo []) exitWith { false };
+        _nearEntities findIf {crew _x isEqualTo []} isNotEqualTo -1
+    };
+
+    if (_fullSpawnPointsWithoutCrew isNotEqualTo []) exitWith {
+        LOG("Found unoccupied vehicles");
+        private _spawnPoint = [_fullSpawnPointsWithoutCrew] call EFUNC(common,deleteAtRandom);
+
+        // Clear the area
+        LOG("Deleting vehicles");
+        _spawnPoint nearEntities SPAWNPOINT_SAFEZONE
+            apply {
+                TRACE_1("Deleting vehicle %1",typeOf _x);
+                deleteVehicle _x;
+            };
+
         _position = getPos _spawnPoint;
         _direction = getDir _spawnPoint;
     };
@@ -48,4 +74,5 @@ if (_position isEqualTo []) exitWith {
 };
 
 // Spawn vehicle
-[_vehicleClassname, _position, _direction, true, false, true] call EFUNC(civilian,createVehicle);
+INFO_2("Creating vehicle %1 at position %2",_vehicleClassname,str _position);
+[EFUNC(vehicles,createVehicle), [_vehicleClassname, _position, _direction, true, false, true]] call CBA_fnc_execNextFrame;
