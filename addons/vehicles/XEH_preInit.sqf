@@ -2,7 +2,7 @@
 ADDON = false;
 #include "XEH_PREP.hpp"
 
-#include "initSettings.sqf"
+#include "initSettings.inc.sqf"
 
 // We need some improvements in determining civilian vehicles limit
 GVAR(emptyVehiclesLimit) = 500;
