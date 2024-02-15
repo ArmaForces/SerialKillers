@@ -19,43 +19,45 @@ params ["_equipmentPresetConfig"];
 
 private _killersEquipment = [_equipmentPresetConfig >> "Killers" >> "Equipment"] call FUNC(readConfigToNamespace);
 
-// Add killers equipment
-{
-    private _itemClassname = _x;
-    private _item = _killersEquipment getVariable _itemClassname;
-    private _availableOnStart = _item getVariable ["availableOnStart", 1];
-    private _availableInStash = _item getVariable ["availableInStash", 1];
-    if (_availableOnStart isEqualTo 1) then {
-        GVAR(killersStartEquipment) pushBackUnique _itemClassname;
-        if (isClass (configFile >> "CfgWeapons" >> _itemClassname)) then {
-            {
-                GVAR(killersStartEquipment) pushBackUnique _x;
-            } forEach ([_itemClassname, true] call CBA_fnc_compatibleMagazines);
-        };
-    };
-    if (_availableInStash isEqualTo 1) then {
-        GVAR(killersStashEquipment) pushBackUnique _itemClassname;
-    };
-} forEach (allVariables _killersEquipment);
+// Fills starting and stash equipment lists using given namespace
+private _fnc_fillEquipmentLists = {
+    params ["_stuffNamespace", "_startEquipmentList", "_stashEquipmentList"];
+    {
+        private _itemClassname = _x;
+        private _item = _stuffNamespace getVariable _itemClassname;
 
-// Add common equipment
-{
-    private _itemClassname = _x;
-    private _item = GVAR(commonEquipment) getVariable _itemClassname;
-    private _availableOnStart = _item getVariable ["availableOnStart", 1];
-    private _availableInStash = _item getVariable ["availableInStash", 1];
-    if (_availableOnStart isEqualTo 1) then {
-        GVAR(killersStartEquipment) pushBackUnique _itemClassname;
-        if (isClass (configFile >> "CfgWeapons" >> _itemClassname)) then {
-            {
-                GVAR(killersStartEquipment) pushBackUnique _x;
-            } forEach ([_itemClassname, true] call CBA_fnc_compatibleMagazines);
+        private _availableOnStart = _item getVariable ["availableOnStart", 1];
+        _availableOnStart = if (_availableOnStart isEqualType true) then {
+            [0, 1] select _availableOnStart
+        } else { _availableOnStart };
+
+        private _availableInStash = _item getVariable ["availableInStash", 1];
+        _availableInStash = if (_availableInStash isEqualType true) then {
+            [0, 1] select _availableInStash
+        } else { _availableInStash };
+
+        // Add equipment available on start
+        if (_availableOnStart > 0) then {
+            _startEquipmentList pushBackUnique _itemClassname;
+            // Load magazines if it is a weapon
+            if (isClass (configFile >> "CfgWeapons" >> _itemClassname)) then {
+                {
+                    _startEquipmentList pushBackUnique _x;
+                } forEach ([_itemClassname, true] call CBA_fnc_compatibleMagazines);
+            };
         };
-    };
-    if (_availableInStash isEqualTo 1) then {
-        GVAR(killersStashCommonEquipment) pushBackUnique _itemClassname;
-    };
-} forEach (allVariables GVAR(commonEquipment));
+        // Add equipment available in stashes
+        if (_availableInStash > 0) then {
+            _stashEquipmentList pushBackUnique _itemClassname;
+            // We don't load magazines here as they get picked from weapon compatible list when filling stash
+        };
+    } forEach (allVariables _stuffNamespace);
+};
+
+// Add killers equipment
+[_killersEquipment, GVAR(killersStartEquipment), GVAR(killersStashEquipment)] call _fnc_fillEquipmentLists;
+// Add common equipment
+[GVAR(commonEquipment), GVAR(killersStartEquipment), GVAR(killersStashCommonEquipment)] call _fnc_fillEquipmentLists;
 
 // Add civilian equipment
 private _civilianEquipmentTypes = [EGVAR(civilian,backpacks), EGVAR(civilian,uniforms), EGVAR(civilian,vests), EGVAR(civilian,headgear)];

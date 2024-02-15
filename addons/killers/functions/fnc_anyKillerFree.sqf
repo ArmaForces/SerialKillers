@@ -15,17 +15,9 @@
  * Public: No
  */
 
-if (EGVAR(common,ACE_Loaded)) then {
-    allPlayers findIf {
-        side _x isEqualTo EAST
-        && {alive _x
-        && {!(_x getVariable [QACEGVAR(captives,isHandcuffed), false])
-    }}}!= -1
-} else {
-    allPlayers findIf {
-        side _x isEqualTo EAST
-        && {alive _x
-        && {!(_x getVariable [QEGVAR(jail,isImprisoned), false])
-    }}}!= -1
-};
+allPlayers findIf {
+    side _x isEqualTo EAST
+    && {alive _x
+    && {!([_x] call EFUNC(jail,isHandcuffed))
+}}} != -1
 
