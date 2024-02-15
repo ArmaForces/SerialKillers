@@ -8,7 +8,7 @@ ADDON = false;
 GVAR(emptyVehiclesLimit) = 500;
 
 if (isServer) then {
-    call FUNC(initVehicles);
+    GVAR(vehicleBlacklistedAreas) = [];
 };
 
 ADDON = true;

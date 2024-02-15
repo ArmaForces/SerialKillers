@@ -1,6 +1,8 @@
 #include "script_component.hpp"
 
 if (isServer) then {
+    [FUNC(initVehicles)] call CBA_fnc_execNextFrame;
+
     [QEGVAR(police,policeStationInitialized), {
         params ["_policeStationArea"];
         // Register as blacklisted area for civilian vehicle spawn
@@ -9,8 +11,6 @@ if (isServer) then {
 
     [QGVAR(carAlarm), FUNC(carAlarm)] call CBA_fnc_addEventHandler;
     [QGVAR(disableCarAlarm), FUNC(disableCarAlarm)] call CBA_fnc_addEventHandler;
-
-    [FUNC(initVehicles)] call CBA_fnc_execNextFrame;
 };
 
 if (hasInterface) then {
