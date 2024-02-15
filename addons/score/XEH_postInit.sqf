@@ -35,7 +35,7 @@ if (isServer) then {
     if (GVAR(idleTimeMax) isEqualTo -1) exitWith {};
     [{
         private _msg = composeText [
-            text format [LLSTRING(IdleTime_Inital_Message), (GVAR(IdleTimeMax) / 60) toFixed 1],
+            text format [LLSTRING(IdleTime_Inital_Message), (GVAR(IdleTimeMax) / 60)],
             lineBreak,
             lineBreak,
             text format ["%1: %2", LELSTRING(killers,Killers), GVAR(idleTimeKillersScoreChange)],
@@ -67,4 +67,7 @@ if (hasInterface) then {
     [QGVAR(showScore), {
         _this call FUNC(showScore);
     }] call CBA_fnc_addEventHandler;
+
+    // Disable vanilla ratings
+    player addEventHandler ["HandleRating", { 0 }];
 };

@@ -2,7 +2,7 @@
 ADDON = false;
 #include "XEH_PREP.hpp"
 
-#include "initSettings.sqf"
+#include "initSettings.inc.sqf"
 
 // Killswitch
 if (!EGVAR(common,enabled)) exitWith {};
@@ -43,6 +43,10 @@ if (isServer) then {
     GVAR(vests) = [];
     GVAR(headgear) = [];
     call FUNC(initCiviliansConfig);
+    publicVariable QGVAR(backpacks);
+    publicVariable QGVAR(uniforms);
+    publicVariable QGVAR(vests);
+    publicVariable QGVAR(headgear);
     // Initialize civilians
     call FUNC(initCivilians);
     publicVariable QGVAR(civilians);

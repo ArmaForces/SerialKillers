@@ -29,6 +29,10 @@ publicVariable QGVAR(policeScore);
 
 GVAR(policeScoreChange) = GVAR(policeScoreChange) + _scoreChange;
 publicVariable QGVAR(policeScoreChange);
+
+// Save change time
+GVAR(policeScoreLastChangeTime) = CBA_missionTime;
+
 [{
     if (GVAR(policeScoreChange) isEqualTo (_this select 0)) then {
         GVAR(policeScoreChange) = 0;

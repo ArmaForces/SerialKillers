@@ -1,11 +1,15 @@
 PREP(addItemToStash);
+PREP(anyKillerFree);
 PREP(createMarkersForNearbyVehicles);
 PREP(createStartPositionMarker);
+PREP(createStashesMarkers);
 PREP(createTeleport);
 PREP(deleteStartPositionsMarkers);
+PREP(disableTeleport);
 PREP(fillKillersStash);
 PREP(initKillersBase);
 PREP(initKillersStashes);
 PREP(initStartPositions);
+PREP(killerHandcuffed);
 PREP(killerKilled);
 PREP(killerRespawned);

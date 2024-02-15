@@ -16,3 +16,8 @@ author = "ArmaForces"
 
 [version]
 path = "addons/main/script_version.hpp"
+
+[asc]
+exclude = [
+    ".inc.sqf"
+]

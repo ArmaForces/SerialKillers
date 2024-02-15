@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="AFSK">
+    <Package name="Missions">
+        <Key ID="STR_AFSK_Missions_Welcome_Message">
+            <English>Welcome to Arma 3 SerialKillers %1</English>
+            <Polish>Witamy na Arma 3 SerialKillers %1</Polish>
+        </Key>
+    </Package>
+</Project>
