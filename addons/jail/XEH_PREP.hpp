@@ -5,5 +5,6 @@ PREP(free);
 PREP(freeAll);
 PREP(getRandomJailPos);
 PREP(imprison);
+PREP(isHandcuffed);
 PREP(jailMarker);
 PREP(removeReleaseAction);
