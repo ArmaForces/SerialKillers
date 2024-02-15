@@ -29,7 +29,7 @@ if (_side isEqualTo WEST) then {
 
 private _newScore = [_side] call FUNC(getSideScore);
 
-INFO_("Changed score for %1: %2 + %3 = %4",_side,_previousScore,_change,_newScore);
+INFO_4("Changed score for %1: %2 + %3 = %4",_side,_previousScore,_change,_newScore);
 
 [QGVAR(scoreChanged), [_side, _change, _newScore, _reason]] call CBA_fnc_globalEvent;
 
