@@ -7,13 +7,12 @@ class CfgPatches {
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {
-            "afsk_common",
-            "afsk_vehicles"
+            "afsk_common"
         };
         author = "ArmaForces";
         VERSION_CONFIG;
     };
 };
 
-
 #include "CfgEventHandlers.hpp"
+#include "CfgSounds.hpp"
