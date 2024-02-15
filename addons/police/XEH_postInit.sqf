@@ -38,6 +38,11 @@ if (isServer) then {
     }] call CBA_fnc_addEventHandler;
 };
 
+// Fill arsenal with starting items
+[{GVAR(arsenals) isNotEqualTo []}, {
+    call FUNC(equipmentScoreCheck);
+}] call CBA_fnc_waitUntilAndExecute;
+
 // Event creating teleport actions to all police stations
 [QGVAR(createTeleport), {
     _this call FUNC(createTeleport);

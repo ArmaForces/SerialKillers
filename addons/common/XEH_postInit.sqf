@@ -10,9 +10,7 @@ if (isServer) then {
     }] call CBA_fnc_addEventHandler;
 };
 
-[QGVAR(showMessage), {
-    _this call FUNC(showMessage);
-}] call CBA_fnc_addEventHandler;
+[QGVAR(showMessage), FUNC(showMessage)] call CBA_fnc_addEventHandler;
 
 [QGVAR(teleport), {
     params ["_caller", "_destination"];
@@ -25,6 +23,7 @@ if (isServer) then {
 if (hasInterface) then {
     /* Initial player loadout */
     GVAR(playerLoadout) = getUnitLoadout player;
+    player setVariable [QGVAR(side), playerSide, true];
 
     /* Spectator events */
     [QGVAR(initializeSideSpectator), {

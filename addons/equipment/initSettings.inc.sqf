@@ -1,5 +1,3 @@
-#include "script_component.hpp"
-
 [
     QGVAR(equipmentPresetCustom),
     "CHECKBOX",
@@ -16,7 +14,7 @@
     "LIST",
     [LSTRING(EquipmentPreset), LSTRING(EquipmentPreset_Description)],
     LSTRING(DisplayName),
-    [[0, 1, 2, 3, 4], [LSTRING(EquipmentPreset_Auto), "Vanilla", "RHS - NOT IMPLEMENTED", "CUP - NOT IMPLEMENTED", "CUP + RHS - NOT IMPLEMENTED"]],
+    [[0, 1, 2, 3, 4], [LSTRING(EquipmentPreset_Auto), "Vanilla", "RHS - NOT IMPLEMENTED", "CUP - NOT IMPLEMENTED", "CUP + RHS"]],
     true,
     {},
     true
