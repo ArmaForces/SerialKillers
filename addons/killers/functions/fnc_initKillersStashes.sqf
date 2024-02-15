@@ -29,6 +29,8 @@ for "_y" from 0 to _createStatshesCount step 1 do {
     private _stashPos = getPos _stash;
     private _box = createVehicle ["O_CargoNet_01_ammo_F", _stashPos, [], 0, "NONE"];
     clearItemCargoGlobal _box;
+    clearWeaponCargoGlobal _box;
+    clearMagazineCargoGlobal _box;
     _box setVariable [QGVAR(killersStash), _stash];
     _stash setVariable [QGVAR(box), _box];
     _box call FUNC(fillKillersStash);
