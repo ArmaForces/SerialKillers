@@ -1,5 +1,3 @@
-#include "script_component.hpp"
-
 [
     QGVAR(killersScoreMax),
     "SLIDER",
@@ -16,7 +14,7 @@
     "SLIDER",
     [LSTRING(KilledCivilianKillersScore), LSTRING(KilledCivilianKillersScore_Description)],
     [LSTRING(DisplayName), LSTRING(Score)],
-    [-10, 10, 2, 0],
+    [-10, 10, 1, 0],
     true
 ] call CBA_fnc_addSetting;
 
@@ -25,7 +23,7 @@
     "SLIDER",
     [LSTRING(KilledCivilianPoliceScore), LSTRING(KilledCivilianPoliceScore_Description)],
     [LSTRING(DisplayName), LSTRING(Score)],
-    [-10, 10, 2, 0],
+    [-10, 10, 1, 0],
     true
 ] call CBA_fnc_addSetting;
 
@@ -34,7 +32,7 @@
     "SLIDER",
     [LSTRING(PoliceKilledCivilianKillersScore), LSTRING(PoliceKilledCivilianKillersScore_Description)],
     [LSTRING(DisplayName), LSTRING(Score)],
-    [-10, 10, 2, 0],
+    [-10, 10, 1, 0],
     true
 ] call CBA_fnc_addSetting;
 

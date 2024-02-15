@@ -34,7 +34,6 @@ _logic setVariable ["Arsenal", _box, true];
 _box setVariable ["policeStation", _logic, true];
 [_box] call EFUNC(common,createArsenal);
 GVAR(arsenals) pushBack _box;
-publicVariable QGVAR(arsenals);
 
 // Init vehicle spawner
 [_box] call FUNC(initSpawner);

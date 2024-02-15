@@ -34,7 +34,7 @@ private _vehicleActions = _spawner getVariable QGVAR(vehicleActions);
         private _vehicleName = getText (configFile >> "CfgVehicles" >> _x >> "displayName");
         private _vehicleRequiredScore = [_x] call EFUNC(equipment,getRequiredScoreForItem);
         private _actionText = format ["(%1) %2", _vehicleRequiredScore, _vehicleName];
-        private _actionID = _spawner addAction [_actionText, {[QGVAR(spawnVehicle), _this select 3] call CBA_fnc_serverEvent}, [_x, _spawner], _vehicleRequiredScore, true, true, "", "true", 3];
+        private _actionID = _spawner addAction [_actionText, {[QGVAR(spawnVehicle), _this select 3] call CBA_fnc_serverEvent}, [_x, _spawner], _vehicleRequiredScore + 10, true, true, "", "true", 3];
 
         // Assign to namespace
         _vehicleActions setVariable [_x, _actionID];

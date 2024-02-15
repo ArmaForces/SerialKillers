@@ -7,6 +7,9 @@ if (isServer) then {
         GVAR(vehicleBlacklistedAreas) pushBackUnique _policeStationArea;
     }] call CBA_fnc_addEventHandler;
 
+    [QGVAR(carAlarm), FUNC(carAlarm)] call CBA_fnc_addEventHandler;
+    [QGVAR(disableCarAlarm), FUNC(disableCarAlarm)] call CBA_fnc_addEventHandler;
+
     [FUNC(initVehicles)] call CBA_fnc_execNextFrame;
 };
 
@@ -17,6 +20,6 @@ if (hasInterface) then {
         params ["_vehicle"];
 
         [QEGVAR(common,showSideChatMsg), [WEST, [_vehicle] call FUNC(vehicleStolenMsg)]] call CBA_fnc_localEvent;
-        [_vehicle, true, 120] call FUNC(carAlarmLoop);
+        [_vehicle, true, GVAR(alarmDuration)] call FUNC(carAlarmLoop);
     }] call CBA_fnc_addEventHandler;
 };

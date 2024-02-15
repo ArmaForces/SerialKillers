@@ -8,6 +8,10 @@ if (isServer) then {
         _this call FUNC(free);
     }] call CBA_fnc_addEventHandler;
 
+    [QGVAR(freeAll), {
+        _this call FUNC(freeAll);
+    }] call CBA_fnc_addEventHandler;
+
     [QGVAR(imprison), {
         _this call FUNC(imprison);
     }] call CBA_fnc_addEventHandler;
@@ -15,6 +19,8 @@ if (isServer) then {
     if (!(GVAR(jail) isEqualTo objNull)) then {
         GVAR(jailMarker) = call FUNC(jailMarker);
         call FUNC(createKillersRespawn);
+    } else {
+        ERROR("Jail not detected!");
     };
 };
 
@@ -33,7 +39,10 @@ if (hasInterface) then {
             // Add ACE EH for handcuffing
             [QACEGVAR(captives,setHandcuffed), {
                 params ["_unit", "_isHandcuffed"];
-                if (!(_unit isEqualTo player) || {_isHandcuffed}) exitWith {};
+                if !(_unit isEqualTo player) exitWith {};
+                if (_isHandcuffed) exitWith {
+                    [QEGVAR(killers,killerHandcuffed), [_unit]] call CBA_fnc_serverEvent;
+                };
                 if (_unit getVariable [QGVAR(isImprisoned), false]) then {
                     [QGVAR(free), [player]] call CBA_fnc_serverEvent;
                 };

@@ -29,6 +29,10 @@ publicVariable QGVAR(killersScore);
 
 GVAR(killersScoreChange) = GVAR(killersScoreChange) + _scoreChange;
 publicVariable QGVAR(killersScoreChange);
+
+// Save change time
+GVAR(killersScoreLastChangeTime) = CBA_missionTime;
+
 [{
     if (GVAR(killersScoreChange) isEqualTo (_this select 0)) then {
         GVAR(killersScoreChange) = 0;
