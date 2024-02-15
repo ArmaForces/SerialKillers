@@ -24,8 +24,6 @@ private _civilianCarTypes = "( (getNumber (_x >> 'scope') >= 2)
                                         && {getNumber (_x >> 'side') == 3}
                                     })" configClasses (configFile >> "CfgVehicles");
 
-GVAR(citiesVehicles) = call CBA_fnc_createNamespace;
-
 while {_i > 0} do {
     private _carType = selectRandom _civilianCarTypes;
     private _pos = [_carType, true, false, true] call EFUNC(common,getRandomPos);
@@ -39,6 +37,9 @@ while {_i > 0} do {
         if (_nearbyCarsCount >= 2 && {(random 1) > 0.1}) exitWith {};
         // Create vehicle on given position. We need some way to prevent instant damage to vehicle as these empty positions are not perfect.
         private _vehicle = [_carType, _pos] call FUNC(createVehicle);
+        if (GVAR(alarmEnabled)) then {
+            [_vehicle, random 1 + GVAR(alarmMinimumChance)] call FUNC(initCarAlarm);
+        };
         _i = _i - 1;
     };
 };

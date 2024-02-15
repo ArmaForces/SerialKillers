@@ -13,7 +13,7 @@
  * 0: Created vehicle <OBJECT>
  *
  * Example:
- * ["C_Offroad_01_F", position player] call afsk_civilian_fnc_createVehicle
+ * ["C_Offroad_01_F", position player] call afsk_vehicles_fnc_createVehicle
  *
  * Public: No
  */
@@ -34,7 +34,7 @@ _vehicle setDir _dir;
 // Disable randomization and use own function to set texture on vehicle globally (so everyone can see the same color!)
 _vehicle setVariable ["BIS_enableRandomization", false];
 if (_enableRandomization) then {
-    [_vehicle] call EFUNC(common,setVehicleRandomTexture);
+    [_vehicle] call FUNC(setVehicleRandomTexture);
 };
 
 if (_emptyCargo) then {

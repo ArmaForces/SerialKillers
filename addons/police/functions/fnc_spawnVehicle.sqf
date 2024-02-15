@@ -75,4 +75,4 @@ if (_position isEqualTo []) exitWith {
 
 // Spawn vehicle
 INFO_2("Creating vehicle %1 at position %2",_vehicleClassname,str _position);
-[EFUNC(civilian,createVehicle), [_vehicleClassname, _position, _direction, true, false, true]] call CBA_fnc_execNextFrame;
+[EFUNC(vehicles,createVehicle), [_vehicleClassname, _position, _direction, true, false, true]] call CBA_fnc_execNextFrame;
