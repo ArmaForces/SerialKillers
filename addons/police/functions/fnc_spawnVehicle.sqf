@@ -56,8 +56,8 @@ if (_emptySpawnPointIndex isNotEqualTo -1) then {
         LOG("Deleting vehicles");
         _spawnPoint nearEntities SPAWNPOINT_SAFEZONE
             apply {
+                TRACE_1("Deleting vehicle %1",typeOf _x);
                 deleteVehicle _x;
-                TRACE_1("Deleted vehicle %1", typeOf _x);
             };
 
         _position = getPos _spawnPoint;
