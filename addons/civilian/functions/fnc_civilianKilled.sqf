@@ -23,14 +23,20 @@ params ["_civilian", "_killer", "_instigator", "_useEffects"];
 // Remove civilian from game
 [_civilian] call EFUNC(civilian,unassignCivilianFromCity);
 GVAR(civilians) deleteAt (GVAR(civilians) findIf {_x isEqualTo _civilian});
-[_civilian] call EFUNC(markers,deleteUnitMarker);
+publicVariable QGVAR(civilians);
+[QEGVAR(markers,deleteUnitMarker), [_civilian]] call CBA_fnc_globalEvent;
+
+// Check if there any civilians left
+if (count GVAR(civilians) isEqualTo 0) then {
+    [QEGVAR(score,allCiviliansDead)] call CBA_fnc_serverEvent;
+};
 
 private _time = [daytime] call BIS_fnc_timeToString;
 // Call function to create marker at killed unit's position.
 [_civilian, _time] call FUNC(civilianKilledMarker);
 // Show message for all cops that cop has been killed near some location with timestamp
 private _msg = [_civilian, _time] call FUNC(civilianKilledMsg);
-[QEGVAR(police,showMsg), [_msg]] call CBA_fnc_globalEvent;
+[QEGVAR(common,showSideChatMsg), [WEST, _msg]] call CBA_fnc_globalEvent;
 
 // Killer can be vehicle sometimes so get driver
 _killer = driver _killer;

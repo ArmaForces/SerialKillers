@@ -1,10 +1,10 @@
 #include "script_component.hpp"
 /*
  * Author: 3Mydlo3
- * Function creates civilian in given city.
+ * Function creates and initializes civilian on given position.
  *
  * Arguments:
- * 0: City namespace <CBA_NAMESPACE>
+ * 0: Position <POSITION>
  *
  * Return Value:
  * 0: Created civilian unit <OBJECT>
@@ -15,9 +15,14 @@
  * Public: No
  */
 
-params ["_cityNamespace"];
+params ["_position"];
 
 private _newGroup = createGroup CIVILIAN;
-private _position = [_cityNamespace] call FUNC(getCityRandomPos);
+private _unit = selectRandom GVAR(units);
+private _civilian = _newGroup createUnit [_unit, _position, [], 0, "NONE"];
 
-_newGroup createUnit ["C_man_polo_1_F", _position, [], 0, "NONE"];
+if (_civilian isEqualTo objNull) exitWith {
+    WARNING_2("Failed creating civilian %1 at %2", _unit, _position);
+};
+
+[_civilian] call FUNC(initCivilian);

@@ -4,7 +4,7 @@
  * Function returns name of nearest map location for given position/unit.
  *
  * Arguments:
- * 0: Unit/position to find nearest map location name <UNIT/POSITION/LOCATION>
+ * 0: Object/position to find nearest map location name <OBJECT/POSITION/LOCATION>
  * 1: Location search radius
  *
  * Return Value:
@@ -18,8 +18,16 @@
 
 params ["_pos", ["_searchRadius", 2000]];
 
+if (_pos isEqualType locationNull) then {
+    _pos = position _pos;
+};
+
+if (_pos isEqualType objNull) then {
+    _pos = getPosATL _pos;
+};
+
 // Get nearest location
-private _nearestLocation = [_pos, _searchRadius] call FUNC(getNearestLocation);
+private _nearestLocation = [_pos, _searchRadius] call FUNC(getNearestLocationWithAvailableName);
 if (_nearestLocation isEqualTo locationNull) exitWith {""};
 
 [_nearestLocation] call FUNC(getLocationName);

@@ -1,0 +1,1 @@
+#include "\z\afsk\addons\civilian_statemachine\script_component.hpp"

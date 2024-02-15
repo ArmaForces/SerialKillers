@@ -1,0 +1,23 @@
+name = "ArmaForces SerialKillers"
+mainprefix = "z"
+prefix = "afsk"
+
+[files]
+include = [
+    "LICENSE",
+    "mod.cpp",
+    "README.md",
+]
+
+exclude = ["*.psd", "*.png", "*.tga"]
+
+[properties]
+author = "ArmaForces"
+
+[version]
+path = "addons/main/script_version.hpp"
+
+[asc]
+exclude = [
+    ".inc.sqf"
+]

@@ -24,8 +24,15 @@ private _time = [daytime] call BIS_fnc_timeToString;
 GVAR(killersScore) = GVAR(killersScore) + _scoreChange;
 publicVariable QGVAR(killersScore);
 
+// For display purposes using properly set-up sector modules
+[EAST, _scoreChange] call BIS_fnc_respawnTickets;
+
 GVAR(killersScoreChange) = GVAR(killersScoreChange) + _scoreChange;
 publicVariable QGVAR(killersScoreChange);
+
+// Save change time
+GVAR(killersScoreLastChangeTime) = CBA_missionTime;
+
 [{
     if (GVAR(killersScoreChange) isEqualTo (_this select 0)) then {
         GVAR(killersScoreChange) = 0;
@@ -33,4 +40,7 @@ publicVariable QGVAR(killersScoreChange);
     };
 }, [GVAR(killersScoreChange)], 5] call CBA_fnc_waitAndExecute;
 
-[_reason] call FUNC(showScore);
+// Check if killers have reached their goal
+if (GVAR(killersScore) >= GVAR(killersScoreMax)) then {
+    [QGVAR(killersScoreReached), [KILLERS_SCORE_REACHED]] call CBA_fnc_serverEvent;
+};

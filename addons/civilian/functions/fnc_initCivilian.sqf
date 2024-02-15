@@ -7,7 +7,7 @@
  * 0: Civilian unit <OBJECT>
  *
  * Return Value:
- * None
+ * 0: Initialized civilian unit <OBJECT>
  *
  * Example:
  * [bob] call afsk_civilian_fnc_initCivilian
@@ -34,5 +34,4 @@ _civilian addEventHandler ["Killed", {
 
 [_civilian, _cityNamespace] call FUNC(assignCityCivilian);
 GVAR(civilians) pushBack _civilian;
-GVAR(civiliansCount) = GVAR(civiliansCount) - 1;
 _civilian setVariable [QGVAR(initialized), true];

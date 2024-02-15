@@ -17,4 +17,5 @@
 
 {
     deleteMarkerLocal _x;
-} forEach GVAR(killersStartPositionsMarkers);
+} forEach GVAR(startPositionsMarkers);
+GVAR(startPositionsMarkers) = [];

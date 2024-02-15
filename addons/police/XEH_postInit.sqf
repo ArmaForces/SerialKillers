@@ -1,28 +1,54 @@
 #include "script_component.hpp"
 
-{
-    [_x] call FUNC(initPoliceStation);
-} forEach EGVAR(modules,policeStations);
+if (isServer) then {
+    // Initialize police stations
+    [{EGVAR(modules,policeStations) isNotEqualTo []},{
+        [{
+            {
+                [_x] call FUNC(initPoliceStation);
+                // Initialize respawn for given police station
+                [WEST, _x] call BIS_fnc_addRespawnPosition;
+            } forEach EGVAR(modules,policeStations);
 
-call FUNC(equipmentScoreCheck);
+            publicVariable QGVAR(arsenals);
+        }] call CBA_fnc_execNextFrame;
+    }] call CBA_fnc_waitUntilAndExecute;
 
-[QGVAR(copKilled), {
-    _this call FUNC(copKilled);
-}] call CBA_fnc_addEventHandler;
+    [QGVAR(copKilled), {
+        params ["_unit"];
+        // Check if unit was already killed (thanks to new ACE medical)
+        if (_unit getVariable [QGVAR(alreadyKilled), false]) exitWith {};
+        _unit setVariable [QGVAR(alreadyKilled), true];
+        _this call FUNC(copKilled);
+    }] call CBA_fnc_addEventHandler;
 
+    [QGVAR(copRespawned), {
+        params ["_unit"];
+        _unit setVariable [QGVAR(alreadyKilled), false];
+    }] call CBA_fnc_addEventHandler;
+
+    // Event triggered when killers try to use police teleport
+    [QGVAR(policeStationAlarm), {
+        _this call FUNC(policeStationAlarm);
+    }] call CBA_fnc_addEventHandler;
+
+    // Event creating new police vehicle
+    [QGVAR(spawnVehicle), {
+        _this call FUNC(spawnVehicle);
+    }] call CBA_fnc_addEventHandler;
+};
+
+// Fill arsenal with starting items
+[{GVAR(arsenals) isNotEqualTo []}, {
+    call FUNC(equipmentScoreCheck);
+}] call CBA_fnc_waitUntilAndExecute;
+
+// Event creating teleport actions to all police stations
 [QGVAR(createTeleport), {
     _this call FUNC(createTeleport);
 }] call CBA_fnc_addEventHandler;
 
-[QGVAR(policeStationAlarm), {
-    _this call FUNC(policeStationAlarm);
-}] call CBA_fnc_addEventHandler;
-
-[QGVAR(showMsg), {
-    params ["_msg"];
-    [WEST, "HQ"] sideChat _msg;
-}] call CBA_fnc_addEventHandler;
-
+// Event triggered when teleport action in police station is used
 [QGVAR(teleport), {
     _this call FUNC(teleport);
 }] call CBA_fnc_addEventHandler;
@@ -33,9 +59,19 @@ call FUNC(equipmentScoreCheck);
     call FUNC(equipmentScoreCheck);
 }] call CBA_fnc_addEventHandler;
 
-if (!isServer) then {
-    ["B_Soldier_F", "killed", {
-        if (!(local (_this select 0))) exitWith {};
+if (hasInterface) then {
+    if !(playerSide isEqualTo WEST) exitWith {};
+
+    // Fill arsenal with starting items
+    [{GVAR(arsenals) isNotEqualTo []}, {
+        call FUNC(initPoliceStationClient);
+    }] call CBA_fnc_waitUntilAndExecute;
+
+    player addEventHandler ["Killed", {
         [QGVAR(copKilled), _this] call CBA_fnc_serverEvent;
-    }] call CBA_fnc_addClassEventHandler;
+    }];
+    player addEventHandler ["Respawn", {
+        player setUnitLoadout EGVAR(common,playerLoadout);
+        [QGVAR(copRespawned), _this] call CBA_fnc_serverEvent;
+    }];
 };

@@ -9,5 +9,13 @@
             <English>Killers</English>
             <Polish>Zabójcy</Polish>
         </Key>
+        <Key ID="STR_AFSK_Killers_StartPositionsCount">
+            <English>Start positions count</English>
+            <Polish>Liczba pozycji startowych</Polish>
+        </Key>
+        <Key ID="STR_AFSK_Killers_StartPositionsCount_Description">
+            <English>How many positions will be available to killers for teleportation on the beginning. 0 or -1 to random [10, 20].</English>
+            <Polish>Ile pozycji do teleportacji na starcie będzie dostępnych dla zabójców. 0 lub -1 by wylosować z przedziału [10, 20]</Polish>
+        </Key>
     </Package>
 </Project>

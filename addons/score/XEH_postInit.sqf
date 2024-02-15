@@ -2,13 +2,22 @@
 
 if (isServer) then {
     /* Serverside events */
+    [QGVAR(allCiviliansDead), {
+        [QGVAR(endMission), [ALL_CIVILIANS_DEAD]] call CBA_fnc_serverEvent;
+    }] call CBA_fnc_addEventHandler;
+
     [QGVAR(endMission), {
         _this call FUNC(endMissionServer);
     }] call CBA_fnc_addEventHandler;
 
     // All killers killed or in custody
     [QGVAR(killersKilled), {
-        [QGVAR(endMission), [KILLERS_DEAD]] call CBA_fnc_serverEvent;
+        [QGVAR(endMission), [KILLERS_DEAD]] call CBA_fnc_globalEvent;
+    }] call CBA_fnc_addEventHandler;
+
+    // Killers have reached their goal
+    [QGVAR(killersScoreReached), {
+        [QGVAR(endMission), [KILLERS_SCORE_REACHED]] call CBA_fnc_globalEvent;
     }] call CBA_fnc_addEventHandler;
 
     [QGVAR(changeScore), {
@@ -18,12 +27,7 @@ if (isServer) then {
         } else {
             [_change, _reason] call FUNC(addKillersScore);
         };
-        [QGVAR(scoreChanged), _this] call CBA_fnc_serverEvent;
-    }] call CBA_fnc_addEventHandler;
-
-    [QGVAR(scoreChanged), {
-        params ["_side", "_change", ["_reason", ""]];
-        [QGVAR(showScore), [_reason]] call CBA_fnc_globalEvent;
+        [QGVAR(scoreChanged), _this] call CBA_fnc_globalEvent;
     }] call CBA_fnc_addEventHandler;
 
     /* Serverside score logic init */
@@ -31,18 +35,27 @@ if (isServer) then {
     if (GVAR(idleTimeMax) isEqualTo -1) exitWith {};
     [{
         private _msg = composeText [
-            text format [LSTRING(IdleTime_Inital_Message), (GVAR(IdleTimeMax) / 60) toFixed 1],
+            text format [LLSTRING(IdleTime_Inital_Message), (GVAR(IdleTimeMax) / 60)],
             lineBreak,
             lineBreak,
-            text format ["%1: %2", ELSTRING(killers,Killers), GVAR(idleTimeKillersScoreChange)],
+            text format ["%1: %2", LELSTRING(killers,Killers), GVAR(idleTimeKillersScoreChange)],
             lineBreak,
-            text format ["%1: %2", ELSTRING(police,Police), GVAR(idleTimePoliceScoreChange)]
+            text format ["%1: %2", LELSTRING(police,Police), GVAR(idleTimePoliceScoreChange)]
         ];
         _msg setAttributes ["valign", "middle"];
         [QEGVAR(common,showMessage), [_msg, [3]]] call CBA_fnc_globalEvent;
         call FUNC(monitorTimeouts);
     }, [], GVAR(idleTimeMax)] call CBA_fnc_waitAndExecute;
+
+    // Initialize score display UI
+    [WEST, 0] call BIS_fnc_respawnTickets;
+    [EAST, 0] call BIS_fnc_respawnTickets;
 };
+
+[QGVAR(scoreChanged), {
+    params ["_side", "_change", ["_reason", ""]];
+    [QGVAR(showScore), [_reason]] call CBA_fnc_localEvent;
+}] call CBA_fnc_addEventHandler;
 
 
 if (hasInterface) then {
@@ -54,4 +67,7 @@ if (hasInterface) then {
     [QGVAR(showScore), {
         _this call FUNC(showScore);
     }] call CBA_fnc_addEventHandler;
+
+    // Disable vanilla ratings
+    player addEventHandler ["HandleRating", { 0 }];
 };

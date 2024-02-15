@@ -1,7 +1,7 @@
 #include "script_component.hpp"
 /*
  * Author: 3Mydlo3
- * Function initializes given city with module, civilians and vehicles.
+ * Function initializes given city with module and civilians.
  *
  * Arguments:
  * 0: City to initialize <CONFIG/LOCATION>
@@ -38,11 +38,10 @@ _cityNamespace setVariable [QGVAR(Position), _cityPosition, true];
 private _cityArea = [_cityPosition, [getNumber (_cityLocationConfig >> 'radiusA'), getNumber (_cityLocationConfig >> 'radiusB'), 0, false]];
 _cityNamespace setVariable [QGVAR(cityArea), _cityArea];
 
-// Create city civilians list
+// Create city civilians variables
 _cityNamespace setVariable [QGVAR(CiviliansList), []];
+_cityNamespace setVariable [QGVAR(CiviliansCount), 0];
+_cityNamespace setVariable [QGVAR(initialCiviliansCount), 0];
 
-// Init civilians
-[_cityNamespace, _cityType] call FUNC(initCityCivilians);
-
-// Init vehicles
+// Return
 _cityNamespace

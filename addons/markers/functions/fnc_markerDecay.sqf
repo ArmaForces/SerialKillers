@@ -16,9 +16,9 @@
  * Public: No
  */
 
-params ["_marker", ["_decayHalfTime", 10]];
+params ["_marker", ["_decayHalfTime", 10], ["_local", false]];
 
 // How much decay will be applied every 15 seconds
 private _decayRate = 1/(_decayHalfTime * 4 * 2);
 
-[_marker, _decayRate] call FUNC(markerDecayLoop);
+[_marker, _decayRate, _local] call FUNC(markerDecayLoop);

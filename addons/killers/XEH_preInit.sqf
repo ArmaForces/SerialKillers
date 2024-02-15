@@ -2,11 +2,12 @@
 ADDON = false;
 #include "XEH_PREP.hpp"
 
-GVAR(killersStartPositionsMarkers) = [];
+#include "initSettings.inc.sqf"
 
-if (isServer) then {
-    call FUNC(initKillersBase);
-    call FUNC(initKillersStashes);
-};
+// Killswitch
+if (!EGVAR(common,enabled)) exitWith {};
+
+GVAR(killersRespawnMarker) = "";
+GVAR(stashes) = [];
 
 ADDON = true;

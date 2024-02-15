@@ -5,14 +5,6 @@
             <English>SerialKillers - Civilian</English>
             <Polish>SerialKillers - Cywile</Polish>
         </Key>
-        <Key ID="STR_AFSK_Civilian_EmptyVehiclesLimit">
-            <English>Civilian vehicles limit</English>
-            <Polish>Limit pojazdów cywilnych</Polish>
-        </Key>
-        <Key ID="STR_AFSK_Civilian_EmptyVehiclesLimit_Description">
-            <English>Controls how much civilian vehicles will be created on the whole map.</English>
-            <Polish>Ustala jak dużo pojazdów cywilnych będzie utworzonych na całej mapie.</Polish>
-        </Key>
         <Key ID="STR_AFSK_Civilian_Civilian_Killed_In_City">
             <English>Civilian was killed at %1 in %2!</English>
             <Polish>Cywil został zabity o godzinie %1 w %2!</Polish>
@@ -20,6 +12,14 @@
         <Key ID="STR_AFSK_Civilian_Civilian_Killed_Near_City">
             <English>Civilian was killed at %1 near %2!</English>
             <Polish>Cywil został zabity o godzinie %1 w pobliżu %2!</Polish>
+        </Key>
+        <Key ID="STR_AFSK_Civilian_InitialCiviliansCount">
+            <English>Civilians count</English>
+            <Polish>Liczba cywili</Polish>
+        </Key>
+        <Key ID="STR_AFSK_Civilian_InitialCiviliansCount_Description">
+            <English>Number of generated civilians on mission startup. Final number will be in +-10% range. Set 0 to randomize between 100-200.</English>
+            <Polish>Liczba generowanych cywili na starcie misji. Właściwa liczba będzie z przedziału +-10%. Losowana z przedziału 100-200 gdy ustawienie jest równe 0.</Polish>
         </Key>
         <Key ID="STR_AFSK_Civilian_Low">
             <English>Low</English>

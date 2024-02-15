@@ -12,7 +12,7 @@ if sys.version_info.major == 2:
     open = codecs.open
 
 def validKeyWordAfterCode(content, index):
-    keyWords = ["for", "do", "count", "each", "forEach", "else", "and", "not", "isEqualTo", "in", "call", "spawn", "execVM", "catch", "param", "select", "apply"];
+    keyWords = ["for", "do", "count", "each", "forEach", "else", "and", "not", "isEqualTo", "isNotEqualTo", "in", "call", "spawn", "execVM", "catch", "param", "select", "apply"];
     for word in keyWords:
         try:
             subWord = content.index(word, index, index+len(word))

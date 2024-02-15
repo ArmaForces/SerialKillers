@@ -17,6 +17,10 @@
             <English>Has helipad</English>
             <Polish>Posiada lądowisko dla helikoptera</Polish>
         </Key>
+        <Key ID="STR_AFSK_Modules_Killers_Base">
+            <English>Killers Base</English>
+            <Polish>Baza Zabójców</Polish>
+        </Key>
         <Key ID="STR_AFSK_Modules_Killers_Start">
             <English>Killers Start</English>
             <Polish>Start Zabójców</Polish>
@@ -24,6 +28,10 @@
         <Key ID="STR_AFSK_Modules_Killers_Stash">
             <English>Killers Weapon Stash</English>
             <Polish>Skład broni zabójców</Polish>
+        </Key>
+        <Key ID="STR_AFSK_Modules_Jail">
+            <English>Jail</English>
+            <Polish>Więzienie</Polish>
         </Key>
     </Package>
 </Project>

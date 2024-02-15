@@ -24,13 +24,18 @@ private _time = [daytime] call BIS_fnc_timeToString;
 GVAR(policeScore) = GVAR(policeScore) + _scoreChange;
 publicVariable QGVAR(policeScore);
 
+// For display purposes using properly set-up sector modules
+[WEST, _scoreChange] call BIS_fnc_respawnTickets;
+
 GVAR(policeScoreChange) = GVAR(policeScoreChange) + _scoreChange;
 publicVariable QGVAR(policeScoreChange);
+
+// Save change time
+GVAR(policeScoreLastChangeTime) = CBA_missionTime;
+
 [{
     if (GVAR(policeScoreChange) isEqualTo (_this select 0)) then {
         GVAR(policeScoreChange) = 0;
         publicVariable QGVAR(policeScoreChange);
     };
 }, [GVAR(policeScoreChange)], 5] call CBA_fnc_waitAndExecute;
-
-[_reason] call FUNC(showScore);

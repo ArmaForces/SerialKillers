@@ -43,19 +43,23 @@ if (playerSide isEqualTo WEST) then {
 {
     private _killer = _x;
     private _hidden = !([_killer] call EFUNC(common,appearsArmed));
-    private _marker = _killer getVariable [QGVAR(marker), ""];
+
     // Check if player should be able to see killer's marker
-    if (playerSide isEqualTo EAST || {_hidden}) then {
-        if (_marker isEqualTo "") then {
-            _marker = [_killer, _hidden] call FUNC(createKillerMarker);
-        } else {
-            _marker setMarkerPosLocal (position _killer);
-        };
-        if (_hidden) then {
-            _marker setMarkerColorLocal "ColorGreen";
-        };
+    // Player must:
+    // 1. either be EAST (other killer)
+    // 2a. or a killer must appear as unarmed
+    // 2b. and not be in prison, or recently freed from prison
+    if (playerSide isEqualTo EAST) then {
+        [_killer, _hidden] call FUNC(createOrUpdateKillerMarker);
     } else {
-        if !(playerSide isEqualTo EAST && {!(_marker isEqualTo "")}) then {
+        private _isOrWasImprisoned = [_killer] call EFUNC(jail,isHandcuffed)
+                                    || {_killer getVariable [QEGVAR(jail,wasImprisonedRecently), false]};
+
+        if (_hidden && {!_isOrWasImprisoned}) exitWith {
+            [_killer, _hidden] call FUNC(createOrUpdateKillerMarker);
+        };
+
+        if !(_marker isEqualTo "") then {
             [_killer] call FUNC(deleteUnitMarker);
         };
     };

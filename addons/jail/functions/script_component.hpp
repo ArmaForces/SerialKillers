@@ -1,0 +1,1 @@
+#include "\z\afsk\addons\jail\script_component.hpp"

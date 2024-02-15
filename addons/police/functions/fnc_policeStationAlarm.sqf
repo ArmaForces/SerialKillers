@@ -17,12 +17,12 @@
 
 params ["_object"];
 
-titleText [LSTRING(Bad_Idea), "PLAIN", 5];
+titleText [LLSTRING(Bad_Idea), "PLAIN", 5];
 
 private _nearestTown = [_object] call EFUNC(common,getNearestCityLocation);
-private _msg = format [LSTRING(Alarm), text _nearestTown];
+private _msg = format [LLSTRING(Alarm), text _nearestTown];
 
 // Show sideChat message to all cops.
 [{
-    [QGVAR(showMsg), _this] call CBA_fnc_globalEvent;
-}, [_msg], random(5)] call CBA_fnc_waitAndExecute;
+    [QEGVAR(common,showSideChatMsg), _this] call CBA_fnc_globalEvent;
+}, [WEST, _msg], random(5)] call CBA_fnc_waitAndExecute;
