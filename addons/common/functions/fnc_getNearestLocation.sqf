@@ -27,6 +27,7 @@ if (_pos isEqualType objNull) then {
 
 // Get nearest locations to object.
 private _locations = nearestLocations [_pos, GVAR(allLocationTypes), _searchRadius];
-diag_log format ["[AFSK] [COMMON] [getNearestLocation] Pos: %1, Location: %2", _pos, _locations param [0, locationNull]];
+TRACE_2("(getNearestLocation) Pos: %1, Location: %2", _pos, _locations param [0, locationNull]);
+
 // Select nearest location from array.
 _locations param [0, locationNull]
