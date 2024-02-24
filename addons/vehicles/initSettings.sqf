@@ -74,3 +74,25 @@
     {},
     true
 ] call CBA_fnc_addSetting;
+
+[
+    QGVAR(alarmCopsNotification),
+    "LIST",
+    [LSTRING(AlarmCopsNotification), LSTRING(AlarmCopsNotification_Description)],
+    [LSTRING(DisplayName), LSTRING(CarAlarm)],
+    [[1, 2, 3], [LSTRING(Always), LSTRING(IfCiviliansNearby), LSTRING(Never)], 1],
+    true,
+    {},
+    true
+] call CBA_fnc_addSetting;
+
+[
+    QGVAR(alarmCopsNotificationDelay),
+    "SLIDER",
+    [LSTRING(AlarmCopsNotificationDelay), LSTRING(AlarmCopsNotificationDelay_Description)],
+    [LSTRING(DisplayName), LSTRING(CarAlarm)],
+    [0, 300, 30, 1],
+    true,
+    {},
+    true
+] call CBA_fnc_addSetting;
