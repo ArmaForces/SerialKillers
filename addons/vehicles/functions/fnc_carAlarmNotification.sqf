@@ -1,7 +1,7 @@
 #include "script_component.hpp"
 /*
  * Author: 3Mydlo3
- * Displays notification of a car alarm according to configured settings.
+ * Sends notification of a car alarm according to configured settings.
  *
  * Arguments:
  * 0: Vehicle which has alarm going off <OBJECT>
@@ -16,6 +16,8 @@
  */
 
 params ["_vehicle"];
+
+if (!isServer) exitWith {};
 
 // No notification
 if (GVAR(alarmCopsNotification) isEqualTo 3) exitWith { false };
@@ -35,7 +37,7 @@ private _notify = if (GVAR(alarmCopsNotification) isEqualTo 1) then {
 if (_notify) exitWith {
     LOG("Cops are notified about a car alarm.");
 
-    [QEGVAR(common,showSideChatMsg), [WEST, _this call FUNC(vehicleStolenMsg)]] call CBA_fnc_localEvent;
+    [QEGVAR(common,showSideChatMsg), [WEST, _this call FUNC(vehicleStolenMsg)]] call CBA_fnc_globalEvent;
 
     true
 };
