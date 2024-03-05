@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="AFSK">
+    <Package name="CUP_Maps">
+        <Key ID="STR_AFSK_CUP_Maps_DisplayName">
+            <English>SerialKillers - CUP Maps</English>
+            <Polish>SerialKillers - CUP Maps</Polish>
+        </Key>
+        <Key ID="STR_AFSK_CUP_Maps_LowerBerezino">
+            <English>Lower Berezino</English>
+            <Polish>Dolne Berezino</Polish>
+        </Key>
+    </Package>
+</Project>
