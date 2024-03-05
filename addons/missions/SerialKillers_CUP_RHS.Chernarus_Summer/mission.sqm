@@ -6270,10 +6270,10 @@ class Mission
 					dataType="Logic";
 					class PositionInfo
 					{
-						position[]={10486.129,6.1020002,2351.019};
-						angles[]={0,2.566437,0};
+						position[]={10489.212,6,2348.9338};
+						angles[]={-0,5.6730065,0};
 					};
-					areaSize[]={16.025999,0,19.535};
+					areaSize[]={16.025999,0,18.291454};
 					areaIsRectangle=1;
 					flags=1;
 					id=2735;
@@ -6711,7 +6711,7 @@ class Mission
 							dataType="Object";
 							class PositionInfo
 							{
-								position[]={10484.61,6,2340.1753};
+								position[]={10485.351,6.0005002,2339.1106};
 								angles[]={0,0.96510011,0};
 							};
 							side="Empty";
@@ -6728,7 +6728,7 @@ class Mission
 							dataType="Object";
 							class PositionInfo
 							{
-								position[]={10498.589,6.0005002,2352.0034};
+								position[]={10499.18,6.0005002,2351.3823};
 								angles[]={0,3.8291993,0};
 							};
 							side="Empty";
