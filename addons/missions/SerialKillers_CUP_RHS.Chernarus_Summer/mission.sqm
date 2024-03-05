@@ -5957,7 +5957,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="if (isServer) then {" \n "[] spawn {" \n " sleep 60; " \n " waitUntil {afsk_score_policeScore >= 30}; " \n " createVehicleCrew police_uav; " \n " [[WEST, ""HQ""], ""US_1mc_use_uav_01""] remoteExec [""SideRadio"",0]; " \n " [[EAST, ""HQ""], [""RU_1mc_enemy_uav_01"",""RU_1mc_enemy_uav_02""] call BIS_fnc_SelectRandom] remoteExec [""SideRadio"",0]; " \n "};" \n "};";
+				init="if (isServer) then {" \n "  [{afsk_score_policeScore > 29}, {" \n "    createVehicleCrew police_uav;" \n "  }] call CBA_fnc_waitUntilAndExecute;" \n "};";
 				name="police_uav";
 				reportRemoteTargets=1;
 				reportOwnPosition=1;
