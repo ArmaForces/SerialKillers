@@ -16,8 +16,6 @@
  * Public: No
  */
 
-#define SPAWNPOINT_SAFEZONE 5
-
 params ["_vehicleClassname", "_spawner"];
 
 private _vehicleType = (_vehicleClassname call BIS_fnc_objectType) select 1;

@@ -12,3 +12,6 @@
 #endif
 
 #include "\z\afsk\addons\main\script_macros.hpp"
+
+// Safezone for vehicle spawn points
+#define SPAWNPOINT_SAFEZONE 5
