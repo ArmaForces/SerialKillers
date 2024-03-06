@@ -14,7 +14,7 @@ class CfgWorlds
                 radiusA = 200;
                 radiusB = 200;
                 speech[] = { "Berezino" };
-                type = "NameCity";
+                type = "NameVillage";
             };
         };
     };
@@ -31,7 +31,7 @@ class CfgWorlds
                 radiusA = 200;
                 radiusB = 200;
                 speech[] = { "Berezino" };
-                type = "NameCity";
+                type = "NameVillage";
             };
         };
     };
@@ -48,7 +48,7 @@ class CfgWorlds
                 radiusA = 200;
                 radiusB = 200;
                 speech[] = { "Berezino" };
-                type = "NameCity";
+                type = "NameVillage";
             };
         };
     };
