@@ -25,6 +25,22 @@ if (isServer) then {
     GVAR(musicQueue) = [];
 
     GVAR(cities) = call FUNC(getAllMapCities);
+
+#ifdef DEV_DEBUG
+    {
+      private _position = getArray (_x >> "position");
+      private _radiusA = getNumber (_x >> "radiusA");
+      private _radiusB = getNumber (_x >> "radiusB");
+      private _angle = getNumber (_x >> "angle");
+
+      private _marker = createMarkerLocal [configName _x, _position];
+      _marker setMarkerShapeLocal "ELLIPSE";
+      _marker setMarkerAlphaLocal 0.5;
+      _marker setMarkerColorLocal "ColorCIVILIAN";
+      _marker setMarkerSizeLocal [_radiusA, _radiusB];
+      _marker setMarkerDir _angle
+    } forEach GVAR(cities);
+#endif
 };
 
 ADDON = true;
