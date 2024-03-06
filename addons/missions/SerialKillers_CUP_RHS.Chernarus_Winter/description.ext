@@ -19,3 +19,5 @@ respawnDelay = 20;
 respawnOnStart = -1;
 respawnTemplatesWest[] = {"MenuPosition", "Counter"};
 respawnTemplatesEast[] = {"Base", "Counter"};
+
+#include "CfgSerialKillers.hpp"

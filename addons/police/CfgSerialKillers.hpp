@@ -2,6 +2,6 @@ class CfgSerialKillers
 {
     class Police
     {
-        FlagClassName = "Flag_US_F";
+        FlagClassName = "Flag_Gendarmerie_F";
     };
 };
