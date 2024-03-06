@@ -4,6 +4,9 @@ ADDON = false;
 
 GVAR(enabled) = ("SK" isEqualTo (getText (missionConfigFile >> "Header" >> "gameType")));
 
+// Killswitch
+if (!GVAR(enabled)) exitWith {};
+
 GVAR(ACE_Loaded) = isClass (configFile >> "CfgPatches" >> "ace_common");
 GVAR(ACRE_Loaded) = isClass (configFile >> "CfgPatches" >> "acre_main");
 GVAR(AFFT_Loaded) = isClass (configFile >> "CfgPatches" >> "afft_main");
