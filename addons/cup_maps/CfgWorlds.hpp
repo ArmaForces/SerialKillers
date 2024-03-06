@@ -6,6 +6,17 @@ class CfgWorlds
     {
         class Names
         {
+            class vill_NorthernBalota
+            {
+                angle = 0;
+                name = CSTRING(NorthernBalota);
+                position[] = { 4880, 2830 };
+                radiusA = 100;
+                radiusB = 100;
+                speech[] = { "Balota" };
+                type = "NameVillage";
+            };
+
             class vill_LowerBerezino
             {
                 angle = 0;
@@ -23,6 +34,17 @@ class CfgWorlds
     {
         class Names
         {
+            class vill_NorthernBalota
+            {
+                angle = 0;
+                name = CSTRING(NorthernBalota);
+                position[] = { 4880, 2830 };
+                radiusA = 100;
+                radiusB = 100;
+                speech[] = { "Balota" };
+                type = "NameVillage";
+            };
+
             class vill_LowerBerezino
             {
                 angle = 0;
@@ -40,6 +62,17 @@ class CfgWorlds
     {
         class Names
         {
+            class vill_NorthernBalota
+            {
+                angle = 0;
+                name = CSTRING(NorthernBalota);
+                position[] = { 4880, 2830 };
+                radiusA = 100;
+                radiusB = 100;
+                speech[] = { "Balota" };
+                type = "NameVillage";
+            };
+
             class vill_LowerBerezino
             {
                 angle = 0;
