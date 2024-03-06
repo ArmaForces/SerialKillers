@@ -22,7 +22,7 @@ if !(isServer) exitWith {};
 private _baseName = _logic getVariable ["LocationName", str random(999)];
 private _hasHelipad = _logic getVariable ["HasHelipad", false];
 private _basePos = getPos _logic;
-private _flag = createVehicle ["Flag_US_F", _basePos, [], 0, "NONE"];
+private _flag = createVehicle [GVAR(FlagClassname), _basePos, [], 0, "NONE"];
 _flag setVariable ["policeStation", _logic, true];
 
 // Init arsenal
