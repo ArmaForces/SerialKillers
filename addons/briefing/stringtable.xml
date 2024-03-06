@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="AFSK">
+    <Package name="Briefing">
+        <Key ID="STR_AFSK_Briefing_DisplayName">
+            <English>SerialKillers - Briefing</English>
+            <Polish>SerialKillers - Odprawa</Polish>
+        </Key>
+    </Package>
+</Project>
