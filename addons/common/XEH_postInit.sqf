@@ -1,5 +1,8 @@
 #include "script_component.hpp"
 
+// Killswitch
+if (!EGVAR(common,enabled)) exitWith {};
+
 [QGVAR(playMusic), {
     playMusic (_this select 0);
 }] call CBA_fnc_addEventHandler;
