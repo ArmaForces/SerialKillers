@@ -42,7 +42,7 @@ if (isServer) then {
     GVAR(uniforms) = [];
     GVAR(vests) = [];
     GVAR(headgear) = [];
-    call FUNC(initCiviliansConfig);
+    call FUNC(initConfig);
     publicVariable QGVAR(backpacks);
     publicVariable QGVAR(uniforms);
     publicVariable QGVAR(vests);
