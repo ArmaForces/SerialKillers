@@ -65,6 +65,10 @@ if (_emptySpawnPointIndex isNotEqualTo -1) then {
     };
 };
 
+if (_position isNotEqualTo []) then {
+    _position = _position findEmptyPosition [0, SPAWNPOINT_SAFEZONE, _vehicleClassname];
+};
+
 // Show message if no empty spawn position
 if (_position isEqualTo []) exitWith {
     private _baseName = (_spawner getVariable "policeStation") getVariable "LocationName";
