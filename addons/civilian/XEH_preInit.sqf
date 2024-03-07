@@ -32,7 +32,24 @@ if (isServer) then {
 
     // Initialize all cities found on the map
     {
-        GVAR(cities) pushBack ([_x] call FUNC(initCity));
+        private _city = [_x] call FUNC(initCity);
+        GVAR(cities) pushBack _city;
+
+#ifdef DEV_DEBUG
+        private _cityArea = _city getVariable QGVAR(cityArea);
+        _cityArea params ["_position", "_radiusA", "_radiusB", "_angle"];
+
+        private _marker = createMarkerLocal [configName _x, _position];
+        _marker setMarkerShapeLocal "ELLIPSE";
+        _marker setMarkerAlphaLocal 0.5;
+        _marker setMarkerColorLocal "ColorCIVILIAN";
+        _marker setMarkerSizeLocal [_radiusA, _radiusB];
+        _marker setMarkerDir _angle;
+
+        private _centerMarker = createMarkerLocal [format["center_%1", configName _x], _position];
+        _centerMarker setMarkerColorLocal "ColorCIVILIAN";
+        _centerMarker setMarkerType "mil_dot";
+#endif
     } forEach EGVAR(common,cities);
     publicVariable QGVAR(cities);
 
