@@ -29,10 +29,15 @@ while {_i > 0} do {
         private _nearestCity = [_pos, MAX_DISTANCE_TO_NEAREST_CITY] call FUNC(getNearestCity);
         if (_nearestCity isEqualTo objNull) exitWith {};
 
-        private _nearestCityType = _nearestCity getVariable [QGVAR(cityType), "NameVillage"];
-        private _cityPosition = _nearestCity getVariable [QGVAR(position), [0, 0, 0]];
-        private _maxAllowedDistance = if (_nearestCityType isEqualTo "NameVillage") then { MAX_DISTANCE_TO_VILLAGE } else { MAX_DISTANCE_TO_NEAREST_CITY };
-        if (_pos distance _cityPosition > _maxAllowedDistance) exitWith {};
+        // TODO: Add configuration whether civilians should be created in cities only
+        private _nearestCityArea = _nearestCity getVariable QGVAR(cityArea);
+        if !(_pos inArea _nearestCityArea) exitWith {};
+
+        // TODO: Handle alternative algorithm a bit better
+        // private _nearestCityType = _nearestCity getVariable [QGVAR(cityType), "NameVillage"];
+        // private _cityPosition = _nearestCity getVariable [QGVAR(position), [0, 0, 0]];
+        // private _maxAllowedDistance = if (_nearestCityType isEqualTo "NameVillage") then { MAX_DISTANCE_TO_VILLAGE } else { MAX_DISTANCE_TO_NEAREST_CITY };
+        // if (_pos distance _cityPosition > _maxAllowedDistance) exitWith {};
 
         private _nearbyCivilians = _pos nearEntities ["Man", 100];
         private _nearbyCiviliansCount = count _nearbyCivilians;
@@ -40,12 +45,5 @@ while {_i > 0} do {
 
         [_pos] call FUNC(createCivilian);
         _i = _i - 1;
-
-        // TODO: Add configuration whether civilians should be created in cities only
-        private _nearestCityArea = _nearestCity getVariable QGVAR(cityArea);
-        if (_pos inArea _nearestCityArea) then {
-            [_pos] call FUNC(createCivilian);
-            _i = _i - 1;
-        };
     };
 };
