@@ -48,6 +48,7 @@ if (isServer) then {
 
         private _centerMarker = createMarkerLocal [format["center_%1", configName _x], _position];
         _centerMarker setMarkerColorLocal "ColorCIVILIAN";
+        _centerMarker setMarkerSizeLocal [0.25, 0.25];
         _centerMarker setMarkerType "mil_dot";
 #endif
     } forEach EGVAR(common,cities);
