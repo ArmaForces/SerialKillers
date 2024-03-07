@@ -40,7 +40,7 @@ _cityNamespace setVariable [QGVAR(Position), _cityPosition, true];
 
 private _radiusA = getNumber (_cityLocationConfig >> 'radiusA');
 private _radiusB = getNumber (_cityLocationConfig >> 'radiusB');
-private _angle = getNumber (_cityLocationConfig << 'angle');
+private _angle = getNumber (_cityLocationConfig >> 'angle');
 private _cityArea = [_cityPosition, _radiusA, _radiusB, _angle, IS_CITY_RECTANGLE];
 private _cityAreaForRandomPos = [_cityPosition, [_radiusA, _radiusB, _angle, IS_CITY_RECTANGLE]];
 _cityNamespace setVariable [QGVAR(cityArea), _cityArea];
