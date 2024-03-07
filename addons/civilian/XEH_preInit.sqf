@@ -24,12 +24,6 @@ if (isServer) then {
     };
     publicVariable QGVAR(initialCiviliansCount);
 
-    // Weights for civilians creation
-    GVAR(weightCapital) = ceil (random (10));
-    GVAR(weightCity) = ceil (random (8));
-    GVAR(weightVillage) = ceil (random (6));
-    GVAR(weightRural) = ceil (random (10));
-
     // Initialize all cities found on the map
     {
         private _city = [_x] call FUNC(initCity);
