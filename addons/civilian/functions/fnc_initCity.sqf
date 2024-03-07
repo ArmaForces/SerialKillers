@@ -36,6 +36,11 @@ _cityNamespace setVariable [QGVAR(cityType), _cityType, true];
 // Set city position and area variables
 private _cityPosition = (position _cityLocation);
 _cityPosition set [2, 0]; // Location position has negative third coordinate
+private _positionOffset = getArray (_cityLocationConfig >> 'positionOffset');
+if (_positionOffset isNotEqualTo []) then {
+    _cityPosition = _cityPosition vectorAdd _positionOffset;
+};
+
 _cityNamespace setVariable [QGVAR(Position), _cityPosition, true];
 
 private _radiusA = getNumber (_cityLocationConfig >> 'radiusA');
