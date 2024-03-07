@@ -1,7 +1,7 @@
 #include "script_component.hpp"
 /*
  * Author: 3Mydlo3
- * Function initializes civilians on whole map.
+ * Function initializes civilians in cities only.
  *
  * Arguments:
  * None
@@ -22,7 +22,12 @@ while {_i > 0} do {
     if (!(_pos isEqualTo [])) then {
         private _nearestCity = [_pos, 1500] call FUNC(getNearestCity);
         if (_nearestCity isEqualTo objNull) exitWith {};
-        [_pos] call FUNC(createCivilian);
-        _i = _i - 1;
+
+        // TODO: Add configuration whether civilians should be created in cities only
+        private _nearestCityArea = _nearestCity getVariable QGVAR(cityArea);
+        if (_pos inArea _nearestCityArea) then {
+            [_pos] call FUNC(createCivilian);
+            _i = _i - 1;
+        };
     };
 };

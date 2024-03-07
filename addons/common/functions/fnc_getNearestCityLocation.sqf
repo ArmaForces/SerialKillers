@@ -27,6 +27,6 @@ if (_pos isEqualType objNull) then {
 
 // Get nearest locations to object.
 private _towns = nearestLocations [_pos, ["NameVillage", "NameCity", "NameCityCapital"], _searchRadius];
-diag_log format ["[AFSK] [COMMON] [getNearestLocation] Pos: %1, Town: %2", _pos, _towns param [0, locationNull]];
+TRACE_2("Nearest location for pos: %1 is location: %2", _pos, _towns param [0, locationNull]);
 // Select nearest location from array.
 _towns param [0, locationNull]

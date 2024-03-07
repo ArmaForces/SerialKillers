@@ -15,6 +15,8 @@
  * Public: No
  */
 
+#define IS_CITY_RECTANGLE false
+
 params ["_cityLocation"];
 
 if (_cityLocation isEqualType configNull) then {
@@ -35,8 +37,14 @@ _cityNamespace setVariable [QGVAR(cityType), _cityType, true];
 private _cityPosition = (position _cityLocation);
 _cityPosition set [2, 0]; // Location position has negative third coordinate
 _cityNamespace setVariable [QGVAR(Position), _cityPosition, true];
-private _cityArea = [_cityPosition, [getNumber (_cityLocationConfig >> 'radiusA'), getNumber (_cityLocationConfig >> 'radiusB'), 0, false]];
+
+private _radiusA = getNumber (_cityLocationConfig >> 'radiusA');
+private _radiusB = getNumber (_cityLocationConfig >> 'radiusB');
+private _angle = getNumber (_cityLocationConfig << 'angle');
+private _cityArea = [_cityPosition, _radiusA, _radiusB, _angle, IS_CITY_RECTANGLE];
+private _cityAreaForRandomPos = [_cityPosition, [_radiusA, _radiusB, _angle, IS_CITY_RECTANGLE]];
 _cityNamespace setVariable [QGVAR(cityArea), _cityArea];
+_cityNamespace setVariable [QGVAR(cityAreaForRandomPos), _cityAreaForRandomPos];
 
 // Create city civilians variables
 _cityNamespace setVariable [QGVAR(CiviliansList), []];
