@@ -2,7 +2,7 @@
 ADDON = false;
 #include "XEH_PREP.hpp"
 
-GVAR(enabled) = ("SK" isEqualTo (getText (missionConfigFile >> "Header" >> "gameType")));
+GVAR(enabled) = (SK_GAME_TYPE isEqualTo (getText (missionConfigFile >> "Header" >> "gameType")));
 
 // Killswitch
 if (!GVAR(enabled)) exitWith {};

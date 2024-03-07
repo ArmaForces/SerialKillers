@@ -1,9 +1,9 @@
 class CfgMPGameTypes {
-    class SK {
+    class SK_GAME_TYPE {
         description = "";
         id = 33;
         name = "SerialKillers";
         picture = "";
-        shortcut = "SK";
+        shortcut = QUOTE(SK_GAME_TYPE);
     };
 };

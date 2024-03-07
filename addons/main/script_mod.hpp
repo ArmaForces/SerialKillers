@@ -20,3 +20,6 @@
 #else
     #define LINKFUNC(x) FUNC(x)
 #endif
+
+// Mod-wide macros
+#define SK_GAME_TYPE SK
