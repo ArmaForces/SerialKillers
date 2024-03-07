@@ -16,8 +16,6 @@
  * Public: No
  */
 
-#define SPAWNPOINT_SAFEZONE 5
-
 params ["_vehicleClassname", "_spawner"];
 
 private _vehicleType = (_vehicleClassname call BIS_fnc_objectType) select 1;
@@ -63,6 +61,10 @@ if (_emptySpawnPointIndex isNotEqualTo -1) then {
         _position = getPos _spawnPoint;
         _direction = getDir _spawnPoint;
     };
+};
+
+if (_position isNotEqualTo []) then {
+    _position = _position findEmptyPosition [0, SPAWNPOINT_SAFEZONE, _vehicleClassname];
 };
 
 // Show message if no empty spawn position
