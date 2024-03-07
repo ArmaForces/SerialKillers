@@ -16,6 +16,17 @@
  * Public: No
  */
 
+#define DEFAULT_SEARCH_RADIUS 500
+
 params ["_group"];
 
-[position leader _group] call EFUNC(civilian,getNearestVehicle);
+private _filterFunction = {
+    params ["_vehicle"];
+
+    if (_vehicle getVariable [QEGVAR(police,isPoliceVehicle), false]) exitWith { false };
+    // TODO: Optionally filter for blacklisted areas
+
+    true
+};
+
+[position leader _group, DEFAULT_SEARCH_RADIUS, _filterFunction] call EFUNC(civilian,getNearestVehicle);
