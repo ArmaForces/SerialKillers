@@ -21,6 +21,14 @@
             <English>Number of generated civilians on mission startup. Final number will be in +-10% range. Set 0 to randomize between 100-200.</English>
             <Polish>Liczba generowanych cywili na starcie misji. Właściwa liczba będzie z przedziału +-10%. Losowana z przedziału 100-200 gdy ustawienie jest równe 0.</Polish>
         </Key>
+        <Key ID="STR_AFSK_Civilian_RespectCityArea">
+            <English>Respect city area</English>
+            <Polish>Respektuj obszar miasta</Polish>
+        </Key>
+        <Key ID="STR_AFSK_Civilian_RespectCityArea_Description">
+            <English>Civilians will be spawned in cities area as defined in map location configuration.</English>
+            <Polish>Cywile będą spawnowani w miastach o obszarze zdefiniowanym w konfiguracji lokacji mapy.</Polish>
+        </Key>
         <Key ID="STR_AFSK_Civilian_Low">
             <English>Low</English>
             <Polish>Mało</Polish>
