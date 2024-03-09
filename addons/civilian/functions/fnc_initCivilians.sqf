@@ -71,34 +71,3 @@ while {_i > 0} do {
     [_pos] call FUNC(createCivilian);
     _i = _i - 1;
 };
-
-// while {_i > 0} do {
-//     private _pos = [nil, NEAR_ROAD, ALLOW_ON_ROAD, NEAR_BUILDINGS] call EFUNC(common,getRandomPos);
-//     if (!(_pos isEqualTo [])) then {
-//         private _nearestCity = [_pos, MAX_DISTANCE_TO_NEAREST_CITY] call FUNC(getNearestCity);
-//         if (_nearestCity isEqualTo objNull) exitWith {};
-
-//         if (GVAR(respectCityArea)) then {
-//             private _nearestCityArea = _nearestCity getVariable QGVAR(cityArea);
-//             if !(_pos inArea _nearestCityArea) exitWith {
-//                 _pos = [];
-//             };
-//         } else {
-//             private _nearestCityType = _nearestCity getVariable [QGVAR(cityType), "NameVillage"];
-//             private _cityPosition = _nearestCity getVariable [QGVAR(position), [0, 0, 0]];
-//             private _maxAllowedDistance = if (_nearestCityType isEqualTo "NameVillage") then { MAX_DISTANCE_TO_VILLAGE } else { MAX_DISTANCE_TO_NEAREST_CITY };
-//             if (_pos distance _cityPosition > _maxAllowedDistance) exitWith {
-//                 _pos = [];
-//             };
-//         };
-
-//         if (_pos isEqualTo []) exitWith {};
-
-//         private _nearbyCivilians = _pos nearEntities ["Man", 100];
-//         private _nearbyCiviliansCount = count _nearbyCivilians;
-//         if (_nearbyCiviliansCount >= 2 && {(random 1) - _nearbyCiviliansCount * 0.05 > 0.1}) exitWith {};
-
-//         [_pos] call FUNC(createCivilian);
-//         _i = _i - 1;
-//     };
-// };
