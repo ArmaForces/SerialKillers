@@ -1,3 +1,4 @@
+/* Civilians placement */
 [
     QGVAR(initialCiviliansCount),
     "SLIDER",
@@ -9,6 +10,40 @@
     true
 ] call CBA_fnc_addSetting;
 
+[
+    QGVAR(villageCiviliansWeightMultiplier),
+    "SLIDER",
+    [LSTRING(VillageCiviliansWeightMultiplier), LSTRING(VillageCiviliansWeightMultiplier_Description)],
+    [LSTRING(DisplayName), localize "str_civilian"],
+    [0, 20, 1, 0],
+    true,
+    {},
+    true
+] call CBA_fnc_addSetting;
+
+[
+    QGVAR(cityCiviliansWeightMultiplier),
+    "SLIDER",
+    [LSTRING(CityCiviliansWeightMultiplier), LSTRING(CityCiviliansWeightMultiplier_Description)],
+    [LSTRING(DisplayName), localize "str_civilian"],
+    [0, 20, 4, 0],
+    true,
+    {},
+    true
+] call CBA_fnc_addSetting;
+
+[
+    QGVAR(cityCapitalCiviliansWeightMultiplier),
+    "SLIDER",
+    [LSTRING(CityCapitalCiviliansWeightMultiplier), LSTRING(CityCapitalCiviliansWeightMultiplier_Description)],
+    [LSTRING(DisplayName), localize "str_civilian"],
+    [0, 20, 6, 0],
+    true,
+    {},
+    true
+] call CBA_fnc_addSetting;
+
+/* Location Area */
 [
     QGVAR(respectCityArea),
     "CHECKBOX",

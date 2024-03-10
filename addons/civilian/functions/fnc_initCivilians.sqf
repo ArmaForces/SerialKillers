@@ -32,9 +32,9 @@ private _cityWeightsArray = _cities apply {
     private _cityType = _x getVariable [QGVAR(cityType), "NameVillage"];
     // TODO: Configurable multipliers?
     private _cityTypeMultiplier = switch (_cityType) do {
-        case "NameVillage": { GVAR(VillageCiviliansMultiplier) };
-        case "NameCity": { GVAR(CityCiviliansMultiplier) };
-        case "NameCityCapital": { GVAR(CapitalCiviliansMultiplier) };
+        case "NameVillage": { GVAR(villageCiviliansWeightMultiplier) };
+        case "NameCity": { GVAR(cityCiviliansWeightMultiplier) };
+        case "NameCityCapital": { GVAR(cityCapitalCiviliansWeightMultiplier) };
         default { 0 };
     };
 

@@ -7,10 +7,6 @@ ADDON = false;
 // Killswitch
 if (!EGVAR(common,enabled)) exitWith {};
 
-GVAR(VillageCiviliansMultiplier) = 1;
-GVAR(CityCiviliansMultiplier) = 4;
-GVAR(CapitalCiviliansMultiplier) = 6;
-
 if (isServer) then {
     // Create namespace for linking location classname with city
     GVAR(citiesLocations) = true call CBA_fnc_createNamespace;
