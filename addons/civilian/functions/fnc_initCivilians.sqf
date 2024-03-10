@@ -30,7 +30,6 @@ private _cityWeightsArray = _cities apply {
     private _area = _radiusA * _radiusB; // We can omit the PI as it's a const and we'll just compare all the values
 
     private _cityType = _x getVariable [QGVAR(cityType), "NameVillage"];
-    // TODO: Configurable multipliers?
     private _cityTypeMultiplier = switch (_cityType) do {
         case "NameVillage": { GVAR(villageCiviliansWeightMultiplier) };
         case "NameCity": { GVAR(cityCiviliansWeightMultiplier) };
