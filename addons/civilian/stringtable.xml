@@ -21,6 +21,14 @@
             <English>Number of generated civilians on mission startup. Final number will be in +-10% range. Set 0 to randomize between 100-200.</English>
             <Polish>Liczba generowanych cywili na starcie misji. Właściwa liczba będzie z przedziału +-10%. Losowana z przedziału 100-200 gdy ustawienie jest równe 0.</Polish>
         </Key>
+        <Key ID="STR_AFSK_Civilian_GuaranteedCivilianInEveryLocation">
+            <English>Guaranteed civilian in every location</English>
+            <Polish>Gwarantowany cywil w każdej lokacji</Polish>
+        </Key>
+        <Key ID="STR_AFSK_Civilian_GuaranteedCivilianInEveryLocation_Description">
+            <English>If checked, every village, city and capital will have at least 1 civilian on start (if limit allows).</English>
+            <Polish>Jeżeli zaznaczone, każda wioska, miasto i stolica będą miały przynajmniej 1 cywila na start (jeżeli pozwoli na to limit).</Polish>
+        </Key>
         <Key ID="STR_AFSK_Civilian_LocationArea">
             <English>Location area</English>
             <Polish>Obszar lokacji</Polish>

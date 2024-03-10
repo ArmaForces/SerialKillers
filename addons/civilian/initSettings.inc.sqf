@@ -11,6 +11,17 @@
 ] call CBA_fnc_addSetting;
 
 [
+    QGVAR(guaranteedCivilianInEveryLocation),
+    "CHECKBOX",
+    [LSTRING(GuaranteedCivilianInEveryLocation), LSTRING(GuaranteedCivilianInEveryLocation_Description)],
+    [LSTRING(DisplayName), localize "str_civilian"],
+    false,
+    true,
+    {},
+    true
+] call CBA_fnc_addSetting;
+
+[
     QGVAR(villageCiviliansWeightMultiplier),
     "SLIDER",
     [LSTRING(VillageCiviliansWeightMultiplier), LSTRING(VillageCiviliansWeightMultiplier_Description)],

@@ -47,6 +47,23 @@ private _cityWeights = createHashMapFromArray _cityWeightsArray;
 // Spawn civilians
 private _i = GVAR(initialCiviliansCount);
 
+if (GVAR(guaranteedCivilianInEveryLocation)) then {
+    private _cityIndex = 0;
+    private _citiesCount = count _cities;
+
+    while {_cityIndex < _citiesCount && {_i > 0}} do {
+        private _city = _cities select _cityIndex;
+        private _pos = [_city, nil, NEAR_ROAD, ALLOW_ON_ROAD, NEAR_BUILDINGS] call FUNC(getCityRandomPos);
+
+        _cityIndex = _cityIndex + 1;
+
+        if (_pos isEqualTo []) then { continue };
+
+        [_pos] call FUNC(createCivilian);
+        _i = _i - 1;
+    };
+};
+
 while {_i > 0} do {
     private _citiesNames = keys _cityWeights;
     private _citiesWeights = values _cityWeights apply {_x select 1};
