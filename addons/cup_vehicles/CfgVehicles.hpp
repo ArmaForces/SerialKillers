@@ -1,17 +1,12 @@
-class CfgVehicles
-{
+class CfgVehicles {
     class Car_F;
-
-    class CUP_Lada_Base : Car_F
-    {
-        class TextureSources
-        {
-            class PolishPolice
-            {
+    class CUP_Lada_Base: Car_F {
+        class AnimationSources;
+        class TextureSources {
+            class PolishPolice {
                 DisplayName = "Polish Police";
                 author = "Renchon";
-                textures[] =
-                {
+                textures[] = {
                     QPATHTOF(assets\textures\pol57xD.paa),
                     QPATHTOF(assets\textures\lada_glass_ca5.paa)
                 };
@@ -19,17 +14,17 @@ class CfgVehicles
             };
         };
 
-
         textureList[] += { "PolishPolice", 0 };
     };
 
     class CUP_LADA_LM_Base : CUP_Lada_Base {
-        class AnimationSources;
+        class AnimationSources: AnimationSources {
+            class hideMilitiaLogo;
+        };
     };
     class CUP_LADA_LM_CIV: CUP_LADA_LM_Base {};
 
-    class GVAR(LADA_LM) : CUP_LADA_LM_CIV
-    {
+    class GVAR(LADA_LM): CUP_LADA_LM_CIV {
         faction = "BLU_GEN_F"; // TODO some own faction
 
         acceleration = 15; // 15 original
@@ -43,8 +38,7 @@ class CfgVehicles
 
     class GVAR(LADA_PolishPolice) : GVAR(LADA_LM)
     {
-        animationList[] =
-        {
+        animationList[] = {
             "hideRail", 1,
             "hideLightBar", 0,
             "hideMilitiaLogo", 1
@@ -52,22 +46,18 @@ class CfgVehicles
 
         displayName = "Fiat 125p (Policja)";
 
-        hiddenSelectionsTextures[] =
-        {
+        hiddenSelectionsTextures[] = {
             QPATHTOF(assets\textures\pol57xD.paa),
             QPATHTOF(assets\textures\lada_glass_ca5.paa)
         };
 
-        textureList[] =
-        {
+        textureList[] = {
             "PolishPolice",
             1
         };
 
-        class AnimationSources : AnimationSources
-        {
-            class hideMilitiaLogo : hideMilitiaLogo
-            {
+        class AnimationSources: AnimationSources {
+            class hideMilitiaLogo: hideMilitiaLogo {
                 initPhase = 1;
             };
         };
