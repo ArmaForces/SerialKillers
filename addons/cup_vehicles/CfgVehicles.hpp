@@ -1,8 +1,6 @@
 class CfgVehicles
 {
     class Car_F;
-    class CUP_Lada_Base;
-    class CUP_LADA_LM_Base;
 
     class CUP_Lada_Base : Car_F
     {
@@ -25,17 +23,35 @@ class CfgVehicles
         textureList[] += { "PolishPolice", 0 };
     };
 
-    class GVAR(LADA_LM) : CUP_LADA_LM_Base
+    class CUP_LADA_LM_Base : CUP_Lada_Base {
+        class AnimationSources;
+    };
+    class CUP_LADA_LM_CIV: CUP_LADA_LM_Base {};
+
+    class GVAR(LADA_LM) : CUP_LADA_LM_CIV
     {
-        acceleration = 16; // 15 original
+        faction = "BLU_GEN_F"; // TODO some own faction
+
+        acceleration = 15; // 15 original
         enginePower = 82.700001; // 56.700001 original
         peakTorque = 136; // 106 original
         idleRPM = 700; // 600 original
         maxSpeed = 213; // 156 original
+
+        // TODO: Change gears
     };
 
     class GVAR(LADA_PolishPolice) : GVAR(LADA_LM)
     {
+        animationList[] =
+        {
+            "hideRail", 1,
+            "hideLightBar", 0,
+            "hideMilitiaLogo", 1
+        };
+
+        displayName = "Fiat 125p (Policja)";
+
         hiddenSelectionsTextures[] =
         {
             QPATHTOF(assets\textures\pol57xD.paa),
@@ -46,6 +62,14 @@ class CfgVehicles
         {
             "PolishPolice",
             1
+        };
+
+        class AnimationSources : AnimationSources
+        {
+            class hideMilitiaLogo : hideMilitiaLogo
+            {
+                initPhase = 1;
+            };
         };
     };
 };
