@@ -216,7 +216,15 @@ class CfgSerialKillers
 
                 class Vehicles {
                     /* Vehicles */
-                    class B_GEN_Offroad_01_gen_F {};
+                    class EGVAR(vehicles,Hatchback_cop) {};
+                    class B_GEN_Offroad_01_gen_F
+                    {
+                        requiredScore = 10;
+                    };
+                    class EGVAR(vehicles,Hatchback_sport_cop)
+                    {
+                        requiredScore = 15;
+                    };
                     class B_G_Offroad_01_armed_F
                     {
                         requiredScore = 20;
@@ -776,12 +784,16 @@ class CfgSerialKillers
                     /* Vehicles */
                     class CUP_LADA_LM_CIV {};
                     class CUP_C_Volha_Limo_TKCIV {};
+                    class EGVAR(vehicles,Hatchback_cop)
+                    {
+                        requiredScore = 5;
+                    };
                     class B_GEN_Offroad_01_gen_F
                     {
                         requiredScore = 10;
                     };
 
-                    class C_Hatchback_01_sport_F
+                    class EGVAR(vehicles,Hatchback_sport_cop)
                     {
                         requiredScore = 15;
                     };
