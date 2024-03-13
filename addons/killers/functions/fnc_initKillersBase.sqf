@@ -24,7 +24,7 @@ _killersBase setVariable ["Teleporter", _flag, true];
 [QGVAR(createTeleport), [_flag]] call CBA_fnc_globalEventJIP;
 
 // Create arsenal
-private _box = createVehicle ["B_CargoNet_01_ammo_F", (getPos _killersBase), [], 0, "NONE"];
+private _box = createVehicle [GVAR(arsenalBoxClassName), (getPos _killersBase), [], 0, "NONE"];
 clearItemCargoGlobal _box;
 clearWeaponCargoGlobal _box;
 clearMagazineCargoGlobal _box;

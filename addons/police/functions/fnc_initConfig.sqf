@@ -18,4 +18,5 @@
 private _policeConfig = (configFile >> "CfgSerialKillers" >> "Police");
 private _missionPoliceConfig = (missionConfigFile >> "CfgSerialKillers" >> "Police");
 
+GVAR(arsenalBoxClassName) = ["ArsenalBoxClassName", _policeConfig, _missionPoliceConfig] call EFUNC(common,getTextFromConfig);
 GVAR(flagClassName) = ["FlagClassName", _policeConfig, _missionPoliceConfig] call EFUNC(common,getTextFromConfig);

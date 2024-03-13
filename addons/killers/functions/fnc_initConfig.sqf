@@ -18,4 +18,6 @@
 private _killersConfig = (configFile >> "CfgSerialKillers" >> "Killers");
 private _missionKillersConfig = (missionConfigFile >> "CfgSerialKillers" >> "Killers");
 
+GVAR(arsenalBoxClassName) = ["ArsenalBoxClassName", _killersConfig, _missionKillersConfig] call EFUNC(common,getTextFromConfig);
 GVAR(flagClassName) = ["FlagClassName", _killersConfig, _missionKillersConfig] call EFUNC(common,getTextFromConfig);
+GVAR(stashBoxClassName) = ["StashBoxClassName", _killersConfig, _missionKillersConfig] call EFUNC(common,getTextFromConfig);

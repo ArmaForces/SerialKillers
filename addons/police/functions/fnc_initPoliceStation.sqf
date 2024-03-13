@@ -26,7 +26,7 @@ private _flag = createVehicle [GVAR(FlagClassname), _basePos, [], 0, "NONE"];
 _flag setVariable ["policeStation", _logic, true];
 
 // Init arsenal
-private _box = createVehicle ["B_CargoNet_01_ammo_F", _basePos, [], 0, "NONE"];
+private _box = createVehicle [GVAR(arsenalBoxClassName), _basePos, [], 0, "NONE"];
 clearItemCargoGlobal _box;
 clearWeaponCargoGlobal _box;
 clearMagazineCargoGlobal _box;
