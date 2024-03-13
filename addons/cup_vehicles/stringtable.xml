@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="AFSK">
+    <Package name="CUP_Vehicles">
+        <Key ID="STR_AFSK_CUP_Vehicles_DisplayName">
+            <English>SerialKillers - CUP Vehicles</English>
+            <Polish>SerialKillers - CUP Pojazdy</Polish>
+        </Key>
+    </Package>
+</Project>
