@@ -24,7 +24,7 @@ if (_timeOfDeath isEqualType 0) then {
 };
 
 private _nearestCity = if (isNull _nearestTown) then {
-    [_deadCivilian] call EFUNC(common,getNearestCity)
+    [_deadCivilian] call FUNC(getNearestCity)
 } else {
     [_nearestTown] call FUNC(getCityByLocation)
 };
