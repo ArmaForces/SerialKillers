@@ -62,8 +62,8 @@ private _cityArea = [_cityPosition];
 _cityArea append _area;
 private _cityAreaForRandomPos = [_cityPosition, _area];
 
-_cityNamespace setVariable [QGVAR(cityArea), _cityArea]; // [_pos, _radiusA, _radiusB, _angle, _rectangle]
-_cityNamespace setVariable [QGVAR(cityAreaForRandomPos), _cityAreaForRandomPos]; // [_pos, [_radiusA, _radiusB, _angle, _rectangle]]
+_cityNamespace setVariable [QGVAR(cityArea), _cityArea, true]; // [_pos, _radiusA, _radiusB, _angle, _rectangle]
+_cityNamespace setVariable [QGVAR(cityAreaForRandomPos), _cityAreaForRandomPos, true]; // [_pos, [_radiusA, _radiusB, _angle, _rectangle]]
 
 // Create city civilians variables
 _cityNamespace setVariable [QGVAR(CiviliansList), []];
