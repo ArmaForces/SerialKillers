@@ -4,6 +4,7 @@ class CfgVehicles
     class CUP_Lada_Base: Car_F
     {
         class AnimationSources;
+        class Sounds;
         class TextureSources
         {
             class PolishPolice
@@ -26,6 +27,12 @@ class CfgVehicles
         class AnimationSources: AnimationSources
         {
             class hideMilitiaLogo;
+        };
+
+        class Sounds : Sounds
+        {
+            class PoliceSiren_01_Ext;
+            class PoliceSiren_01_Int;
         };
     };
 
@@ -90,6 +97,18 @@ class CfgVehicles
             class hideMilitiaLogo: hideMilitiaLogo
             {
                 initPhase = 1;
+            };
+        };
+
+        class Sounds : Sounds
+        {
+            class PoliceSiren_01_Ext : PoliceSiren_01_Ext
+            {
+                sound[] = { QPATHTOF(assets\sounds\syrena.ogg), "db-8", 1 };
+            };
+            class PoliceSiren_01_Int : PoliceSiren_01_Int
+            {
+                sound[] = { QPATHTOF(assets\sounds\syrena.ogg), "db-16", 1 };
             };
         };
     };
