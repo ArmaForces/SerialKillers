@@ -1,9 +1,13 @@
-class CfgVehicles {
+class CfgVehicles
+{
     class Car_F;
-    class CUP_Lada_Base: Car_F {
+    class CUP_Lada_Base: Car_F
+    {
         class AnimationSources;
-        class TextureSources {
-            class PolishPolice {
+        class TextureSources
+        {
+            class PolishPolice
+            {
                 DisplayName = "Polish Police";
                 author = "Renchon";
                 textures[] = {
@@ -17,14 +21,17 @@ class CfgVehicles {
         textureList[] += { "PolishPolice", 0 };
     };
 
-    class CUP_LADA_LM_Base : CUP_Lada_Base {
-        class AnimationSources: AnimationSources {
+    class CUP_LADA_LM_Base : CUP_Lada_Base
+    {
+        class AnimationSources: AnimationSources
+        {
             class hideMilitiaLogo;
         };
     };
-    class CUP_LADA_LM_CIV: CUP_LADA_LM_Base {};
 
-    class GVAR(LADA_LM): CUP_LADA_LM_CIV {
+    class CUP_LADA_LM_CIV: CUP_LADA_LM_Base {};
+    class GVAR(LADA_LM): CUP_LADA_LM_CIV
+    {
         faction = "BLU_GEN_F"; // TODO some own faction
 
         acceleration = 15; // 15 original
@@ -56,8 +63,10 @@ class CfgVehicles {
             1
         };
 
-        class AnimationSources: AnimationSources {
-            class hideMilitiaLogo: hideMilitiaLogo {
+        class AnimationSources: AnimationSources
+        {
+            class hideMilitiaLogo: hideMilitiaLogo
+            {
                 initPhase = 1;
             };
         };
