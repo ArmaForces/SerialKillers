@@ -51,17 +51,14 @@ class CfgVehicles
             "hideMilitiaLogo", 1
         };
 
-        displayName = "Fiat 125p (Policja)";
+        displayName = CSTRING(Fiat125p_PolishPolice);
 
         hiddenSelectionsTextures[] = {
             QPATHTOF(assets\textures\pol57xD.paa),
             QPATHTOF(assets\textures\lada_glass_ca5.paa)
         };
 
-        textureList[] = {
-            "PolishPolice",
-            1
-        };
+        textureList[] = { "PolishPolice", 1 };
 
         class AnimationSources: AnimationSources
         {
