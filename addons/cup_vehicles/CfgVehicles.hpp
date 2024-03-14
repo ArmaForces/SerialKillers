@@ -36,11 +36,35 @@ class CfgVehicles
 
         acceleration = 15; // 15 original
         enginePower = 82.700001; // 56.700001 original
-        peakTorque = 136; // 106 original
+        peakTorque = 142; // 106 original
         idleRPM = 700; // 600 original
         maxSpeed = 213; // 156 original
 
         // TODO: Change gears
+        class complexGearbox
+        {
+            // Sport hatchback:
+            // GearboxRatios[] = {"R1",-3.8,"N",0,"D1",3.6,"D2",2.15,"D3",1.55,"D4",1.15,"D5",0.9,"D6",0.67};
+            // Original: GearboxRatios[] = {"R1",-3.87,"N",0,"D1",3.85,"D2",2.3,"D3",1.49,"D4",1};
+            GearboxRatios[] = {
+                "R1", -3.87,
+                "N", 0,
+                "D1", 3.85,
+                "D2", 3.1,
+                "D3", 2.49,
+                "D4", 1.5,
+                "D5", 1,
+                "D6", 0.71
+            };
+
+            TransmissionRatios[] = { "High", 3.994 };
+
+            driveString = "D";
+            neutralString = "N";
+            reverseString = "R";
+            moveOffGear = 1;
+            gearBoxMode = "auto";
+        };
     };
 
     class GVAR(LADA_PolishPolice) : GVAR(LADA_LM)
@@ -52,6 +76,7 @@ class CfgVehicles
         };
 
         displayName = CSTRING(Fiat125p_PolishPolice);
+        displayNameShort = "Fiat 125p";
 
         hiddenSelectionsTextures[] = {
             QPATHTOF(assets\textures\pol57xD.paa),
