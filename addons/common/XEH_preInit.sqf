@@ -2,7 +2,7 @@
 ADDON = false;
 #include "XEH_PREP.hpp"
 
-INFO("Starting SerialKillers framework");
+INFO_1("SerialKillers version %1",QUOTE(VERSION_STR));
 
 GVAR(enabled) = (QUOTE(SK_GAME_TYPE) isEqualTo (getText (missionConfigFile >> "Header" >> "gameType")));
 
