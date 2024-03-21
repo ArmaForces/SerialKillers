@@ -20,6 +20,11 @@ private _stashes = +EGVAR(modules,killersStashes);
 if (_stashes isEqualTo []) exitWith {};
 
 private _stashesCount = count (_stashes);
+
+if (_stashesCount isEqualTo 0) exitWith {
+    WARNING("No killer stashes found.");
+};
+
 // Number of stashes to randomly select and create (so around 75% of them should appear on average)
 private _createStatshesCount = ceil (random [_stashesCount/2, _stashesCount/1.33, _stashesCount]);
 
