@@ -54,12 +54,11 @@ if (!(_objectType isEqualType "")) then {
 
 // If no object is given, just random position is enough
 if (_objectType isEqualTo "") exitWith {[_cityArea, _nearRoad, _allowOnRoad, _nearHouse, _emptyPosSearchRadius] call _fnc_randomPos};
-
-private _location = _cityNamespace getVariable QGVAR(Location);
+private _cityArea = _cityNamespace getVariable QGVAR(cityArea);
 private _randomPos = [];
 private _loopLimit = 250;
 // Loop until acquired random empty pos is within location area (or loop limit reached)
-while {(_loopLimit >= 0) && {(_randomPos isEqualTo []) || {!(_randomPos inArea _location)}}} do {
+while {(_loopLimit >= 0) && {(_randomPos isEqualTo []) || {!(_randomPos inArea _cityArea)}}} do {
     _randomPos = [_cityArea, _nearRoad, _allowOnRoad, _nearHouse, _emptyPosSearchRadius] call _fnc_randomPos;
     _randomPos = _randomPos findEmptyPosition [0, _emptyPosSearchRadius, _objectType];
     _loopLimit = _loopLimit - 1;
@@ -67,4 +66,4 @@ while {(_loopLimit >= 0) && {(_randomPos isEqualTo []) || {!(_randomPos inArea _
 
 if (_loopLimit isEqualTo 0) exitWith {[]};
 
-_randomPos;
+_randomPos
