@@ -2,7 +2,16 @@
 ADDON = false;
 #include "XEH_PREP.hpp"
 
-GVAR(enabled) = ("SK" isEqualTo (getText (missionConfigFile >> "Header" >> "gameType")));
+INFO_1("SerialKillers version %1",QUOTE(VERSION_STR));
+
+GVAR(enabled) = (QUOTE(SK_GAME_TYPE) isEqualTo (getText (missionConfigFile >> "Header" >> "gameType")));
+
+// Killswitch
+if (!GVAR(enabled)) then {
+    INFO_1("Mission is missing '%1' gameType Header. SerialKillers framework will be disabled.",QUOTE(SK_GAME_TYPE));
+} else {
+    INFO_1("Mission is configured for '%1' gameType. SerialKillers framework will be enabled.",QUOTE(SK_GAME_TYPE));
+};
 
 GVAR(ACE_Loaded) = isClass (configFile >> "CfgPatches" >> "ace_common");
 GVAR(ACRE_Loaded) = isClass (configFile >> "CfgPatches" >> "acre_main");

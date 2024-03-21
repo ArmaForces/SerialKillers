@@ -1,5 +1,8 @@
 #include "script_component.hpp"
 
+// Killswitch
+if (!EGVAR(common,enabled)) exitWith {};
+
 if (isServer) then {
     // Initialize police stations
     [{EGVAR(modules,policeStations) isNotEqualTo []},{

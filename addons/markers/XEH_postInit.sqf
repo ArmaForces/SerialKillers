@@ -1,5 +1,8 @@
 #include "script_component.hpp"
 
+// Killswitch
+if (!EGVAR(common,enabled)) exitWith {};
+
 if (isServer) then {
     addMissionEventHandler ["HandleDisconnect", {
         params ["_unit", "_id", "_uid", "_name"];
