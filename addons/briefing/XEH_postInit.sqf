@@ -4,5 +4,7 @@
 if (!EGVAR(common,enabled)) exitWith {};
 
 if (hasInterface) then {
-    call FUNC(createRules);
+    if (GVAR(rulesEnabled)) then {
+        call FUNC(createRules);
+    };
 };

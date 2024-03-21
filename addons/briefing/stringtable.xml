@@ -5,6 +5,14 @@
             <English>SerialKillers - Briefing</English>
             <Polish>SerialKillers - Odprawa</Polish>
         </Key>
+        <Key ID="STR_AFSK_Briefing_RulesEnabled">
+            <English>Enable rules</English>
+            <Polish>Włącz zasady</Polish>
+        </Key>
+        <Key ID="STR_AFSK_Briefing_RulesEnabled_Description">
+            <English>If enabled, suggested rules will be visible on the map in "SerialKillers" briefing section.</English>
+            <Polish>Jeżeli włączone, proponowane zasady będą widoczne na odprawnie na mapie w zakładce "SerialKillers".</Polish>
+        </Key>
         <Key ID="STR_AFSK_Briefing_Rules">
             <English>Rules</English>
             <Polish>Zasady</Polish>
