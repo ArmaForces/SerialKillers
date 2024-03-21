@@ -20,3 +20,7 @@
 #else
     #define LINKFUNC(x) FUNC(x)
 #endif
+
+// Enables some debugging functionality.
+// Should never be enabled during normal gameplay as it might reveal information!
+// #define DEV_DEBUG
