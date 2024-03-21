@@ -38,7 +38,7 @@ while {_i > 0} do {
         // Create vehicle on given position. We need some way to prevent instant damage to vehicle as these empty positions are not perfect.
         private _vehicle = [_carType, _pos] call FUNC(createVehicle);
         if (GVAR(alarmEnabled)) then {
-            [_vehicle, random 1 + GVAR(alarmMinimumChance)] call FUNC(initCarAlarm);
+            [_vehicle, random [GVAR(alarmMinimumChance), 0.5, 1]] call FUNC(initCarAlarm);
         };
         _i = _i - 1;
     };
