@@ -22,7 +22,7 @@ private _positions = true call CBA_fnc_createNamespace;
 
 // Generate positions
 while {_i > 0} do {
-    private _pos = [nil, false, false, true] call EFUNC(common,getRandomPos);
+    private _pos = [KILLER_UNIT_CLASS, false, false, true] call EFUNC(common,getRandomPos);
     //diag_log format ["[AFSK] [KILLERS] [initStartPositions] Pos: %1", _pos];
     if (!(_pos isEqualTo [])) then {
         private _nearestCity = [_pos, 1500] call EFUNC(common,getNearestCityLocation);

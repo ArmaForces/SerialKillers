@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="AFSK">
+    <Package name="CUP_Vehicles">
+        <Key ID="STR_AFSK_CUP_Vehicles_DisplayName">
+            <English>SerialKillers - CUP Vehicles</English>
+            <Polish>SerialKillers - CUP Pojazdy</Polish>
+        </Key>
+        <Key ID="STR_AFSK_CUP_Vehicles_Fiat125p_PolishPolice">
+            <English>Fiat 125p (Polish Police)</English>
+            <Polish>Fiat 125p (Policja)</Polish>
+        </Key>
+    </Package>
+</Project>

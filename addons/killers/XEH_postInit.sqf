@@ -1,5 +1,8 @@
 #include "script_component.hpp"
 
+// Killswitch
+if (!EGVAR(common,enabled)) exitWith {};
+
 [QGVAR(killerHandcuffed), {
     _this call FUNC(killerHandcuffed);
 }] call CBA_fnc_addEventHandler;
@@ -51,10 +54,15 @@ if (hasInterface) then {
     }] call CBA_fnc_addEventHandler;
 
     // Killer killed EH
-    ["C_man_p_fugitive_F", "killed", {
+    [KILLER_UNIT_CLASS, "killed", {
+        INFO("Killer was killed");
         if (!(local (_this select 0))) exitWith {};
+        INFO("Killer player was killed");
+
         [QGVAR(killerKilled), _this] call CBA_fnc_serverEvent;
+
         [{alive player}, {
+            INFO("Killer player has respawned");
             [QGVAR(killerRespawned), [player]] call CBA_fnc_serverEvent;
         }] call CBA_fnc_waitUntilAndExecute;
     }] call CBA_fnc_addClassEventHandler;

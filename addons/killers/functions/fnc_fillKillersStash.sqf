@@ -32,7 +32,7 @@ for "_y" from 0 to _itemsCount step 1 do {
 private _stashAvailableCommonItemsCount = count EGVAR(equipment,killersStashCommonEquipment);
 private _commonItemsCount = ceil (random 3) + floor (_stashAvailableCommonItemsCount/10);
 
-for "_y" from 0 to _itemsCount step 1 do {
+for "_y" from 0 to _commonItemsCount step 1 do {
     // Add common equipment
     private _newCommonItem = selectRandom EGVAR(equipment,killersStashCommonEquipment);
     private _itemQuantity = ceil (random 2);

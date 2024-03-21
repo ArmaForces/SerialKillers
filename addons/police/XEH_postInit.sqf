@@ -1,5 +1,8 @@
 #include "script_component.hpp"
 
+// Killswitch
+if (!EGVAR(common,enabled)) exitWith {};
+
 if (isServer) then {
     // Initialize police stations
     [{EGVAR(modules,policeStations) isNotEqualTo []},{
@@ -9,6 +12,8 @@ if (isServer) then {
                 // Initialize respawn for given police station
                 [WEST, _x] call BIS_fnc_addRespawnPosition;
             } forEach EGVAR(modules,policeStations);
+
+            publicVariable QGVAR(arsenals);
         }] call CBA_fnc_execNextFrame;
     }] call CBA_fnc_waitUntilAndExecute;
 
@@ -59,6 +64,12 @@ if (isServer) then {
 
 if (hasInterface) then {
     if !(playerSide isEqualTo WEST) exitWith {};
+
+    // Fill arsenal with starting items
+    [{GVAR(arsenals) isNotEqualTo []}, {
+        call FUNC(initPoliceStationClient);
+    }] call CBA_fnc_waitUntilAndExecute;
+
     player addEventHandler ["Killed", {
         [QGVAR(copKilled), _this] call CBA_fnc_serverEvent;
     }];

@@ -28,5 +28,4 @@ GVAR(prisoners) = [];
     };
 } forEach _prisoners;
 
-private _msg = format ["Prisoners have been released from the prison!"];
-[QEGVAR(common,showSideChatMsg), [WEST, _msg]] call CBA_fnc_globalEvent;
+[QEGVAR(common,showSideChatMsg), [WEST, LLSTRING(Prisoners_Released)]] call CBA_fnc_globalEvent;

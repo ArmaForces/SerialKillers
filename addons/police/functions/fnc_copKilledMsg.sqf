@@ -23,14 +23,18 @@ if (_timeOfDeath isEqualType 0) then {
     _timeOfDeath = [_timeOfDeath] call BIS_fnc_timeToString;
 };
 
-if (isNull _nearestTown) then {
-    _nearestTown = [_deadCop] call EFUNC(common,getNearestCityLocation);
+private _nearestCity = if (isNull _nearestTown) then {
+    [_deadCop] call EFUNC(civilian,getNearestCity)
+} else {
+    [_nearestTown] call EFUNC(civilian,getCityByLocation)
 };
 
 private _msg = "";
-private _distance = (position _deadCop) distance _nearestTown;
+private _nearestCityArea = _nearestCity getVariable QEGVAR(civilian,cityArea);
+private _isInCity = (position _deadCop) inArea _nearestCityArea;
+
 // Check if distance is greater than 250 m. If so then change output a bit to represent that.
-if (_distance <= 250) then {
+if (_isInCity) then {
     _msg = format [LLSTRING(Cop_Killed_In_City), _timeOfDeath, text _nearestTown];
 } else {
     _msg = format [LLSTRING(Cop_Killed_Near_City), _timeOfDeath, text _nearestTown];
