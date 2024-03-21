@@ -23,7 +23,7 @@ private _civilianUnitsConfigs = if (_customCivilianUnits isNotEqualTo []) then {
     _customCivilianUnits apply {configFile >> "CfgVehicles" >> _x};
 } else {
     // By default load all civilian units
-    QUOTE((configFile >> 'CfgVehicles' >> 'C_man_1') in ([_x] call EFUNC(common,configGetAllParents))) configClasses (configFile >> "CfgVehicles");
+    QUOTE((configFile >> 'CfgVehicles' >> 'C_man_1') in ([_x] call EFUNC(common,configGetAllParents)) && getNumber (_x >> 'scope') > 1) configClasses (configFile >> "CfgVehicles");
 };
 
 // TODO: Add blacklisted units config to exclude VR guys
