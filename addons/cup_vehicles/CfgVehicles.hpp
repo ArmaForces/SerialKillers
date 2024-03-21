@@ -12,8 +12,8 @@ class CfgVehicles
                 DisplayName = "Polish Police";
                 author = "Renchon";
                 textures[] = {
-                    QPATHTOF(assets\textures\pol57xD.paa),
-                    QPATHTOF(assets\textures\lada_glass_ca5.paa)
+                    QPATHTOF(assets\textures\fiat_125p_pol_co.paa),
+                    QPATHTOF(assets\textures\fiat_125p_pol_glass_co.paa)
                 };
                 factions[] = { "BLU_GEN_F" };
             };
@@ -85,8 +85,8 @@ class CfgVehicles
         displayNameShort = "Fiat 125p";
 
         hiddenSelectionsTextures[] = {
-            QPATHTOF(assets\textures\pol57xD.paa),
-            QPATHTOF(assets\textures\lada_glass_ca5.paa)
+            QPATHTOF(assets\textures\fiat_125p_pol_co.paa),
+            QPATHTOF(assets\textures\fiat_125p_pol_glass_co.paa)
         };
 
         textureList[] = { "PolishPolice", 1 };
