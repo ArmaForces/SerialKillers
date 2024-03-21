@@ -4,6 +4,7 @@ PREP(copKilledMarker);
 PREP(copKilledMsg);
 PREP(createTeleport);
 PREP(equipmentScoreCheck);
+PREP(initConfig);
 PREP(initPoliceStation);
 PREP(initSpawner);
 PREP(initPoliceStationClient);

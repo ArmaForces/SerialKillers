@@ -27,7 +27,7 @@ private _createStatshesCount = ceil (random [_stashesCount/2, _stashesCount/1.33
 for "_y" from 0 to _createStatshesCount step 1 do {
     private _stash = _stashes deleteAt (floor (random (count (_stashes))));
     private _stashPos = getPos _stash;
-    private _box = createVehicle ["O_CargoNet_01_ammo_F", _stashPos, [], 0, "NONE"];
+    private _box = createVehicle [GVAR(stashBoxClassName), _stashPos, [], 0, "NONE"];
     clearItemCargoGlobal _box;
     clearWeaponCargoGlobal _box;
     clearMagazineCargoGlobal _box;
