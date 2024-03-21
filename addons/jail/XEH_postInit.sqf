@@ -1,5 +1,8 @@
 #include "script_component.hpp"
 
+// Killswitch
+if (!EGVAR(common,enabled)) exitWith {};
+
 // Jail module
 GVAR(jail) = EGVAR(modules,jail);
 

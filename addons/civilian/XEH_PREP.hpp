@@ -10,6 +10,6 @@ PREP(getNearestCity);
 PREP(getNearestVehicle);
 PREP(initCity);
 PREP(initCivilians);
-PREP(initCiviliansConfig);
+PREP(initConfig);
 PREP(initCivilian);
 PREP(unassignCivilianFromCity);

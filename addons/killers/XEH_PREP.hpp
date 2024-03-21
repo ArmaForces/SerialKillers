@@ -7,6 +7,7 @@ PREP(createTeleport);
 PREP(deleteStartPositionsMarkers);
 PREP(disableTeleport);
 PREP(fillKillersStash);
+PREP(initConfig);
 PREP(initKillersBase);
 PREP(initKillersStashes);
 PREP(initStartPositions);

@@ -12,7 +12,7 @@
 #endif
 
 #define MISSION_CONFIG(MISSION_NAME,MAP) \
-        class MISSION_NAME { \
+        class DOUBLES(MISSION_NAME,MAP) { \
             directory = QUOTE(PATHTO_R(MISSION_NAME.MAP)); \
         }
 
