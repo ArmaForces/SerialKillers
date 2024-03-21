@@ -80,4 +80,5 @@ INFO_2("Creating vehicle %1 at position %2",_vehicleClassname,str _position);
 [{
     private _vehicle = _this call EFUNC(vehicles,createVehicle);
     _vehicle setVariable [QGVAR(isPoliceVehicle), true, true];
+    _vehicle addItemCargoGlobal ["TDD_Talon_Mag", 1];
 }, [_vehicleClassname, _position, _direction, true, false, true]] call CBA_fnc_execNextFrame;
