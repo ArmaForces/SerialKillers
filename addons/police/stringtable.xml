@@ -25,5 +25,13 @@
             <English>Cop was killed at %1 near %2!</English>
             <Polish>Policjant został zabity o godzinie %1 w pobliżu %2!</Polish>
         </Key>
+        <Key ID="STR_AFSK_Police_SaveEquipmentForRespawn">
+            <English>Save equipment for respawn</English>
+            <Polish>Zapisz ekwipunek do odrodzenia</Polish>
+        </Key>
+        <Key ID="STR_AFSK_Police_SavedEquipment">
+            <English>Saved equipment for respawn. Primary weapon: %1 Handgun: %2 Launcher: %3</English>
+            <Polish>Zapisano ekwipunek do odrodzenia. Broń podstawowa: %1 Pistolet: %2 Wyrzutnia: %3</Polish>
+        </Key>
     </Package>
 </Project>

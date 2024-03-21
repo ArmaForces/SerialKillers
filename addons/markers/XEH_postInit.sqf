@@ -1,5 +1,8 @@
 #include "script_component.hpp"
 
+// Killswitch
+if (!EGVAR(common,enabled)) exitWith {};
+
 if (isServer) then {
     addMissionEventHandler ["HandleDisconnect", {
         params ["_unit", "_id", "_uid", "_name"];
@@ -7,9 +10,9 @@ if (isServer) then {
     }];
 
     // Check for AFM Friendly Tracker and auto disable it
-    if (EGVAR(common,AFM_Loaded)) then {
-        afm_friendly_tracker_enabled = false;
-        publicVariable "afm_friendly_tracker_enabled";
+    if (EGVAR(common,AFFT_Loaded)) then {
+        afft_friendly_tracker_enabled = false;
+        publicVariable "afft_friendly_tracker_enabled";
     };
 };
 

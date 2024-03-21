@@ -1,5 +1,8 @@
 #include "script_component.hpp"
 
+// Killswitch
+if (!EGVAR(common,enabled)) exitWith {};
+
 if (isServer) then {
     /* Serverside events */
     [QGVAR(allCiviliansDead), {
@@ -26,20 +29,9 @@ if (isServer) then {
     // Idle timeout init
     if (GVAR(idleTimeMax) isEqualTo -1) exitWith {};
     [{
-        [{
-            private _msg = composeText [
-                text format [LLSTRING(IdleTime_Inital_Message), (GVAR(IdleTimeMax) / 60) toFixed 1],
-                lineBreak,
-                lineBreak,
-                text format ["%1: %2", LELSTRING(killers,Killers), GVAR(idleTimeKillersScoreChange)],
-                lineBreak,
-                text format ["%1: %2", LELSTRING(police,Police), GVAR(idleTimePoliceScoreChange)]
-            ];
-            _msg setAttributes ["valign", "middle"];
-            [QEGVAR(common,showMessage), [_msg, [3]]] call CBA_fnc_globalEvent;
-            call FUNC(monitorTimeouts);
-        }, [], GVAR(idleTimeMax)] call CBA_fnc_waitAndExecute;
-    }] call CBA_fnc_execNextFrame;
+        [QGVAR(showTimeoutInitialMessage)] call CBA_fnc_globalEvent;
+        call FUNC(monitorTimeouts);
+    }, [], GVAR(idleTimeMax)] call CBA_fnc_waitAndExecute;
 
     // Initialize score display UI
     [WEST, 0] call BIS_fnc_respawnTickets;
@@ -60,6 +52,19 @@ if (hasInterface) then {
 
     [QGVAR(showScore), {
         _this call FUNC(showScore);
+    }] call CBA_fnc_addEventHandler;
+
+    [QGVAR(showTimeoutInitialMessage), {
+        private _msg = composeText [
+            text format [LLSTRING(IdleTime_Inital_Message), (GVAR(IdleTimeMax) / 60)],
+            lineBreak,
+            lineBreak,
+            text format ["%1: %2", LELSTRING(killers,Killers), GVAR(idleTimeKillersScoreChange)],
+            lineBreak,
+            text format ["%1: %2", LELSTRING(police,Police), GVAR(idleTimePoliceScoreChange)]
+        ];
+        _msg setAttributes ["valign", "middle"];
+        [QEGVAR(common,showMessage), [_msg, [3]]] call CBA_fnc_localEvent;
     }] call CBA_fnc_addEventHandler;
 
     // Disable vanilla ratings

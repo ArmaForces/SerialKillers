@@ -23,6 +23,13 @@
         _marker = [_civilian] call FUNC(createCivilianMarker);
     } else {
         _marker setMarkerPosLocal (position _civilian);
+#ifdef DEV_DEBUG
+        if (vehicle _civilian isEqualTo _civilian) then {
+            _marker setMarkerColorLocal "ColorGreen";
+        } else {
+            _marker setMarkerColorLocal "ColorUnknown";
+        };
+#endif
     };
 } foreach EGVAR(civilian,civilians);
 

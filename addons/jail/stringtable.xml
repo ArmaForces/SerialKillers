@@ -13,5 +13,9 @@
             <English>Release prisoner</English>
             <Polish>Uwolnij więźnia</Polish>
         </Key>
+        <Key ID="STR_AFSK_Jail_Prisoners_Released">
+            <English>Prisoners have been released from the prison!</English>
+            <Polish>Więźniowie zostali uwolnieni z więzienia!</Polish>
+        </Key>
     </Package>
 </Project>
