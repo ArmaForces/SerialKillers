@@ -1,5 +1,8 @@
 #include "script_component.hpp"
 
+// Killswitch
+if (!EGVAR(common,enabled)) exitWith {};
+
 if (isServer) then {
 
     [QGVAR(carAlarm), FUNC(carAlarm)] call CBA_fnc_addEventHandler;

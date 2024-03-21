@@ -1,5 +1,8 @@
 #include "script_component.hpp"
 
+// Killswitch
+if (!EGVAR(common,enabled)) exitWith {};
+
 if (isServer) then {
     GVAR(jail) = call FUNC(initJail);
     GVAR(policeStations) = call FUNC(initPoliceStations);

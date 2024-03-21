@@ -1,5 +1,10 @@
 #include "script_component.hpp"
 
+// Killswitch
+if (!EGVAR(common,enabled)) exitWith {
+    WARNING("Mission is missing 'SK' gameType Header. SerialKillers framework will be disabled.");
+};
+
 [QGVAR(playMusic), {
     playMusic (_this select 0);
 }] call CBA_fnc_addEventHandler;

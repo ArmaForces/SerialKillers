@@ -4,6 +4,9 @@ ADDON = false;
 
 #include "initSettings.inc.sqf"
 
+// Killswitch
+if (!EGVAR(common,enabled)) exitWith {};
+
 // We need some improvements in determining civilian vehicles limit
 GVAR(emptyVehiclesLimit) = 500;
 

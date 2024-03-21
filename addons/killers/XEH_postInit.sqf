@@ -1,5 +1,8 @@
 #include "script_component.hpp"
 
+// Killswitch
+if (!EGVAR(common,enabled)) exitWith {};
+
 [QGVAR(killerHandcuffed), {
     _this call FUNC(killerHandcuffed);
 }] call CBA_fnc_addEventHandler;
