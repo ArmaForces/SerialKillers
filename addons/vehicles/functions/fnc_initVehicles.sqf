@@ -17,12 +17,24 @@
 
 private _i = GVAR(emptyVehiclesLimit);
 
-// Retrieve all civilian car types from config
-private _civilianCarTypes = "( (getNumber (_x >> 'scope') >= 2)
-                                    && {
-                                        getText (_x >> 'vehicleClass') in ['Car']
-                                        && {getNumber (_x >> 'side') == 3}
-                                    })" configClasses (configFile >> "CfgVehicles");
+private _originalBlacklistedAreasAndGround = GVAR(vehicleBlacklistedAreas) + ["ground"];
+private _originalBlacklistedAreasAndWater = GVAR(vehicleBlacklistedAreas) + ["water"];
+
+// Retrieve civilian car types from config
+private _customCivilianCarTypes = getArray (missionConfigFile >> "CfgSerialKillers" >> "Civilian" >> "CarTypes");
+
+private _civilianCarTypes = if (_customCivilianCarTypes isNotEqualTo []) then {
+    _customCivilianCarTypes apply {configFile >> "CfgVehicles" >> _x}
+} else {
+    // By default get all civilian side vehicles
+    "( (getNumber (_x >> 'scope') >= 2)
+        && {
+            getText (_x >> 'vehicleClass') in ['Car']
+            && {getNumber (_x >> 'side') == 3}
+        })" configClasses (configFile >> "CfgVehicles");
+};
+
+// TODO: Consider blacklist
 
 while {_i > 0} do {
     private _carType = selectRandom _civilianCarTypes;

@@ -21,6 +21,74 @@
             <English>Number of generated civilians on mission startup. Final number will be in +-10% range. Set 0 to randomize between 100-200.</English>
             <Polish>Liczba generowanych cywili na starcie misji. Właściwa liczba będzie z przedziału +-10%. Losowana z przedziału 100-200 gdy ustawienie jest równe 0.</Polish>
         </Key>
+        <Key ID="STR_AFSK_Civilian_GuaranteedCivilianInEveryLocation">
+            <English>Guaranteed civilian in every location</English>
+            <Polish>Gwarantowany cywil w każdej lokacji</Polish>
+        </Key>
+        <Key ID="STR_AFSK_Civilian_GuaranteedCivilianInEveryLocation_Description">
+            <English>If checked, every village, city and capital will have at least 1 civilian on start (if limit allows).</English>
+            <Polish>Jeżeli zaznaczone, każda wioska, miasto i stolica będą miały przynajmniej 1 cywila na start (jeżeli pozwoli na to limit).</Polish>
+        </Key>
+        <Key ID="STR_AFSK_Civilian_LocationArea">
+            <English>Location area</English>
+            <Polish>Obszar lokacji</Polish>
+        </Key>
+        <Key ID="STR_AFSK_Civilian_RespectCityArea">
+            <English>Respect city area</English>
+            <Polish>Respektuj obszar miasta</Polish>
+        </Key>
+        <Key ID="STR_AFSK_Civilian_VillageCiviliansWeightMultiplier">
+            <English>Village civilians weight multiplier</English>
+            <Polish>Mnożnik cywili w wioskach</Polish>
+        </Key>
+        <Key ID="STR_AFSK_Civilian_VillageCiviliansWeightMultiplier_Description">
+            <English>Weight multiplier for villages when civilians are spawned. The higher (relatively to other location types), the more civilians (on average) will be in villages on the same area.</English>
+            <Polish>Mnożnik wagi dla wiosek podczas spawnowania cywili. Im wyższy (w stosunku do innych typów lokacji), tym średnio więcej cywili będzie wygenerowanych w wioskach na tym samym obszarze.</Polish>
+        </Key>
+        <Key ID="STR_AFSK_Civilian_CityCiviliansWeightMultiplier">
+            <English>City civilians weight multiplier</English>
+            <Polish>Mnożnik cywili w miastach</Polish>
+        </Key>
+        <Key ID="STR_AFSK_Civilian_CityCiviliansWeightMultiplier_Description">
+            <English>Weight multiplier for cities when civilians are spawned. The higher (relatively to other location types), the more civilians (on average) will be in cities on the same area.</English>
+            <Polish>Mnożnik wagi dla miast podczas spawnowania cywili. Im wyższy (w stosunku do innych typów lokacji), tym średnio więcej cywili będzie wygenerowanych w miastach o samym obszarze.</Polish>
+        </Key>
+        <Key ID="STR_AFSK_Civilian_CityCapitalCiviliansWeightMultiplier">
+            <English>Capital civilians weight multiplier</English>
+            <Polish>Mnożnik cywili w stolicy</Polish>
+        </Key>
+        <Key ID="STR_AFSK_Civilian_CityCapitalCiviliansWeightMultiplier_Description">
+            <English>Weight multiplier for capital(s) when civilians are spawned. The higher (relatively to other location types), the more civilians (on average) will be in capital(s) on the same area.</English>
+            <Polish>Mnożnik wagi dla stolic podczas spawnowania cywili. Im wyższy (w stosunku do innych typów lokacji), tym średnio więcej cywili będzie wygenerowanych w stolicach na tym samym obszarze.</Polish>
+        </Key>
+        <Key ID="STR_AFSK_Civilian_RespectCityArea_Description">
+            <English>Civilians will be spawned in cities area as defined in map location configuration. Otherwise, values below will be used to define area for each location type.</English>
+            <Polish>Cywile będą spawnowani w miastach o obszarze zdefiniowanym w konfiguracji lokacji mapy. W przeciwnym razie wartości wyszczególnione poniżej zostaną użyte do zdefiniowania rozmiaru każdej lokacji.</Polish>
+        </Key>
+        <Key ID="STR_AFSK_Civilian_CustomVillageAreaRadius">
+            <English>Custom village area radius</English>
+            <Polish>Własny promień obszaru wioski</Polish>
+        </Key>
+        <Key ID="STR_AFSK_Civilian_CustomVillageAreaRadius_Description">
+            <English>When map locations are badly defined, this can be used to control how large villages are on a given map. This is used for spawning civilians, waypoints and some other things.</English>
+            <Polish>Gdy lokacje na mapie są słabo zdefiniowane, można ustawić ręcznie jak duże są wioski na danej mapie. Jest to używane do spawnownia cywili, waypointów i wielu innych rzeczy.</Polish>
+        </Key>
+        <Key ID="STR_AFSK_Civilian_CustomCityAreaRadius">
+            <English>Custom city area radius</English>
+            <Polish>Własny promień obszaru miasta</Polish>
+        </Key>
+        <Key ID="STR_AFSK_Civilian_CustomCityAreaRadius_Description">
+            <English>When map locations are badly defined, this can be used to control how large cities are on a given map. This is used for spawning civilians, waypoints and some other things.</English>
+            <Polish>Gdy lokacje na mapie są słabo zdefiniowane, można ustawić ręcznie jak duże są miasta na danej mapie. Jest to używane do spawnownia cywili, waypointów i wielu innych rzeczy.</Polish>
+        </Key>
+        <Key ID="STR_AFSK_Civilian_CustomCityCapitalAreaRadius">
+            <English>Custom capital area radius</English>
+            <Polish>Własny promień obszaru stolicy</Polish>
+        </Key>
+        <Key ID="STR_AFSK_Civilian_CustomCityCapitalAreaRadius_Description">
+            <English>When map locations are badly defined, this can be used to control how large capital(s) are on a given map. This is used for spawning civilians, waypoints and some other things.</English>
+            <Polish>Gdy lokacje na mapie są słabo zdefiniowane, można ustawić ręcznie jak duże są stolice na danej mapie. Jest to używane do spawnownia cywili, waypointów i wielu innych rzeczy.</Polish>
+        </Key>
         <Key ID="STR_AFSK_Civilian_Low">
             <English>Low</English>
             <Polish>Mało</Polish>

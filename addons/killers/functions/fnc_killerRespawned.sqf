@@ -17,4 +17,8 @@
 
 params ["_unit"];
 
+INFO_1("Killer %1 has respawned",name _unit);
+
+_unit setVariable [QGVAR(alreadyKilled), false];
+
 [QEGVAR(jail,imprison), [_unit]] call CBA_fnc_serverEvent;
