@@ -29,7 +29,7 @@ if (_stashesCount isEqualTo 0) exitWith {
 private _createStatshesCount = ceil (random [_stashesCount/2, _stashesCount/1.33, _stashesCount]);
 
 // Initialize random stashes up to _createStatshesCount
-for "_y" from 0 to _createStatshesCount step 1 do {
+for "_y" from 0 to (_createStatshesCount - 1) step 1 do {
     private _stash = _stashes deleteAt (floor (random (count (_stashes))));
     private _stashPos = getPos _stash;
     private _box = createVehicle [GVAR(stashBoxClassName), _stashPos, [], 0, "CAN_COLLIDE"];
