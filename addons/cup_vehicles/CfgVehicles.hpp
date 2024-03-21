@@ -47,7 +47,6 @@ class CfgVehicles
         idleRPM = 700; // 600 original
         maxSpeed = 213; // 156 original
 
-        // TODO: Change gears
         class complexGearbox
         {
             // Sport hatchback:
