@@ -31,7 +31,7 @@ if (_currentSoundDuration > ALARM_LENGTH) then {
     _currentSoundDuration = _currentSoundDuration + ALARM_INTERVAL;
 };
 
-_remainingDuration = _remainingDuration - 1;
+_remainingDuration = _remainingDuration - ALARM_INTERVAL;
 
 // player sideChat format ["Remaining alarm: %1", _remainingDuration];
 

@@ -1,5 +1,6 @@
 PREP(carAlarm);
 PREP(carAlarmLoop);
+PREP(carAlarmNotification);
 PREP(createVehicle);
 PREP(disableCarAlarm);
 PREP(initCarAlarm);

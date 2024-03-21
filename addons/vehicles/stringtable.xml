@@ -29,6 +29,22 @@
             <English>Control exact distance (in meters) at which an alarm can be heard. Increasing the distance makes it easier for cops to spot a stolen vehicle.</English>
             <Polish>Kontroluje dokładną odległość (w metrach), z której alarm będzie słyszalny. Zwiększenie tej odległości ułatwia policji zlokalizowanie skradzionego pojazdu.</Polish>
         </Key>
+        <Key ID="STR_AFSK_Vehicles_AlarmCopsNotification">
+            <English>Notify cops of alarm</English>
+            <Polish>Powiadomienie dla policji o alarmie</Polish>
+        </Key>
+        <Key ID="STR_AFSK_Vehicles_AlarmCopsNotification_Description">
+            <English>When should the cops be notified that an alarm went off?</English>
+            <Polish>Kiedy policja powinna być informowana o włączonym alarmie?</Polish>
+        </Key>
+        <Key ID="STR_AFSK_Vehicles_AlarmCopsNotificationDelay">
+            <English>Cops notification delay</English>
+            <Polish>Opóźnienie powiadomienia dla policji</Polish>
+        </Key>
+        <Key ID="STR_AFSK_Vehicles_AlarmCopsNotificationDelay_Description">
+            <English>Delay between an alarm going off and possible notification for cops.</English>
+            <Polish>Opóźnienie pomiędzy włączeniem alarmu a możliwym powiadomieniem dla Policji.</Polish>
+        </Key>
         <Key ID="STR_AFSK_Vehicles_AlarmDisarmIfFailed">
             <English>Alarm disarm if didn't go off</English>
             <Polish>Rozbrój alarm jeżeli się nie włączył</Polish>
@@ -37,13 +53,21 @@
             <English>Disarm alarm if it didn't go off when a player entered vehicle. Effective only if 'Alarm always armed' is disabled and 'Alarm Minimum Chance' is set to less than 1.</English>
             <Polish>Rozbrój alarm jeżeli się nie włączył gdy gracz wszedł do pojazdu. Działa tylko jeżeli ustawienie 'Alarm zawsze uzbrojony' jest wyłączone oraz 'Minimalna szansa na alarm' jest ustawiona na mniej niż 1.</Polish>
         </Key>
+        <Key ID="STR_AFSK_Vehicles_AlarmAverageChance">
+            <English>Alarm Average Chance</English>
+            <Polish>Średnia szansa na alarm</Polish>
+        </Key>
+        <Key ID="STR_AFSK_Vehicles_AlarmMaximumChance">
+            <English>Alarm Maximum Chance</English>
+            <Polish>Maksymalna szansa na alarm</Polish>
+        </Key>
         <Key ID="STR_AFSK_Vehicles_AlarmMinimumChance">
             <English>Alarm Minimum Chance</English>
             <Polish>Minimalna szansa na alarm</Polish>
         </Key>
-        <Key ID="STR_AFSK_Vehicles_AlarmMinimumChance_Description">
-            <English>Controls the chance of an alarm going off in a car that has the alarm armed.</English>
-            <Polish>Ustala szansę na uruchomienie alarmu w pojeździe posiadającym alarm.</Polish>
+        <Key ID="STR_AFSK_Vehicles_AlarmChance_Description">
+            <English>Controls the chance of an alarm going off in a car that has the alarm armed. Normal distribution of [min, mid, max].</English>
+            <Polish>Ustala szansę na uruchomienie alarmu w pojeździe posiadającym alarm. Rozkład normalny [minimum, średnia, maksimum].</Polish>
         </Key>
         <Key ID="STR_AFSK_Vehicles_AlarmDuration">
             <English>Alarm Duration</English>
@@ -84,6 +108,18 @@
         <Key ID="STR_AFSK_Vehicles_High">
             <English>High</English>
             <Polish>Dużo</Polish>
+        </Key>
+        <Key ID="STR_AFSK_Vehicles_Always">
+            <English>Always</English>
+            <Polish>Zawsze</Polish>
+        </Key>
+        <Key ID="STR_AFSK_Vehicles_Never">
+            <English>Never</English>
+            <Polish>Nigdy</Polish>
+        </Key>
+        <Key ID="STR_AFSK_Vehicles_IfCiviliansNearby">
+            <English>If civilians nearby</English>
+            <Polish>Jeżeli są cywile w pobliżu</Polish>
         </Key>
     </Package>
 </Project>
