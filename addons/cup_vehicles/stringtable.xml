@@ -6,8 +6,8 @@
             <Polish>SerialKillers - CUP Pojazdy</Polish>
         </Key>
         <Key ID="STR_AFSK_CUP_Vehicles_Fiat125p_PolishPolice">
-            <Polish>Fiat 125p (Policja)</Polish>
             <English>Fiat 125p (Polish Police)</English>
+            <Polish>Fiat 125p (Policja)</Polish>
         </Key>
     </Package>
 </Project>
