@@ -43,11 +43,33 @@
 ] call CBA_fnc_addSetting;
 
 [
+    QGVAR(alarmAverageChance),
+    "SLIDER",
+    [LSTRING(AlarmAverageChance), LSTRING(AlarmChance_Description)],
+    [LSTRING(DisplayName), LSTRING(CarAlarm)],
+    [-1, 1, 0.5, 1],
+    true,
+    {},
+    true
+] call CBA_fnc_addSetting;
+
+[
+    QGVAR(alarmMaximumChance),
+    "SLIDER",
+    [LSTRING(AlarmMaximumChance), LSTRING(AlarmChance_Description)],
+    [LSTRING(DisplayName), LSTRING(CarAlarm)],
+    [-1, 1, 1, 1],
+    true,
+    {},
+    true
+] call CBA_fnc_addSetting;
+
+[
     QGVAR(alarmMinimumChance),
     "SLIDER",
-    [LSTRING(AlarmMinimumChance), LSTRING(AlarmMinimumChance_Description)],
+    [LSTRING(AlarmMinimumChance), LSTRING(AlarmChance_Description)],
     [LSTRING(DisplayName), LSTRING(CarAlarm)],
-    [-1, 1, 0.25, 1],
+    [-1, 1, 0, 1],
     true,
     {},
     true

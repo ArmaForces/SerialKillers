@@ -53,13 +53,21 @@
             <English>Disarm alarm if it didn't go off when a player entered vehicle. Effective only if 'Alarm always armed' is disabled and 'Alarm Minimum Chance' is set to less than 1.</English>
             <Polish>Rozbrój alarm jeżeli się nie włączył gdy gracz wszedł do pojazdu. Działa tylko jeżeli ustawienie 'Alarm zawsze uzbrojony' jest wyłączone oraz 'Minimalna szansa na alarm' jest ustawiona na mniej niż 1.</Polish>
         </Key>
+        <Key ID="STR_AFSK_Vehicles_AlarmAverageChance">
+            <English>Alarm Average Chance</English>
+            <Polish>Średnia szansa na alarm</Polish>
+        </Key>
+        <Key ID="STR_AFSK_Vehicles_AlarmMaximumChance">
+            <English>Alarm Maximum Chance</English>
+            <Polish>Maksymalna szansa na alarm</Polish>
+        </Key>
         <Key ID="STR_AFSK_Vehicles_AlarmMinimumChance">
             <English>Alarm Minimum Chance</English>
             <Polish>Minimalna szansa na alarm</Polish>
         </Key>
-        <Key ID="STR_AFSK_Vehicles_AlarmMinimumChance_Description">
-            <English>Controls the chance of an alarm going off in a car that has the alarm armed.</English>
-            <Polish>Ustala szansę na uruchomienie alarmu w pojeździe posiadającym alarm.</Polish>
+        <Key ID="STR_AFSK_Vehicles_AlarmChance_Description">
+            <English>Controls the chance of an alarm going off in a car that has the alarm armed. Normal distribution of [min, mid, max].</English>
+            <Polish>Ustala szansę na uruchomienie alarmu w pojeździe posiadającym alarm. Rozkład normalny [minimum, średnia, maksimum].</Polish>
         </Key>
         <Key ID="STR_AFSK_Vehicles_AlarmDuration">
             <English>Alarm Duration</English>
