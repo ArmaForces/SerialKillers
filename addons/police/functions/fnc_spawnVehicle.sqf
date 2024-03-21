@@ -16,8 +16,6 @@
  * Public: No
  */
 
-#define SPAWNPOINT_SAFEZONE 5
-
 params ["_vehicleClassname", "_spawner"];
 
 private _vehicleType = (_vehicleClassname call BIS_fnc_objectType) select 1;
@@ -65,6 +63,10 @@ if (_emptySpawnPointIndex isNotEqualTo -1) then {
     };
 };
 
+if (_position isNotEqualTo []) then {
+    _position = _position findEmptyPosition [0, SPAWNPOINT_SAFEZONE, _vehicleClassname];
+};
+
 // Show message if no empty spawn position
 if (_position isEqualTo []) exitWith {
     private _baseName = (_spawner getVariable "policeStation") getVariable "LocationName";
@@ -75,4 +77,7 @@ if (_position isEqualTo []) exitWith {
 
 // Spawn vehicle
 INFO_2("Creating vehicle %1 at position %2",_vehicleClassname,str _position);
-[EFUNC(vehicles,createVehicle), [_vehicleClassname, _position, _direction, true, false, true]] call CBA_fnc_execNextFrame;
+[{
+    private _vehicle = _this call EFUNC(vehicles,createVehicle);
+    _vehicle setVariable [QGVAR(isPoliceVehicle), true, true];
+}, [_vehicleClassname, _position, _direction, true, false, true]] call CBA_fnc_execNextFrame;

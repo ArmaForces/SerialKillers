@@ -61,4 +61,4 @@ private _msg = composeText [
 ];
 _msg setAttributes ["valign", "middle"];
 
-[QEGVAR(common,showMessage), [_msg, [5]]] call CBA_fnc_globalEvent;
+[QEGVAR(common,showMessage), [_msg, [5]]] call CBA_fnc_localEvent;

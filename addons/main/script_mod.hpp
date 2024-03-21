@@ -23,3 +23,7 @@
 
 // Mod-wide macros
 #define SK_GAME_TYPE SK
+
+// Enables some debugging functionality.
+// Should never be enabled during normal gameplay as it might reveal information!
+// #define DEV_DEBUG

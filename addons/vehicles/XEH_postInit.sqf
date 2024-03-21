@@ -7,6 +7,15 @@ if (isServer) then {
 
     [QGVAR(carAlarm), FUNC(carAlarm)] call CBA_fnc_addEventHandler;
     [QGVAR(disableCarAlarm), FUNC(disableCarAlarm)] call CBA_fnc_addEventHandler;
+
+    [QGVAR(alarmOff), {
+        params ["_vehicle"];
+
+        // Delay notification
+        [{
+            _this call FUNC(carAlarmNotification);
+        }, [_vehicle], GVAR(alarmCopsNotificationDelay)] call CBA_fnc_waitAndExecute;
+    }] call CBA_fnc_addEventHandler;
 };
 
 if (hasInterface) then {
@@ -15,7 +24,6 @@ if (hasInterface) then {
     [QGVAR(alarmOff), {
         params ["_vehicle"];
 
-        [QEGVAR(common,showSideChatMsg), [WEST, [_vehicle] call FUNC(vehicleStolenMsg)]] call CBA_fnc_localEvent;
         [_vehicle, true, GVAR(alarmDuration)] call FUNC(carAlarmLoop);
     }] call CBA_fnc_addEventHandler;
 };
