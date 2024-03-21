@@ -26,12 +26,14 @@ if (_city isEqualType locationNull) exitWith {
 private _name = _city getVariable [QGVAR(Name), ""];
 if !(_name isEqualTo "") exitWith {_name};
 
-// Get logic assigned location
-private _location = _city getVariable [QGVAR(Location), [_city] call EFUNC(common,getNearestCityLocation)];
-if (_location isEqualTo locationNull) exitWith {""};
+// Get logic assigned location class name
+private _locationClassName = _city getVariable [QGVAR(locationClassName),
+    className ([_city] call EFUNC(common,getNearestCityLocation))];
+
+if (_locationClassName isEqualTo "") exitWith {""};
 
 // Get location name from config and save as logic variable for future calls
-_name = getText (configFile >> "CfgWorlds" >> worldName >> "Names" >> className _location >> "name");
+_name = getText (configFile >> "CfgWorlds" >> worldName >> "Names" >> _locationClassName >> "name");
 _city setVariable [QGVAR(Name), _name];
 
 _name

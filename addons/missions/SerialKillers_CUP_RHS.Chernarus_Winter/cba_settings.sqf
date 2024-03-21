@@ -1,3 +1,5 @@
+// SerialKillers map custom settings
+force force afsk_civilian_respectCityArea = true; // Use configured areas as the mod changes them to be usable
 
 // ACE Fatigue
 force force ace_advanced_fatigue_enabled = false;

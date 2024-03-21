@@ -10,4 +10,6 @@ if (!EGVAR(common,enabled)) exitWith {};
 GVAR(killersRespawnMarker) = "";
 GVAR(stashes) = [];
 
+call FUNC(initConfig);
+
 ADDON = true;

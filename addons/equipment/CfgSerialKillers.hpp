@@ -782,8 +782,8 @@ class CfgSerialKillers
                 class Vehicles
                 {
                     /* Vehicles */
-                    class CUP_LADA_LM_CIV {};
-                    class CUP_C_Volha_Limo_TKCIV {};
+                    class EGVAR(cup_vehicles,LADA_LM) {};
+                    class EGVAR(cup_vehicles,LADA_PolishPolice) {};
                     class EGVAR(vehicles,Hatchback_cop)
                     {
                         requiredScore = 5;
