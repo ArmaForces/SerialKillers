@@ -22,7 +22,7 @@
 
 params ["_cityNamespace", ["_objectType", ""], ["_nearRoad", false], ["_allowOnRoad", true], ["_nearHouse", false], ["_emptyPosSearchRadius", 25]];
 
-private _cityArea = _cityNamespace getVariable QGVAR(cityArea);
+private _cityArea = _cityNamespace getVariable QGVAR(cityAreaForRandomPos);
 
 // Function returns position random position in area
 private _fnc_randomPos = {

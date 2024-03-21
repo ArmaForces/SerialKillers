@@ -15,6 +15,8 @@
  * Public: No
  */
 
+#define IS_CITY_RECTANGLE false
+
 params ["_cityLocation"];
 
 if (_cityLocation isEqualType configNull) then {
@@ -35,9 +37,34 @@ _cityNamespace setVariable [QGVAR(cityType), _cityType, true];
 // Set city position and area variables
 private _cityPosition = (position _cityLocation);
 _cityPosition set [2, 0]; // Location position has negative third coordinate
+private _positionOffset = getArray (_cityLocationConfig >> 'positionOffset');
+if (_positionOffset isNotEqualTo []) then {
+    _cityPosition = _cityPosition vectorAdd _positionOffset;
+};
+
 _cityNamespace setVariable [QGVAR(Position), _cityPosition, true];
-private _cityArea = [_cityPosition, [getNumber (_cityLocationConfig >> 'radiusA'), getNumber (_cityLocationConfig >> 'radiusB'), 0, false]];
-_cityNamespace setVariable [QGVAR(cityArea), _cityArea];
+
+private _area = if (GVAR(respectCityArea)) then {
+    private _radiusA = getNumber (_cityLocationConfig >> 'radiusA');
+    private _radiusB = getNumber (_cityLocationConfig >> 'radiusB');
+    private _angle = getNumber (_cityLocationConfig >> 'angle');
+
+    [_radiusA, _radiusB, _angle, IS_CITY_RECTANGLE]
+} else {
+    switch (_cityType) do {
+        case "NameVillage": { [GVAR(customVillageAreaRadius), GVAR(customVillageAreaRadius), 0, IS_CITY_RECTANGLE] };
+        case "NameCity": { [GVAR(customCityAreaRadius), GVAR(customCityAreaRadius), 0, IS_CITY_RECTANGLE] };
+        case "NameCityCapital": { [GVAR(customCityCapitalAreaRadius), GVAR(customCityCapitalAreaRadius), 0, IS_CITY_RECTANGLE] };
+        default { [GVAR(customVillageAreaRadius), GVAR(customVillageAreaRadius), 0, IS_CITY_RECTANGLE] };
+    }
+};
+
+private _cityArea = [_cityPosition];
+_cityArea append _area;
+private _cityAreaForRandomPos = [_cityPosition, _area];
+
+_cityNamespace setVariable [QGVAR(cityArea), _cityArea, true]; // [_pos, _radiusA, _radiusB, _angle, _rectangle]
+_cityNamespace setVariable [QGVAR(cityAreaForRandomPos), _cityAreaForRandomPos, true]; // [_pos, [_radiusA, _radiusB, _angle, _rectangle]]
 
 // Create city civilians variables
 _cityNamespace setVariable [QGVAR(CiviliansList), []];
