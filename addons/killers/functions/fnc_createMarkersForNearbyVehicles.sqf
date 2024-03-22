@@ -12,7 +12,7 @@
  * None
  *
  * Example:
- * [getPos bob, 500] call afsk_killers_fnc_createMarkersForNearbyVehicles
+ * [getPosATL bob, 500] call afsk_killers_fnc_createMarkersForNearbyVehicles
  *
  * Public: No
  */
@@ -26,7 +26,7 @@ private _emptyVehicles = _nearbyVehicles select {
 
 {
     private _vehicle = _x;
-    private _marker = createMarkerLocal [format ["vehicle_%1", _vehicle], getPos _vehicle];
+    private _marker = createMarkerLocal [format ["vehicle_%1", _vehicle], getPosATL _vehicle];
     _marker setMarkerColorLocal "ColorCIVILIAN";
     _marker setMarkerTextLocal getText (configFile >> "CfgVehicles" >> (typeof _vehicle) >> "displayName");
 

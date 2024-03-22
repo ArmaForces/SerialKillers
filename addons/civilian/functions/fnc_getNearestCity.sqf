@@ -19,7 +19,7 @@
 params ["_position", ["_searchRadius", 2000]];
 
 if (_position isEqualType objNull) then {
-    _position = getPos _position;
+    _position = getPosATL _position;
 };
 
 // Find nearest city location

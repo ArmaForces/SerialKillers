@@ -70,7 +70,7 @@ if (hasInterface) then {
     [QGVAR(teleportedToStart), {
         params ["_flag"];
         private _actionID = player addAction ["Teleport back", {
-            player setPos getPos (_this select 3)
+            player setPos getPosATL (_this select 3)
         }, _flag, 10, true];
         // Wait until player teleports back or times out
         [{player distance (_this select 0) < 10}, {
@@ -94,7 +94,7 @@ if (hasInterface) then {
     params ["_killer", "_destination"];
 
     if (_destination isEqualType objNull) then {
-        _destination = getPos _destination;
+        _destination = getPosATL _destination;
     };
 
     // Mark nearest vehicles for first couple minutes
