@@ -2,7 +2,7 @@
 ADDON = false;
 #include "XEH_PREP.hpp"
 
-#include "initSettings.sqf"
+#include "initSettings.inc.sqf"
 
 // Killswitch
 if (!EGVAR(common,enabled)) exitWith {};
@@ -24,15 +24,27 @@ if (isServer) then {
     };
     publicVariable QGVAR(initialCiviliansCount);
 
-    // Weights for civilians creation
-    GVAR(weightCapital) = ceil (random (10));
-    GVAR(weightCity) = ceil (random (8));
-    GVAR(weightVillage) = ceil (random (6));
-    GVAR(weightRural) = ceil (random (10));
-
     // Initialize all cities found on the map
     {
-        GVAR(cities) pushBack ([_x] call FUNC(initCity));
+        private _city = [_x] call FUNC(initCity);
+        GVAR(cities) pushBack _city;
+
+#ifdef DEV_DEBUG
+        private _cityArea = _city getVariable QGVAR(cityArea);
+        _cityArea params ["_position", "_radiusA", "_radiusB", "_angle"];
+
+        private _marker = createMarkerLocal [configName _x, _position];
+        _marker setMarkerShapeLocal "ELLIPSE";
+        _marker setMarkerAlphaLocal 0.5;
+        _marker setMarkerColorLocal "ColorCIVILIAN";
+        _marker setMarkerSizeLocal [_radiusA, _radiusB];
+        _marker setMarkerDir _angle;
+
+        private _centerMarker = createMarkerLocal [format["center_%1", configName _x], _position];
+        _centerMarker setMarkerColorLocal "ColorCIVILIAN";
+        _centerMarker setMarkerSizeLocal [0.25, 0.25];
+        _centerMarker setMarkerType "mil_dot";
+#endif
     } forEach EGVAR(common,cities);
     publicVariable QGVAR(cities);
 
@@ -42,24 +54,19 @@ if (isServer) then {
     GVAR(uniforms) = [];
     GVAR(vests) = [];
     GVAR(headgear) = [];
-    call FUNC(initCiviliansConfig);
+    call FUNC(initConfig);
     publicVariable QGVAR(backpacks);
     publicVariable QGVAR(uniforms);
     publicVariable QGVAR(vests);
     publicVariable QGVAR(headgear);
     // Initialize civilians
-    call FUNC(initCivilians);
+    [GVAR(cities)] call FUNC(initCivilians);
     publicVariable QGVAR(civilians);
     {
         private _civiliansCount = count (_x getVariable [QGVAR(CiviliansList), []]);
         _x setVariable [QGVAR(CiviliansCount), _civiliansCount];
         _x setVariable [QGVAR(initialCiviliansCount), _civiliansCount];
     } forEach GVAR(cities);
-
-
-    // We need some improvements in determining civilian vehicles limit
-    GVAR(emptyVehiclesLimit) = GVAR(emptyVehiclesLimitMultiplier) * (5 * count (GVAR(cities)));
-    call FUNC(initVehicles);
 };
 
 ADDON = true;

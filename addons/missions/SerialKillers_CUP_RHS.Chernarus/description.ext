@@ -1,0 +1,23 @@
+cba_settings_hasSettingsFile = 1;
+
+class Header
+{
+	gameType = "SK";
+	minPlayers = 2;
+	maxPlayers = 24;
+};
+
+author = "3Mydlo3";
+onLoadName = "ArmaForces SerialKillers";
+onLoadMission = "Police obtained information that up to 4 well equipped killers want to wreak havoc on Chernarus. Their task is simple - stop the assassins as soon as possible.";
+briefingName = "ArmaForces SerialKillers";
+
+disabledAI = "true";
+enableDebugConsole = 1;
+respawn = 3;
+respawnDelay = 20;
+respawnOnStart = -1;
+respawnTemplatesWest[] = {"MenuPosition", "Counter"};
+respawnTemplatesEast[] = {"Base", "Counter"};
+
+#include "CfgSerialKillers.hpp"

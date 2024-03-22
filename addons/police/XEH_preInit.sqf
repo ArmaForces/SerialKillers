@@ -8,4 +8,6 @@ if (!EGVAR(common,enabled)) exitWith {};
 GVAR(arsenals) = [];
 GVAR(lastEquipmentUpdateScore) = -1;
 
+call FUNC(initConfig);
+
 ADDON = true;

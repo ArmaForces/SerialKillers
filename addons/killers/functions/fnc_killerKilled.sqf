@@ -20,5 +20,7 @@ params ["_unit", "_killer"];
 
 if !(isServer) exitWith {};
 
+INFO_1("Killer %1 was killed",name _unit);
+
 // Create spectator for killer so he won't get bored when he's dead or imprisoned.
 [QEGVAR(common,initializeSpectator), [], _unit] call CBA_fnc_targetEvent;

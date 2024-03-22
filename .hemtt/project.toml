@@ -16,3 +16,33 @@ author = "ArmaForces"
 
 [version]
 path = "addons/main/script_version.hpp"
+
+[asc]
+exclude = [
+    ".inc.sqf"
+]
+
+[hemtt.launch]
+workshop = [
+    "450814997", # CBA_A3
+    "2369477168", # ADT
+]
+parameters = [
+    "-name=dev_sk",
+    "-window",
+]
+
+[hemtt.launch.cup]
+workshop = [
+    "450814997", # CBA_A3
+    "2369477168", # ADT
+    "583496184", # CUP Terrains - Core
+    "583544987", # CUP Terrains - Maps
+    "497660133", # CUP Weapons
+    "497661914", # CUP Units
+    "541888371", # CUP Vehicles
+]
+parameters = [
+    "-name=dev_sk",
+    "-window",
+]

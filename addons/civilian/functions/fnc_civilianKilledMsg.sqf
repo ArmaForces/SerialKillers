@@ -24,8 +24,10 @@ if (_timeOfDeath isEqualType 0) then {
     _timeOfDeath = [_timeOfDeath] call BIS_fnc_timeToString;
 };
 
-if (isNull _nearestTown) then {
-    _nearestTown = [_deadCivilian] call EFUNC(common,getNearestCityLocation);
+private _nearestCity = if (isNull _nearestTown) then {
+    [_deadCivilian] call FUNC(getNearestCity)
+} else {
+    [_nearestTown] call FUNC(getCityByLocation)
 };
 
 // Check if civilian died in city. If so then change output a bit to represent that.
