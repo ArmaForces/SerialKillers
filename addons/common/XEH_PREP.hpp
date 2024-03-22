@@ -14,7 +14,6 @@ PREP(getRandomEmptyPosition);
 PREP(getRandomPos);
 PREP(getTextFromConfig);
 PREP(isHouseNearby);
-PREP(isPositionInCity);
 PREP(isRoadNearby);
 PREP(playMusicServer);
 PREP(removeItemsFromArsenal);
