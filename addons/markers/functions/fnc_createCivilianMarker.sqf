@@ -22,7 +22,7 @@ if (_civilian isEqualTo objNull) exitWith {
 };
 
 private _marker = format["civilian_%1", _civilian];
-createMarkerLocal [_marker, getPos _civilian];
+createMarkerLocal [_marker, getPosATL _civilian];
 _marker setMarkerTypeLocal "mil_dot";
 _marker setMarkerSizeLocal [0.5, 0.5];
 _marker setMarkerColorLocal "ColorGreen";

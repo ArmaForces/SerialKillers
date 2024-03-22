@@ -16,7 +16,7 @@
  */
 
 {
-    private _marker = createMarkerlocal [str _x, getPos _x];
+    private _marker = createMarkerlocal [str _x, getPosATL _x];
     _marker setMarkerColorlocal "ColorEAST";
     _marker setMarkerSizelocal [0.5,0.5];
     _marker setMarkerTypelocal "mil_pickup";

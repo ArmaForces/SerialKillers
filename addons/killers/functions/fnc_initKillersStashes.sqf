@@ -31,7 +31,7 @@ private _createStatshesCount = ceil (random [_stashesCount/2, _stashesCount/1.33
 // Initialize random stashes up to _createStatshesCount
 for "_y" from 0 to (_createStatshesCount - 1) step 1 do {
     private _stash = _stashes deleteAt (floor (random (count (_stashes))));
-    private _stashPos = getPos _stash;
+    private _stashPos = getPosATL _stash;
     private _box = createVehicle [GVAR(stashBoxClassName), _stashPos, [], 0, "CAN_COLLIDE"];
     _box setDir getDir _stash;
     clearItemCargoGlobal _box;

@@ -18,7 +18,7 @@
 params ["_spawner"];
 
 private _policeBase = _spawner getVariable "policeStation";
-private _baseArea = [getPos _policeBase] + (_policeBase getVariable "objectArea");
+private _baseArea = [getPosATL _policeBase] + (_policeBase getVariable "objectArea");
 
 // Variable contains vehicle classname -> action id connection
 _spawner setVariable [QGVAR(vehicleActions), true call CBA_fnc_createNamespace, true];
@@ -29,7 +29,7 @@ private _helipads = (allMissionObjects "Helipad_base_F") inAreaArray _baseArea;
 
 // Preload
 {
-    getPos _x findEmptyPositionReady [0, SPAWNPOINT_SAFEZONE];
+    getPosATL _x findEmptyPositionReady [0, SPAWNPOINT_SAFEZONE];
 } forEach (_spawnPoints + _helipads);
 
 // Assign found spawn points for easier access

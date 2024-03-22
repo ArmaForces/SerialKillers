@@ -24,7 +24,7 @@ GVAR(prisoners) = [];
 {
     [_x] call FUNC(free);
     if (_object isNotEqualTo objNull) then {
-        _x setPos (getPos _object);
+        _x setPos (getPosATL _object);
     };
 } forEach _prisoners;
 

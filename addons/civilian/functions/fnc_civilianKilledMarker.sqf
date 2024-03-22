@@ -20,7 +20,7 @@ params ["_unit", "_time"];
 
 private _markerName = format ["killed_civilian_%1_%2", _unit];
 private _markerText = format ["%1", _time];
-private _marker = createMarker [_markerName, getpos _unit];
+private _marker = createMarker [_markerName, getPosATL _unit];
 _marker setMarkerType "mil_objective";
 _marker setMarkerColor "ColorEAST";
 _marker setMarkerSize [0.4, 0.4];

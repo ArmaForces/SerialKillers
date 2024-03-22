@@ -11,7 +11,7 @@
  * 0: Police station marker <STRING>
  *
  * Example:
- * ["Player", getPos player] call afsk_police_fnc_policeStationMarker
+ * ["Player", getPosATL player] call afsk_police_fnc_policeStationMarker
  *
  * Public: No
  */

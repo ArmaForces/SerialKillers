@@ -20,7 +20,7 @@
 params ["_pos", ["_radius", 500], ["_filterFunction", {true}]];
 
 if (_pos isEqualType objNull) then {
-    _pos = getPos _pos;
+    _pos = getPosATL _pos;
 };
 
 private _nearbyVehicles = _pos nearEntities [["Air", "Car", "Motorcycle", "Tank"], _radius]

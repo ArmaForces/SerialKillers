@@ -31,17 +31,17 @@ private _spawnPoints = if (_vehicleType isEqualTo "Helicopter" || {_vehicleType 
 private _position = [];
 private _direction = 0;
 
-private _emptySpawnPointIndex = _spawnPoints findIf {getPos _x nearEntities SPAWNPOINT_SAFEZONE isEqualTo []};
+private _emptySpawnPointIndex = _spawnPoints findIf {getPosATL _x nearEntities SPAWNPOINT_SAFEZONE isEqualTo []};
 if (_emptySpawnPointIndex isNotEqualTo -1) then {
     LOG("Found empty spawnpoint");
     private _spawnPoint = _spawnPoints select _emptySpawnPointIndex;
-    _position = getPos _spawnPoint;
+    _position = getPosATL _spawnPoint;
     _direction = getDir _spawnPoint;
 } else {
     // Maybe there is a position that has unoccupied vehicle
     LOG("Looking for unoccupied vehicles");
     private _fullSpawnPointsWithoutCrew = _spawnPoints select {
-        private _nearEntities = getPos _x nearEntities SPAWNPOINT_SAFEZONE;
+        private _nearEntities = getPosATL _x nearEntities SPAWNPOINT_SAFEZONE;
         if (_nearEntities isEqualTo []) exitWith { false };
         _nearEntities findIf {crew _x isEqualTo []} isNotEqualTo -1
     };
@@ -58,7 +58,7 @@ if (_emptySpawnPointIndex isNotEqualTo -1) then {
                 deleteVehicle _x;
             };
 
-        _position = getPos _spawnPoint;
+        _position = getPosATL _spawnPoint;
         _direction = getDir _spawnPoint;
     };
 };
