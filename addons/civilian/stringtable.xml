@@ -13,7 +13,7 @@
             <English>Controls how much civilian vehicles will be created on the whole map.</English>
             <Polish>Ustala jak dużo pojazdów cywilnych będzie utworzonych na całej mapie.</Polish>
         </Key>
-        <Key ID="STR_AFSK_Civilian_Civilian_Killed_In_City">
+        <Key ID="STR_AFSK_Civilian_Killed_In_City">
             <English>Civilian was killed at %1 in %2!</English>
             <Polish>Cywil został zabity o godzinie %1 w %2!</Polish>
         </Key>
