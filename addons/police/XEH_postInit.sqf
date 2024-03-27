@@ -83,3 +83,9 @@ if (hasInterface) then {
     private _msg = _this call FUNC(copKilledMsg);
     [QEGVAR(common,showSideChatMsg), [WEST, _msg]] call CBA_fnc_localEvent;
 }] call CBA_fnc_addEventHandler;
+
+[QGVAR(showFailedCreatingVehicleNotification), {
+    params ["_vehicleName", "_baseName"];
+    private _msg = format [LLSTRING(FailedCreatingVehicle), _vehicleName, _baseName];
+    [QEGVAR(common,showSideChatMsg), [WEST, _msg]] call CBA_fnc_localEvent;
+}] call CBA_fnc_addEventHandler;

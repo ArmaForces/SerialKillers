@@ -71,8 +71,7 @@ if (_position isNotEqualTo []) then {
 if (_position isEqualTo []) exitWith {
     private _baseName = (_spawner getVariable "policeStation") getVariable "LocationName";
     private _vehicleName = getText (configFile >> "CfgVehicles" >> _vehicleClassname >> "displayName");
-    private _msg = format ["Cannot create %1 at %2.", _vehicleName, _baseName];
-    [QEGVAR(common,showSideChatMsg), [WEST, _msg]] call CBA_fnc_globalEvent;
+    [QGVAR(showFailedCreatingVehicleNotification), [_vehicleName, _baseName]] call CBA_fnc_globalEvent;
 };
 
 // Spawn vehicle

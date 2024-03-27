@@ -33,6 +33,10 @@
             <English>Cop was killed by cop</English>
             <Polish>Policjant został zabity przez policjanta</Polish>
         </Key>
+        <Key ID="STR_AFSK_Police_FailedCreatingVehicle">
+            <English>Cannot create %1 at %2.</English>
+            <Polish>Nie można utworzyć %1 w %2.</Polish>
+        </Key>
         <Key ID="STR_AFSK_Police_SaveEquipmentForRespawn">
             <English>Save equipment for respawn</English>
             <Polish>Zapisz ekwipunek do odrodzenia</Polish>
