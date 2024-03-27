@@ -19,7 +19,7 @@ if (isServer) then {
         params [["_side", sideEmpty], ["_msg", ""]];
         if (_msg isEqualTo "") exitWith {};
         private _sideText = if (_side isEqualTo sideEmpty) then { "ALL" } else { _side };
-        INFO_2("(Side Chat) %1: %2",_sideText,_msg);
+        INFO_2("(Side Chat) %1: %2",_sideText,_msg call BIS_fnc_localize);
     }] call CBA_fnc_addEventHandler;
 };
 
@@ -60,7 +60,7 @@ if (hasInterface) then {
         if (_msg isEqualTo "") exitWith {};
         // If side is empty we want to show message to everyone
         if (_side isEqualTo sideEmpty || {playerSide isEqualTo _side}) then {
-            [playerSide, "HQ"] sideChat _msg;
+            [playerSide, "HQ"] sideChat (_msg call BIS_fnc_localize);
         };
     }] call CBA_fnc_addEventHandler;
 };

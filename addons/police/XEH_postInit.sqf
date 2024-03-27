@@ -78,3 +78,8 @@ if (hasInterface) then {
         [QGVAR(copRespawned), _this] call CBA_fnc_serverEvent;
     }];
 };
+
+[QGVAR(showCopKilledNotification), {
+    private _msg = _this call FUNC(copKilledMsg);
+    [QEGVAR(common,showSideChatMsg), [WEST, _msg]] call CBA_fnc_localEvent;
+}] call CBA_fnc_addEventHandler;

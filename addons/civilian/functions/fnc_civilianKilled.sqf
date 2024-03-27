@@ -35,8 +35,7 @@ private _time = [daytime] call BIS_fnc_timeToString;
 // Call function to create marker at killed unit's position.
 [_civilian, _time] call FUNC(civilianKilledMarker);
 // Show message for all cops that cop has been killed near some location with timestamp
-private _msg = [_civilian, _killer, _time] call FUNC(civilianKilledMsg);
-[QEGVAR(common,showSideChatMsg), [WEST, _msg]] call CBA_fnc_globalEvent;
+[QGVAR(showCivilianKilledNotification), [_civilian, _killer, _time]] call CBA_fnc_globalEvent;
 
 // Killer can be vehicle sometimes so get driver
 _killer = driver _killer;

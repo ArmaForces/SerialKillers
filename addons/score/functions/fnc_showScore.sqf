@@ -57,7 +57,7 @@ private _msg = composeText [
     lineBreak,
     _msgPoliceScore,
     lineBreak,
-    _extraText
+    _extraText call BIS_fnc_localize
 ];
 _msg setAttributes ["valign", "middle"];
 
