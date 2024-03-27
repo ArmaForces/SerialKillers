@@ -37,7 +37,7 @@ private _notify = if (GVAR(alarmCopsNotification) isEqualTo 1) then {
 if (_notify) exitWith {
     LOG("Cops are notified about a car alarm.");
 
-    [QEGVAR(common,showSideChatMsg), [WEST, _this call FUNC(vehicleStolenMsg)]] call CBA_fnc_globalEvent;
+    [QGVAR(showCarAlarmNotification), [_vehicle]] call CBA_fnc_globalEvent;
 
     true
 };

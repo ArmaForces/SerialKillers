@@ -30,14 +30,14 @@ private _nearestCity = if (isNull _nearestTown) then {
 };
 
 private _msg = "";
+private _nearestCityName = _nearestCity getVariable [QEGVAR(civilian,name), ""];
 private _nearestCityArea = _nearestCity getVariable QEGVAR(civilian,cityArea);
 private _isInCity = (position _deadCop) inArea _nearestCityArea;
 
-// Check if distance is greater than 250 m. If so then change output a bit to represent that.
 if (_isInCity) then {
-    _msg = format [LLSTRING(Cop_Killed_In_City), _timeOfDeath, text _nearestTown];
+    _msg = format [LLSTRING(Cop_Killed_In_City), _timeOfDeath, _nearestCityName];
 } else {
-    _msg = format [LLSTRING(Cop_Killed_Near_City), _timeOfDeath, text _nearestTown];
+    _msg = format [LLSTRING(Cop_Killed_Near_City), _timeOfDeath, _nearestCityName];
 };
 
 _msg
