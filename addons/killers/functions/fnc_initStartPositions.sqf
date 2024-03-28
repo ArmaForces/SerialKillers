@@ -45,6 +45,7 @@ while {_i > 0} do {
 {
     private _pos = getPos _x;
     private _locationName = _x getVariable ["LocationName", ""];
+    // TODO: Localize location name (move it to local rather than server)
     if (_locationName isEqualTo "") then {
         private _nearestLocation = [_pos] call EFUNC(common,getNearestLocationWithAvailableName);
         _locationName = if (_nearestLocation isEqualTo locationNull) then {
