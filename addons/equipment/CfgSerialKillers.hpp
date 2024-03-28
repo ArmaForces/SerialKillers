@@ -501,9 +501,6 @@ class CfgSerialKillers
                     class Laserdesignator_02_ghex_F: Laserdesignator {};
                     class Laserdesignator_03 : Laserdesignator {};
 
-                    // Spike strip mine
-                    class TDD_Talon_Mag {};
-
                     class armaforces_inflatable_boat_bag {};
                     class armaforces_inflatable_boat_engine_bag {};
 
@@ -722,6 +719,9 @@ class CfgSerialKillers
                     class ACE_DefusalKit {};
                     class MineDetector { requiredScore = 30; };
                     class ACE_HuntIR_monitor : ACE_HuntIR_M203 {};
+
+                    // Spike strip mine
+                    class TDD_Talon_Mag {};
 
                     /* Uniforms */
                     class U_B_GEN_Soldier_F {};
