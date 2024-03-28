@@ -105,7 +105,7 @@
     [[1, 2, 3], [LSTRING(Always), LSTRING(IfCiviliansNearby), LSTRING(Never)], 1],
     true,
     {},
-    true
+    false
 ] call CBA_fnc_addSetting;
 
 [
@@ -116,5 +116,5 @@
     [0, 300, 30, 1],
     true,
     {},
-    true
+    false
 ] call CBA_fnc_addSetting;
