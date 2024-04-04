@@ -25,7 +25,7 @@ if (_vehicleClassname isEqualType configNull) then {
 };
 
 if (_position isEqualType objNull) then {
-    _position = getPos _position;
+    _position = getPosATL _position;
 };
 
 private _mode = if (_forcePosition) then {"CAN_COLLIDE"} else {"NONE"};

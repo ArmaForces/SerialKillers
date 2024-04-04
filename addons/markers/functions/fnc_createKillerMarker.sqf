@@ -19,7 +19,7 @@
 params ["_killer", ["_hidden", false]];
 
 private _marker = format["killer_%1", name _killer];
-createMarkerLocal [_marker, getPos _killer];
+createMarkerLocal [_marker, getPosATL _killer];
 _marker setMarkerTypeLocal "mil_dot";
 
 if (_hidden) then {

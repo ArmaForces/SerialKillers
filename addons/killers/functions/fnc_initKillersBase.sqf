@@ -18,13 +18,13 @@
 private _killersBase = EGVAR(modules,killersBase);
 
 // Create teleporter to all start positions
-private _flag = GVAR(flagClassName) createVehicle (getPos _killersBase);
+private _flag = GVAR(flagClassName) createVehicle (getPosATL _killersBase);
 _flag setVariable ["killersBase", _killersBase, true];
 _killersBase setVariable ["Teleporter", _flag, true];
 [QGVAR(createTeleport), [_flag]] call CBA_fnc_globalEventJIP;
 
 // Create arsenal
-private _box = createVehicle [GVAR(arsenalBoxClassName), (getPos _killersBase), [], 0, "NONE"];
+private _box = createVehicle [GVAR(arsenalBoxClassName), (getPosATL _killersBase), [], 0, "NONE"];
 clearItemCargoGlobal _box;
 clearWeaponCargoGlobal _box;
 clearMagazineCargoGlobal _box;

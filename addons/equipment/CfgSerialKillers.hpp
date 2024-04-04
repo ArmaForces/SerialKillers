@@ -720,6 +720,9 @@ class CfgSerialKillers
                     class MineDetector { requiredScore = 30; };
                     class ACE_HuntIR_monitor : ACE_HuntIR_M203 {};
 
+                    // Spike strip mine
+                    class TDD_Talon_Mag {};
+
                     /* Uniforms */
                     class U_B_GEN_Soldier_F {};
                     class U_B_GEN_Commander_F {};
@@ -759,6 +762,10 @@ class CfgSerialKillers
                     class B_Messenger_Coyote_F {};
                     class B_LegStrapBag_olive_F {};
                     class B_LegStrapBag_coyote_F {};
+                    class B_AssaultPack_blk {};
+                    class B_Carryall_blk : rhs_weap_m4a1_carryhandle_m203 {};
+                    class B_TacticalPack_blk : rhs_weap_m4a1_carryhandle_m203 {};
+                    class B_FieldPack_blk : rhs_weap_m4a1_carryhandle_m203 {};
                     /* Headgear */
                     class rds_police_cap {};
                     class H_Cap_police {};

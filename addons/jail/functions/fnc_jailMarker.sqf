@@ -16,7 +16,7 @@
  */
 
 private _markerText = format ["%1", LLSTRING(Jail)];
-private _marker = createMarker ["jail", getPos GVAR(jail)];
+private _marker = createMarker ["jail", getPosATL GVAR(jail)];
 _marker setMarkerType "mil_end";
 _marker setMarkerColor "ColorEAST";
 _marker setMarkerText _markerText;
