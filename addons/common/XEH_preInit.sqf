@@ -26,7 +26,8 @@ if (!GVAR(enabled)) exitWith {};
 GVAR(allLocationTypes) = ("true" configClasses (configFile >> "CfgLocationTypes")) apply {configName _x};
 
 // Location names cache namespace (to prevent reading from config every time)
-GVAR(locationNames) = call CBA_fnc_createNamespace;
+GVAR(locationNames) = createHashMap;
+GVAR(locationNamesRaw) = createHashMap;
 
 if (isServer) then {
     GVAR(musicEH) = -1;

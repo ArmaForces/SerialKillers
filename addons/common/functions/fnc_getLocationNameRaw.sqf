@@ -27,12 +27,12 @@ private _locationClassname = if (_location isEqualType locationNull) then {
 if (_locationClassname isEqualTo "") exitWith {""};
 
 // Try to get name from cache
-private _name = GVAR(locationNames) getVariable [_locationClassname, ""];
+private _name = GVAR(locationNamesRaw) getOrDefault [_locationClassname, ""];
 
 if (_name isEqualTo "") then {
     _name = getTextRaw (configFile >> "CfgWorlds" >> worldName >> "Names" >> _locationClassname >> "name");
     // Fill cache
-    GVAR(locationNames) setVariable [_locationClassname, _name];
+    GVAR(locationNamesRaw) set [_locationClassname, _name];
 };
 
 _name
