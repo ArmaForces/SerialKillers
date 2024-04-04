@@ -20,9 +20,9 @@ params ["_baseName", "_basePos"];
 
 private _markerName = format ["policeStation_%1", _baseName];
 private _markerText = format ["%1", _baseName];
-private _marker = createMarker [_markerName, _basePos];
-_marker setMarkerType "mil_flag";
-_marker setMarkerColor "ColorWEST";
+private _marker = createMarkerLocal [_markerName, _basePos];
+_marker setMarkerTypeLocal "mil_flag";
+_marker setMarkerColorLocal "ColorWEST";
 _marker setMarkerText _markerText;
 
 _marker
