@@ -31,7 +31,7 @@ while {_i > 0} do {
         private _nearestLocation = [_pos, 1500] call EFUNC(common,getNearestLocationWithAvailableName);
         //diag_log format ["[AFSK] [KILLERS] [initStartPositions] Location: %1", _nearestLocation];
         if (_nearestLocation isEqualTo locationNull) exitWith {};
-        private _locationName = [_nearestLocation] call EFUNC(common,getLocationName);
+        private _locationName = [_nearestLocation] call EFUNC(common,getLocationNameRaw);
         if (_locationName isEqualTo "") exitWith {};
         //diag_log format ["[AFSK] [KILLERS] [initStartPositions] Location Name: %1", _locationName];
         if (!(_positions getVariable [_locationName, []] isEqualTo [])) exitWith {};
