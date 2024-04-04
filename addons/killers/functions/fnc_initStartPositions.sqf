@@ -51,7 +51,7 @@ while {_i > 0} do {
         _locationName = if (_nearestLocation isEqualTo locationNull) then {
             random (999) toFixed 1
         } else {
-            [_nearestLocation] call EFUNC(common,getLocationName);
+            [_nearestLocation] call EFUNC(common,getLocationNameRaw);
         };
     };
     _positions setVariable [_locationName, _pos, true];

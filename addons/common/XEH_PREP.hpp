@@ -9,6 +9,7 @@ PREP(getLocationType);
 PREP(getNearestCityLocation);
 PREP(getNearestLocation);
 PREP(getNearestLocationName);
+PREP(getNearestLocationNameRaw);
 PREP(getNearestLocationWithAvailableName);
 PREP(getRandomEmptyPosition);
 PREP(getRandomPos);
