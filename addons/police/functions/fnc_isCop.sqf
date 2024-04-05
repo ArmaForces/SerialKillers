@@ -17,4 +17,4 @@
 
 params ["_unit"];
 
-_unit getVariable [QEGVAR(common,side), CIVILIAN]
+_unit getVariable [QEGVAR(common,side), CIVILIAN] isEqualTo WEST
