@@ -21,13 +21,17 @@ params ["_unit", "_killer"];
 if !(isServer) exitWith {};
 
 private _time = [daytime] call BIS_fnc_timeToString;
+
+LOG_3("Cop %1 was killed by %2 %3 at %4",name _unit,isPlayer _killer select ["AI", "PLAYER"],name _killer,_time);
+
 // Call function to create marker at killed unit's position.
 [_unit, _time] call FUNC(copKilledMarker);
 // Show message for all cops that cop has been killed near some location with timestamp
 [QGVAR(showcopKilledNotification), [_unit, _time]] call CBA_fnc_globalEvent;
 
 // Check why unit died and call funcion to change score.
-if (side _killer isEqualTo WEST && {_unit isNotEqualTo _killer}) then {
+// BUG: side check returns false for dead cops
+if ([_killer] call FUNC(isCop)) then {
     [QEGVAR(score,changeScore), [EAST, EGVAR(score,copKilledCopKillersScore), LSTRING(KilledByCop)]] call CBA_fnc_serverEvent;
     [QEGVAR(score,changeScore), [WEST, EGVAR(score,copKilledCopPoliceScore), LSTRING(KilledByCop)]] call CBA_fnc_serverEvent;
 } else {

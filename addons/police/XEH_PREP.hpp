@@ -9,6 +9,7 @@ PREP(initPoliceStation);
 PREP(initSpawner);
 PREP(initPoliceStationClient);
 PREP(initSaveEquipmentAction);
+PREP(isCop);
 PREP(policeStationAlarm);
 PREP(policeStationMarker);
 PREP(removeVehiclesFromSpawner);
