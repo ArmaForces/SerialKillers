@@ -22,7 +22,7 @@ if !(isServer) exitWith {};
 
 private _time = [daytime] call BIS_fnc_timeToString;
 
-private _isPlayerOrAi = isPlayer _killer select ["AI", "PLAYER"];
+private _isPlayerOrAi = ["AI", "PLAYER"] select isPlayer _killer;
 LOG_4("Cop %1 was killed by %2 %3 at %4",name _unit,_isPlayerOrAi,name _killer,_time);
 
 // Call function to create marker at killed unit's position.
