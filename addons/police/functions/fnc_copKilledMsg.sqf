@@ -25,9 +25,9 @@ if (_timeOfDeath isEqualType 0) then {
 
 // Check if civilian died in city. If so then change output a bit to represent that.
 private _template = if ([_deadCop, _nearestTown] call EFUNC(civilian,isPositionInCity)) then {
-    if (side _killer isEqualTo WEST) then { LLSTRING(KilledByCop_In_City) } else { LLSTRING(Killed_In_City) };
+    if ([_deadCop, _killer] call FUNC(isKilledByCop)) then { LLSTRING(KilledByCop_In_City) } else { LLSTRING(Killed_In_City) };
 } else {
-    if (side _killer isEqualTo WEST) then { LLSTRING(KilledByCop_Near_City) } else { LLSTRING(Killed_Near_City) };
+    if ([_deadCop, _killer] call FUNC(isKilledByCop)) then { LLSTRING(KilledByCop_Near_City) } else { LLSTRING(Killed_Near_City) };
 };
 
 // Supplying killer name to format, but only killed by cop should reveal name for lynch

@@ -37,7 +37,7 @@ LOG_4("Cop %1 was killed by %2 %3 at %4",name _unit,_isPlayerOrAi,name _killer,_
 private _isSuicideInVehicle = isNull _killer && {vehicle _unit isNotEqualTo _unit};
 
 // Check why unit died and call funcion to change score.
-if (_isSuicideInVehicle || {[_killer] call FUNC(isCop)}) then {
+if ([_unit, _killer] call FUNC(isKilledByCop)) then {
     [QEGVAR(score,changeScore), [EAST, EGVAR(score,copKilledCopKillersScore), LSTRING(KilledByCop)]] call CBA_fnc_serverEvent;
     [QEGVAR(score,changeScore), [WEST, EGVAR(score,copKilledCopPoliceScore), LSTRING(KilledByCop)]] call CBA_fnc_serverEvent;
 } else {
