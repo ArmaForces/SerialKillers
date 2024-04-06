@@ -18,14 +18,14 @@
  * Public: No
  */
 
-params ["_deadCivilian", ["_killer", objNull], ["_timeOfDeath", daytime], ["_nearestTown", locationNull]];
+params ["_unit", ["_killer", objNull], ["_timeOfDeath", daytime], ["_nearestTown", locationNull]];
 
 if (_timeOfDeath isEqualType 0) then {
     _timeOfDeath = [_timeOfDeath] call BIS_fnc_timeToString;
 };
 
 // Check if civilian died in city. If so then change output a bit to represent that.
-private _template = if ([_deadCivilian, _nearestTown] call FUNC(isPositionInCity)) then {
+private _template = if ([_unit, _nearestTown] call FUNC(isPositionInCity)) then {
     if ([_killer] call EFUNC(police,isCop)) then { LLSTRING(KilledByCop_In_City) } else { LLSTRING(Killed_In_City) };
 } else {
     if ([_killer] call EFUNC(police,isCop)) then { LLSTRING(KilledByCop_Near_City) } else { LLSTRING(Killed_Near_City) };

@@ -17,20 +17,21 @@
  * Public: No
  */
 
-params ["_deadCop", "_killer", ["_timeOfDeath", daytime], ["_nearestTown", locationNull]];
+params ["_unit", "_killer", ["_timeOfDeath", daytime], ["_nearestTown", locationNull]];
 
 if (_timeOfDeath isEqualType 0) then {
     _timeOfDeath = [_timeOfDeath] call BIS_fnc_timeToString;
 };
 
 // Check if civilian died in city. If so then change output a bit to represent that.
-private _template = if ([_deadCop, _nearestTown] call EFUNC(civilian,isPositionInCity)) then {
-    if ([_deadCop, _killer] call FUNC(isKilledByCop)) then { LLSTRING(KilledByCop_In_City) } else { LLSTRING(Killed_In_City) };
+private _template = if ([_unit, _nearestTown] call EFUNC(civilian,isPositionInCity)) then {
+    if ([_unit, _killer] call FUNC(isKilledByCop)) then { LLSTRING(KilledByCop_In_City) } else { LLSTRING(Killed_In_City) };
 } else {
-    if ([_deadCop, _killer] call FUNC(isKilledByCop)) then { LLSTRING(KilledByCop_Near_City) } else { LLSTRING(Killed_Near_City) };
+    if ([_unit, _killer] call FUNC(isKilledByCop)) then { LLSTRING(KilledByCop_Near_City) } else { LLSTRING(Killed_Near_City) };
 };
 
 // Supplying killer name to format, but only killed by cop should reveal name for lynch
-private _msg = format [_template, _timeOfDeath, text _nearestTown, name _killer];
+private _killerName = if (isNull _killer) then { name _unit } else { name _killer };
+private _msg = format [_template, _timeOfDeath, text _nearestTown, _killerName];
 
 _msg
