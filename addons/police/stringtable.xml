@@ -17,13 +17,21 @@
             <English>It was a bad idea...</English>
             <Polish>To był zły pomysł...</Polish>
         </Key>
-        <Key ID="STR_AFSK_Police_Cop_Killed_In_City">
+        <Key ID="STR_AFSK_Police_Killed_In_City">
             <English>Cop was killed at %1 in %2!</English>
             <Polish>Policjant został zabity o godzinie %1 w %2!</Polish>
         </Key>
-        <Key ID="STR_AFSK_Police_Cop_Killed_Near_City">
+        <Key ID="STR_AFSK_Police_Killed_Near_City">
             <English>Cop was killed at %1 near %2!</English>
             <Polish>Policjant został zabity o godzinie %1 w pobliżu %2!</Polish>
+        </Key>
+        <Key ID="STR_AFSK_Police_KilledByCop_In_City">
+            <English>Cop was killed by cop %3 at %1 in %2!</English>
+            <Polish>Policjant został zabity przez policjanta %3 o godzinie %1 w %2!</Polish>
+        </Key>
+        <Key ID="STR_AFSK_Police_KilledByCop_Near_City">
+            <English>Cop was killed by cop %3 at %1 near %2!</English>
+            <Polish>Policjant został zabity przez policjanta %3 o godzinie %1 w pobliżu %2!</Polish>
         </Key>
         <Key ID="STR_AFSK_Police_Killed">
             <English>Cop was killed</English>

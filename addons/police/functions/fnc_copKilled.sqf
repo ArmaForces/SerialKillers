@@ -28,7 +28,7 @@ LOG_4("Cop %1 was killed by %2 %3 at %4",name _unit,_isPlayerOrAi,name _killer,_
 // Call function to create marker at killed unit's position.
 [_unit, _time] call FUNC(copKilledMarker);
 // Show message for all cops that cop has been killed near some location with timestamp
-[QGVAR(showcopKilledNotification), [_unit, _time]] call CBA_fnc_globalEvent;
+[QGVAR(showcopKilledNotification), [_unit, _killer, _time]] call CBA_fnc_globalEvent;
 
 // Killer will be null if unit was driving a vehicle and smashed into something, killing itself.
 // Killer might also be null when vehicle explodes after unit got out of it, but that's why vehicle check is done.
