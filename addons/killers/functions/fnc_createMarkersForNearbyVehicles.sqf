@@ -29,6 +29,7 @@ private _emptyVehicles = _nearbyVehicles select {
     private _vehicle = _x;
     private _marker = createMarkerLocal [format ["vehicle_%1", _vehicle], getPosATL _vehicle];
     _marker setMarkerColorLocal "ColorCIVILIAN";
+    _marker setMarkerSizeLocal [0.5, 0.5];
     _marker setMarkerTextLocal getText (configFile >> "CfgVehicles" >> (typeof _vehicle) >> "displayName");
 
     private _markerType = if (_vehicle isKindOf "Air") then {
