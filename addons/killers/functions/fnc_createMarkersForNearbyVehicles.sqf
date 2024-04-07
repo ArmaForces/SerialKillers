@@ -21,7 +21,8 @@ params ["_position", ["_radius", 1000]];
 
 private _nearbyVehicles = _position nearEntities [["Air", "Car", "Motorcycle", "Tank"], _radius];
 private _emptyVehicles = _nearbyVehicles select {
-    crew _x isEqualTo []
+    damage _x isEqualTo 0 &&
+    {crew _x isEqualTo []}
 };
 
 {
