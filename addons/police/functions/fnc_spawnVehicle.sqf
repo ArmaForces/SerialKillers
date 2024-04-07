@@ -63,7 +63,8 @@ if (_emptySpawnPointIndex isEqualTo -1) exitWith {
             deleteVehicle _x;
         };
 
-    [FUNC(spawnVehicle), _this] call CBA_fnc_execNextFrame;
+    // execNextFrame is too low delay for findEmptyPosition to recognize that a vehicle was deleted
+    [FUNC(spawnVehicle), _this, 0.1] call CBA_fnc_waitAndExecute;
 };
 
 LOG("Found empty spawnpoint");
