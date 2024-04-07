@@ -70,7 +70,7 @@ if (_position isNotEqualTo []) then {
 // Show message if no empty spawn position
 if (_position isEqualTo []) exitWith {
     private _baseName = (_spawner getVariable "policeStation") getVariable "LocationName";
-    private _vehicleName = getText (configFile >> "CfgVehicles" >> _vehicleClassname >> "displayName");
+    private _vehicleName = getTextRaw (configFile >> "CfgVehicles" >> _vehicleClassname >> "displayName");
     [QGVAR(showFailedCreatingVehicleNotification), [_vehicleName, _baseName]] call CBA_fnc_globalEvent;
 };
 

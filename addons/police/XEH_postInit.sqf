@@ -77,6 +77,10 @@ if (hasInterface) then {
         player setUnitLoadout EGVAR(common,playerLoadout);
         [QGVAR(copRespawned), _this] call CBA_fnc_serverEvent;
     }];
+
+    [QGVAR(createPoliceStationMarkerLocal), {
+        _this call FUNC(policeStationMarker);
+    }] call CBA_fnc_addEventHandler;
 };
 
 [QGVAR(showCopKilledNotification), {
@@ -86,6 +90,6 @@ if (hasInterface) then {
 
 [QGVAR(showFailedCreatingVehicleNotification), {
     params ["_vehicleName", "_baseName"];
-    private _msg = format [LLSTRING(FailedCreatingVehicle), _vehicleName, _baseName];
+    private _msg = format [LLSTRING(FailedCreatingVehicle), _vehicleName call BIS_fnc_localize, _baseName call BIS_fnc_localize];
     [QEGVAR(common,showSideChatMsg), [WEST, _msg]] call CBA_fnc_localEvent;
 }] call CBA_fnc_addEventHandler;

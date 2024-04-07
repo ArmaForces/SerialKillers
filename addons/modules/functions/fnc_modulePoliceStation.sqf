@@ -19,5 +19,6 @@ params ["_module"];
 
 private _locationName = _module getVariable ["LocationName", ""];
 if (_locationName isEqualTo "") then {
-    _module setVariable ["LocationName", [_module] call EFUNC(common,getNearestLocationName), true];
+    private _nearestLocation = [_module] call EFUNC(common,getNearestLocation);
+    _module setVariable ["LocationName", [_nearestLocation] call EFUNC(common,getLocationNameRaw)];;
 };
