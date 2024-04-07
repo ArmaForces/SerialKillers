@@ -552,7 +552,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="Kankon";
+							value="";
 						};
 					};
 				};
