@@ -35,7 +35,7 @@ private _emptyVehicles = _nearbyVehicles select {
         } else { "loc_car" };
     _marker setMarkerTypeLocal _markerType;
 
-    [_marker, 2, true] call EFUNC(markers,markerDecay);
+    [_marker, 2.5, true] call EFUNC(markers,markerDecay);
 } forEach _emptyVehicles;
 
 nil
