@@ -25,4 +25,6 @@ _marker setMarkerTypeLocal "mil_flag";
 _marker setMarkerColorLocal "ColorWEST";
 _marker setMarkerTextLocal _markerText;
 
+LOG_2("Created local police station marker %1 with text %2",_markerName,_markerText);
+
 _marker

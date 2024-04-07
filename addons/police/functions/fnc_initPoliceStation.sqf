@@ -44,3 +44,5 @@ GVAR(arsenals) pushBack _box;
 // Create teleporter
 _logic setVariable ["Teleporter", _flag, true];
 [QGVAR(createTeleport), [_flag]] call CBA_fnc_globalEventJIP;
+
+LOG_1("Initialized police station %1",_baseName);
