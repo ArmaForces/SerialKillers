@@ -32,6 +32,9 @@ private _newScore = [_side] call FUNC(getSideScore);
 if (_reason isEqualTo "") then {
     INFO_4("Changed score for %1: %2 + %3 = %4",_side,_previousScore,_change,_newScore);
 } else {
+    if (_reason isEqualType []) then {
+        _reason = format ([_reason select 0 call BIS_fnc_localize] append _reason select [0, count _reason - 1]);
+    };
     INFO_5("Changed score for %1: %2 + %3 = %4, caused by %5",_side,_previousScore,_change,_newScore,_reason);
 };
 
