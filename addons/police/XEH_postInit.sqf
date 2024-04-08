@@ -63,6 +63,11 @@ if (isServer) then {
 }] call CBA_fnc_addEventHandler;
 
 if (hasInterface) then {
+
+    [QGVAR(createPoliceStationMarkerLocal), {
+        _this call FUNC(policeStationMarker);
+    }] call CBA_fnc_addEventHandler;
+
     if !(playerSide isEqualTo WEST) exitWith {};
 
     // Fill arsenal with starting items
@@ -77,10 +82,6 @@ if (hasInterface) then {
         player setUnitLoadout EGVAR(common,playerLoadout);
         [QGVAR(copRespawned), _this] call CBA_fnc_serverEvent;
     }];
-
-    [QGVAR(createPoliceStationMarkerLocal), {
-        _this call FUNC(policeStationMarker);
-    }] call CBA_fnc_addEventHandler;
 };
 
 [QGVAR(showCopKilledNotification), {
