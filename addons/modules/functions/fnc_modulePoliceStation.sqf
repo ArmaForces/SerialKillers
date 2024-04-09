@@ -21,7 +21,7 @@ private _locationName = _module getVariable ["LocationName", ""];
 if (_locationName isEqualTo "") then {
     private _nearestLocation = [_module] call EFUNC(common,getNearestLocationWithAvailableName);
     _locationName = [_nearestLocation] call EFUNC(common,getLocationNameRaw);
-    _module setVariable ["LocationName", _locationName];
+    _module setVariable ["LocationName", _locationName, true];
 
     LOG_1("Police station named automatically: '%1'",_locationName);
 } else {
