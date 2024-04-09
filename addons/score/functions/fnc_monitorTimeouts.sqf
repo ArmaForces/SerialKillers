@@ -29,7 +29,7 @@ if (GVAR(killersScoreChange) isEqualTo 0) then {
     }, [], GVAR(idleTimeMax), {
         // Killers failed to increase their score within time limit
         GVAR(idleTimeouts) = GVAR(idleTimeouts) + 1;
-        private _msg = format [LLSTRING(IdleTime_TimeoutReached), GVAR(idleTimeouts), GVAR(idleTimeoutsMax)];
+        private _msg = [LSTRING(IdleTime_TimeoutReached), GVAR(idleTimeouts), GVAR(idleTimeoutsMax)];
         [QGVAR(changeScore), [EAST, 0, _msg]] call CBA_fnc_serverEvent;
         [QGVAR(changeScore), [WEST, 5, _msg]] call CBA_fnc_serverEvent;
         call FUNC(monitorTimeouts);
