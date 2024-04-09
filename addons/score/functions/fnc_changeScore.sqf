@@ -17,7 +17,7 @@
  * Public: No
  */
 
-params ["_side", "_change", ["_reason", ""]];
+params ["_side", "_change", ["_reason", "", ["", []]]];
 
 private _previousScore = [_side] call FUNC(getSideScore);
 

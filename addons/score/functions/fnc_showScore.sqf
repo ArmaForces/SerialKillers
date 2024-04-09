@@ -16,7 +16,7 @@
  * Public: No
  */
 
-params [["_extraText", ""]];
+params [["_extraText", "", ["", []]]];
 
 private _fnc_determineSign = {
     params ["_value"];

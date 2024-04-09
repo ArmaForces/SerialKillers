@@ -39,7 +39,7 @@ if (isServer) then {
 };
 
 [QGVAR(scoreChanged), {
-    params ["_side", "_change", ["_reason", ""]];
+    params ["_side", "_change", ["_reason", "", ["", []]]];
     [QGVAR(showScore), [_reason]] call CBA_fnc_localEvent;
 }] call CBA_fnc_addEventHandler;
 
