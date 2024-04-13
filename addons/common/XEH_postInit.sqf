@@ -1,5 +1,9 @@
 #include "script_component.hpp"
 
+#ifdef DEBUG_MODE_FULL
+    WARNING("Debug mode is enabled. It might reveal information, don't use it for normal gameplay!");
+#endif
+
 // Killswitch
 if (!EGVAR(common,enabled)) exitWith {
     WARNING("Mission is missing 'SK' gameType Header. SerialKillers framework will be disabled.");
