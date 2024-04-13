@@ -105,35 +105,7 @@
     true
 ] call CBA_fnc_addSetting;
 
-[
-    QGVAR(timeLimitExtraTime),
-    "SLIDER",
-    [LSTRING(TimeLimit_ExtraTime), LSTRING(TimeLimit_ExtraTime_Description)],
-    [LSTRING(DisplayName), LSTRING(TimeLimit)],
-    [-1, 120, 15, 0],
-    true
-] call CBA_fnc_addSetting;
-
 // Idle Time
-
-[
-    QGVAR(timeLimitIdleTime),
-    "SLIDER",
-    [LSTRING(IdleTimeMax), LSTRING(TimeLimit_IdleTime_Description)],
-    [LSTRING(DisplayName), LSTRING(TimeLimit)],
-    [-1, 900, 150, 0],
-    true
-] call CBA_fnc_addSetting;
-
-[
-    QGVAR(timeLimitIdleTimeoutsMax),
-    "SLIDER",
-    [LSTRING(IdleTimeoutsMax), LSTRING(TimeLimit_IdleTimeoutsMax_Description)],
-    [LSTRING(DisplayName), LSTRING(TimeLimit)],
-    [-1, 10, 1, 0],
-    true
-] call CBA_fnc_addSetting;
-
 [
     QGVAR(idleTimeMax),
     "SLIDER",
@@ -178,3 +150,53 @@
     true
 ] call CBA_fnc_addSetting;
 
+
+// Extra time
+[
+    QGVAR(timeLimitExtraTime),
+    "SLIDER",
+    [LSTRING(ExtraTime_Duration), LSTRING(ExtraTime_Duration_Description)],
+    [LSTRING(DisplayName), LSTRING(ExtraTime)],
+    [-1, 120, 15, 0],
+    true
+] call CBA_fnc_addSetting;
+
+[
+    QGVAR(extraTimeIdleTime),
+    "SLIDER",
+    [LSTRING(IdleTimeMax), LSTRING(ExtraTime_IdleTime_Description)],
+    [LSTRING(DisplayName), LSTRING(ExtraTime)],
+    [-1, 900, 150, 0],
+    true
+] call CBA_fnc_addSetting;
+
+[
+    QGVAR(extraTimeIdleTimeoutsMax),
+    "SLIDER",
+    [LSTRING(IdleTimeoutsMax), LSTRING(ExtraTime_IdleTimeoutsMax_Description)],
+    [LSTRING(DisplayName), LSTRING(ExtraTime)],
+    [-1, 10, 1, 0],
+    true
+] call CBA_fnc_addSetting;
+
+[
+    QGVAR(extraTimePoliceScoreChange),
+    "SLIDER",
+    [LSTRING(ExtraTime_IdleTimePoliceScoreChange), LSTRING(ExtraTime_IdleTimePoliceScoreChange_Description)],
+    [LSTRING(DisplayName), LSTRING(ExtraTime)],
+    [-10, 10, 2, 0],
+    true,
+    {},
+    true
+] call CBA_fnc_addSetting;
+
+[
+    QGVAR(extraTimeKillersScoreChange),
+    "SLIDER",
+    [LSTRING(ExtraTime_IdleTimeKillersScoreChange), LSTRING(ExtraTime_IdleTimeKillersScoreChange_Description)],
+    [LSTRING(DisplayName), LSTRING(ExtraTime)],
+    [-10, 10, 0, 0],
+    true,
+    {},
+    true
+] call CBA_fnc_addSetting;

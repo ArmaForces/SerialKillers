@@ -94,14 +94,6 @@
             <English>Timeout between kills</English>
             <Polish>Odstęp czasu pomiędzy zabójstwami</Polish>
         </Key>
-        <Key ID="STR_AFSK_Score_IdleTime_Inital_Message">
-            <English>From now on killers must keep killing within %1 minutes since last kill or they will face penalty.</English>
-            <Polish>Od tego momentu zabójcy muszą zabić w ciągu %1 minut od ostatniego zabójstwa albo otrzymają karę.</Polish>
-        </Key>
-        <Key ID="STR_AFSK_Score_IdleTime_TimeoutReached">
-            <English>Maximum idle time reached %1/%2</English>
-            <Polish>Maksymalny odstęp czasu pomiędzy zabójstwami przekroczony %1/%2</Polish>
-        </Key>
         <Key ID="STR_AFSK_Score_IdleTimeoutsMax">
             <English>Maximum number of timeouts</English>
             <Polish>Maksymalna liczba przekroczeń limitu czasu</Polish>
@@ -153,6 +145,10 @@
             <English>All killers are either dead or in custody.</English>
             <Polish>Wszyscy zabójcy są martwi albo w więzieniu.</Polish>
         </Key>
+        <Key ID="STR_AFSK_Score_TimeLimit_Reached">
+            <English>Mission time limit reached</English>
+            <Polish>Osiągnięty limit czasu misji</Polish>
+        </Key>
         <Key ID="STR_AFSK_Score_Timeout_Limit">
             <English>Timeouts limit reached</English>
             <Polish>Osiągnięty limit przekroczeń limitu czasu</Polish>
@@ -177,24 +173,78 @@
             <Polish>Natychmiastowa przegrana</Polish>
         </Key>
         <Key ID="STR_AFSK_Score_TimeLimit_InstantEnd_Description">
-            <English>Police instantly wins scenario. Overrides everything in this category.</English>
-            <Polish>Natychmiast kończy scenariusz zwycięstwem policji. Pozostałe ustawienia nie mają żadnego wpływu.</Polish>
+            <English>Police instantly wins scenario. Overrides extra time settings.</English>
+            <Polish>Natychmiast kończy scenariusz zwycięstwem policji. Nadpisuje ustawienia dogrywki.</Polish>
         </Key>
-        <Key ID="STR_AFSK_Score_TimeLimit_ExtraTime">
+        <!--
+            Extra time settings
+        -->
+        <Key ID="STR_AFSK_Score_ExtraTime">
+            <English>Extra time</English>
+            <Polish>Dogrywka</Polish>
+        </Key>
+        <Key ID="STR_AFSK_Score_ExtraTime_Duration">
             <English>Maximum extra time duration</English>
             <Polish>Maksymalna długość dogrywki</Polish>
         </Key>
-        <Key ID="STR_AFSK_Score_TimeLimit_ExtraTime_Description">
+        <Key ID="STR_AFSK_Score_ExtraTime_Duration_Description">
             <English>After this additional time mission instantly ends with police victory. Set to -1 to disable.</English>
             <Polish>Po tym dodatkowym czasie misja kończy się Natychmiastowym zwycięstwem policji. Ustaw na -1 by wyłączyć.</Polish>
         </Key>
-        <Key ID="STR_AFSK_Score_TimeLimit_IdleTime_Description">
+        <Key ID="STR_AFSK_Score_ExtraTime_IdleTime_Description">
             <English>Maximum timeout is adjusted to this value.</English>
             <Polish>Maksymalny odstęp czasu między zabójstwami zostaje zmieniony do tej wartości.</Polish>
         </Key>
-        <Key ID="STR_AFSK_Score_TimeLimit_IdleTimeoutsMax_Description">
+        <Key ID="STR_AFSK_Score_ExtraTime_IdleTimeoutsMax_Description">
             <English>Maximum number of timeouts is adjusted to this value.</English>
             <Polish>Maksymalna liczba przekroczeń limitu czasu zostaje zmieniona do tej wartości.</Polish>
+        </Key>
+        <Key ID="STR_AFSK_Score_ExtraTime_IdleTimePoliceScoreChange">
+            <English>Police score change during extra time</English>
+            <Polish>Zmiana wyniku policji po przekroczeniu limitu czasu w dogrywce</Polish>
+        </Key>
+        <Key ID="STR_AFSK_Score_ExtraTime_IdleTimePoliceScoreChange_Description">
+            <English>Police gets this many points on timeout during extra time.</English>
+            <Polish>Po upłynięciu maksymalnego czasu pomiędzy zabójstwami podczas dogrywki policja dostanie tyle punktów.</Polish>
+        </Key>
+        <Key ID="STR_AFSK_Score_ExtraTime_IdleTimeKillersScoreChange">
+            <English>Killers score change during extra time</English>
+            <Polish>Zmiana wyniku zabójców po przekroczeniu limitu czasu w dogrywce</Polish>
+        </Key>
+        <Key ID="STR_AFSK_Score_ExtraTime_IdleTimeKillersScoreChange_Description">
+            <English>Killers get this many points on timeout during extra time.</English>
+            <Polish>Po upłynięciu maksymalnego czasu pomiędzy zabójstwami podczas dogrywki policja dostanie tyle punktów.</Polish>
+        </Key>
+        <!--
+            Message templates
+        -->
+        <Key ID="STR_AFSK_Score_IdleTime_InitalMessage">
+            <English>From now on killers must keep killing within %1 minutes since last kill or they will face penalty.</English>
+            <Polish>Od tego momentu zabójcy muszą zabić w ciągu %1 minut od ostatniego zabójstwa albo otrzymają karę.</Polish>
+        </Key>
+        <Key ID="STR_AFSK_Score_IdleTime_TimeoutReached">
+            <English>Maximum idle time reached %1/%2</English>
+            <Polish>Maksymalny odstęp czasu pomiędzy zabójstwami przekroczony %1/%2</Polish>
+        </Key>
+        <Key ID="STR_AFSK_Score_ExtraTime_StartedMessageHeader">
+            <English>Extra time has started</English>
+            <Polish>Rozpoczęła się dogrywka</Polish>
+        </Key>
+        <Key ID="STR_AFSK_Score_TimeRemaining">
+            <English>Remaining time left: %1 min</English>
+            <Polish>Pozostały czas: %1 min</Polish>
+        </Key>
+        <Key ID="STR_AFSK_Score_IdleTimeAllowed">
+            <English>Allowed idle time: %1 s</English>
+            <Polish>Dozwolony czas bezczynności: %1 s</Polish>
+        </Key>
+        <Key ID="STR_AFSK_Score_IdleTimeMaxAllowed">
+            <English>Maximum idle times: %1</English>
+            <Polish>Maksymalnie %1 razy bezczynności</Polish>
+        </Key>
+        <Key ID="STR_AFSK_Score_IdleTimeScoreChanges">
+            <English>Score changes on idle time</English>
+            <Polish>Zmiany wyniku po bezczynności</Polish>
         </Key>
     </Package>
 </Project>

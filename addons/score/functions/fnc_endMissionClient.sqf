@@ -40,7 +40,7 @@ switch (_endType) do {
     // 3
     case TIME_LIMIT_REACHED: {
         private _win = if (playerSide isEqualTo WEST) then {true} else {false};
-        [QGVAR(timeoutLimit), _win, nil, false] call BIS_fnc_endMission;
+        [QGVAR(timeLimit), _win, nil, false] call BIS_fnc_endMission;
     };
     // 4
     case ALL_CIVILIANS_DEAD: {
