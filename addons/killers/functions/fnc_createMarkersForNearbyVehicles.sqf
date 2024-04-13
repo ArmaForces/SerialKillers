@@ -28,6 +28,9 @@ private _emptyVehicles = _nearbyVehicles select {
 {
     private _vehicle = _x;
     private _markerName = format ["vehicle_%1", _vehicle];
+    private _markerExists = getMarkerPos _markerName isNotEqualTo [0, 0, 0];
+    if (_markerExists) then { continue };
+
     private _marker = createMarkerLocal [_markerName, getPosATL _vehicle];
     if (_marker isEqualTo "") then { _marker = _markerName };
     _marker setMarkerColorLocal "ColorCIVILIAN";
