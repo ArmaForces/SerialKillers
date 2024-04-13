@@ -36,7 +36,9 @@ if (_reason isEqualTo "") then {
 } else {
     if (_reason isEqualType []) then {
         // BUG: This doesn't work
-        _finalReason = format ([_reason select 0 call BIS_fnc_localize] append (_reason select [0, count _reason - 1]));
+        private _formatArray = [_reason select 0 call BIS_fnc_localize];
+        _formatArray append (_reason select [1, count _reason - 1]);
+        _finalReason = format _formatArray;
     } else {
         _finalReason = _reason;
     };
