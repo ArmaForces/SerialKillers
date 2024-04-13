@@ -90,7 +90,7 @@
     "SLIDER",
     [LSTRING(TimeLimit), LSTRING(TimeLimit_Description)],
     [LSTRING(DisplayName), LSTRING(TimeLimit)],
-    [-1, 120, 45, 0],
+    [-1, 120, 30, 0],
     true,
     {},
     true
