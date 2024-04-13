@@ -169,8 +169,8 @@
             <Polish>Limit czasu misji</Polish>
         </Key>
         <Key ID="STR_AFSK_Score_TimeLimit_Description">
-            <English>After this time (in minutes) rules change accordingly to other settings in this category.</English>
-            <Polish>Po tym czasie (w minutach) zasady zmieniają się zgodnie z innymi ustawieniami w tej kategorii.</Polish>
+            <English>After this time (in minutes) rules change accordingly to other settings in this category. Set to -1 to disable.</English>
+            <Polish>Po tym czasie (w minutach) zasady zmieniają się zgodnie z innymi ustawieniami w tej kategorii. Ustaw na -1 by wyłączyć.</Polish>
         </Key>
         <Key ID="STR_AFSK_Score_TimeLimit_InstantEnd">
             <English>Instant lose</English>
@@ -185,8 +185,8 @@
             <Polish>Maksymalna długość dogrywki</Polish>
         </Key>
         <Key ID="STR_AFSK_Score_TimeLimit_ExtraTime_Description">
-            <English>After this additional time mission instantly ends with police victory.</English>
-            <Polish>Po tym dodatkowym czasie misja kończy się Natychmiastowym zwycięstwem policji.</Polish>
+            <English>After this additional time mission instantly ends with police victory. Set to -1 to disable.</English>
+            <Polish>Po tym dodatkowym czasie misja kończy się Natychmiastowym zwycięstwem policji. Ustaw na -1 by wyłączyć.</Polish>
         </Key>
         <Key ID="STR_AFSK_Score_TimeLimit_IdleTime_Description">
             <English>Maximum timeout is adjusted to this value.</English>

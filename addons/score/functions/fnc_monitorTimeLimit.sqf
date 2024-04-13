@@ -14,15 +14,35 @@
  * Public: No
  */
 
+if (GVAR(timeLimit) isEqualTo -1) exitWith {
+    INFO("Time limit is disabled");
+};
+
 [{
+    // Instant end
     if (GVAR(timeLimitInstantEnd)) exitWith {
+        INFO("Time limit reached, extra time is disabled, ending mission");
         [QGVAR(endMission), [TIME_LIMIT_REACHED]] call CBA_fnc_globalEvent;
     };
+
+    GVAR(isExtraTime) = true;
+
     // Adjust rules
     GVAR(idleTimeMax) = GVAR(timeLimitIdleTime);
     GVAR(idleTimeouts) = 0;
     GVAR(idleTimeoutsMax) = GVAR(timeLimitIdleTimeoutsMax);
-    [{
-        [QGVAR(endMission), [TIME_LIMIT_REACHED]] call CBA_fnc_globalEvent;
-    }, [], (GVAR(timeLimitExtraTime) * 60)] call CBA_fnc_waitAndExecute;
+
+    // Extra time countdown if enabled
+    if (GVAR(timeLimitExtraTime) isNotEqualTo -1) exitWith {
+        [{
+            INFO("Extra time limit reached");
+            [QGVAR(endMission), [TIME_LIMIT_REACHED]] call CBA_fnc_globalEvent;
+        }, [], (GVAR(timeLimitExtraTime) * 60)] call CBA_fnc_waitAndExecute;
+
+        INFO_1("Extra time limit of %1 minutes has started",GVAR(timeLimitExtraTime) * 60);
+    };
+
+    INFO("No extra time limit, changed rules apply");
 }, [], (GVAR(timeLimit) * 60)] call CBA_fnc_waitAndExecute;
+
+INFO_1("Enabled time limit of %1 minutes",GVAR(timeLimit) * 60);

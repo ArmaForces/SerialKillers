@@ -36,6 +36,8 @@ if (isServer) then {
     // Initialize score display UI
     [WEST, 0] call BIS_fnc_respawnTickets;
     [EAST, 0] call BIS_fnc_respawnTickets;
+
+    call FUNC(monitorTimeLimit);
 };
 
 [QGVAR(scoreChanged), {

@@ -20,6 +20,7 @@ GVAR(policeScoreLastChangeTime) = CBA_missionTime;
 GVAR(killersScoreLastChangeTime) = CBA_missionTime;
 // Idle timeouts counter
 GVAR(idleTimeouts) = 0;
+GVAR(isExtraTime) = false;
 
 // Mission end flag
 GVAR(missionEnd) = -1;
