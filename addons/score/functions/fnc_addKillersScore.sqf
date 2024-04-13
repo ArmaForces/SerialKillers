@@ -33,13 +33,14 @@ publicVariable QGVAR(killersScoreChange);
 // Save change time
 GVAR(killersScoreLastChangeTime) = CBA_missionTime;
 
-// Keep last score change for 5 seconds to "stack it" visually if many events occur in short succession.
+// Keep last score change for some time to "stack it" visually if many events occur in short succession.
+// Using (5 + score change) seconds so that the more score changed, the longer it's stacked.
 [{
     if (GVAR(killersScoreChange) isEqualTo (_this select 0)) then {
         GVAR(killersScoreChange) = 0;
         publicVariable QGVAR(killersScoreChange);
     };
-}, [GVAR(killersScoreChange)], 5] call CBA_fnc_waitAndExecute;
+}, [GVAR(killersScoreChange)], 5 + GVAR(killersScoreChange)] call CBA_fnc_waitAndExecute;
 
 // Check if killers have reached their goal
 if (GVAR(killersScore) >= GVAR(killersScoreMax)) then {
