@@ -59,7 +59,7 @@ if (hasInterface) then {
         if (!(local (_this select 0))) exitWith {};
         INFO("Killer player was killed");
 
-        [QGVAR(killerKilled), _this] call CBA_fnc_serverEvent;
+        [QGVAR(killerKilled), _this] call CBA_fnc_globalEvent;
 
         [{alive player}, {
             INFO("Killer player has respawned");
