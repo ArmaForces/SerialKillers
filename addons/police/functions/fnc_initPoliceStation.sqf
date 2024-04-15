@@ -39,9 +39,10 @@ GVAR(arsenals) pushBack _box;
 [_box] call FUNC(initSpawner);
 
 // Create marker
-private _marker = [_baseName, _basePos] call FUNC(policeStationMarker);
-_logic setVariable ["Marker", _marker];
+[QGVAR(createPoliceStationMarkerLocal), [_baseName, _basePos]] call CBA_fnc_globalEventJIP;
 
 // Create teleporter
 _logic setVariable ["Teleporter", _flag, true];
 [QGVAR(createTeleport), [_flag]] call CBA_fnc_globalEventJIP;
+
+LOG_1("Initialized police station %1",_baseName);

@@ -19,10 +19,12 @@
 params ["_baseName", "_basePos"];
 
 private _markerName = format ["policeStation_%1", _baseName];
-private _markerText = format ["%1", _baseName];
-private _marker = createMarker [_markerName, _basePos];
-_marker setMarkerType "mil_flag";
-_marker setMarkerColor "ColorWEST";
-_marker setMarkerText _markerText;
+private _markerText = format ["%1", _baseName call BIS_fnc_localize];
+private _marker = createMarkerLocal [_markerName, _basePos];
+_marker setMarkerTypeLocal "mil_flag";
+_marker setMarkerColorLocal "ColorWEST";
+_marker setMarkerTextLocal _markerText;
+
+LOG_2("Created local police station marker %1 with text %2",_markerName,_markerText);
 
 _marker

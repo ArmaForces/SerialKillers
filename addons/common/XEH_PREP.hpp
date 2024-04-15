@@ -5,6 +5,7 @@ PREP(createArsenal);
 PREP(deleteAtRandom);
 PREP(getAllMapCities);
 PREP(getLocationName);
+PREP(getLocationNameRaw);
 PREP(getLocationType);
 PREP(getNearestCityLocation);
 PREP(getNearestLocation);

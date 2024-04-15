@@ -5,13 +5,29 @@
             <English>SerialKillers - Civilian</English>
             <Polish>SerialKillers - Cywile</Polish>
         </Key>
-        <Key ID="STR_AFSK_Civilian_Civilian_Killed_In_City">
+        <Key ID="STR_AFSK_Civilian_EmptyVehiclesLimit">
+            <English>Civilian vehicles limit</English>
+            <Polish>Limit pojazdów cywilnych</Polish>
+        </Key>
+        <Key ID="STR_AFSK_Civilian_EmptyVehiclesLimit_Description">
+            <English>Controls how much civilian vehicles will be created on the whole map.</English>
+            <Polish>Ustala jak dużo pojazdów cywilnych będzie utworzonych na całej mapie.</Polish>
+        </Key>
+        <Key ID="STR_AFSK_Civilian_Killed_In_City">
             <English>Civilian was killed at %1 in %2!</English>
             <Polish>Cywil został zabity o godzinie %1 w %2!</Polish>
         </Key>
-        <Key ID="STR_AFSK_Civilian_Civilian_Killed_Near_City">
+        <Key ID="STR_AFSK_Civilian_Killed_Near_City">
             <English>Civilian was killed at %1 near %2!</English>
             <Polish>Cywil został zabity o godzinie %1 w pobliżu %2!</Polish>
+        </Key>
+        <Key ID="STR_AFSK_Civilian_KilledByCop_In_City">
+            <English>Civilian was killed by cop %3 at %1 in %2!</English>
+            <Polish>Cywil został zabity przez policjanta %3 o godzinie %1 w %2!</Polish>
+        </Key>
+        <Key ID="STR_AFSK_Civilian_KilledByCop_Near_City">
+            <English>Civilian was killed by cop %3 at %1 near %2!</English>
+            <Polish>Cywil został zabity przez policjanta %3 o godzinie %1 w pobliżu %2!</Polish>
         </Key>
         <Key ID="STR_AFSK_Civilian_InitialCiviliansCount">
             <English>Civilians count</English>
@@ -88,6 +104,14 @@
         <Key ID="STR_AFSK_Civilian_CustomCityCapitalAreaRadius_Description">
             <English>When map locations are badly defined, this can be used to control how large capital(s) are on a given map. This is used for spawning civilians, waypoints and some other things.</English>
             <Polish>Gdy lokacje na mapie są słabo zdefiniowane, można ustawić ręcznie jak duże są stolice na danej mapie. Jest to używane do spawnownia cywili, waypointów i wielu innych rzeczy.</Polish>
+        </Key>
+        <Key ID="STR_AFSK_Civilian_Killed">
+            <English>Civilian was killed</English>
+            <Polish>Cywil został zabity</Polish>
+        </Key>
+        <Key ID="STR_AFSK_Civilian_KilledByCop">
+            <English>Civilian was killed by cop</English>
+            <Polish>Cywil został zabity przez policjanta</Polish>
         </Key>
         <Key ID="STR_AFSK_Civilian_Low">
             <English>Low</English>

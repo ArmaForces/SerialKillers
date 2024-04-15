@@ -69,7 +69,7 @@ if (hasInterface) then {
 
     [QGVAR(teleportedToStart), {
         params ["_flag"];
-        private _actionID = player addAction ["Teleport back", {
+        private _actionID = player addAction [LLSTRING(TeleportBack), {
             player setPos getPosATL (_this select 3)
         }, _flag, 10, true];
         // Wait until player teleports back or times out

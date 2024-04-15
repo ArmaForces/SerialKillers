@@ -31,7 +31,7 @@ while {_i > 0} do {
         private _nearestLocation = [_pos, 1500] call EFUNC(common,getNearestLocationWithAvailableName);
         //diag_log format ["[AFSK] [KILLERS] [initStartPositions] Location: %1", _nearestLocation];
         if (_nearestLocation isEqualTo locationNull) exitWith {};
-        private _locationName = [_nearestLocation] call EFUNC(common,getLocationName);
+        private _locationName = [_nearestLocation] call EFUNC(common,getLocationNameRaw);
         if (_locationName isEqualTo "") exitWith {};
         //diag_log format ["[AFSK] [KILLERS] [initStartPositions] Location Name: %1", _locationName];
         if (!(_positions getVariable [_locationName, []] isEqualTo [])) exitWith {};
@@ -45,12 +45,13 @@ while {_i > 0} do {
 {
     private _pos = getPos _x;
     private _locationName = _x getVariable ["LocationName", ""];
+    // TODO: Localize location name (move it to local rather than server)
     if (_locationName isEqualTo "") then {
         private _nearestLocation = [_pos] call EFUNC(common,getNearestLocationWithAvailableName);
         _locationName = if (_nearestLocation isEqualTo locationNull) then {
             random (999) toFixed 1
         } else {
-            [_nearestLocation] call EFUNC(common,getLocationName);
+            [_nearestLocation] call EFUNC(common,getLocationNameRaw);
         };
     };
     _positions setVariable [_locationName, _pos, true];

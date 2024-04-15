@@ -60,8 +60,8 @@ class CfgVehicles {
         class Attributes: AttributesBase {
             // Allows police station identification
             class LocationName: Edit {
-                displayName = CSTRING(PoliceStation_LocationName);
-                tooltip = CSTRING(PoliceStation_LocationName_Description);
+                displayName = CSTRING(LocationName);
+                tooltip = CSTRING(LocationName_Description);
                 property = "LocationName";
             };
             // Determine if helicopters can be spawned here
@@ -105,8 +105,8 @@ class CfgVehicles {
         class Attributes: AttributesBase {
             // Allows killers start positions identification
             class LocationName: Edit {
-                displayName = CSTRING(Location_Name);
-                tooltip = CSTRING(Location_Name_Description);
+                displayName = CSTRING(LocationName);
+                tooltip = CSTRING(LocationName_Description);
                 property = "LocationName";
             };
             class ModuleDescription: ModuleDescription {};

@@ -6016,7 +6016,7 @@ class Mission
 								class data
 								{
 									singleType="STRING";
-									value="Chernogorsk";
+									value="";
 								};
 							};
 						};
@@ -6060,7 +6060,7 @@ class Mission
 								class data
 								{
 									singleType="STRING";
-									value="Zelenogorsk";
+									value="";
 								};
 							};
 						};
@@ -6105,7 +6105,7 @@ class Mission
 								class data
 								{
 									singleType="STRING";
-									value="Elektrozavodsk";
+									value="";
 								};
 							};
 						};
@@ -6149,7 +6149,7 @@ class Mission
 								class data
 								{
 									singleType="STRING";
-									value="Solnichny";
+									value="";
 								};
 							};
 						};
@@ -6193,7 +6193,7 @@ class Mission
 								class data
 								{
 									singleType="STRING";
-									value="Vybor";
+									value="";
 								};
 							};
 						};
@@ -6237,7 +6237,7 @@ class Mission
 								class data
 								{
 									singleType="STRING";
-									value="Gorka";
+									value="";
 								};
 							};
 						};

@@ -27,17 +27,19 @@ private _spawnPoints = if (_vehicleType isEqualTo "Helicopter" || {_vehicleType 
     +(_spawner getVariable QGVAR(spawnPoints))
 };
 
+private _fnc_noEmptyPositionMsg = {
+    params ["_vehicleClassname", "_spawner"];
+    private _baseName = (_spawner getVariable "policeStation") getVariable "LocationName";
+    private _vehicleName = getTextRaw (configFile >> "CfgVehicles" >> _vehicleClassname >> "displayName");
+    [QGVAR(showFailedCreatingVehicleNotification), [_vehicleName, _baseName]] call CBA_fnc_globalEvent;
+};
+
 // Find spawn position
 private _position = [];
 private _direction = 0;
 
 private _emptySpawnPointIndex = _spawnPoints findIf {getPosATL _x nearEntities SPAWNPOINT_SAFEZONE isEqualTo []};
-if (_emptySpawnPointIndex isNotEqualTo -1) then {
-    LOG("Found empty spawnpoint");
-    private _spawnPoint = _spawnPoints select _emptySpawnPointIndex;
-    _position = getPosATL _spawnPoint;
-    _direction = getDir _spawnPoint;
-} else {
+if (_emptySpawnPointIndex isEqualTo -1) exitWith {
     // Maybe there is a position that has unoccupied vehicle
     LOG("Looking for unoccupied vehicles");
     private _fullSpawnPointsWithoutCrew = _spawnPoints select {
@@ -46,33 +48,33 @@ if (_emptySpawnPointIndex isNotEqualTo -1) then {
         _nearEntities findIf {crew _x isEqualTo []} isNotEqualTo -1
     };
 
-    if (_fullSpawnPointsWithoutCrew isNotEqualTo []) exitWith {
-        LOG("Found unoccupied vehicles");
-        private _spawnPoint = [_fullSpawnPointsWithoutCrew] call EFUNC(common,deleteAtRandom);
-
-        // Clear the area
-        LOG("Deleting vehicles");
-        _spawnPoint nearEntities SPAWNPOINT_SAFEZONE
-            apply {
-                TRACE_1("Deleting vehicle %1",typeOf _x);
-                deleteVehicle _x;
-            };
-
-        _position = getPosATL _spawnPoint;
-        _direction = getDir _spawnPoint;
+    if (_fullSpawnPointsWithoutCrew isEqualTo []) exitWith {
+        [_vehicleClassname, _spawner] call _fnc_noEmptyPositionMsg;
     };
+
+    LOG("Found unoccupied vehicles");
+    private _spawnPoint = [_fullSpawnPointsWithoutCrew] call EFUNC(common,deleteAtRandom);
+
+    // Clear the area
+    LOG("Deleting vehicles");
+    _spawnPoint nearEntities SPAWNPOINT_SAFEZONE
+        apply {
+            TRACE_1("Deleting vehicle %1",typeOf _x);
+            deleteVehicle _x;
+        };
+
+    // execNextFrame is too low delay for findEmptyPosition to recognize that a vehicle was deleted
+    [FUNC(spawnVehicle), _this, 0.1] call CBA_fnc_waitAndExecute;
 };
 
-if (_position isNotEqualTo []) then {
-    _position = _position findEmptyPosition [0, SPAWNPOINT_SAFEZONE, _vehicleClassname];
-};
+LOG("Found empty spawnpoint");
+private _spawnPoint = _spawnPoints select _emptySpawnPointIndex;
+private _position = getPosATL _spawnPoint findEmptyPosition [0, SPAWNPOINT_SAFEZONE, _vehicleClassname];
+_direction = getDir _spawnPoint;
 
 // Show message if no empty spawn position
 if (_position isEqualTo []) exitWith {
-    private _baseName = (_spawner getVariable "policeStation") getVariable "LocationName";
-    private _vehicleName = getText (configFile >> "CfgVehicles" >> _vehicleClassname >> "displayName");
-    private _msg = format ["Cannot create %1 at %2.", _vehicleName, _baseName];
-    [QEGVAR(common,showSideChatMsg), [WEST, _msg]] call CBA_fnc_globalEvent;
+    [_vehicleClassname, _spawner] call _fnc_noEmptyPositionMsg;
 };
 
 // Spawn vehicle

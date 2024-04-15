@@ -36,15 +36,20 @@ if (isServer) then {
     // Initialize score display UI
     [WEST, 0] call BIS_fnc_respawnTickets;
     [EAST, 0] call BIS_fnc_respawnTickets;
+
+    call FUNC(monitorTimeLimit);
 };
 
 [QGVAR(scoreChanged), {
-    params ["_side", "_change", ["_reason", ""]];
+    params ["_side", "_change", ["_reason", "", ["", []]]];
     [QGVAR(showScore), [_reason]] call CBA_fnc_localEvent;
 }] call CBA_fnc_addEventHandler;
 
 
 if (hasInterface) then {
+    // Disable vanilla ratings
+    player addEventHandler ["HandleRating", { 0 }];
+
     /* Clientside events */
     [QGVAR(endMission), {
         _this call FUNC(endMissionClient);
@@ -56,17 +61,25 @@ if (hasInterface) then {
 
     [QGVAR(showTimeoutInitialMessage), {
         private _msg = composeText [
-            text format [LLSTRING(IdleTime_Inital_Message), (GVAR(IdleTimeMax) / 60)],
+            text format [LLSTRING(IdleTime_InitalMessage), (GVAR(IdleTimeMax) / 60)],
             lineBreak,
-            lineBreak,
-            text format ["%1: %2", LELSTRING(killers,Killers), GVAR(idleTimeKillersScoreChange)],
-            lineBreak,
-            text format ["%1: %2", LELSTRING(police,Police), GVAR(idleTimePoliceScoreChange)]
+            call FUNC(getIdleTimeRulesMessage)
         ];
         _msg setAttributes ["valign", "middle"];
-        [QEGVAR(common,showMessage), [_msg, [3]]] call CBA_fnc_localEvent;
+        _msg setAttributes ["align", "center"];
+        [QEGVAR(common,showMessage), [_msg, [6]]] call CBA_fnc_localEvent;
     }] call CBA_fnc_addEventHandler;
 
-    // Disable vanilla ratings
-    player addEventHandler ["HandleRating", { 0 }];
+    [QGVAR(showExtraTimeInitialMessage), {
+        private _msg = composeText [
+            text LLSTRING(ExtraTime_StartedMessageHeader),
+            lineBreak,
+            text format [LLSTRING(TimeRemaining), GVAR(timeLimitExtraTime)],
+            lineBreak,
+            call FUNC(getIdleTimeRulesMessage)
+        ];
+        _msg setAttributes ["valign", "middle"];
+        _msg setAttributes ["align", "center"];
+        [QEGVAR(common,showMessage), [_msg, [6]]] call CBA_fnc_localEvent;
+    }] call CBA_fnc_addEventHandler;
 };

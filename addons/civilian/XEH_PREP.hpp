@@ -12,4 +12,5 @@ PREP(initCity);
 PREP(initCivilians);
 PREP(initConfig);
 PREP(initCivilian);
+PREP(isPositionInCity);
 PREP(unassignCivilianFromCity);

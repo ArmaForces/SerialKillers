@@ -23,15 +23,18 @@ if (GVAR(idleTimeouts) >= GVAR(idleTimeoutsMax)) exitWith {
 };
 
 if (GVAR(killersScoreChange) isEqualTo 0) then {
-    [{GVAR(killersScoreChange) > 0}, {
+    private _isExtraTime = GVAR(isExtraTime);
+
+    [{GVAR(killersScoreChange) > 0 || {(_this select 0) isNotEqualTo GVAR(isExtraTime)}}, {
         // Killers managed to increase their score within time limit
+        // Or extra time has started and we need to restart to adjust for new rules.
         call FUNC(monitorTimeouts);
-    }, [], GVAR(idleTimeMax), {
+    }, [_isExtraTime], GVAR(idleTimeMax), {
         // Killers failed to increase their score within time limit
         GVAR(idleTimeouts) = GVAR(idleTimeouts) + 1;
-        private _msg = format [LLSTRING(IdleTime_TimeoutReached), GVAR(idleTimeouts), GVAR(idleTimeoutsMax)];
-        [QGVAR(changeScore), [EAST, 0, _msg]] call CBA_fnc_serverEvent;
-        [QGVAR(changeScore), [WEST, 5, _msg]] call CBA_fnc_serverEvent;
+        private _msg = [LSTRING(IdleTime_TimeoutReached), GVAR(idleTimeouts), GVAR(idleTimeoutsMax)];
+        [QGVAR(changeScore), [EAST, GVAR(idleTimeKillersScoreChange), _msg]] call CBA_fnc_serverEvent;
+        [QGVAR(changeScore), [WEST, GVAR(idleTimePoliceScoreChange), _msg]] call CBA_fnc_serverEvent;
         call FUNC(monitorTimeouts);
     }] call CBA_fnc_waitUntilAndExecute;
 } else {

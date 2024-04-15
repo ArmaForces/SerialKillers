@@ -16,7 +16,7 @@
  * Public: No
  */
 
-params [["_extraText", ""]];
+params [["_extraText", "", ["", []]]];
 
 private _fnc_determineSign = {
     params ["_value"];
@@ -45,6 +45,10 @@ _msgPolice setAttributes ["align", "center"];
 private _msgPoliceScore = text format ["%1/%2 (%4%3)", GVAR(policeScore), GVAR(policeScoreMax), GVAR(policeScoreChange), [GVAR(policeScoreChange)] call _fnc_determineSign];
 _msgPoliceScore setAttributes ["align", "center"];
 
+if (_extraText isEqualType []) then {
+    _extraText = format ([_extraText select 0 call BIS_fnc_localize] append _extraText select [1, count _extraText - 1]);
+};
+
 private _msg = composeText [
     _msgHour,
     _separator,
@@ -57,7 +61,7 @@ private _msg = composeText [
     lineBreak,
     _msgPoliceScore,
     lineBreak,
-    _extraText
+    _extraText call BIS_fnc_localize
 ];
 _msg setAttributes ["valign", "middle"];
 
