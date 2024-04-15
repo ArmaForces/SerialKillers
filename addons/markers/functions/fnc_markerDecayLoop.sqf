@@ -16,16 +16,19 @@
  * Public: No
  */
 
-params ["_marker", "_decayRate", ["_local", false]];
+params ["_marker", "_decayRate", ["_previousAlpha", -1], ["_local", false]];
 
 private _currentAlpha = markerAlpha _marker;
 
+if (_currentAlpha isNotEqualTo _previousAlpha && {_previousAlpha isNotEqualTo -1}) exitWith {};
 if (_currentAlpha <= _decayRate) exitWith {deleteMarker _marker};
 
+private _newAlpha = (_currentAlpha - _decayRate);
+
 if (_local) then {
-    _marker setMarkerAlphaLocal (_currentAlpha - _decayRate);
+    _marker setMarkerAlphaLocal _newAlpha;
 } else {
-    _marker setMarkerAlpha (_currentAlpha - _decayRate);
+    _marker setMarkerAlpha _newAlpha;
 };
 
-[FUNC(markerDecayLoop), [_marker, _decayRate, _local], 15] call CBA_fnc_waitAndExecute;
+[FUNC(markerDecayLoop), [_marker, _decayRate, _newAlpha, _local], 15] call CBA_fnc_waitAndExecute;

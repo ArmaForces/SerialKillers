@@ -28,6 +28,7 @@ private _positionID = 0;
         [QGVAR(teleportedToStart), [_this select 0]] call CBA_fnc_localEvent;
     }, [_destinationPos]];
     [_destinationPos, _destinationName] call FUNC(createStartPositionMarker);
+    [_destinationPos] call FUNC(createMarkersForNearbyVehicles);
     // Add for deletion after teleportation
     _teleportActionsIDs pushBack _teleportActionID;
     _positionID = _positionID + 1;
