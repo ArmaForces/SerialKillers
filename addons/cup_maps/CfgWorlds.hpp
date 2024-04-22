@@ -1116,6 +1116,11 @@ class CfgWorlds
                 radiusB = 300;
             };
 
+            class ACityC_Nizhnoye
+            {
+                type = "NameLocal";
+            };
+
             class ACityC_NovySobor
             {
                 angle = 45;
