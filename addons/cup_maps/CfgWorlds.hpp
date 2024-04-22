@@ -1045,4 +1045,137 @@ class CfgWorlds
             };
         };
     };
+
+    class Woodland_ACR : CAWorld
+    {
+        class Names
+        {
+            class city_Chernogorsk
+            {
+                angle = 55;
+                positionOffset[] = { -150, 200 };
+                radiusA = 600;
+                radiusB = 800;
+            };
+
+            class city_Elektrozavodsk
+            {
+                angle = 70;
+                radiusA = 500;
+                radiusB = 800;
+            };
+
+            class city_StarySobor
+            {
+                angle = 45;
+                positionOffset[] = { -20, -50 };
+                radiusA = 400;
+                radiusB = 200;
+            };
+
+            class vill_Dolina
+            {
+                positionOffset[] = { -50, -30 };
+                radiusA = 300;
+                radiusB = 150;
+            };
+
+            class vill_Guglovo
+            {
+                positionOffset[] = { 50, -50 };
+            };
+
+            class vill_Kamyshovo
+            {
+                positionOffset[] = { 0, 50 };
+                radiusA = 200;
+                radiusB = 200;
+            };
+
+            class vill_Mogilevka
+            {
+                angle = 30;
+                positionOffset[] = { -50, 50 };
+                radiusA = 200;
+                radiusB = 250;
+            };
+
+            class vill_Msta
+            {
+                angle = 60;
+                positionOffset[] = { -60, 20 };
+                radiusA = 100;
+                radiusB = 200;
+            };
+
+            class vill_Nadezhdino
+            {
+                angle = 50;
+                positionOffset[] = { 25, 75 };
+                radiusA = 175;
+                radiusB = 300;
+            };
+
+            class vill_NovySobor
+            {
+                angle = 45;
+                positionOffset[] = { -50, -100 };
+                radiusA = 250;
+                radiusB = 200;
+            };
+
+            class vill_Orlovets
+            {
+                positionOffset[] = { 25, 100 };
+                radiusA = 200;
+                radiusB = 150;
+            };
+
+            class vill_Polana
+            {
+                angle = 30;
+                positionOffset[] = { -50, -50 };
+                radiusA = 200;
+                radiusB = 300;
+            };
+
+            class vill_Prigorodki
+            {
+                angle = 35;
+                positionOffset[] = { -75, -75 };
+                radiusA = 300;
+                radiusB = 150;
+            };
+
+            class vill_Pusta
+            {
+                positionOffset[] = { 25, 0 };
+                radiusB = 225;
+            };
+
+            class vill_Shakhovka
+            {
+                positionOffset[] = { -100, 0 };
+            };
+
+            class vill_Staroye
+            {
+                positionOffset[] = { -125, 100 };
+                radiusA = 300;
+                radiusB = 200;
+            };
+
+            class vill_Tulga
+            {
+                positionOffset[] = { -25, 50 };
+                radiusA = 200;
+            };
+
+            class vill_Vyshnoye
+            {
+                angle = 75;
+                radiusA = 150;
+            };
+        };
+    };
 };
