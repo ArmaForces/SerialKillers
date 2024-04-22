@@ -12,14 +12,18 @@ class EditorData
 	};
 	class ItemIDProvider
 	{
-		nextID=46;
+		nextID=57;
+	};
+	class LayerIndexProvider
+	{
+		nextID=2;
 	};
 	class Camera
 	{
-		pos[]={4226.3438,108.76195,4055.8662};
-		dir[]={0.021378908,-0.66971278,0.74231511};
-		up[]={0.01927997,0.74261904,0.66943574};
-		aside[]={0.99958783,2.2821496e-008,-0.028788496};
+		pos[]={3759.5088,50.945465,4292.5015};
+		dir[]={-0.72968692,-0.40420526,0.55155724};
+		up[]={-0.32246569,0.91466206,0.24374582};
+		aside[]={0.60301101,-1.5061232e-007,0.79776007};
 	};
 };
 binarizationWanted=0;
@@ -41,13 +45,15 @@ addons[]=
 	"ace_microdagr",
 	"ace_flashlights",
 	"A3_Weapons_F_Items",
-	"acre_sys_prc152"
+	"acre_sys_prc152",
+	"A3_Structures_F_Mil_Helipads",
+	"A3_Structures_F_Bootcamp_VR_Helpers"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=13;
+		items=15;
 		class Item0
 		{
 			className="afsk_modules";
@@ -137,6 +143,20 @@ class AddonsMetaData
 			author="ACRE2Team";
 			url="https://github.com/IDI-Systems/acre2";
 		};
+		class Item13
+		{
+			className="A3_Structures_F_Mil";
+			name="Arma 3 - Military Buildings and Structures";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item14
+		{
+			className="A3_Structures_F_Bootcamp";
+			name="Arma 3 Bootcamp Update - Buildings and Structures";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
 	};
 };
 dlcs[]=
@@ -192,7 +212,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=22;
+		items=24;
 		class Item0
 		{
 			dataType="Logic";
@@ -288,7 +308,7 @@ class Mission
 			name="respawn_west";
 			type="Empty";
 			colorName="ColorWEST";
-			angle=223.48895;
+			angle=223.48894;
 			id=2;
 		};
 		class Item3
@@ -306,7 +326,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={4971.5786,29.523161,6167.2197};
-				angles[]={-0,3.9005253,6.2756844};
+				angles[]={0,3.9005253,6.2756844};
 			};
 			id=4;
 			type="ModuleBleedTickets_F";
@@ -2182,7 +2202,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={4974.814,29.492195,6153.2988};
-						angles[]={-0,4.7556076,6.2656889};
+						angles[]={0,4.7556076,6.2656889};
 					};
 					side="West";
 					flags=6;
@@ -2333,7 +2353,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={4976.2124,29.46772,6153.377};
-						angles[]={-0,4.7556076,6.2656889};
+						angles[]={0,4.7556076,6.2656889};
 					};
 					side="West";
 					flags=4;
@@ -2513,7 +2533,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={4974.5156,29.497417,6154.7705};
-						angles[]={-0,4.7554631,6.2656889};
+						angles[]={0,4.7554631,6.2656889};
 					};
 					side="West";
 					flags=6;
@@ -2664,7 +2684,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={4975.5864,29.478678,6154.8467};
-						angles[]={-0,4.7556076,6.2656889};
+						angles[]={0,4.7556076,6.2656889};
 					};
 					side="West";
 					flags=4;
@@ -4498,6 +4518,154 @@ class Mission
 			id=45;
 			type="afsk_modules_moduleKillersBase";
 			atlOffset=1.5258789e-005;
+		};
+		class Item22
+		{
+			dataType="Layer";
+			name="Police Stations";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Layer";
+					name="Military Base";
+					class Entities
+					{
+						items=7;
+						class Item0
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={4927.2329,29.719452,6174.8765};
+								angles[]={0.0049914722,3.1536713,6.278194};
+							};
+							side="Empty";
+							flags=4;
+							class Attributes
+							{
+							};
+							id=48;
+							type="Land_HelipadCivil_F";
+						};
+						class Item1
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={4918.7622,29.552137,6123.4585};
+								angles[]={0,0.0068428693,0};
+							};
+							side="Empty";
+							class Attributes
+							{
+							};
+							id=49;
+							type="VR_Area_01_circle_4_grey_F";
+							atlOffset=0.00059127808;
+						};
+						class Item2
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={4933.2041,29.188589,6124.0254};
+								angles[]={0,0.0068428693,0};
+							};
+							side="Empty";
+							class Attributes
+							{
+							};
+							id=50;
+							type="VR_Area_01_circle_4_grey_F";
+							atlOffset=0.00055503845;
+						};
+						class Item3
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={4948.333,29.542976,6123.3052};
+								angles[]={0,0.0068428693,0};
+							};
+							side="Empty";
+							class Attributes
+							{
+							};
+							id=51;
+							type="VR_Area_01_circle_4_grey_F";
+							atlOffset=0.00059509277;
+						};
+						class Item4
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={3923.5398,10.95409,2747.6101};
+								angles[]={0,5.9251509,0};
+							};
+							side="Empty";
+							class Attributes
+							{
+							};
+							id=53;
+							type="VR_Area_01_circle_4_grey_F";
+							atlOffset=0.00058937073;
+						};
+						class Item5
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={3936.8286,10.926965,2753.293};
+								angles[]={0,5.9251509,0};
+							};
+							side="Empty";
+							class Attributes
+							{
+							};
+							id=54;
+							type="VR_Area_01_circle_4_grey_F";
+							atlOffset=0.00055408478;
+						};
+						class Item6
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={3919.4956,11.22528,2778.3337};
+								angles[]={0,2.6653519,0};
+							};
+							side="Empty";
+							class Attributes
+							{
+							};
+							id=55;
+							type="VR_Area_01_circle_4_grey_F";
+							atlOffset=0.00060176849;
+						};
+					};
+					id=47;
+					atlOffset=-1.3334522;
+				};
+			};
+			id=46;
+			atlOffset=-1.3334522;
+		};
+		class Item23
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={3649.0786,12.919067,4336.2852};
+				angles[]={0,5.536911,0};
+			};
+			areaSize[]={7.9723749,0,4.2577057};
+			areaIsRectangle=1;
+			flags=1;
+			id=56;
+			type="afsk_modules_moduleJail";
 		};
 	};
 	class Connections
