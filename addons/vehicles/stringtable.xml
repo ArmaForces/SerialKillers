@@ -89,6 +89,14 @@
             <English>Controls how much civilian vehicles will be created on the whole map.</English>
             <Polish>Ustala jak dużo pojazdów cywilnych będzie utworzonych na całej mapie.</Polish>
         </Key>
+        <Key ID="STR_AFSK_Vehicles_EmptyVehiclesMultiplier">
+            <English>Civilian vehicles multiplier</English>
+            <Polish>Mnożnik pojazdów cywilnych</Polish>
+        </Key>
+        <Key ID="STR_AFSK_Vehicles_EmptyVehiclesMultiplier_Description">
+            <English>Controls how much civilian vehicles will at most be created in one area.</English>
+            <Polish>Ustala jak dużo pojazdów cywilnych zostanie utworzonych w pobliżu.</Polish>
+        </Key>
         <Key ID="STR_AFSK_Vehicles_Vehicle_Stolen_In_City">
             <English>Vehicle was stolen at %1 in %2!</English>
             <Polish>Pojazd został skradziony o godzinie %1 w %2!</Polish>

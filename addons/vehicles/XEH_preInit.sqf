@@ -8,7 +8,7 @@ ADDON = false;
 if (!EGVAR(common,enabled)) exitWith {};
 
 // We need some improvements in determining civilian vehicles limit
-GVAR(emptyVehiclesLimit) = 500;
+GVAR(emptyVehiclesLimit) = GVAR(emptyVehiclesCount);
 
 if (isServer) then {
     call FUNC(initVehicles);
