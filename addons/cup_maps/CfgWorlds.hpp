@@ -1050,7 +1050,7 @@ class CfgWorlds
     {
         class Names
         {
-            class city_Chernogorsk
+            class ACityC_Chernogorsk
             {
                 angle = 55;
                 positionOffset[] = { -150, 200 };
@@ -1058,14 +1058,14 @@ class CfgWorlds
                 radiusB = 800;
             };
 
-            class city_Elektrozavodsk
+            class ACityC_Elektrozavodsk
             {
                 angle = 70;
                 radiusA = 500;
                 radiusB = 800;
             };
 
-            class city_StarySobor
+            class ACityC_StarySobor
             {
                 angle = 45;
                 positionOffset[] = { -20, -50 };
@@ -1073,26 +1073,26 @@ class CfgWorlds
                 radiusB = 200;
             };
 
-            class vill_Dolina
+            class ACityC_Dolina
             {
                 positionOffset[] = { -50, -30 };
                 radiusA = 300;
                 radiusB = 150;
             };
 
-            class vill_Guglovo
+            class ACityC_Guglovo
             {
                 positionOffset[] = { 50, -50 };
             };
 
-            class vill_Kamyshovo
+            class ACityC_Kamyshovo
             {
                 positionOffset[] = { 0, 50 };
                 radiusA = 200;
                 radiusB = 200;
             };
 
-            class vill_Mogilevka
+            class ACityC_Mogilevka
             {
                 angle = 30;
                 positionOffset[] = { -50, 50 };
@@ -1100,7 +1100,7 @@ class CfgWorlds
                 radiusB = 250;
             };
 
-            class vill_Msta
+            class ACityC_Msta
             {
                 angle = 60;
                 positionOffset[] = { -60, 20 };
@@ -1108,7 +1108,7 @@ class CfgWorlds
                 radiusB = 200;
             };
 
-            class vill_Nadezhdino
+            class ACityC_Nadezhdino
             {
                 angle = 50;
                 positionOffset[] = { 25, 75 };
@@ -1116,7 +1116,7 @@ class CfgWorlds
                 radiusB = 300;
             };
 
-            class vill_NovySobor
+            class ACityC_NovySobor
             {
                 angle = 45;
                 positionOffset[] = { -50, -100 };
@@ -1124,14 +1124,14 @@ class CfgWorlds
                 radiusB = 200;
             };
 
-            class vill_Orlovets
+            class ACityC_Orlovets
             {
                 positionOffset[] = { 25, 100 };
                 radiusA = 200;
                 radiusB = 150;
             };
 
-            class vill_Polana
+            class ACityC_Polana
             {
                 angle = 30;
                 positionOffset[] = { -50, -50 };
@@ -1139,7 +1139,7 @@ class CfgWorlds
                 radiusB = 300;
             };
 
-            class vill_Prigorodki
+            class ACityC_Prigorodki
             {
                 angle = 35;
                 positionOffset[] = { -75, -75 };
@@ -1147,31 +1147,31 @@ class CfgWorlds
                 radiusB = 150;
             };
 
-            class vill_Pusta
+            class ACityC_Pusta
             {
                 positionOffset[] = { 25, 0 };
                 radiusB = 225;
             };
 
-            class vill_Shakhovka
+            class ACityC_Shakhovka
             {
                 positionOffset[] = { -100, 0 };
             };
 
-            class vill_Staroye
+            class ACityC_Staroye
             {
                 positionOffset[] = { -125, 100 };
                 radiusA = 300;
                 radiusB = 200;
             };
 
-            class vill_Tulga
+            class ACityC_Tulga
             {
                 positionOffset[] = { -25, 50 };
                 radiusA = 200;
             };
 
-            class vill_Vyshnoye
+            class ACityC_Vyshnoye
             {
                 angle = 75;
                 radiusA = 150;
