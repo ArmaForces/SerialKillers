@@ -4,5 +4,6 @@ PREP(createKillerMarker);
 PREP(createOrUpdateKillerMarker);
 PREP(deleteUnitMarker);
 PREP(markerDecay);
+PREP(markerDecayLocal);
 PREP(markerDecayLoop);
 PREP(loop);

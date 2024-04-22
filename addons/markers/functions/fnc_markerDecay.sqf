@@ -7,6 +7,7 @@
  * Arguments:
  * 0: Object or marker <OBJECT/STRING>
  * 1: Time to decay by half (in minutes) <NUMBER>
+ * 2: Is marker local <BOOLEAN>
  *
  * Return Value:
  * None

@@ -34,13 +34,13 @@ if (hasInterface) then {
         }] call CBA_fnc_addEventHandler;
 
         [QEGVAR(police,copKilled), {
-            [_this select 0] call FUNC(markerDecay);
+            [_this select 0, 1] call FUNC(markerDecayLocal);
         }] call CBA_fnc_addEventHandler;
     };
 
     if (playerSide isEqualTo EAST) exitWith {
         [QEGVAR(killers,killerKilled), {
-            [_this select 0] call FUNC(markerDecay);
+            [_this select 0] call FUNC(markerDecayLocal);
         }] call CBA_fnc_addEventHandler;
     };
 };
