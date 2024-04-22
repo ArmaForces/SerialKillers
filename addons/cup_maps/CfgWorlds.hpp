@@ -1045,4 +1045,77 @@ class CfgWorlds
             };
         };
     };
+
+    class Zargabad : CAWorld
+    {
+        class Names
+        {
+            class local_Azizayt
+            {
+                radiusA = 300;
+                radiusB = 300;
+            };
+
+            // class local_airport
+            // {
+
+            // };
+
+            // class local_factory
+            // {
+
+            // };
+
+            // class local_Firuz_Baharv
+            // {
+
+            // };
+
+            class local_Hazar_Bagh
+            {
+                radiusA = 350;
+                radiusB = 350;
+            };
+
+            // class local_military_base
+            // {
+
+            // };
+
+            class local_Nango
+            {
+                positionOffset[] = { 100, -200 };
+                angle = 75;
+                radiusA = 500;
+                radiusB = 300;
+            };
+
+            class local_Shahbaz
+            {
+                positionOffset[] = { 300, 100 };
+                radiusA = 400;
+                radiusB = 300;
+            };
+
+            class local_The_Villa
+            {
+                radiusA = 200;
+                radiusB = 200;
+                type = "NameVillage";
+            };
+
+            class local_Yarum
+            {
+                angle = 20;
+                radiusA = 500;
+                radiusB = 200;
+            };
+
+            class local_Zargabad
+            {
+                radiusA = 600;
+                radiusB = 400;
+            };
+        };
+    };
 };
