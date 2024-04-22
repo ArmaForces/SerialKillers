@@ -3,7 +3,7 @@
     "SLIDER",
     [LSTRING(EmptyVehiclesLimit), LSTRING(EmptyVehiclesLimit_Description)],
     [LSTRING(DisplayName), localize "str_dn_vehicles"],
-    [0, 400, 200, 0],
+    [0, 1000, 400, 0],
     true,
     {},
     true

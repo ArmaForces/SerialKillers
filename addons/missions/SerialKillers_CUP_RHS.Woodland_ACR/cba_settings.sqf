@@ -1,7 +1,7 @@
 // SerialKillers map custom settings
 force force afsk_civilian_respectCityArea = true; // Use configured areas as the mod changes them to be usable
 force force afsk_civilian_initialCiviliansCount = 100;
-force force afsk_vehicles_emptyVehiclesLimitMultiplier = 1; // Low
+force force afsk_vehicles_emptyVehiclesCount = 200;
 
 // ACE Fatigue
 force force ace_advanced_fatigue_enabled = false;
