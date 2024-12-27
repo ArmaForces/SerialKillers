@@ -20,7 +20,7 @@ params ["_unit", "_killer"];
 
 if !(isServer) exitWith {};
 
-private _time = [daytime] call BIS_fnc_timeToString;
+private _time = [dayTime] call BIS_fnc_timeToString;
 
 private _isPlayerOrAi = ["AI", "PLAYER"] select isPlayer _killer;
 LOG_4("Cop %1 was killed by %2 %3 at %4",name _unit,_isPlayerOrAi,name _killer,_time);
