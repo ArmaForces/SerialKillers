@@ -24,8 +24,8 @@ private _actionID = [
     LLSTRING(Release_Prisoner),
     "",
     "",
-    QUOTE([ARR_2(_this, _target)] call FUNC(canRelease)),
-    QUOTE([ARR_2(_caller, _target)] call FUNC(canRelease)),
+    QUOTE([ARR_2(_this,_target)] call FUNC(canRelease)),
+    QUOTE([ARR_2(_caller,_target)] call FUNC(canRelease)),
     {}, {},
     {
         params ["_target", "_caller", "_actionId", "_arguments"];
