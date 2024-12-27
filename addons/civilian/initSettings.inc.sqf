@@ -1,4 +1,4 @@
-/* Civilians placement */
+// Civilians placement
 [
     QGVAR(initialCiviliansCount),
     "SLIDER",
