@@ -31,7 +31,7 @@ private _notify = if (GVAR(alarmCopsNotification) isEqualTo 1) then {
     private _anyNearbyUnrestrainedCivilians = _nearbyUnits
         findIf {alive _x && {side _x isEqualTo CIVILIAN && {!([_x] call EFUNC(jail,isHandcuffed))}}} != -1;
 
-    if (_anyNearbyUnrestrainedCivilians) then { true } else { false };
+    [false, true] select (_anyNearbyUnrestrainedCivilians)
 };
 
 if (_notify) exitWith {

@@ -26,11 +26,7 @@ if (_item isEqualType objNull) then {
 if (_item isEqualTo "") exitWith {-1};
 
 // Check if given item is a vehicle
-private _namespace = if (isClass (configFile >> "CfgVehicles" >> _item)) then {
-    GVAR(policeVehiclesScores)
-} else {
-    GVAR(policeEquipmentScores)
-};
+private _namespace = [GVAR(policeEquipmentScores), GVAR(policeVehiclesScores)] select isClass (configFile >> "CfgVehicles" >> _item);
 
 // Lowercase search only
 _item = toLower _item;
