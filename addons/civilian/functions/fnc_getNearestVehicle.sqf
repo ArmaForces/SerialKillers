@@ -9,7 +9,7 @@
  * 2: Filter function returning true for valid vehicles <FUNC> (Optional)
  *
  * Return Value:
- * None
+ * Nearest vehicle or objNull if not found <OBJECT>
  *
  * Example:
  * [player] call afsk_civilian_fnc_getNearestVehicle

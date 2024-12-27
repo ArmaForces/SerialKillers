@@ -25,4 +25,4 @@ if (_civilian isEqualTo objNull) exitWith {
     WARNING_2("Failed creating civilian %1 at %2",_unit,_position);
 };
 
-[_civilian] call FUNC(initCivilian);
+[_civilian] call FUNC(initCivilian)

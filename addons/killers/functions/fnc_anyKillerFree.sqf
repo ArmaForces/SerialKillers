@@ -7,7 +7,7 @@
  * None
  *
  * Return Value:
- * None
+ * True if any killer is still free <BOOL>
  *
  * Example:
  * call afsk_killers_fnc_anyKillerFree

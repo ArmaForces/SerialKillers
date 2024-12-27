@@ -39,3 +39,5 @@ GVAR(policeScoreLastChangeTime) = CBA_missionTime;
         publicVariable QGVAR(policeScoreChange);
     };
 }, [GVAR(policeScoreChange)], 5] call CBA_fnc_waitAndExecute;
+
+GVAR(policeScore)
