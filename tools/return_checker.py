@@ -34,6 +34,7 @@ def filter_files(filepaths):
 
                 # A possible docblock starts
                 if contents.startswith('/*'):
+                    print(f"  INFO: Found docblock in file {filepath}")
                     # Find the `* Return Value:` comment
                     lines = list(map(
                         # Remove \n from all the lines
