@@ -15,7 +15,7 @@ def get_files():
     sqf_files = []
 
     for root, _, files in os.walk(root_dir):
-        for file in fnmatch.filter(files, "*.sqf"):
+        for file in fnmatch.filter(files, "fnc_*.sqf"):
             sqf_files.append(os.path.join(root, file))
 
     sqf_files.sort()
