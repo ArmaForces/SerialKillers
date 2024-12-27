@@ -45,7 +45,7 @@ if (_emptySpawnPointIndex isEqualTo -1) exitWith {
     private _fullSpawnPointsWithoutCrew = _spawnPoints select {
         private _nearEntities = getPosATL _x nearEntities SPAWNPOINT_SAFEZONE;
         if (_nearEntities isEqualTo []) exitWith { false };
-        _nearEntities findIf {crew _x isEqualTo []} isNotEqualTo -1;
+        _nearEntities findIf {crew _x isEqualTo []} isNotEqualTo -1
     };
 
     if (_fullSpawnPointsWithoutCrew isEqualTo []) exitWith {
