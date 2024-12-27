@@ -29,7 +29,7 @@ if (_pos isEqualType objNull) then {
 private _towns = nearestLocations [_pos, ["NameVillage", "NameCity", "NameCityCapital"], _searchRadius];
 
 #define GET_NEAREST_LOCATION _towns param [0, locationNull]
-TRACE_2("Nearest location for pos: %1 is location: %2", _pos, GET_NEAREST_LOCATION);
+TRACE_2("Nearest location for pos: %1 is location: %2",_pos,GET_NEAREST_LOCATION);
 
 // Select nearest location from array.
 _towns param [0, locationNull]

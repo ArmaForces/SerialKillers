@@ -24,27 +24,27 @@ GVAR(missionEnd) = _endType;
 switch (_endType) do {
     // 0
     case KILLERS_SCORE_REACHED: {
-        private _win = if (playerSide isEqualTo EAST) then {true} else {false};
+        private _win = [false, true] select (playerSide isEqualTo EAST);
         [QGVAR(killersScoreReached), _win, nil, false] call BIS_fnc_endMission;
     };
     // 1
     case KILLERS_DEAD: {
-        private _win = if (playerSide isEqualTo WEST) then {true} else {false};
+        private _win = [false, true] select (playerSide isEqualTo WEST);
         [QGVAR(killersDead), _win, nil, false] call BIS_fnc_endMission;
     };
     // 2
     case MAXIMUM_TIMEOUT_REACHED: {
-        private _win = if (playerSide isEqualTo WEST) then {true} else {false};
+        private _win = [false, true] select (playerSide isEqualTo WEST);
         [QGVAR(timeoutLimit), _win, nil, false] call BIS_fnc_endMission;
     };
     // 3
     case TIME_LIMIT_REACHED: {
-        private _win = if (playerSide isEqualTo WEST) then {true} else {false};
+        private _win = [false, true] select (playerSide isEqualTo WEST);
         [QGVAR(timeLimit), _win, nil, false] call BIS_fnc_endMission;
     };
     // 4
     case ALL_CIVILIANS_DEAD: {
-        private _win = if (playerSide isEqualTo EAST) then {true} else {false};
+        private _win = [false, true] select (playerSide isEqualTo EAST);
         [QGVAR(civiliansDead), _win, nil, false] call BIS_fnc_endMission;
     };
     default {

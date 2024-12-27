@@ -23,4 +23,6 @@ if (GVAR(ACE_Loaded)) then {
     [_msg, _size, _target, _width] call ACE_common_fnc_displayTextStructured;
 } else {
     hint _msg;
-}
+};
+
+nil

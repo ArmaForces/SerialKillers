@@ -58,7 +58,7 @@ if (isServer) then {
 
 [QEGVAR(score,scoreChanged), {
     params ["_side", "_change", ["_reason", ""]];
-    if (_side isEqualTo EAST) exitwith {};
+    if (_side isEqualTo EAST) exitWith {};
     call FUNC(equipmentScoreCheck);
 }] call CBA_fnc_addEventHandler;
 

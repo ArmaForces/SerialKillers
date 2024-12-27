@@ -4,8 +4,6 @@
 class CfgVehicles
 {
     class Car_F;
-    class Hatchback_01_base_F;
-    class Hatchback_01_sport_base_F;
     class C_Hatchback_01_F;
     class C_Hatchback_01_sport_F;
 

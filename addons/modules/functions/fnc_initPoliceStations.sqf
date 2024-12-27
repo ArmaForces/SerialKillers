@@ -7,7 +7,7 @@
  * None
  *
  * Return Value:
- * None
+ * List of police station modules <ARRAY<OBJECT>>
  *
  * Example:
  * None
