@@ -255,7 +255,6 @@ class CfgSerialKillers
                     class ACE_microDAGR {};
                     class ACE_DAGR {};
                     class ACE_CableTie {};
-                    class ACE_HandFlare_White {};
                     class ACE_Flashlight_XL50 {};
                     class ACE_Flashlight_KSF1 {};
                     class ACE_Flashlight_MX991 {};
@@ -394,7 +393,6 @@ class CfgSerialKillers
                         availableInStash = 1;
                     };
                     class rhsusf_acc_leupoldmk4_2 : rhs_weap_M107 {};
-                    class rhsusf_acc_eotech_552 : rhs_weap_M107 {};
 
                     /* Launchers */
                     class rhs_weap_panzerfaust60
@@ -731,7 +729,6 @@ class CfgSerialKillers
                     class U_BG_Guerilla2_1 {};
                     class U_BG_Guerilla2_3 {};
                     class U_C_Journalist {};
-                    class U_Marshal {};
                     class U_C_IDAP_Man_casual_F {};
                     class U_C_IDAP_Man_Jeans_F {};
                     class U_C_IDAP_Man_Tee_F {};
