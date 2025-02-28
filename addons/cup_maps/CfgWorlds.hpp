@@ -1045,4 +1045,142 @@ class CfgWorlds
             };
         };
     };
+
+    class Woodland_ACR : CAWorld
+    {
+        class Names
+        {
+            class ACityC_Chernogorsk
+            {
+                angle = 55;
+                positionOffset[] = { -150, 200 };
+                radiusA = 600;
+                radiusB = 800;
+            };
+
+            class ACityC_Elektrozavodsk
+            {
+                angle = 70;
+                radiusA = 500;
+                radiusB = 800;
+            };
+
+            class ACityC_StarySobor
+            {
+                angle = 45;
+                positionOffset[] = { -20, -50 };
+                radiusA = 400;
+                radiusB = 200;
+            };
+
+            class ACityC_Dolina
+            {
+                positionOffset[] = { -50, -30 };
+                radiusA = 300;
+                radiusB = 150;
+            };
+
+            class ACityC_Guglovo
+            {
+                positionOffset[] = { 50, -50 };
+            };
+
+            class ACityC_Kamyshovo
+            {
+                positionOffset[] = { 0, 50 };
+                radiusA = 200;
+                radiusB = 200;
+            };
+
+            class ACityC_Mogilevka
+            {
+                angle = 30;
+                positionOffset[] = { -50, 50 };
+                radiusA = 200;
+                radiusB = 250;
+            };
+
+            class ACityC_Msta
+            {
+                angle = 60;
+                positionOffset[] = { -60, 20 };
+                radiusA = 100;
+                radiusB = 200;
+            };
+
+            class ACityC_Nadezhdino
+            {
+                angle = 50;
+                positionOffset[] = { 25, 75 };
+                radiusA = 175;
+                radiusB = 300;
+            };
+
+            class ACityC_Nizhnoye
+            {
+                type = "NameLocal";
+            };
+
+            class ACityC_NovySobor
+            {
+                angle = 45;
+                positionOffset[] = { -50, -100 };
+                radiusA = 250;
+                radiusB = 200;
+            };
+
+            class ACityC_Orlovets
+            {
+                positionOffset[] = { 25, 100 };
+                radiusA = 200;
+                radiusB = 150;
+            };
+
+            class ACityC_Polana
+            {
+                angle = 30;
+                positionOffset[] = { -50, -50 };
+                radiusA = 200;
+                radiusB = 300;
+            };
+
+            class ACityC_Prigorodki
+            {
+                angle = 35;
+                positionOffset[] = { -75, -75 };
+                radiusA = 300;
+                radiusB = 150;
+            };
+
+            class ACityC_Pusta
+            {
+                positionOffset[] = { 25, 0 };
+                radiusB = 225;
+            };
+
+            class ACityC_Shakhovka
+            {
+                positionOffset[] = { -100, 0 };
+            };
+
+            class ACityC_Staroye
+            {
+                positionOffset[] = { -125, 100 };
+                radiusA = 300;
+                radiusB = 200;
+            };
+
+            class ACityC_Tulga
+            {
+                positionOffset[] = { -25, 50 };
+                radiusA = 200;
+            };
+
+            class ACityC_Vyshnoye
+            {
+                angle = 75;
+                radiusA = 150;
+            };
+        };
+    };
 };
