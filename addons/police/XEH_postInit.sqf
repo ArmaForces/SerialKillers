@@ -76,7 +76,7 @@ if (hasInterface) then {
     }] call CBA_fnc_waitUntilAndExecute;
 
     player addEventHandler ["Killed", {
-        [QGVAR(copKilled), _this] call CBA_fnc_serverEvent;
+        [QGVAR(copKilled), _this] call CBA_fnc_globalEvent;
     }];
     player addEventHandler ["Respawn", {
         player setUnitLoadout EGVAR(common,playerLoadout);

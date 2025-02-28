@@ -11,6 +11,7 @@ PREP(initConfig);
 PREP(initKillersBase);
 PREP(initKillersStashes);
 PREP(initStartPositions);
+PREP(isKiller);
 PREP(killerHandcuffed);
 PREP(killerKilled);
 PREP(killerRespawned);

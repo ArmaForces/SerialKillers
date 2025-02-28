@@ -7,4 +7,6 @@ ADDON = false;
 // Killswitch
 if (!EGVAR(common,enabled)) exitWith {};
 
+GVAR(markersToDelete) = [];
+
 ADDON = true;

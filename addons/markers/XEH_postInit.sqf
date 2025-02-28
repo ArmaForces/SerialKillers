@@ -16,14 +16,6 @@ if (isServer) then {
     };
 };
 
-[QEGVAR(killers,killerKilled), {
-    _this call FUNC(deleteUnitMarker);
-}] call CBA_fnc_addEventHandler;
-
-[QEGVAR(police,copKilled), {
-    _this call FUNC(deleteUnitMarker);
-}] call CBA_fnc_addEventHandler;
-
 [QGVAR(playerDisconnected), {
     params ["_unit", "_id", "_uid", "_name"];
     [_unit] call FUNC(deleteUnitMarker);
@@ -35,4 +27,16 @@ if (isServer) then {
 
 if (hasInterface) then {
     call FUNC(loop);
+
+    if (playerSide isEqualTo WEST) exitWith {
+        [QEGVAR(killers,killerKilled), {
+            [QGVAR(deleteUnitMarker), [_this select 0]] call CBA_fnc_localEvent;
+        }] call CBA_fnc_addEventHandler;
+    };
+
+    if (playerSide isEqualTo EAST) exitWith {
+        [QEGVAR(killers,killerKilled), {
+            [_this select 0] call FUNC(markerDecayLocal);
+        }] call CBA_fnc_addEventHandler;
+    };
 };

@@ -4,7 +4,7 @@
  * Function checks whether given unit is a cop.
  *
  * Arguments:
- * 0: Unit <OBJECT>
+ * 0: Unit to check if it's a cop <OBJECT>
  *
  * Return Value:
  * True if unit is a cop <BOOL>
@@ -19,4 +19,4 @@ params ["_unit"];
 
 if (isNull _unit) exitWith { false };
 
-_unit getVariable [QEGVAR(common,side), CIVILIAN] isEqualTo WEST
+_unit getVariable [QEGVAR(common,side), side _unit] isEqualTo WEST

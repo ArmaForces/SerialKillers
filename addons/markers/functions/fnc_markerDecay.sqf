@@ -2,10 +2,12 @@
 /*
  * Author: 3Mydlo3
  * Function starts marker decay loop with given time (in minutes) to decay by half.
+ * If an object is passed, it's assigned marker is retrieved.
  *
  * Arguments:
- * 0: Marker <STRING>
+ * 0: Object or marker <OBJECT/STRING>
  * 1: Time to decay by half (in minutes) <NUMBER>
+ * 2: Is marker local <BOOLEAN>
  *
  * Return Value:
  * None
@@ -16,10 +18,18 @@
  * Public: No
  */
 
-params ["_marker", ["_decayHalfTime", 10], ["_local", false]];
+params ["_unitOrMarker", ["_decayHalfTime", 10], ["_local", false]];
 
 // How much decay will be applied every 15 seconds
 private _decayRate = 1/(_decayHalfTime * 4 * 2);
 private _currentAlpha = markerAlpha _marker;
+
+private _marker = if (_unitOrMarker isEqualType objNull) then {
+    _unitOrMarker getVariable [QGVAR(marker), ""]
+} else {
+    _unitOrMarker
+};
+
+if (_marker isEqualTo "") exitWith {};
 
 [_marker, _decayRate, _currentAlpha, _local] call FUNC(markerDecayLoop);

@@ -15,6 +15,11 @@
  * Public: No
  */
 
+{
+    deleteMarkerLocal _x;
+} forEach GVAR(markersToDelete);
+GVAR(markersToDelete) = [];
+
 // Move marker for every civilian
 {
     private _civilian = _x;
@@ -43,13 +48,16 @@ if (playerSide isEqualTo WEST) then {
         } else {
             _marker setMarkerPosLocal (position _cop);
         };
-    } forEach (allPlayers select {side _x isEqualTo WEST});
+    } forEach (allPlayers select {[_x] call EFUNC(police,isCop)});
 };
 
 // Move marker for every killer
 {
     private _killer = _x;
     private _hidden = !([_killer] call EFUNC(common,appearsArmed));
+    private _isInPrison = [_killer] call EFUNC(jail,isHandcuffed);
+
+    if (_isInPrison) exitWith {};
 
     // Check if player should be able to see killer's marker
     // Player must:
@@ -59,18 +67,15 @@ if (playerSide isEqualTo WEST) then {
     if (playerSide isEqualTo EAST) then {
         [_killer, _hidden] call FUNC(createOrUpdateKillerMarker);
     } else {
-        private _isOrWasImprisoned = [_killer] call EFUNC(jail,isHandcuffed)
-                                    || {_killer getVariable [QEGVAR(jail,wasImprisonedRecently), false]};
+        private _recentlyReleasedFromPrison = _killer getVariable [QEGVAR(jail,wasImprisonedRecently), false];
 
-        if (_hidden && {!_isOrWasImprisoned}) exitWith {
+        if (_hidden && {!_recentlyReleasedFromPrison}) exitWith {
             [_killer, _hidden] call FUNC(createOrUpdateKillerMarker);
         };
 
-        if !(_marker isEqualTo "") then {
-            [_killer] call FUNC(deleteUnitMarker);
-        };
+        [_killer] call FUNC(deleteUnitMarker);
     };
-} forEach (allPlayers select {side _x isEqualTo EAST});
+} forEach (allPlayers select {[_x] call EFUNC(killers,isKiller)});
 
 // Schedule next loop
 [FUNC(loop), [], GVAR(refreshRate)] call CBA_fnc_waitAndExecute;
