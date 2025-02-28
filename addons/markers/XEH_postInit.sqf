@@ -32,10 +32,6 @@ if (hasInterface) then {
         [QEGVAR(killers,killerKilled), {
             [QGVAR(deleteUnitMarker), [_this select 0]] call CBA_fnc_localEvent;
         }] call CBA_fnc_addEventHandler;
-
-        [QEGVAR(police,copKilled), {
-            [_this select 0, 1] call FUNC(markerDecayLocal);
-        }] call CBA_fnc_addEventHandler;
     };
 
     if (playerSide isEqualTo EAST) exitWith {
