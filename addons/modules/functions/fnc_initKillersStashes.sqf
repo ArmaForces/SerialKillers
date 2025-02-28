@@ -7,7 +7,7 @@
  * None
  *
  * Return Value:
- * None
+ * List of killers stash modules <ARRAY<OBJECT>>
  *
  * Example:
  * None

@@ -27,4 +27,5 @@ _nearestTown = [_position, _searchRadius] call EFUNC(common,getNearestCityLocati
 
 // Return city namespace or objNull if not found
 if (_nearestTown isEqualTo locationNull) exitWith {objNull};
-[_nearestTown] call FUNC(getCityByLocation);
+
+[_nearestTown] call FUNC(getCityByLocation)

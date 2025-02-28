@@ -7,7 +7,7 @@
  * None
  *
  * Return Value:
- * None
+ * List of killers start modules <ARRAY<OBJECT>>
  *
  * Example:
  * None

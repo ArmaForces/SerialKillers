@@ -31,7 +31,7 @@
         };
 #endif
     };
-} foreach EGVAR(civilian,civilians);
+} forEach EGVAR(civilian,civilians);
 
 // Move marker for every cop
 if (playerSide isEqualTo WEST) then {

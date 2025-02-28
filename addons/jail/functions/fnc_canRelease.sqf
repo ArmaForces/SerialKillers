@@ -8,7 +8,7 @@
  * 1: Unit to release <OBJECT>
  *
  * Return Value:
- * None
+ * Whether target unit can be released <BOOL>
  *
  * Example:
  * [bob, ted] call afsk_jail_fnc_canBeReleased

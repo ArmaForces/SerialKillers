@@ -18,8 +18,5 @@
 params ["_position"];
 
 private _roads = _position nearRoads 50;
-if (_roads isEqualTo []) then {
-    false
-} else {
-    true
-};
+
+[true, false] select (_roads isEqualTo [])

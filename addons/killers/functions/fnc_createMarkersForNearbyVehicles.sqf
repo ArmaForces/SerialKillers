@@ -36,10 +36,10 @@ private _emptyVehicles = _nearbyVehicles select {
     _marker setMarkerColorLocal "ColorCIVILIAN";
     _marker setMarkerSizeLocal [0.5, 0.5];
     _marker setMarkerAlphaLocal 1; // Force just in case marker already exists and should be fully-visible again
-    _marker setMarkerTextLocal getText (configFile >> "CfgVehicles" >> (typeof _vehicle) >> "displayName");
+    _marker setMarkerTextLocal getText (configFile >> "CfgVehicles" >> (typeOf _vehicle) >> "displayName");
 
     private _markerType = if (_vehicle isKindOf "Air") then {
-            if (_vehicle isKindOf "Plane") then { "loc_plane" } else { "loc_heli" }
+            ["loc_heli", "loc_plane"] select (_vehicle isKindOf "Plane")
         } else { "loc_car" };
     _marker setMarkerTypeLocal _markerType;
 

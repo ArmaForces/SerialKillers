@@ -18,7 +18,7 @@
 
 params ["_unit", "_time"];
 
-private _markerName = format ["killed_civilian_%1_%2", _unit];
+private _markerName = format ["killed_civilian_%1", _unit];
 private _markerText = format ["%1", _time];
 private _marker = createMarkerLocal [_markerName, getPosATL _unit];
 _marker setMarkerTypeLocal "mil_objective";

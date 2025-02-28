@@ -5,6 +5,10 @@
             <English>SerialKillers - Equipment</English>
             <Polish>SerialKillers - Ekwipunek</Polish>
         </Key>
+        <Key ID="STR_AFSK_Equipment_EquipmentPreset">
+            <English>Predefined equipment preset</English>
+            <Polish>Predefiniowana konfiguracja ekwipunku</Polish>
+        </Key>
         <Key ID="STR_AFSK_Equipment_EquipmentPresetCustom">
             <English>Custom equipment preset</English>
             <Polish>Własna konfiguracja ekwipunku</Polish>
@@ -13,17 +17,13 @@
             <English>Use "Custom" equipment preset from mission config. Overwrites predefined mod presets.</English>
             <Polish>Użyj konfiguracji "Custom" z pliku konfiguracyjnego w misji. Zastępuje predefiniowane konfiguracje z moda.</Polish>
         </Key>
-        <Key ID="STR_AFSK_Equipment_EquipmentPreset">
-            <English>Predefined equipment preset</English>
-            <Polish>Predefiniowana konfiguracja ekwipunku</Polish>
+        <Key ID="STR_AFSK_Equipment_EquipmentPreset_Auto">
+            <English>Automatic preset selection</English>
+            <Polish>Automatyczny wybór konfiguracji</Polish>
         </Key>
         <Key ID="STR_AFSK_Equipment_EquipmentPreset_Description">
             <English>Use predefined equipment preset from mod config.</English>
             <Polish>Użyj predefiniowanej konfiguracji ekwipunku z moda.</Polish>
-        </Key>
-        <Key ID="STR_AFSK_Equipment_EquipmentPreset_Auto">
-            <English>Automatic preset selection</English>
-            <Polish>Automatyczny wybór konfiguracji</Polish>
         </Key>
     </Package>
 </Project>

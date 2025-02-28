@@ -17,7 +17,7 @@
  * Public: No
  */
 
-params ["_unit", "_killer", ["_timeOfDeath", daytime], ["_nearestTown", locationNull]];
+params ["_unit", "_killer", ["_timeOfDeath", dayTime], ["_nearestTown", locationNull]];
 
 if (_timeOfDeath isEqualType 0) then {
     _timeOfDeath = [_timeOfDeath] call BIS_fnc_timeToString;

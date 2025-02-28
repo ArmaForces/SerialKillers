@@ -63,4 +63,4 @@ while {(_loopLimit >= 0) && {(_randomPos isEqualTo [])}} do {
 
 if (_loopLimit isEqualTo 0) exitWith {[]};
 
-_randomPos;
+_randomPos
