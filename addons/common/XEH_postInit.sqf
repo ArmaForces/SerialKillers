@@ -22,7 +22,7 @@ if (isServer) then {
     [QGVAR(showSideChatMsg), {
         params [["_side", sideEmpty], ["_msg", ""]];
         if (_msg isEqualTo "") exitWith {};
-        private _sideText = if (_side isEqualTo sideEmpty) then { "ALL" } else { _side };
+        private _sideText = [_side, "ALL"] select (_side isEqualTo sideEmpty);
         INFO_2("(Side Chat) %1: %2",_sideText,_msg call BIS_fnc_localize);
     }] call CBA_fnc_addEventHandler;
 };

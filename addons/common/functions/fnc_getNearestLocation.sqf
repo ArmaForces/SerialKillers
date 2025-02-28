@@ -30,7 +30,7 @@ private _locations = nearestLocations [_pos, GVAR(allLocationTypes), _searchRadi
 
 // Introduced so that there are no issues with ',' in TRACE macro.
 #define GET_NEAREST_LOCATION _locations param [0, locationNull]
-TRACE_2("(getNearestLocation) Pos: %1 Location: %2", _pos, GET_NEAREST_LOCATION);
+TRACE_2("(getNearestLocation) Pos: %1 Location: %2",_pos,GET_NEAREST_LOCATION);
 
 // Select nearest location from array.
 _locations param [0, locationNull]

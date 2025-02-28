@@ -40,7 +40,7 @@ for "_y" from 0 to (_createStatshesCount - 1) step 1 do {
     _box setVariable [QGVAR(killersStash), _stash];
     _stash setVariable [QGVAR(box), _box];
     _box call FUNC(fillKillersStash);
-    GVAR(stashes) pushback _box;
+    GVAR(stashes) pushBack _box;
 };
 
 publicVariable QGVAR(stashes);

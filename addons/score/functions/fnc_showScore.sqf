@@ -30,7 +30,7 @@ private _fnc_determineSign = {
 private _separator = parseText "<br/>---------------------------<br/>";
 _separator setAttributes ["align", "center"];
 
-private _msgHour = text format ["%1", [daytime] call BIS_fnc_timeToString];
+private _msgHour = text format ["%1", [dayTime] call BIS_fnc_timeToString];
 _msgHour setAttributes ["align", "center"];
 
 private _msgKillers = text format ["%1", LELSTRING(killers,Killers)];

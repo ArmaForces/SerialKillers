@@ -17,7 +17,7 @@
  * Public: No
  */
 
-params ["_stolenVehicle", ["_timeOfTheft", daytime], ["_nearestTown", locationNull]];
+params ["_stolenVehicle", ["_timeOfTheft", dayTime], ["_nearestTown", locationNull]];
 
 if (_timeOfTheft isEqualType 0) then {
     _timeOfTheft = [_timeOfTheft] call BIS_fnc_timeToString;

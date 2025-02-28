@@ -18,7 +18,7 @@
 
 params ["_scoreChange", ["_reason", ""]];
 
-private _time = [daytime] call BIS_fnc_timeToString;
+private _time = [dayTime] call BIS_fnc_timeToString;
 
 // Change killers score
 GVAR(killersScore) = GVAR(killersScore) + _scoreChange;

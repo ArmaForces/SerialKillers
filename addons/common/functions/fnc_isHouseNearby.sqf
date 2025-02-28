@@ -18,8 +18,5 @@
 params ["_position"];
 
 private _houses = nearestTerrainObjects [_position, ["House"], 50, false];
-if (_houses isEqualTo []) then {
-    false
-} else {
-    true
-};
+
+[true, false] select (_houses isEqualTo [])

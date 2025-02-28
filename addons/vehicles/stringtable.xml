@@ -1,18 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="AFSK">
     <Package name="Vehicles">
-        <Key ID="STR_AFSK_Vehicles_DisplayName">
-            <English>SerialKillers - Vehicles</English>
-            <Polish>SerialKillers - Pojazdy</Polish>
-        </Key>
-        <Key ID="STR_AFSK_Vehicles_AlarmEnabled">
-            <English>Alarm enabled</English>
-            <Polish>Alarmy włączone</Polish>
-        </Key>
-        <Key ID="STR_AFSK_Vehicles_AlarmEnabled_Description">
-            <English>Add car alarms to civilian vehicles.</English>
-            <Polish>Dodaj alarmy do pojazdów cywilnych.</Polish>
-        </Key>
         <Key ID="STR_AFSK_Vehicles_AlarmAlwaysArmed">
             <English>Alarm always armed</English>
             <Polish>Alarm zawsze uzbrojony</Polish>
@@ -29,13 +17,17 @@
             <English>Control exact distance (in meters) at which an alarm can be heard. Increasing the distance makes it easier for cops to spot a stolen vehicle.</English>
             <Polish>Kontroluje dokładną odległość (w metrach), z której alarm będzie słyszalny. Zwiększenie tej odległości ułatwia policji zlokalizowanie skradzionego pojazdu.</Polish>
         </Key>
+        <Key ID="STR_AFSK_Vehicles_AlarmAverageChance">
+            <English>Alarm Average Chance</English>
+            <Polish>Średnia szansa na alarm</Polish>
+        </Key>
+        <Key ID="STR_AFSK_Vehicles_AlarmChance_Description">
+            <English>Controls the chance of an alarm going off in a car that has the alarm armed. Normal distribution of [min, mid, max].</English>
+            <Polish>Ustala szansę na uruchomienie alarmu w pojeździe posiadającym alarm. Rozkład normalny [minimum, średnia, maksimum].</Polish>
+        </Key>
         <Key ID="STR_AFSK_Vehicles_AlarmCopsNotification">
             <English>Notify cops of alarm</English>
             <Polish>Powiadomienie dla policji o alarmie</Polish>
-        </Key>
-        <Key ID="STR_AFSK_Vehicles_AlarmCopsNotification_Description">
-            <English>When should the cops be notified that an alarm went off?</English>
-            <Polish>Kiedy policja powinna być informowana o włączonym alarmie?</Polish>
         </Key>
         <Key ID="STR_AFSK_Vehicles_AlarmCopsNotificationDelay">
             <English>Cops notification delay</English>
@@ -45,6 +37,10 @@
             <English>Delay between an alarm going off and possible notification for cops.</English>
             <Polish>Opóźnienie pomiędzy włączeniem alarmu a możliwym powiadomieniem dla Policji.</Polish>
         </Key>
+        <Key ID="STR_AFSK_Vehicles_AlarmCopsNotification_Description">
+            <English>When should the cops be notified that an alarm went off?</English>
+            <Polish>Kiedy policja powinna być informowana o włączonym alarmie?</Polish>
+        </Key>
         <Key ID="STR_AFSK_Vehicles_AlarmDisarmIfFailed">
             <English>Alarm disarm if didn't go off</English>
             <Polish>Rozbrój alarm jeżeli się nie włączył</Polish>
@@ -52,22 +48,6 @@
         <Key ID="STR_AFSK_Vehicles_AlarmDisarmIfFailed_Description">
             <English>Disarm alarm if it didn't go off when a player entered vehicle. Effective only if 'Alarm always armed' is disabled and 'Alarm Minimum Chance' is set to less than 1.</English>
             <Polish>Rozbrój alarm jeżeli się nie włączył gdy gracz wszedł do pojazdu. Działa tylko jeżeli ustawienie 'Alarm zawsze uzbrojony' jest wyłączone oraz 'Minimalna szansa na alarm' jest ustawiona na mniej niż 1.</Polish>
-        </Key>
-        <Key ID="STR_AFSK_Vehicles_AlarmAverageChance">
-            <English>Alarm Average Chance</English>
-            <Polish>Średnia szansa na alarm</Polish>
-        </Key>
-        <Key ID="STR_AFSK_Vehicles_AlarmMaximumChance">
-            <English>Alarm Maximum Chance</English>
-            <Polish>Maksymalna szansa na alarm</Polish>
-        </Key>
-        <Key ID="STR_AFSK_Vehicles_AlarmMinimumChance">
-            <English>Alarm Minimum Chance</English>
-            <Polish>Minimalna szansa na alarm</Polish>
-        </Key>
-        <Key ID="STR_AFSK_Vehicles_AlarmChance_Description">
-            <English>Controls the chance of an alarm going off in a car that has the alarm armed. Normal distribution of [min, mid, max].</English>
-            <Polish>Ustala szansę na uruchomienie alarmu w pojeździe posiadającym alarm. Rozkład normalny [minimum, średnia, maksimum].</Polish>
         </Key>
         <Key ID="STR_AFSK_Vehicles_AlarmDuration">
             <English>Alarm Duration</English>
@@ -77,9 +57,33 @@
             <English>Controls how long will the alarm sound be heard.</English>
             <Polish>Ustala jak długo będzie wył alarm.</Polish>
         </Key>
+        <Key ID="STR_AFSK_Vehicles_AlarmEnabled">
+            <English>Alarm enabled</English>
+            <Polish>Alarmy włączone</Polish>
+        </Key>
+        <Key ID="STR_AFSK_Vehicles_AlarmEnabled_Description">
+            <English>Add car alarms to civilian vehicles.</English>
+            <Polish>Dodaj alarmy do pojazdów cywilnych.</Polish>
+        </Key>
+        <Key ID="STR_AFSK_Vehicles_AlarmMaximumChance">
+            <English>Alarm Maximum Chance</English>
+            <Polish>Maksymalna szansa na alarm</Polish>
+        </Key>
+        <Key ID="STR_AFSK_Vehicles_AlarmMinimumChance">
+            <English>Alarm Minimum Chance</English>
+            <Polish>Minimalna szansa na alarm</Polish>
+        </Key>
+        <Key ID="STR_AFSK_Vehicles_Always">
+            <English>Always</English>
+            <Polish>Zawsze</Polish>
+        </Key>
         <Key ID="STR_AFSK_Vehicles_CarAlarm">
             <English>Car alarm</English>
             <Polish>Alarm samochodowy</Polish>
+        </Key>
+        <Key ID="STR_AFSK_Vehicles_DisplayName">
+            <English>SerialKillers - Vehicles</English>
+            <Polish>SerialKillers - Pojazdy</Polish>
         </Key>
         <Key ID="STR_AFSK_Vehicles_EmptyVehiclesLimit">
             <English>Civilian vehicles limit</English>
@@ -89,13 +93,17 @@
             <English>Controls how much civilian vehicles will be created on the whole map.</English>
             <Polish>Ustala jak dużo pojazdów cywilnych będzie utworzonych na całej mapie.</Polish>
         </Key>
-        <Key ID="STR_AFSK_Vehicles_Vehicle_Stolen_In_City">
-            <English>Vehicle was stolen at %1 in %2!</English>
-            <Polish>Pojazd został skradziony o godzinie %1 w %2!</Polish>
+        <Key ID="STR_AFSK_Vehicles_EmptyVehiclesMultiplier">
+            <English>Civilian vehicles multiplier</English>
+            <Polish>Mnożnik pojazdów cywilnych</Polish>
         </Key>
-        <Key ID="STR_AFSK_Vehicles_Vehicle_Stolen_Near_City">
-            <English>Vehicle was stolen at %1 near %2!</English>
-            <Polish>Pojazd został skradziony o godzinie %1 w pobliżu %2!</Polish>
+        <Key ID="STR_AFSK_Vehicles_EmptyVehiclesMultiplier_Description">
+            <English>Controls how much civilian vehicles will at most be created in one area.</English>
+            <Polish>Ustala jak dużo pojazdów cywilnych zostanie utworzonych w pobliżu.</Polish>
+        </Key>
+        <Key ID="STR_AFSK_Vehicles_IfCiviliansNearby">
+            <English>If civilians nearby</English>
+            <Polish>Jeżeli są cywile w pobliżu</Polish>
         </Key>
         <Key ID="STR_AFSK_Vehicles_Low">
             <English>Low</English>
@@ -105,21 +113,17 @@
             <English>Mediun</English>
             <Polish>Średnio</Polish>
         </Key>
-        <Key ID="STR_AFSK_Vehicles_High">
-            <English>High</English>
-            <Polish>Dużo</Polish>
-        </Key>
-        <Key ID="STR_AFSK_Vehicles_Always">
-            <English>Always</English>
-            <Polish>Zawsze</Polish>
-        </Key>
         <Key ID="STR_AFSK_Vehicles_Never">
             <English>Never</English>
             <Polish>Nigdy</Polish>
         </Key>
-        <Key ID="STR_AFSK_Vehicles_IfCiviliansNearby">
-            <English>If civilians nearby</English>
-            <Polish>Jeżeli są cywile w pobliżu</Polish>
+        <Key ID="STR_AFSK_Vehicles_Vehicle_Stolen_In_City">
+            <English>Vehicle was stolen at %1 in %2!</English>
+            <Polish>Pojazd został skradziony o godzinie %1 w %2!</Polish>
+        </Key>
+        <Key ID="STR_AFSK_Vehicles_Vehicle_Stolen_Near_City">
+            <English>Vehicle was stolen at %1 near %2!</English>
+            <Polish>Pojazd został skradziony o godzinie %1 w pobliżu %2!</Polish>
         </Key>
     </Package>
 </Project>

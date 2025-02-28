@@ -61,7 +61,7 @@ _policeEquipmentList sort true;
             _itemNamespace = GVAR(commonEquipment) getVariable [_itemClassname, call CBA_fnc_createNamespace];
         };
         private _loadMagazines = _itemNamespace getVariable ["loadMagazines", true];
-        if (_loadMagazines isEqualTo "false") exitwith {};
+        if (_loadMagazines isEqualTo "false") exitWith {};
         // Get compatible magazines and add them if not added yet
         private _magazines = [_itemClassName, true] call CBA_fnc_compatibleMagazines;
         {

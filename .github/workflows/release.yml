@@ -1,0 +1,33 @@
+name: Release
+
+on:
+  release:
+    types:
+      - published
+
+jobs:
+  build_addon:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    - name: Set VERSION env
+      run: echo VERSION=${GITHUB_REF:11} >> $GITHUB_ENV
+    - name: Setup HEMTT
+      uses: arma-actions/hemtt@v1
+    - name: Run HEMTT release
+      run: hemtt release
+    # Upload to GitHub
+    - uses: softprops/action-gh-release@v1
+      with:
+        files: 'releases/afsk-${{ env.VERSION }}-*.zip'
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    # Upload to Steam Workshop
+    - uses: arma-actions/workshop-upload@v1
+      with:
+        itemId: '1993094302' # Id of item to update
+        contentPath: '.hemttout/release'
+        changelog: 'https://github.com/ArmaForces/SerialKillers/releases/tag/v${{ env.VERSION }}'
+      env:
+        STEAM_USERNAME: ${{ secrets.STEAM_USERNAME }}
+        STEAM_PASSWORD: ${{ secrets.STEAM_PASSWORD }}

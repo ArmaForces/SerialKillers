@@ -31,7 +31,7 @@ if (count GVAR(civilians) isEqualTo 0) then {
     [QEGVAR(score,allCiviliansDead)] call CBA_fnc_serverEvent;
 };
 
-private _time = [daytime] call BIS_fnc_timeToString;
+private _time = [dayTime] call BIS_fnc_timeToString;
 // Call function to create marker at killed unit's position.
 [_civilian, _time] call FUNC(civilianKilledMarker);
 // Show message for all cops that cop has been killed near some location with timestamp

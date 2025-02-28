@@ -17,4 +17,4 @@
 
 params ["_array"];
 
-_array deleteAt (floor (random (count _array)));
+_array deleteAt (floor (random (count _array)))
