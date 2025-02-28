@@ -31,7 +31,7 @@ class EditorData
 	};
 };
 binarizationWanted=0;
-sourceName="SerialKillers-Tanoa";
+sourceName="SerialKillers";
 addons[]=
 {
 	"A3_Characters_F",

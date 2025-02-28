@@ -3,6 +3,7 @@ class CfgMissions {
         MISSION_CONFIG(SerialKillers_CUP_RHS,Chernarus);
         MISSION_CONFIG(SerialKillers_CUP_RHS,Chernarus_Winter);
         MISSION_CONFIG(SerialKillers_CUP_RHS,Chernarus_Summer);
+        MISSION_CONFIG(SerialKillers,Tanoa);
         MISSION_CONFIG(SK_test,Malden);
     };
 };
