@@ -28,6 +28,7 @@ private _box = createVehicle [GVAR(arsenalBoxClassName), (getPosATL _killersBase
 clearItemCargoGlobal _box;
 clearWeaponCargoGlobal _box;
 clearMagazineCargoGlobal _box;
+[_box] call EFUNC(common,createArsenal);
 _killersBase setVariable ["Arsenal", _box, true];
 _box setVariable ["killersBase", _killersBase, true];
 [QGVAR(initStartingEquipment)] call CBA_fnc_globalEventJIP;
