@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="AFSK">
+    <Package name="Maps">
+        <Key ID="STR_AFSK_Maps_DisplayName">
+            <English>SerialKillers - Maps</English>
+            <Polish>SerialKillers - Maps</Polish>
+        </Key>
+    </Package>
+</Project>
