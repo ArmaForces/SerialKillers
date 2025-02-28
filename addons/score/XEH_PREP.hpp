@@ -1,7 +1,10 @@
 PREP(addKillersScore);
 PREP(addPoliceScore);
+PREP(changeScore);
 PREP(endMissionClient);
 PREP(endMissionServer);
+PREP(extraTimeAdjustRules);
+PREP(getIdleTimeRulesMessage);
 PREP(monitorTimeLimit);
 PREP(monitorTimeouts);
 PREP(showScore);

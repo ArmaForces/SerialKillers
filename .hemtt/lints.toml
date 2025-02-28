@@ -1,0 +1,6 @@
+[sqf.command_case]
+options.ignore = [
+    "CIVILIAN",
+    "EAST",
+    "WEST",
+]

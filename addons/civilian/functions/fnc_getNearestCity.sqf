@@ -19,7 +19,7 @@
 params ["_position", ["_searchRadius", 2000]];
 
 if (_position isEqualType objNull) then {
-    _position = getPos _position;
+    _position = getPosATL _position;
 };
 
 // Find nearest city location
@@ -27,4 +27,5 @@ _nearestTown = [_position, _searchRadius] call EFUNC(common,getNearestCityLocati
 
 // Return city namespace or objNull if not found
 if (_nearestTown isEqualTo locationNull) exitWith {objNull};
-[_nearestTown] call FUNC(getCityByLocation);
+
+[_nearestTown] call FUNC(getCityByLocation)

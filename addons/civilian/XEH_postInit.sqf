@@ -16,3 +16,8 @@ if (isServer) then {
         _this call FUNC(civilianKilled);
     }] call CBA_fnc_addEventHandler;
 };
+
+[QGVAR(showCivilianKilledNotification), {
+    private _msg = _this call FUNC(civilianKilledMsg);
+    [QEGVAR(common,showSideChatMsg), [WEST, _msg]] call CBA_fnc_localEvent;
+}] call CBA_fnc_addEventHandler;

@@ -19,9 +19,9 @@ params ["_flag"];
 private _logic = _flag getVariable ["policeStation", objNull];
 
 {
-    if !(_logic isEqualTo _x) then {
+    if (_logic isNotEqualTo _x) then {
         private _destinationName = _x getVariable ["LocationName", "Teleport"];
-        _flag addAction [_destinationName, {
+        _flag addAction [_destinationName call BIS_fnc_localize, {
             [QGVAR(teleport), [_this select 0, _this select 1, _this select 3 select 0]] call CBA_fnc_serverEvent;
         }, [_x]];
     };

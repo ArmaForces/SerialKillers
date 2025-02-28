@@ -1,11 +1,9 @@
-#define HATCHBACK_POLICE_TEXTURE QPATHTOF(assets\textures\hatchback_01_police.paa)
-#define HATCHBACK_SPORT_POLICE_TEXTURE QPATHTOF(assets\textures\hatchback_01_police_highway.paa)
+#define HATCHBACK_POLICE_TEXTURE QPATHTOF(assets\textures\hatchback_01_police_co.paa)
+#define HATCHBACK_SPORT_POLICE_TEXTURE QPATHTOF(assets\textures\hatchback_01_police_highway_co.paa)
 
 class CfgVehicles
 {
     class Car_F;
-    class Hatchback_01_base_F;
-    class Hatchback_01_sport_base_F;
     class C_Hatchback_01_F;
     class C_Hatchback_01_sport_F;
 

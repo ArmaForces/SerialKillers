@@ -18,12 +18,12 @@
 
 params ["_unit", "_time"];
 
-private _markerName = format ["killed_civilian_%1_%2", _unit];
+private _markerName = format ["killed_civilian_%1", _unit];
 private _markerText = format ["%1", _time];
-private _marker = createMarker [_markerName, getpos _unit];
-_marker setMarkerType "mil_objective";
-_marker setMarkerColor "ColorEAST";
-_marker setMarkerSize [0.4, 0.4];
+private _marker = createMarkerLocal [_markerName, getPosATL _unit];
+_marker setMarkerTypeLocal "mil_objective";
+_marker setMarkerColorLocal "ColorEAST";
+_marker setMarkerSizeLocal [0.4, 0.4];
 _marker setMarkerText _markerText;
 
 [_marker] call EFUNC(markers,markerDecay);

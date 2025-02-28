@@ -7,7 +7,7 @@
  * None
  *
  * Return Value:
- * None
+ * Text read from config <STRING>
  *
  * Example:
  * None

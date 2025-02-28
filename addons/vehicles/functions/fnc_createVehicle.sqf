@@ -25,10 +25,10 @@ if (_vehicleClassname isEqualType configNull) then {
 };
 
 if (_position isEqualType objNull) then {
-    _position = getPos _position;
+    _position = getPosATL _position;
 };
 
-private _mode = if (_forcePosition) then {"CAN_COLLIDE"} else {"NONE"};
+private _mode = ["NONE", "CAN_COLLIDE"] select (_forcePosition);
 private _vehicle = createVehicle [_vehicleClassname, _position, [], 0, _mode];
 _vehicle setDir _dir;
 // Disable randomization and use own function to set texture on vehicle globally (so everyone can see the same color!)

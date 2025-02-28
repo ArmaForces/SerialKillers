@@ -16,9 +16,9 @@
  */
 
 {
-    private _marker = createMarkerlocal [str _x, getPos _x];
-    _marker setMarkerColorlocal "ColorEAST";
-    _marker setMarkerSizelocal [0.5,0.5];
-    _marker setMarkerTypelocal "mil_pickup";
+    private _marker = createMarkerLocal [str _x, getPosATL _x];
+    _marker setMarkerColorLocal "ColorEAST";
+    _marker setMarkerSizeLocal [0.5,0.5];
+    _marker setMarkerTypeLocal "mil_pickup";
     _x setVariable [QGVAR(marker), _marker];
 } forEach GVAR(stashes);

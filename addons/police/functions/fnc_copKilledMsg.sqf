@@ -17,27 +17,21 @@
  * Public: No
  */
 
-params ["_deadCop", ["_timeOfDeath", daytime], ["_nearestTown", locationNull]];
+params ["_unit", "_killer", ["_timeOfDeath", dayTime], ["_nearestTown", locationNull]];
 
 if (_timeOfDeath isEqualType 0) then {
     _timeOfDeath = [_timeOfDeath] call BIS_fnc_timeToString;
 };
 
-private _nearestCity = if (isNull _nearestTown) then {
-    [_deadCop] call EFUNC(civilian,getNearestCity)
+// Check if civilian died in city. If so then change output a bit to represent that.
+private _template = if ([_unit, _nearestTown] call EFUNC(civilian,isPositionInCity)) then {
+    if ([_unit, _killer] call FUNC(isKilledByCop)) then { LLSTRING(KilledByCop_In_City) } else { LLSTRING(Killed_In_City) };
 } else {
-    [_nearestTown] call EFUNC(civilian,getCityByLocation)
+    if ([_unit, _killer] call FUNC(isKilledByCop)) then { LLSTRING(KilledByCop_Near_City) } else { LLSTRING(Killed_Near_City) };
 };
 
-private _msg = "";
-private _nearestCityArea = _nearestCity getVariable QEGVAR(civilian,cityArea);
-private _isInCity = (position _deadCop) inArea _nearestCityArea;
-
-// Check if distance is greater than 250 m. If so then change output a bit to represent that.
-if (_isInCity) then {
-    _msg = format [LLSTRING(Cop_Killed_In_City), _timeOfDeath, text _nearestTown];
-} else {
-    _msg = format [LLSTRING(Cop_Killed_Near_City), _timeOfDeath, text _nearestTown];
-};
+// Supplying killer name to format, but only killed by cop should reveal name for lynch
+private _killerName = if (isNull _killer) then { name _unit } else { name _killer };
+private _msg = format [_template, _timeOfDeath, text _nearestTown, _killerName];
 
 _msg

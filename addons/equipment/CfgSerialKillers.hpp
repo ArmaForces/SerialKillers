@@ -255,7 +255,6 @@ class CfgSerialKillers
                     class ACE_microDAGR {};
                     class ACE_DAGR {};
                     class ACE_CableTie {};
-                    class ACE_HandFlare_White {};
                     class ACE_Flashlight_XL50 {};
                     class ACE_Flashlight_KSF1 {};
                     class ACE_Flashlight_MX991 {};
@@ -394,7 +393,6 @@ class CfgSerialKillers
                         availableInStash = 1;
                     };
                     class rhsusf_acc_leupoldmk4_2 : rhs_weap_M107 {};
-                    class rhsusf_acc_eotech_552 : rhs_weap_M107 {};
 
                     /* Launchers */
                     class rhs_weap_panzerfaust60
@@ -720,6 +718,9 @@ class CfgSerialKillers
                     class MineDetector { requiredScore = 30; };
                     class ACE_HuntIR_monitor : ACE_HuntIR_M203 {};
 
+                    // Spike strip mine
+                    class TDD_Talon_Mag {};
+
                     /* Uniforms */
                     class U_B_GEN_Soldier_F {};
                     class U_B_GEN_Commander_F {};
@@ -728,7 +729,6 @@ class CfgSerialKillers
                     class U_BG_Guerilla2_1 {};
                     class U_BG_Guerilla2_3 {};
                     class U_C_Journalist {};
-                    class U_Marshal {};
                     class U_C_IDAP_Man_casual_F {};
                     class U_C_IDAP_Man_Jeans_F {};
                     class U_C_IDAP_Man_Tee_F {};
@@ -759,6 +759,10 @@ class CfgSerialKillers
                     class B_Messenger_Coyote_F {};
                     class B_LegStrapBag_olive_F {};
                     class B_LegStrapBag_coyote_F {};
+                    class B_AssaultPack_blk {};
+                    class B_Carryall_blk : rhs_weap_m4a1_carryhandle_m203 {};
+                    class B_TacticalPack_blk : rhs_weap_m4a1_carryhandle_m203 {};
+                    class B_FieldPack_blk : rhs_weap_m4a1_carryhandle_m203 {};
                     /* Headgear */
                     class rds_police_cap {};
                     class H_Cap_police {};

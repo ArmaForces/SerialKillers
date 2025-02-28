@@ -35,3 +35,5 @@ _civilian addEventHandler ["Killed", {
 [_civilian, _cityNamespace] call FUNC(assignCityCivilian);
 GVAR(civilians) pushBack _civilian;
 _civilian setVariable [QGVAR(initialized), true];
+
+_civilian

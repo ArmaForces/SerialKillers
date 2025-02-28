@@ -18,7 +18,7 @@
 
 params ["_scoreChange", ["_reason", ""]];
 
-private _time = [daytime] call BIS_fnc_timeToString;
+private _time = [dayTime] call BIS_fnc_timeToString;
 
 // Change police score
 GVAR(policeScore) = GVAR(policeScore) + _scoreChange;
@@ -39,3 +39,5 @@ GVAR(policeScoreLastChangeTime) = CBA_missionTime;
         publicVariable QGVAR(policeScoreChange);
     };
 }, [GVAR(policeScoreChange)], 5] call CBA_fnc_waitAndExecute;
+
+GVAR(policeScore)

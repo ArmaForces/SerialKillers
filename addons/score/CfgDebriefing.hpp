@@ -15,6 +15,9 @@ class CfgDebriefing {
         title = CSTRING(Police_Win);
         subtitle = CSTRING(Killers_Dead);
     };
+    class GVAR(timeLimit): GVAR(killersDead) {
+        subtitle = CSTRING(TimeLimit_Reached);
+    };
     class GVAR(timeoutLimit): GVAR(killersDead) {
         subtitle = CSTRING(Timeout_Limit);
     };

@@ -27,3 +27,8 @@ if (hasInterface) then {
         [_vehicle, true, GVAR(alarmDuration)] call FUNC(carAlarmLoop);
     }] call CBA_fnc_addEventHandler;
 };
+
+[QGVAR(showCarAlarmNotification), {
+    private _msg = _this call FUNC(vehicleStolenMsg);
+    [QEGVAR(common,showSideChatMsg), [WEST, _msg]] call CBA_fnc_localEvent;
+}] call CBA_fnc_addEventHandler;

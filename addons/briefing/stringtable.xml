@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="AFSK">
+    <Package name="Briefing">
+        <Key ID="STR_AFSK_Briefing_DisplayName">
+            <English>SerialKillers - Briefing</English>
+            <Polish>SerialKillers - Odprawa</Polish>
+        </Key>
+        <Key ID="STR_AFSK_Briefing_Rules">
+            <English>Rules</English>
+            <Polish>Zasady</Polish>
+        </Key>
+        <Key ID="STR_AFSK_Briefing_RulesEnabled">
+            <English>Enable rules</English>
+            <Polish>Włącz zasady</Polish>
+        </Key>
+        <Key ID="STR_AFSK_Briefing_RulesEnabled_Description">
+            <English>If enabled, suggested rules will be visible on the map in "SerialKillers" briefing section.</English>
+            <Polish>Jeżeli włączone, proponowane zasady będą widoczne na odprawnie na mapie w zakładce "SerialKillers".</Polish>
+        </Key>
+        <Key ID="STR_AFSK_Briefing_Rules_1">
+            <English>Cops are not allowed to use terrorist stashes/weapons. They may only use radios they find after neutralizing a terrorist.</English>
+            <Polish>Policjanci nie mogą używać broni terrorystów ani skrytek z bronią. Mogą używać jedynie radia, które znajdą przy zneutralizowanym terroryście.</Polish>
+        </Key>
+        <Key ID="STR_AFSK_Briefing_Rules_2">
+            <English>Cops are not allowed to kill, hurt or harm civilians in any other way without certainty that this is a terrorist. They may not use civilian vehicles either.</English>
+            <Polish>Policjanci nie mogą zabijać ani krzywdzić cywili w żaden sposób bez pewności, że to terrorysta. Nie mogą również używać cywilnych pojazdów.</Polish>
+        </Key>
+        <Key ID="STR_AFSK_Briefing_Rules_3">
+            <English>Cops are not allowed to sit in jail nor obstruct it in any way. They may only check if a prisoner is there, without moving him, they must leave immediately afterwards.</English>
+            <Polish>Policjanci nie mogą siedzieć w więzieniu ani blokować wejścia do niego. Mogą jedynie sprawdzić czy więzień tam jest, bez przemieszczania go i muszą opuścić więzienie natychmiast po sprawdzeniu.</Polish>
+        </Key>
+        <Key ID="STR_AFSK_Briefing_Rules_4">
+            <English>Only 1 police helicopter is allowed, with the same dedicated crew.</English>
+            <Polish>Tylko 1 policyjny helikopter jest dozwolony, z tą samą dedykowaną załogą.</Polish>
+        </Key>
+        <Key ID="STR_AFSK_Briefing_Rules_5">
+            <English>Terrorists should not use any cops-dedicated functionalities within police stations.</English>
+            <Polish>Terroryści nie powinni używać funkcjonalności przeznaczonych dla policjantów w obrębie komisariatów.</Polish>
+        </Key>
+        <Key ID="STR_AFSK_Briefing_Rules_6">
+            <English>Terrorists are responsible for everyone's fun. Make it so the police doesn't die of boredom.</English>
+            <Polish>Terroryści są odpowiedzialni za zabawę wszystkich grających. Grajcie tak, żeby policja nie umarła z nudów.</Polish>
+        </Key>
+        <Key ID="STR_AFSK_Briefing_Rules_7">
+            <English>Driving off-road is allowed only when having off-road vehicle. Despite that, do not hide in forests/remote areas on purpose, as it's not fun.</English>
+            <Polish>Jeżdżenie poza drogami (off-road) jest dozwolone tylko w pojazdach terenowych. Nie ukrywaj się po lasach i odległych miejscach, to nie jest fajna zabawa.</Polish>
+        </Key>
+        <Key ID="STR_AFSK_Briefing_Rules_8">
+            <English>Using vehicles as kamikaze kinetic projectiles is strictly forbidden due to how arma works, and it's not fun anyway.</English>
+            <Polish>Używanie pojazdów jako pocisków kinetycznych do kamikadze jest zabronione ze względu na to jak działa arma, do tego nie jest to fajna zabawa.</Polish>
+        </Key>
+    </Package>
+</Project>

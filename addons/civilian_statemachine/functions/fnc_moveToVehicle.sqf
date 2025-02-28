@@ -25,4 +25,4 @@ private _waypoint = _group addWaypoint [_vehicle, 0];
 _waypoint waypointAttachVehicle _vehicle;
 _waypoint setWaypointType "GETIN";
 
-TRACE_2("Group %1 getting in a vehicle %2", _group, _vehicle);
+TRACE_2("Group %1 getting in a vehicle %2",_group,_vehicle);

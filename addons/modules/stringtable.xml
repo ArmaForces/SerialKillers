@@ -1,21 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="AFSK">
     <Package name="Modules">
-        <Key ID="STR_AFSK_Modules_PoliceStation_Name">
-            <English>Police Station</English>
-            <Polish>Posterunek Policji</Polish>
-        </Key>
-        <Key ID="STR_AFSK_Modules_PoliceStation_LocationName">
-            <English>Location Name</English>
-            <Polish>Nazwa lokacji</Polish>
-        </Key>
-        <Key ID="STR_AFSK_Modules_PoliceStation_LocationName_Description">
-            <English>Location Name. If empty will use nearest map location name.</English>
-            <Polish>Nazwa lokacji. Jeżeli puste to użyta zostanie nazwa najbliższej lokacji na mapie.</Polish>
-        </Key>
-        <Key ID="STR_AFSK_Modules_PoliceStation_HasHelipad">
-            <English>Has helipad</English>
-            <Polish>Posiada lądowisko dla helikoptera</Polish>
+        <Key ID="STR_AFSK_Modules_Jail">
+            <English>Jail</English>
+            <Polish>Więzienie</Polish>
         </Key>
         <Key ID="STR_AFSK_Modules_Killers_Base">
             <English>Killers Base</English>
@@ -29,9 +17,21 @@
             <English>Killers Weapon Stash</English>
             <Polish>Skład broni zabójców</Polish>
         </Key>
-        <Key ID="STR_AFSK_Modules_Jail">
-            <English>Jail</English>
-            <Polish>Więzienie</Polish>
+        <Key ID="STR_AFSK_Modules_LocationName">
+            <English>Location Name (Optional)</English>
+            <Polish>Nazwa lokacji (Opcjonalne)</Polish>
+        </Key>
+        <Key ID="STR_AFSK_Modules_LocationName_Description">
+            <English>Location Name. If empty will use nearest map location name according to player language. If not empty, the same name will be used for all languages (unless it's stringtable empty starting with $).</English>
+            <Polish>Nazwa lokacji. Jeżeli puste to użyta zostanie nazwa najbliższej lokacji na mapie zgodnie z językiem gracza. Jeżeli nie będzie puste, ta sama nazwa pokaże się we wszystkich językach (chyba że będzie zawierać wpis lokalizowalny rozpoczynający się od $).</Polish>
+        </Key>
+        <Key ID="STR_AFSK_Modules_PoliceStation_HasHelipad">
+            <English>Has helipad</English>
+            <Polish>Posiada lądowisko dla helikoptera</Polish>
+        </Key>
+        <Key ID="STR_AFSK_Modules_PoliceStation_Name">
+            <English>Police Station</English>
+            <Polish>Posterunek Policji</Polish>
         </Key>
     </Package>
 </Project>

@@ -58,11 +58,16 @@ if (isServer) then {
 
 [QEGVAR(score,scoreChanged), {
     params ["_side", "_change", ["_reason", ""]];
-    if (_side isEqualTo EAST) exitwith {};
+    if (_side isEqualTo EAST) exitWith {};
     call FUNC(equipmentScoreCheck);
 }] call CBA_fnc_addEventHandler;
 
 if (hasInterface) then {
+
+    [QGVAR(createPoliceStationMarkerLocal), {
+        _this call FUNC(policeStationMarker);
+    }] call CBA_fnc_addEventHandler;
+
     if !(playerSide isEqualTo WEST) exitWith {};
 
     // Fill arsenal with starting items
@@ -78,3 +83,14 @@ if (hasInterface) then {
         [QGVAR(copRespawned), _this] call CBA_fnc_serverEvent;
     }];
 };
+
+[QGVAR(showCopKilledNotification), {
+    private _msg = _this call FUNC(copKilledMsg);
+    [QEGVAR(common,showSideChatMsg), [WEST, _msg]] call CBA_fnc_localEvent;
+}] call CBA_fnc_addEventHandler;
+
+[QGVAR(showFailedCreatingVehicleNotification), {
+    params ["_vehicleName", "_baseName"];
+    private _msg = format [LLSTRING(FailedCreatingVehicle), _vehicleName call BIS_fnc_localize, _baseName call BIS_fnc_localize];
+    [QEGVAR(common,showSideChatMsg), [WEST, _msg]] call CBA_fnc_localEvent;
+}] call CBA_fnc_addEventHandler;
